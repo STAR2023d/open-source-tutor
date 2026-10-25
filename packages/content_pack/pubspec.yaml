@@ -1,0 +1,16 @@
+name: content_pack
+description: Open math content (skills + questions) for the Hesabu learner app.
+publish_to: none
+version: 0.1.0
+
+environment:
+  sdk: ^3.4.0
+  flutter: ">=3.22.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+flutter:
+  assets:
+    - assets/grade4/

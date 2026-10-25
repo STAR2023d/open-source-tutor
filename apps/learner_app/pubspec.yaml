@@ -1,0 +1,25 @@
+name: learner_app
+description: Hesabu - free, open-source mastery-based maths practice for Grades 4-6.
+publish_to: none
+version: 0.1.0+1
+
+environment:
+  sdk: ^3.4.0
+  flutter: ">=3.22.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  mastery_core:
+    path: ../../packages/mastery_core
+  content_pack:
+    path: ../../packages/content_pack
+  shared_preferences: ^2.2.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
