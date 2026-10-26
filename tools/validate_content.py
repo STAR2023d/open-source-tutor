@@ -15,6 +15,47 @@ CORE_LEVELS = BLOOM[:4]  # must match masteryCeiling in mastery_core
 MIN_PER_LEVEL = 2
 errors, warnings = [], []
 
+# Visual types the app can draw, with required numeric/list params.
+# Keep in sync with apps/learner_app/lib/visuals/visual_factory.dart
+VISUALS = {
+    "placeValueChart": {"value": (0, 99999)},
+    "columnAddition": {"a": (0, 9999), "b": (0, 9999)},
+    "barModel": {},
+    "numberLine": {"min": None, "max": None, "step": None},
+    "fractionBar": {"numerator": (0, 99), "denominator": (1, 12)},
+    "arrayGrid": {"rows": (1, 12), "cols": (1, 12)},
+}
+
+
+def check_visual(qid, q):
+    v = q.get("visual")
+    if v is None:
+        return
+    vtype = v.get("type")
+    if vtype not in VISUALS:
+        err(f"{qid}: unknown visual type {vtype}")
+        return
+    if v.get("showWith", "prompt") not in ("prompt", "hint"):
+        err(f"{qid}: showWith must be 'prompt' or 'hint'")
+    if v.get("showWith") == "hint" and not q.get("hints"):
+        err(f"{qid}: visual is shown with a hint but the question has no hints")
+    for key, rng in VISUALS[vtype].items():
+        val = v.get(key)
+        if not isinstance(val, (int, float)) or isinstance(val, bool):
+            err(f"{qid}: visual '{vtype}' needs numeric '{key}'")
+        elif rng and not (rng[0] <= val <= rng[1]):
+            err(f"{qid}: visual '{vtype}' '{key}' must be in {rng[0]}..{rng[1]}")
+    if vtype == "barModel":
+        parts = v.get("parts", [])
+        if len(parts) < 2 or any("label" not in x or "value" not in x for x in parts):
+            err(f"{qid}: barModel needs >= 2 parts with label and value")
+    if vtype == "numberLine":
+        if isinstance(v.get("min"), (int, float)) and isinstance(v.get("max"), (int, float)):
+            if v["max"] <= v["min"]:
+                err(f"{qid}: numberLine max must be greater than min")
+        if isinstance(v.get("step"), (int, float)) and v["step"] <= 0:
+            err(f"{qid}: numberLine step must be > 0")
+
 
 def err(msg):
     errors.append(msg)
@@ -74,6 +115,7 @@ def check_grade(folder: Path):
             continue
         if not q.get("explanation"):
             err(f"{qid}: missing explanation")
+        check_visual(qid, q)
         if not q.get("hints"):
             warn(f"{qid}: no hints")
         per_skill.setdefault(q["skillId"], {}).setdefault(q["bloom"], 0)

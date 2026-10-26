@@ -126,4 +126,41 @@ void main() {
       expect(session.next(), isNull);
     });
   });
+
+  group('VisualSpec', () {
+    test('parses type, reveal timing and params', () {
+      final q = Question.fromJson({
+        'id': 'q',
+        'skillId': 's',
+        'bloom': 'apply',
+        'type': 'numericInput',
+        'prompt': '?',
+        'answer': '1',
+        'explanation': 'e',
+        'visual': {
+          'type': 'placeValueChart',
+          'value': 5382,
+          'showWith': 'hint',
+          'highlight': ['hundreds'],
+        },
+      });
+      expect(q.visual!.type, 'placeValueChart');
+      expect(q.visual!.showWith, VisualReveal.hint);
+      expect(q.visual!.params['value'], 5382);
+      expect(q.visual!.params.containsKey('type'), isFalse);
+    });
+
+    test('question without a visual has none', () {
+      final q = Question.fromJson({
+        'id': 'q',
+        'skillId': 's',
+        'bloom': 'apply',
+        'type': 'numericInput',
+        'prompt': '?',
+        'answer': '1',
+        'explanation': 'e',
+      });
+      expect(q.visual, isNull);
+    });
+  });
 }

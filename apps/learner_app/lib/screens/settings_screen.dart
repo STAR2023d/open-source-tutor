@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../theme/theme_controller.dart';
 import '../theme/tokens.dart';
+import 'gallery_screen.dart';
 
 class SettingsScreen extends StatelessWidget {
   const SettingsScreen({super.key, required this.theme});
@@ -48,6 +49,17 @@ class SettingsScreen extends StatelessWidget {
                   subtitle: const Text('Makes everything easier to read'),
                   value: theme.largeText,
                   onChanged: theme.setLargeText,
+                ),
+                const Divider(height: Space.xl),
+                ListTile(
+                  contentPadding: EdgeInsets.zero,
+                  leading: const Icon(Icons.draw_outlined),
+                  title: const Text('Picture gallery'),
+                  subtitle: const Text('All the teaching pictures, for teachers and contributors'),
+                  trailing: const Icon(Icons.chevron_right),
+                  onTap: () => Navigator.of(context).push(MaterialPageRoute<void>(
+                    builder: (_) => const GalleryScreen(),
+                  )),
                 ),
                 const Divider(height: Space.xl),
                 Text('About', style: text.titleMedium),

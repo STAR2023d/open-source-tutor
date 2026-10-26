@@ -5,6 +5,34 @@ enum QuestionType { multipleChoice, numericInput }
 
 enum SkillStatus { planned, live }
 
+/// When a question's picture appears: straight away, or as a hint.
+enum VisualReveal { prompt, hint }
+
+/// UI-free description of a teaching picture (place-value chart, bar model...).
+/// The app turns it into a widget; the core only carries the data.
+class VisualSpec {
+  const VisualSpec({
+    required this.type,
+    this.params = const {},
+    this.showWith = VisualReveal.prompt,
+  });
+
+  final String type;
+  final Map<String, dynamic> params;
+  final VisualReveal showWith;
+
+  factory VisualSpec.fromJson(Map<String, dynamic> json) {
+    final params = Map<String, dynamic>.of(json)
+      ..remove('type')
+      ..remove('showWith');
+    return VisualSpec(
+      type: json['type'] as String,
+      params: params,
+      showWith: json['showWith'] == 'hint' ? VisualReveal.hint : VisualReveal.prompt,
+    );
+  }
+}
+
 class Skill {
   const Skill({
     required this.id,
@@ -81,6 +109,7 @@ class Question {
     this.answer,
     this.hints = const [],
     required this.explanation,
+    this.visual,
   });
 
   final String id;
@@ -92,6 +121,7 @@ class Question {
   final String? answer;
   final List<String> hints;
   final String explanation;
+  final VisualSpec? visual;
 
   factory Question.fromJson(Map<String, dynamic> json) => Question(
         id: json['id'] as String,
@@ -105,6 +135,9 @@ class Question {
         answer: json['answer'] as String?,
         hints: ((json['hints'] as List<dynamic>?) ?? const []).cast<String>(),
         explanation: json['explanation'] as String,
+        visual: json['visual'] == null
+            ? null
+            : VisualSpec.fromJson(json['visual'] as Map<String, dynamic>),
       );
 
   /// Checks a response. For multiple choice, [response] is the index of the

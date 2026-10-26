@@ -9,7 +9,9 @@ import '../widgets/bloom_ladder.dart';
 import '../widgets/choice_tile.dart';
 import '../widgets/feedback_card.dart';
 import '../widgets/mastery_badge.dart';
+import '../visuals/visual_factory.dart';
 import '../widgets/soft_card.dart';
+import '../widgets/visual_card.dart';
 
 class PracticeScreen extends StatefulWidget {
   const PracticeScreen({
@@ -131,6 +133,7 @@ class _PracticeScreenState extends State<PracticeScreen> {
             ],
           ),
         ),
+        ..._visualBlock(q, answered),
         const SizedBox(height: Space.m),
         if (q.type == QuestionType.multipleChoice)
           ..._choices(q, answered)
@@ -169,6 +172,24 @@ class _PracticeScreenState extends State<PracticeScreen> {
         const SizedBox(height: Space.l),
       ],
     );
+  }
+
+  /// The teaching picture. Pictures marked `showWith: hint` appear when the
+  /// learner asks for their first hint (which costs "clean" credit) or after
+  /// answering, so they still help review.
+  List<Widget> _visualBlock(Question q, bool answered) {
+    final spec = q.visual;
+    if (spec == null) return const [];
+    final visible = spec.showWith == VisualReveal.prompt ||
+        _hintsShown >= 1 ||
+        answered;
+    if (!visible) return const [];
+    final visual = buildVisual(spec);
+    if (visual == null) return const [];
+    return [
+      const SizedBox(height: Space.m),
+      VisualCard(child: visual),
+    ];
   }
 
   List<Widget> _choices(Question q, bool answered) {
