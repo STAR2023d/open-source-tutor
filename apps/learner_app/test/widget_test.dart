@@ -1,30 +1,56 @@
-// This is a basic Flutter widget test.
-//
-// To perform an interaction with a widget in your test, use the WidgetTester
-// utility in the flutter_test package. For example, you can send tap and scroll
-// gestures. You can also use WidgetTester to find child widgets in the widget
-// tree, read text, and verify that the values of widget properties are correct.
-
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-
-import 'package:learner_app/main.dart';
+import 'package:learner_app/theme/app_theme.dart';
+import 'package:learner_app/theme/hesabu_colors.dart';
+import 'package:learner_app/widgets/choice_tile.dart';
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
-    await tester.pumpWidget(const MyApp());
+  for (final brightness in Brightness.values) {
+    testWidgets('theme builds with semantic colours ($brightness)', (tester) async {
+      late BuildContext captured;
+      await tester.pumpWidget(MaterialApp(
+        theme: buildTheme(brightness),
+        home: Builder(builder: (context) {
+          captured = context;
+          return const SizedBox();
+        }),
+      ));
+      expect(HesabuColors.of(captured).strand('Numbers'), isA<Color>());
+    });
+  }
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
+  testWidgets('ChoiceTile shows its text and reports taps', (tester) async {
+    var taps = 0;
+    await tester.pumpWidget(MaterialApp(
+      theme: buildTheme(Brightness.light),
+      home: Scaffold(
+        body: ChoiceTile(
+          label: 'A',
+          text: 'Hundreds',
+          state: ChoiceState.idle,
+          onTap: () => taps++,
+        ),
+      ),
+    ));
+    await tester.tap(find.text('Hundreds'));
+    expect(taps, 1);
+  });
 
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
-    await tester.pump();
-
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
+  testWidgets('ChoiceTile cannot be tapped when answered', (tester) async {
+    var taps = 0;
+    await tester.pumpWidget(MaterialApp(
+      theme: buildTheme(Brightness.dark),
+      home: Scaffold(
+        body: ChoiceTile(
+          label: 'B',
+          text: 'Tens',
+          state: ChoiceState.incorrect,
+          onTap: null,
+        ),
+      ),
+    ));
+    await tester.tap(find.text('Tens'));
+    expect(taps, 0);
+    expect(find.byIcon(Icons.close), findsOneWidget);
   });
 }

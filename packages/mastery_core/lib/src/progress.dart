@@ -67,7 +67,8 @@ class SkillProgress {
     return r.where((a) => a.correct).length / r.length;
   }
 
-  int _cleanCorrectAt(BloomLevel level) => _recent
+  /// Correct answers without hints at [level] within the recent window.
+  int cleanCorrectAt(BloomLevel level) => _recent
       .where((a) => a.bloom == level && a.correct && a.hintsUsed == 0)
       .length;
 
@@ -75,7 +76,7 @@ class SkillProgress {
   BloomLevel get nextTargetLevel {
     for (final level in BloomLevel.values) {
       if (level.index > masteryCeiling.index) break;
-      if (_cleanCorrectAt(level) < minPerLevel) return level;
+      if (cleanCorrectAt(level) < minPerLevel) return level;
     }
     return masteryCeiling;
   }
@@ -85,7 +86,7 @@ class SkillProgress {
     if (recentAccuracy < threshold) return false;
     for (final level in BloomLevel.values) {
       if (level.index > masteryCeiling.index) break;
-      if (_cleanCorrectAt(level) < minPerLevel) return false;
+      if (cleanCorrectAt(level) < minPerLevel) return false;
     }
     return true;
   }
