@@ -1,0 +1,15 @@
+{
+  "skills": [
+    {"id": "g4.num.whole.place-value", "title": "Place value and total value (up to 10,000s)", "grade": 4, "strand": "Numbers", "subStrand": "Whole Numbers", "prerequisites": [], "status": "live", "kicdRef": "Gr4 Math 1.1 (a)"},
+    {"id": "g4.num.whole.read-write", "title": "Read and write numbers", "grade": 4, "strand": "Numbers", "subStrand": "Whole Numbers", "prerequisites": ["g4.num.whole.place-value"], "status": "planned", "kicdRef": "Gr4 Math 1.1 (b,c)"},
+    {"id": "g4.num.whole.order-round", "title": "Order and round numbers", "grade": 4, "strand": "Numbers", "subStrand": "Whole Numbers", "prerequisites": ["g4.num.whole.place-value"], "status": "planned", "kicdRef": "Gr4 Math 1.1 (d,e)"},
+    {"id": "g4.num.whole.factors-multiples", "title": "Factors and multiples", "grade": 4, "strand": "Numbers", "subStrand": "Whole Numbers", "prerequisites": ["g4.num.whole.place-value"], "status": "planned", "kicdRef": "Gr4 Math 1.1 (f,g)"},
+    {"id": "g4.num.add.regroup", "title": "Addition with regrouping (up to 4 digits)", "grade": 4, "strand": "Numbers", "subStrand": "Addition", "prerequisites": ["g4.num.whole.place-value"], "status": "live", "kicdRef": "Gr4 Math 1.2 (a,b,c)"},
+    {"id": "g4.num.sub.regroup", "title": "Subtraction with regrouping (up to 4 digits)", "grade": 4, "strand": "Numbers", "subStrand": "Subtraction", "prerequisites": ["g4.num.add.regroup"], "status": "planned", "kicdRef": "Gr4 Math 1.3"},
+    {"id": "g4.num.mul.two-digit", "title": "Multiplication (up to 2 digits by 2 digits)", "grade": 4, "strand": "Numbers", "subStrand": "Multiplication", "prerequisites": ["g4.num.add.regroup"], "status": "planned", "kicdRef": "Gr4 Math 1.4"},
+    {"id": "g4.num.div.one-digit", "title": "Division by a one-digit number", "grade": 4, "strand": "Numbers", "subStrand": "Division", "prerequisites": ["g4.num.mul.two-digit"], "status": "planned", "kicdRef": "Gr4 Math 1.5"},
+    {"id": "g4.num.frac.represent", "title": "Represent fractions", "grade": 4, "strand": "Numbers", "subStrand": "Fractions", "prerequisites": ["g4.num.div.one-digit"], "status": "planned", "kicdRef": "Gr4 Math 1.6 (a,b,c)"},
+    {"id": "g4.num.frac.convert", "title": "Improper and mixed fractions", "grade": 4, "strand": "Numbers", "subStrand": "Fractions", "prerequisites": ["g4.num.frac.represent"], "status": "planned", "kicdRef": "Gr4 Math 1.6 (d,e)"},
+    {"id": "g4.num.dec.tenths-hundredths", "title": "Tenths and hundredths (decimals)", "grade": 4, "strand": "Numbers", "subStrand": "Decimals", "prerequisites": ["g4.num.whole.place-value", "g4.num.frac.represent"], "status": "planned", "kicdRef": "Gr4 Math 1.7"}
+  ]
+}

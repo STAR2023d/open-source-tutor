@@ -18,6 +18,7 @@
 | `lib/theme/hesabu_colors.dart` | Semantic colours: success, try-again, hint, curriculum strands |
 | `lib/theme/theme_controller.dart` | Theme mode and larger-text setting, saved on device |
 | `lib/widgets/` | ChoiceTile, BloomLadder, FeedbackCard, MasteryBadge, SkillCard, SoftCard, VisualCard |
+| `lib/mascot/` | The buddies (Tembo, Twiga, Chui), drawn in code, plus speech bubble (see docs/buddies-and-onboarding.md) |
 | `lib/visuals/` | Teaching pictures: place value chart, column addition, bar model, number line, fractions, array grid (see docs/visuals.md) |
 
 ## Rules for contributors

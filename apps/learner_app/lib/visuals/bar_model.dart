@@ -18,7 +18,7 @@ class BarModel extends StatelessWidget {
     required this.parts,
     this.total = '?',
     this.totalLabel = 'Total',
-  }) : assert(parts.length >= 2);
+  });
 
   final List<BarPart> parts;
   final String total;
@@ -32,6 +32,8 @@ class BarModel extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // Not an initializer assert: List.length is not allowed in a const constructor.
+    assert(parts.length >= 2, 'A bar model needs at least two parts');
     final scheme = Theme.of(context).colorScheme;
     final text = Theme.of(context).textTheme;
     final sum = parts

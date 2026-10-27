@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:mastery_core/mastery_core.dart';
 
+import '../data/profile_controller.dart';
 import '../data/storage.dart';
+import '../mascot/mascot.dart';
 import '../theme/hesabu_colors.dart';
 import '../theme/theme_controller.dart';
 import '../theme/tokens.dart';
@@ -15,11 +17,13 @@ class HomeScreen extends StatefulWidget {
     required this.content,
     required this.store,
     required this.theme,
+    required this.profile,
   });
 
   final ContentBundle content;
   final ProgressStore store;
   final ThemeController theme;
+  final ProfileController profile;
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
@@ -62,7 +66,7 @@ class _HomeScreenState extends State<HomeScreen> {
             tooltip: 'Settings',
             icon: const Icon(Icons.settings_outlined),
             onPressed: () => Navigator.of(context).push(MaterialPageRoute<void>(
-              builder: (_) => SettingsScreen(theme: widget.theme),
+              builder: (_) => SettingsScreen(theme: widget.theme, profile: widget.profile),
             )),
           ),
         ],
@@ -73,7 +77,11 @@ class _HomeScreenState extends State<HomeScreen> {
           child: ListView(
             padding: const EdgeInsets.all(Space.m),
             children: [
-              _Summary(mastered: mastered, total: live.length),
+              _Summary(
+                mastered: mastered,
+                total: live.length,
+                profile: widget.profile,
+              ),
               for (final entry in groups.entries) ...[
                 _GroupHeader(
                   title: entry.key,
@@ -104,6 +112,7 @@ class _HomeScreenState extends State<HomeScreen> {
       lockedReason: missing == null ? null : 'Master "${missing.title}" first',
       onTap: () => Navigator.of(context).push(MaterialPageRoute<void>(
         builder: (_) => PracticeScreen(
+          profile: widget.profile,
           skill: skill,
           questions: widget.content.questionsFor(skill.id),
           initial: progress,
@@ -115,16 +124,22 @@ class _HomeScreenState extends State<HomeScreen> {
 }
 
 class _Summary extends StatelessWidget {
-  const _Summary({required this.mastered, required this.total});
+  const _Summary({
+    required this.mastered,
+    required this.total,
+    required this.profile,
+  });
 
   final int mastered;
   final int total;
+  final ProfileController profile;
 
   @override
   Widget build(BuildContext context) {
     final scheme = Theme.of(context).colorScheme;
     final text = Theme.of(context).textTheme;
     final value = total == 0 ? 0.0 : mastered / total;
+    final allDone = total > 0 && mastered == total;
     return Container(
       margin: const EdgeInsets.only(bottom: Space.m),
       padding: const EdgeInsets.all(Space.l),
@@ -135,14 +150,33 @@ class _Summary extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text('Grade 4 Maths',
-              style: text.headlineMedium?.copyWith(color: scheme.onPrimaryContainer)),
-          const SizedBox(height: Space.xs),
-          Text(
-            mastered == 0
-                ? 'Pick a skill and start practising!'
-                : '$mastered of $total skills mastered. Keep going!',
-            style: text.bodyLarge?.copyWith(color: scheme.onPrimaryContainer),
+          Row(
+            children: [
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text('Jambo, ${profile.displayName}!',
+                        style: text.headlineMedium
+                            ?.copyWith(color: scheme.onPrimaryContainer)),
+                    const SizedBox(height: Space.xs),
+                    Text(
+                      mastered == 0
+                          ? 'Grade 4 Maths. Pick a skill and start practising!'
+                          : '$mastered of $total skills mastered. Keep going!',
+                      style: text.bodyLarge
+                          ?.copyWith(color: scheme.onPrimaryContainer),
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(width: Space.s),
+              Mascot(
+                kind: profile.mascot,
+                mood: allDone ? MascotMood.cheer : MascotMood.happy,
+                size: 84,
+              ),
+            ],
           ),
           const SizedBox(height: Space.m),
           Semantics(

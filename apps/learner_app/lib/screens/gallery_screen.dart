@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../mascot/mascot.dart';
 import '../theme/tokens.dart';
 import '../visuals/visual_factory.dart';
 import '../widgets/visual_card.dart';
@@ -36,6 +37,20 @@ class GalleryScreen extends StatelessWidget {
           child: ListView(
             padding: const EdgeInsets.all(Space.m),
             children: [
+              section(
+                'Buddies and moods',
+                'Mascot(kind: MascotKind.tembo, mood: MascotMood.cheer)',
+                Wrap(
+                  alignment: WrapAlignment.center,
+                  spacing: Space.s,
+                  runSpacing: Space.s,
+                  children: [
+                    for (final k in MascotKind.values)
+                      for (final m in MascotMood.values)
+                        Mascot(kind: k, mood: m, size: 76),
+                  ],
+                ),
+              ),
               section(
                 'Place value chart',
                 '{"type":"placeValueChart","value":27450,"highlight":["thousands"],"showValues":true}',

@@ -1,0 +1,224 @@
+{
+  "questions": [
+    {
+      "id": "g4pv-r1",
+      "skillId": "g4.num.whole.place-value",
+      "bloom": "remember",
+      "type": "multipleChoice",
+      "prompt": "In the number 5,382, what is the place value of the digit 3?",
+      "choices": [
+        {
+          "text": "Hundreds",
+          "correct": true
+        },
+        {
+          "text": "Tens",
+          "misconception": "off_by_one_place",
+          "feedback": "Count from the right: ones, tens, hundreds. The 3 sits one place further left than the tens."
+        },
+        {
+          "text": "Thousands",
+          "misconception": "off_by_one_place",
+          "feedback": "The 5 is in the thousands place. The 3 is right next to it."
+        },
+        {
+          "text": "300",
+          "misconception": "confuses_place_and_total_value",
+          "feedback": "300 is the total value. The place value is the NAME of the place."
+        }
+      ],
+      "hints": [
+        "Write the number under the labels: Th, H, T, O.",
+        "Start from the ones place on the right."
+      ],
+      "explanation": "5,382 has 5 thousands, 3 hundreds, 8 tens and 2 ones. So the 3 is in the hundreds place.",
+      "visual": {
+        "type": "placeValueChart",
+        "value": 5382,
+        "showLabels": true,
+        "showWith": "hint"
+      }
+    },
+    {
+      "id": "g4pv-r2",
+      "skillId": "g4.num.whole.place-value",
+      "bloom": "remember",
+      "type": "multipleChoice",
+      "prompt": "Which number has the digit 4 in the ten-thousands place?",
+      "choices": [
+        {
+          "text": "45,210",
+          "correct": true
+        },
+        {
+          "text": "14,502",
+          "misconception": "wrong_place_identified",
+          "feedback": "In 14,502 the 4 is in the thousands place."
+        },
+        {
+          "text": "25,041",
+          "misconception": "wrong_place_identified",
+          "feedback": "In 25,041 the 4 is in the tens place."
+        },
+        {
+          "text": "52,104",
+          "misconception": "wrong_place_identified",
+          "feedback": "In 52,104 the 4 is in the ones place."
+        }
+      ],
+      "hints": [
+        "Ten-thousands is the 5th place from the right."
+      ],
+      "explanation": "In 45,210 the 4 is the first digit of a 5-digit number, so it is in the ten-thousands place."
+    },
+    {
+      "id": "g4pv-u1",
+      "skillId": "g4.num.whole.place-value",
+      "bloom": "understand",
+      "type": "numericInput",
+      "prompt": "What is the total value of the digit 7 in 27,450?",
+      "answer": "7000",
+      "hints": [
+        "Which place is the 7 in?",
+        "The 7 is in the thousands place. 7 thousands = ?"
+      ],
+      "explanation": "The 7 is in the thousands place, so its total value is 7 x 1,000 = 7,000.",
+      "visual": {
+        "type": "placeValueChart",
+        "value": 27450,
+        "highlight": [
+          "thousands"
+        ],
+        "showWith": "hint"
+      }
+    },
+    {
+      "id": "g4pv-u2",
+      "skillId": "g4.num.whole.place-value",
+      "bloom": "understand",
+      "type": "multipleChoice",
+      "prompt": "Which shows 36,205 broken into the total values of its digits?",
+      "choices": [
+        {
+          "text": "30,000 + 6,000 + 200 + 5",
+          "correct": true
+        },
+        {
+          "text": "3,000 + 600 + 20 + 5",
+          "misconception": "shifted_one_place",
+          "feedback": "Every part is ten times too small. The 3 is in the ten-thousands place."
+        },
+        {
+          "text": "30,000 + 6,000 + 200 + 50",
+          "misconception": "ones_as_tens",
+          "feedback": "The 5 is in the ones place, so it is just 5. There are 0 tens."
+        },
+        {
+          "text": "30,000 + 600 + 20 + 5",
+          "misconception": "mixed_place_values",
+          "feedback": "Check each digit: the 6 is in the thousands place and the 2 is in the hundreds place."
+        }
+      ],
+      "hints": [
+        "Name the place of each digit first."
+      ],
+      "explanation": "36,205 = 3 ten-thousands + 6 thousands + 2 hundreds + 0 tens + 5 ones = 30,000 + 6,000 + 200 + 5."
+    },
+    {
+      "id": "g4pv-a1",
+      "skillId": "g4.num.whole.place-value",
+      "bloom": "apply",
+      "type": "numericInput",
+      "prompt": "A library has 4 ten-thousands, 6 thousands, 0 hundreds, 5 tens and 2 ones of books. How many books is that altogether?",
+      "answer": "46052",
+      "hints": [
+        "Write each digit in its place: 4 _ _ _ _.",
+        "There are 0 hundreds, so write 0 in the hundreds place."
+      ],
+      "explanation": "40,000 + 6,000 + 0 + 50 + 2 = 46,052 books.",
+      "visual": {
+        "type": "placeValueChart",
+        "value": 46052,
+        "mode": "counters",
+        "showWith": "hint"
+      }
+    },
+    {
+      "id": "g4pv-a2",
+      "skillId": "g4.num.whole.place-value",
+      "bloom": "apply",
+      "type": "numericInput",
+      "prompt": "Write the number made of 7 ten-thousands, 0 thousands, 3 hundreds, 9 tens and 4 ones.",
+      "answer": "70394",
+      "hints": [
+        "Fill the places from the left: ten-thousands, thousands, hundreds, tens, ones."
+      ],
+      "explanation": "7 | 0 | 3 | 9 | 4 gives 70,394."
+    },
+    {
+      "id": "g4pv-an1",
+      "skillId": "g4.num.whole.place-value",
+      "bloom": "analyze",
+      "type": "multipleChoice",
+      "prompt": "Brian says 9,876 is greater than 10,234 because 9 is bigger than 1. What is wrong with his thinking?",
+      "choices": [
+        {
+          "text": "10,234 has a ten-thousands place, so it has more digits and is greater.",
+          "correct": true
+        },
+        {
+          "text": "Nothing is wrong. Brian is correct.",
+          "misconception": "compares_first_digit_only",
+          "feedback": "Compare the number of digits first. A 5-digit number is greater than a 4-digit number."
+        },
+        {
+          "text": "He should have compared the last digits instead.",
+          "misconception": "compares_last_digit",
+          "feedback": "We compare from the largest place value, not from the ones."
+        },
+        {
+          "text": "He should have added the digits of each number.",
+          "misconception": "adds_digits",
+          "feedback": "Adding digits does not tell us which number is greater."
+        }
+      ],
+      "hints": [
+        "Count the digits in each number."
+      ],
+      "explanation": "10,234 has 5 digits and 9,876 has 4 digits. A number with more digits (no leading zero) is greater."
+    },
+    {
+      "id": "g4pv-an2",
+      "skillId": "g4.num.whole.place-value",
+      "bloom": "analyze",
+      "type": "multipleChoice",
+      "prompt": "The total value of 6 in 4,365 is 60. Which number has a 6 whose total value is ten times as much?",
+      "choices": [
+        {
+          "text": "7,613",
+          "correct": true
+        },
+        {
+          "text": "6,148",
+          "misconception": "value_100x_not_10x",
+          "feedback": "The 6 here is worth 6,000. That is 100 times 60, not 10 times."
+        },
+        {
+          "text": "1,260",
+          "misconception": "same_value",
+          "feedback": "The 6 here is worth 60 again. We need a value 10 times bigger."
+        },
+        {
+          "text": "9,306",
+          "misconception": "wrong_direction",
+          "feedback": "The 6 here is worth 6. That is 10 times SMALLER than 60."
+        }
+      ],
+      "hints": [
+        "Ten times 60 is what number?",
+        "Which place is worth 600?"
+      ],
+      "explanation": "10 x 60 = 600. A 6 is worth 600 in the hundreds place, as in 7,613."
+    }
+  ]
+}
