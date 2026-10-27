@@ -40,7 +40,7 @@ void main() {
     var taps = 0;
     await tester.pumpWidget(MaterialApp(
       theme: buildTheme(Brightness.dark),
-      home: Scaffold(
+      home: const Scaffold(
         body: ChoiceTile(
           label: 'B',
           text: 'Tens',
