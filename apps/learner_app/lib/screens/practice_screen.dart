@@ -4,22 +4,28 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:mastery_core/mastery_core.dart';
 
+import '../data/profile_controller.dart';
+import '../mascot/mascot.dart';
 import '../theme/tokens.dart';
 import '../widgets/bloom_ladder.dart';
 import '../widgets/choice_tile.dart';
 import '../widgets/feedback_card.dart';
 import '../widgets/mastery_badge.dart';
+import '../visuals/visual_factory.dart';
 import '../widgets/soft_card.dart';
+import '../widgets/visual_card.dart';
 
 class PracticeScreen extends StatefulWidget {
   const PracticeScreen({
     super.key,
+    required this.profile,
     required this.skill,
     required this.questions,
     required this.initial,
     required this.onProgress,
   });
 
+  final ProfileController profile;
   final Skill skill;
   final List<Question> questions;
   final SkillProgress initial;
@@ -131,6 +137,7 @@ class _PracticeScreenState extends State<PracticeScreen> {
             ],
           ),
         ),
+        ..._visualBlock(q, answered),
         const SizedBox(height: Space.m),
         if (q.type == QuestionType.multipleChoice)
           ..._choices(q, answered)
@@ -169,6 +176,24 @@ class _PracticeScreenState extends State<PracticeScreen> {
         const SizedBox(height: Space.l),
       ],
     );
+  }
+
+  /// The teaching picture. Pictures marked `showWith: hint` appear when the
+  /// learner asks for their first hint (which costs "clean" credit) or after
+  /// answering, so they still help review.
+  List<Widget> _visualBlock(Question q, bool answered) {
+    final spec = q.visual;
+    if (spec == null) return const [];
+    final visible = spec.showWith == VisualReveal.prompt ||
+        _hintsShown >= 1 ||
+        answered;
+    if (!visible) return const [];
+    final visual = buildVisual(spec);
+    if (visual == null) return const [];
+    return [
+      const SizedBox(height: Space.m),
+      VisualCard(child: visual),
+    ];
   }
 
   List<Widget> _choices(Question q, bool answered) {
@@ -226,6 +251,25 @@ class _PracticeScreenState extends State<PracticeScreen> {
 
   Widget _feedback(Question q) {
     final r = _result!;
+    final name = widget.profile.displayName;
+    final phrases = r.correct
+        ? ['Yes! Great thinking, $name!', 'Hongera, $name! (Well done!)', 'You nailed it!', 'Brilliant, $name!']
+        : ['Not quite yet, $name. Let us look together.', 'Good try! Mistakes help us learn.', 'Almost! Read the explanation, then try the next one.'];
+    return Column(
+      children: [
+        MascotBubble(
+          kind: widget.profile.mascot,
+          mood: r.correct ? MascotMood.cheer : MascotMood.oops,
+          text: phrases[q.id.hashCode.abs() % phrases.length],
+        ),
+        const SizedBox(height: Space.s),
+        _feedbackCard(q),
+      ],
+    );
+  }
+
+  Widget _feedbackCard(Question q) {
+    final r = _result!;
     if (r.correct) {
       return FeedbackCard(
         kind: FeedbackKind.correct,
@@ -260,12 +304,12 @@ class _PracticeScreenState extends State<PracticeScreen> {
             curve: Curves.elasticOut,
             builder: (context, scale, child) =>
                 Transform.scale(scale: scale, child: child),
-            child: const Icon(Icons.emoji_events, size: 96, color: Color(0xFFFFB300)),
+            child: Mascot(kind: widget.profile.mascot, mood: MascotMood.cheer, size: 150),
           ),
           const SizedBox(height: Space.m),
           Semantics(
             liveRegion: true,
-            child: Text('Skill mastered!',
+            child: Text('Hongera, ${widget.profile.displayName}! Skill mastered!',
                 style: text.headlineMedium, textAlign: TextAlign.center),
           ),
           const SizedBox(height: Space.s),

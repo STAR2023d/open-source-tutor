@@ -1,15 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:mastery_core/mastery_core.dart';
 
+import 'data/profile_controller.dart';
 import 'data/storage.dart';
 import 'screens/home_screen.dart';
+import 'screens/onboarding_screen.dart';
 import 'theme/app_theme.dart';
 import 'theme/theme_controller.dart';
 
 class HesabuApp extends StatefulWidget {
-  const HesabuApp({super.key, required this.theme, required this.store});
+  const HesabuApp({
+    super.key,
+    required this.theme,
+    required this.profile,
+    required this.store,
+  });
 
   final ThemeController theme;
+  final ProfileController profile;
   final ProgressStore store;
 
   @override
@@ -22,7 +30,7 @@ class _HesabuAppState extends State<HesabuApp> {
   @override
   Widget build(BuildContext context) {
     return ListenableBuilder(
-      listenable: widget.theme,
+      listenable: Listenable.merge([widget.theme, widget.profile]),
       builder: (context, _) => MaterialApp(
         title: 'Hesabu',
         debugShowCheckedModeBanner: false,
@@ -42,7 +50,9 @@ class _HesabuAppState extends State<HesabuApp> {
             child: child!,
           );
         },
-        home: FutureBuilder<ContentBundle>(
+        home: !widget.profile.onboarded
+            ? OnboardingScreen(profile: widget.profile)
+            : FutureBuilder<ContentBundle>(
           future: _content,
           builder: (context, snap) {
             if (snap.hasError) {
@@ -58,6 +68,7 @@ class _HesabuAppState extends State<HesabuApp> {
               content: snap.data!,
               store: widget.store,
               theme: widget.theme,
+              profile: widget.profile,
             );
           },
         ),

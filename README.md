@@ -5,7 +5,7 @@ aligned to the national competency-based curriculum designs (KICD).
 Learners practise a skill with examples, questions and games until they show
 mastery, then move on.
 
-**Status:** pre-alpha. Grade 4 Numbers: place value and addition are live.
+**Status:** pre-alpha. Grade 4 Numbers: place value and addition are live. Themed UI, teaching pictures, a buddy and onboarding are in.
 
 ## Principles
 1. Mastery before progress: a learner moves on only after showing mastery.
@@ -21,7 +21,7 @@ mastery, then move on.
 | `packages/content_pack` | Skills and questions as JSON (CC BY-SA 4.0) |
 | `apps/learner_app` | Flutter app (web PWA + Android) |
 | `tools/validate_content.py` | Content quality gate used by CI |
-| `docs/` | Curriculum mapping and architecture decisions |
+| `docs/` | Curriculum mapping, design system, teaching pictures, buddies and onboarding, architecture decisions |
 
 ## Run it
 ```bash
