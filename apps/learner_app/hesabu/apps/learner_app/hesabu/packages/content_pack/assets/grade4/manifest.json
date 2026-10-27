@@ -1,8 +1,0 @@
-{
-  "grade": 4,
-  "skills": "skills.json",
-  "questions": [
-    "questions_place_value.json",
-    "questions_addition.json"
-  ]
-}
