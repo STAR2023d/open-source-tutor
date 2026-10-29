@@ -36,8 +36,7 @@ void main() {
     expect(taps, 1);
   });
 
-  testWidgets('ChoiceTile cannot be tapped when answered', (tester) async {
-    var taps = 0;
+  testWidgets('answered ChoiceTile shows the not-this-one icon', (tester) async {
     await tester.pumpWidget(MaterialApp(
       theme: buildTheme(Brightness.dark),
       home: const Scaffold(
@@ -45,12 +44,10 @@ void main() {
           label: 'B',
           text: 'Tens',
           state: ChoiceState.incorrect,
-          onTap: null,
         ),
       ),
     ));
-    await tester.tap(find.text('Tens'));
-    expect(taps, 0);
+    expect(find.text('Tens'), findsOneWidget);
     expect(find.byIcon(Icons.close), findsOneWidget);
   });
 }

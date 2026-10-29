@@ -1,0 +1,205 @@
+{
+  "skillId": "g4.num.add.regroup",
+  "generatedAt": "20261028T105910Z",
+  "model": "gemini:gemini-3.8-flash",
+  "promptVersion": "2026-10-v1",
+  "perLevelTarget": 6,
+  "shortfall": {
+    "understand": 4,
+    "apply": 4,
+    "analyze": 4
+  },
+  "log": [
+    "plan: existing {'remember': 2, 'understand': 2, 'apply': 2, 'analyze': 2}; need {'remember': 4, 'understand': 4, 'apply': 4, 'analyze': 4}",
+    "generate[remember]: 6 drafts",
+    "generate[understand]: FAILED network error: The read operation timed out",
+    "generate[apply]: FAILED network error: The read operation timed out",
+    "generate[analyze]: FAILED HTTP 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}\n",
+    "verify: 6 passed, 0 rejected",
+    "critic: UNAVAILABLE (HTTP 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}\n); passing on code checks only"
+  ],
+  "questions": [
+    {
+      "bloom": "remember",
+      "type": "numericInput",
+      "prompt": "Work out: 4,568 + 2,175",
+      "answer": "6743",
+      "hints": [
+        "Add column by column starting from the ones: 8 + 5 = 13.",
+        "Write 3 in the ones column and carry 1 ten over to the tens column."
+      ],
+      "explanation": "Add the ones: 8 + 5 = 13. Write 3, carry 1 ten.\nAdd the tens: 6 + 7 + 1 = 14. Write 4, carry 1 hundred.\nAdd the hundreds: 5 + 1 + 1 = 7.\nAdd the thousands: 4 + 2 = 6.\nThe answer is 6,743.",
+      "visual": {
+        "type": "columnAddition",
+        "a": 4568,
+        "b": 2175,
+        "showCarries": true,
+        "showResult": false
+      },
+      "check": {
+        "kind": "expr",
+        "givens": [
+          4568,
+          2175
+        ],
+        "expr": "4568+2175",
+        "equals": 6743
+      },
+      "_review": {
+        "status": "approved",
+        "reviewed_by": "Dan",
+        "verification": "code-verified",
+        "checks": [
+          "visual shape normalized to {type: ...}",
+          "expr 4568+2175 = 6743",
+          "expr: answer key matches recomputation",
+          "visual 'columnAddition' consistent with the prompt"
+        ],
+        "critic": null,
+        "warnings": [
+          "carries are visible with the question, which gives away the regrouping; consider showWith 'hint'"
+        ]
+      },
+      "_tid": "d1"
+    },
+    {
+      "bloom": "remember",
+      "type": "numericInput",
+      "prompt": "Work out: 5,649 + 1,783",
+      "answer": "7432",
+      "hints": [
+        "Start with the ones: 9 + 3 = 12.",
+        "Remember to add any carried amounts to the next column to the left."
+      ],
+      "explanation": "Add the ones: 9 + 3 = 12 (write 2, carry 1 ten).\nAdd the tens: 4 + 8 + 1 = 13 (write 3, carry 1 hundred).\nAdd the hundreds: 6 + 7 + 1 = 14 (write 4, carry 1 thousand).\nAdd the thousands: 5 + 1 + 1 = 7.\nSo, 5,649 + 1,783 = 7,432.",
+      "visual": {
+        "type": "columnAddition",
+        "a": 5649,
+        "b": 1783,
+        "showCarries": true,
+        "showResult": false
+      },
+      "check": {
+        "kind": "expr",
+        "givens": [
+          5649,
+          1783
+        ],
+        "expr": "5649+1783",
+        "equals": 7432
+      },
+      "_review": {
+        "status": "approved",
+        "reviewed_by": "Dan",
+        "verification": "code-verified",
+        "checks": [
+          "visual shape normalized to {type: ...}",
+          "expr 5649+1783 = 7432",
+          "expr: answer key matches recomputation",
+          "visual 'columnAddition' consistent with the prompt"
+        ],
+        "critic": null,
+        "warnings": [
+          "carries are visible with the question, which gives away the regrouping; consider showWith 'hint'"
+        ]
+      },
+      "_tid": "d3"
+    },
+    {
+      "bloom": "remember",
+      "type": "multipleChoice",
+      "prompt": "A shopkeeper counted 3,450 shillings in the morning and 2,860 shillings in the afternoon. What was the total amount collected?",
+      "choices": [
+        {
+          "text": "6,310",
+          "correct": true
+        },
+        {
+          "text": "6,210",
+          "misconception": "forgot_tens_carry",
+          "feedback": "Remember to add the 1 carried from the tens column (5 + 6 = 11) to the hundreds."
+        },
+        {
+          "text": "5,310",
+          "misconception": "forgot_hundreds_carry",
+          "feedback": "Remember to carry 1 thousand from adding the hundreds (4 + 8 + 1 = 13)."
+        },
+        {
+          "text": "5,210",
+          "misconception": "forgot_all_carries",
+          "feedback": "Be sure to add every carry digit into the next column."
+        }
+      ],
+      "hints": [
+        "Add 3,450 and 2,860 column by column.",
+        "Check the tens column: 5 + 6 = 11, so write 1 and carry 1 to the hundreds."
+      ],
+      "explanation": "Add ones: 0 + 0 = 0.\nAdd tens: 5 + 6 = 11. Write 1, carry 1 hundred.\nAdd hundreds: 4 + 8 + 1 = 13. Write 3, carry 1 thousand.\nAdd thousands: 3 + 2 + 1 = 6.\nTotal = 6,310 shillings.",
+      "check": {
+        "kind": "expr",
+        "givens": [
+          3450,
+          2860
+        ],
+        "expr": "3450+2860",
+        "equals": 6310
+      },
+      "_review": {
+        "status": "approved",
+        "reviewed_by": "Dan",
+        "verification": "code-verified",
+        "checks": [
+          "expr 3450+2860 = 6310",
+          "expr: correct choice matches recomputation"
+        ],
+        "critic": null,
+        "warnings": []
+      },
+      "_tid": "d4"
+    },
+    {
+      "bloom": "remember",
+      "type": "numericInput",
+      "prompt": "Work out: 6,387 + 2,945",
+      "answer": "9332",
+      "hints": [
+        "Start by adding 7 + 5 in the ones column.",
+        "Remember to regroup after every column whose sum is 10 or more."
+      ],
+      "explanation": "Add ones: 7 + 5 = 12. Write 2, carry 1 ten.\nAdd tens: 8 + 4 + 1 = 13. Write 3, carry 1 hundred.\nAdd hundreds: 3 + 9 + 1 = 13. Write 3, carry 1 thousand.\nAdd thousands: 6 + 2 + 1 = 9.\nThe answer is 9,332.",
+      "visual": {
+        "type": "columnAddition",
+        "a": 6387,
+        "b": 2945,
+        "showCarries": true,
+        "showResult": false
+      },
+      "check": {
+        "kind": "expr",
+        "givens": [
+          6387,
+          2945
+        ],
+        "expr": "6387+2945",
+        "equals": 9332
+      },
+      "_review": {
+        "status": "approved",
+        "reviewed_by": "Dan",
+        "verification": "code-verified",
+        "checks": [
+          "visual shape normalized to {type: ...}",
+          "expr 6387+2945 = 9332",
+          "expr: answer key matches recomputation",
+          "visual 'columnAddition' consistent with the prompt"
+        ],
+        "critic": null,
+        "warnings": [
+          "carries are visible with the question, which gives away the regrouping; consider showWith 'hint'"
+        ]
+      },
+      "_tid": "d5"
+    }
+  ],
+  "rejected": []
+}

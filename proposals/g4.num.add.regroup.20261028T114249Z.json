@@ -1,0 +1,122 @@
+{
+  "skillId": "g4.num.add.regroup",
+  "generatedAt": "20261028T114249Z",
+  "model": "gemini:gemini-3.6-flash",
+  "promptVersion": "2026-10-v1",
+  "perLevelTarget": 4,
+  "shortfall": {
+    "remember": 2,
+    "understand": 2,
+    "analyze": 2
+  },
+  "log": [
+    "plan: existing {'remember': 2, 'understand': 2, 'apply': 2, 'analyze': 2}; need {'remember': 2, 'understand': 2, 'apply': 2, 'analyze': 2}",
+    "generate[remember]: FAILED HTTP 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}\n",
+    "generate[understand]: FAILED HTTP 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}\n",
+    "generate[apply]: 3 drafts",
+    "generate[analyze]: FAILED HTTP 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}\n",
+    "verify: 3 passed, 0 rejected",
+    "critic: reviewed 3/3",
+    "revise: FAILED for d3: HTTP 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}\n",
+    "revise (attempt 1): 0 revised drafts",
+    "verify: 0 passed, 0 rejected",
+    "critic: nothing to review"
+  ],
+  "questions": [
+    {
+      "bloom": "apply",
+      "type": "multipleChoice",
+      "prompt": "A shopkeeper in Nakuru earned 3,468 shillings on Monday and 2,755 shillings on Tuesday. How many shillings did she earn in total over the two days?",
+      "choices": [
+        {
+          "text": "6,223",
+          "correct": true
+        },
+        {
+          "text": "5,223",
+          "misconception": "forgot_thousands_carry",
+          "feedback": "Don't forget to add the 1 carried over to the thousands column: 1 + 3 + 2 = 6."
+        },
+        {
+          "text": "6,213",
+          "misconception": "forgot_tens_carry",
+          "feedback": "When you add 6 tens + 5 tens + 1 carried ten, you get 12 tens, so the tens digit should be 2."
+        },
+        {
+          "text": "6,123",
+          "misconception": "forgot_hundreds_carry",
+          "feedback": "When you add 4 hundreds + 7 hundreds + 1 carried hundred, you get 12 hundreds, so the hundreds digit should be 2."
+        }
+      ],
+      "hints": [
+        "Set up vertical addition: 3,468 + 2,755.",
+        "Add from right to left, carrying 1 whenever a column sum is 10 or more."
+      ],
+      "explanation": "Add column by column:\nOnes: 8 + 5 = 13 (write 3, carry 1)\nTens: 6 + 5 + 1 = 12 (write 2, carry 1)\nHundreds: 4 + 7 + 1 = 12 (write 2, carry 1)\nThousands: 3 + 2 + 1 = 6\n\nTotal earnings = 6,223 shillings.",
+      "check": {
+        "kind": "expr",
+        "givens": [
+          3468,
+          2755
+        ],
+        "expr": "3468+2755",
+        "equals": 6223
+      },
+      "_review": {
+        "status": "pending",
+        "reviewed_by": null,
+        "verification": "code-verified",
+        "checks": [
+          "expr 3468+2755 = 6223",
+          "expr: correct choice matches recomputation",
+          "regrouping present"
+        ],
+        "critic": {
+          "id": "d1",
+          "ok": true,
+          "issues": []
+        },
+        "warnings": []
+      },
+      "_tid": "d1"
+    },
+    {
+      "bloom": "apply",
+      "type": "numericInput",
+      "prompt": "Mr. Kamau planted 1,847 avocado trees and 2,565 mango trees on his shamba. How many trees did he plant altogether?",
+      "answer": "4412",
+      "hints": [
+        "Add 1,847 + 2,565.",
+        "Start by adding the ones column: 7 + 5 = 12 ones (write 2, regroup 1 ten)."
+      ],
+      "explanation": "Add step by step from right to left:\nOnes: 7 + 5 = 12 (write 2, carry 1)\nTens: 4 + 6 + 1 = 11 (write 1, carry 1)\nHundreds: 8 + 5 + 1 = 14 (write 4, carry 1)\nThousands: 1 + 2 + 1 = 4\n\n1,847 + 2,565 = 4,412 trees.",
+      "check": {
+        "kind": "expr",
+        "givens": [
+          1847,
+          2565
+        ],
+        "expr": "1847+2565",
+        "equals": 4412
+      },
+      "_review": {
+        "status": "pending",
+        "reviewed_by": null,
+        "verification": "code-verified",
+        "checks": [
+          "expr 1847+2565 = 4412",
+          "expr: answer key matches recomputation",
+          "regrouping present"
+        ],
+        "critic": {
+          "id": "d2",
+          "ok": true,
+          "issues": []
+        },
+        "warnings": []
+      },
+      "_tid": "d2"
+    }
+  ],
+  "rejected": []
+}

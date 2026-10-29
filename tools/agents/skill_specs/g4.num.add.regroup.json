@@ -1,0 +1,7 @@
+{
+  "max_value": 9999,
+  "max_result": 10000,
+  "regroup_required_levels": ["apply", "analyze"],
+  "contexts": ["shillings and shop sales", "shamba and trees", "school library books", "matatu passengers"],
+  "notes": "Grade 4: add whole numbers up to 4 digits with regrouping; estimate by rounding to the nearest ten. Sums stay at or below 10,000."
+}

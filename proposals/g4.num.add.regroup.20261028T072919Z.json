@@ -1,0 +1,673 @@
+{
+  "skillId": "g4.num.add.regroup",
+  "generatedAt": "20261028T072919Z",
+  "model": "template-offline(seed=1)",
+  "promptVersion": "2026-10-v1",
+  "perLevelTarget": 6,
+  "shortfall": {},
+  "log": [
+    "plan: existing {'remember': 2, 'understand': 2, 'apply': 2, 'analyze': 2}; need {'remember': 4, 'understand': 4, 'apply': 4, 'analyze': 4}",
+    "generate[remember]: 6 drafts",
+    "generate[understand]: 6 drafts",
+    "generate[apply]: 6 drafts",
+    "generate[analyze]: 6 drafts",
+    "verify: 24 passed, 0 rejected",
+    "critic: reviewed 24/24"
+  ],
+  "questions": [
+    {
+      "bloom": "remember",
+      "type": "numericInput",
+      "prompt": "Work out: 2,100 + 5,662",
+      "answer": "7762",
+      "hints": [
+        "Add the ones first, then the tens, hundreds and thousands."
+      ],
+      "explanation": "Add column by column: 2,100 + 5,662 = 7,762. No regrouping is needed.",
+      "check": {
+        "kind": "expr",
+        "givens": [
+          2100,
+          5662
+        ],
+        "expr": "2100+5662",
+        "equals": 7762
+      },
+      "_review": {
+        "status": "pending",
+        "reviewed_by": null,
+        "verification": "code-verified",
+        "checks": [
+          "expr 2100+5662 = 7762",
+          "expr: answer key matches recomputation"
+        ],
+        "critic": {
+          "id": "d1",
+          "ok": true,
+          "issues": []
+        }
+      },
+      "_tid": "d1"
+    },
+    {
+      "bloom": "remember",
+      "type": "numericInput",
+      "prompt": "Work out: 1,017 + 6,700",
+      "answer": "7717",
+      "hints": [
+        "Add the ones first, then the tens, hundreds and thousands."
+      ],
+      "explanation": "Add column by column: 1,017 + 6,700 = 7,717. No regrouping is needed.",
+      "check": {
+        "kind": "expr",
+        "givens": [
+          1017,
+          6700
+        ],
+        "expr": "1017+6700",
+        "equals": 7717
+      },
+      "_review": {
+        "status": "pending",
+        "reviewed_by": null,
+        "verification": "code-verified",
+        "checks": [
+          "expr 1017+6700 = 7717",
+          "expr: answer key matches recomputation"
+        ],
+        "critic": {
+          "id": "d2",
+          "ok": true,
+          "issues": []
+        }
+      },
+      "_tid": "d2"
+    },
+    {
+      "bloom": "remember",
+      "type": "numericInput",
+      "prompt": "Work out: 1,208 + 6,321",
+      "answer": "7529",
+      "hints": [
+        "Add the ones first, then the tens, hundreds and thousands."
+      ],
+      "explanation": "Add column by column: 1,208 + 6,321 = 7,529. No regrouping is needed.",
+      "check": {
+        "kind": "expr",
+        "givens": [
+          1208,
+          6321
+        ],
+        "expr": "1208+6321",
+        "equals": 7529
+      },
+      "_review": {
+        "status": "pending",
+        "reviewed_by": null,
+        "verification": "code-verified",
+        "checks": [
+          "expr 1208+6321 = 7529",
+          "expr: answer key matches recomputation"
+        ],
+        "critic": {
+          "id": "d3",
+          "ok": true,
+          "issues": []
+        }
+      },
+      "_tid": "d3"
+    },
+    {
+      "bloom": "remember",
+      "type": "numericInput",
+      "prompt": "Work out: 1,237 + 5,322",
+      "answer": "6559",
+      "hints": [
+        "Add the ones first, then the tens, hundreds and thousands."
+      ],
+      "explanation": "Add column by column: 1,237 + 5,322 = 6,559. No regrouping is needed.",
+      "check": {
+        "kind": "expr",
+        "givens": [
+          1237,
+          5322
+        ],
+        "expr": "1237+5322",
+        "equals": 6559
+      },
+      "_review": {
+        "status": "pending",
+        "reviewed_by": null,
+        "verification": "code-verified",
+        "checks": [
+          "expr 1237+5322 = 6559",
+          "expr: answer key matches recomputation"
+        ],
+        "critic": {
+          "id": "d4",
+          "ok": true,
+          "issues": []
+        }
+      },
+      "_tid": "d4"
+    },
+    {
+      "bloom": "understand",
+      "type": "numericInput",
+      "prompt": "Estimate 4,101 + 1,221 by rounding each number to the nearest ten first. What is your estimate?",
+      "answer": "5320",
+      "hints": [
+        "4,101 rounds to 4,100.",
+        "1,221 rounds to 1,220."
+      ],
+      "explanation": "4,100 + 1,220 = 5,320. The exact answer is 5,322, so the estimate is close.",
+      "check": {
+        "kind": "expr",
+        "givens": [
+          4101,
+          1221
+        ],
+        "expr": "round_to(4101,10)+round_to(1221,10)",
+        "equals": 5320
+      },
+      "_review": {
+        "status": "pending",
+        "reviewed_by": null,
+        "verification": "code-verified",
+        "checks": [
+          "expr round_to(4101,10)+round_to(1221,10) = 5320",
+          "expr: answer key matches recomputation"
+        ],
+        "critic": {
+          "id": "d7",
+          "ok": true,
+          "issues": []
+        }
+      },
+      "_tid": "d7"
+    },
+    {
+      "bloom": "understand",
+      "type": "numericInput",
+      "prompt": "Estimate 3,022 + 1,278 by rounding each number to the nearest ten first. What is your estimate?",
+      "answer": "4300",
+      "hints": [
+        "3,022 rounds to 3,020.",
+        "1,278 rounds to 1,280."
+      ],
+      "explanation": "3,020 + 1,280 = 4,300.",
+      "check": {
+        "kind": "expr",
+        "givens": [
+          3022,
+          1278
+        ],
+        "expr": "round_to(3022,10)+round_to(1278,10)",
+        "equals": 4300
+      },
+      "_review": {
+        "status": "pending",
+        "reviewed_by": null,
+        "verification": "code-verified",
+        "checks": [
+          "expr round_to(3022,10)+round_to(1278,10) = 4300",
+          "expr: answer key matches recomputation"
+        ],
+        "critic": {
+          "id": "d8",
+          "ok": true,
+          "issues": []
+        }
+      },
+      "_tid": "d8"
+    },
+    {
+      "bloom": "understand",
+      "type": "numericInput",
+      "prompt": "Estimate 2,363 + 3,981 by rounding each number to the nearest ten first. What is your estimate?",
+      "answer": "6340",
+      "hints": [
+        "2,363 rounds to 2,360.",
+        "3,981 rounds to 3,980."
+      ],
+      "explanation": "2,360 + 3,980 = 6,340. The exact answer is 6,344, so the estimate is close.",
+      "check": {
+        "kind": "expr",
+        "givens": [
+          2363,
+          3981
+        ],
+        "expr": "round_to(2363,10)+round_to(3981,10)",
+        "equals": 6340
+      },
+      "_review": {
+        "status": "pending",
+        "reviewed_by": null,
+        "verification": "code-verified",
+        "checks": [
+          "expr round_to(2363,10)+round_to(3981,10) = 6340",
+          "expr: answer key matches recomputation"
+        ],
+        "critic": {
+          "id": "d9",
+          "ok": true,
+          "issues": []
+        }
+      },
+      "_tid": "d9"
+    },
+    {
+      "bloom": "understand",
+      "type": "numericInput",
+      "prompt": "Estimate 4,574 + 3,618 by rounding each number to the nearest ten first. What is your estimate?",
+      "answer": "8190",
+      "hints": [
+        "4,574 rounds to 4,570.",
+        "3,618 rounds to 3,620."
+      ],
+      "explanation": "4,570 + 3,620 = 8,190. The exact answer is 8,192, so the estimate is close.",
+      "check": {
+        "kind": "expr",
+        "givens": [
+          4574,
+          3618
+        ],
+        "expr": "round_to(4574,10)+round_to(3618,10)",
+        "equals": 8190
+      },
+      "_review": {
+        "status": "pending",
+        "reviewed_by": null,
+        "verification": "code-verified",
+        "checks": [
+          "expr round_to(4574,10)+round_to(3618,10) = 8190",
+          "expr: answer key matches recomputation"
+        ],
+        "critic": {
+          "id": "d10",
+          "ok": true,
+          "issues": []
+        }
+      },
+      "_tid": "d10"
+    },
+    {
+      "bloom": "apply",
+      "type": "numericInput",
+      "prompt": "Wanjiru has 2,895 trees on her farm and plants 2,190 more. How many trees does she have now?",
+      "answer": "5085",
+      "hints": [
+        "Add the two numbers. Start with the ones.",
+        "When a column adds to 10 or more, regroup."
+      ],
+      "explanation": "2,895 + 2,190 = 5,085.",
+      "check": {
+        "kind": "expr",
+        "givens": [
+          2895,
+          2190
+        ],
+        "expr": "2895+2190",
+        "equals": 5085
+      },
+      "_review": {
+        "status": "pending",
+        "reviewed_by": null,
+        "verification": "code-verified",
+        "checks": [
+          "expr 2895+2190 = 5085",
+          "expr: answer key matches recomputation",
+          "regrouping present"
+        ],
+        "critic": {
+          "id": "d13",
+          "ok": true,
+          "issues": []
+        }
+      },
+      "_tid": "d13"
+    },
+    {
+      "bloom": "apply",
+      "type": "numericInput",
+      "prompt": "Wanjiru has 5,920 trees on her farm and plants 3,745 more. How many trees does she have now?",
+      "answer": "9665",
+      "hints": [
+        "Add the two numbers. Start with the ones.",
+        "When a column adds to 10 or more, regroup."
+      ],
+      "explanation": "5,920 + 3,745 = 9,665.",
+      "check": {
+        "kind": "expr",
+        "givens": [
+          5920,
+          3745
+        ],
+        "expr": "5920+3745",
+        "equals": 9665
+      },
+      "_review": {
+        "status": "pending",
+        "reviewed_by": null,
+        "verification": "code-verified",
+        "checks": [
+          "expr 5920+3745 = 9665",
+          "expr: answer key matches recomputation",
+          "regrouping present"
+        ],
+        "critic": {
+          "id": "d14",
+          "ok": true,
+          "issues": []
+        }
+      },
+      "_tid": "d14"
+    },
+    {
+      "bloom": "apply",
+      "type": "numericInput",
+      "prompt": "A school library has 4,813 books and receives 3,604 new books. How many books does it have now?",
+      "answer": "8417",
+      "hints": [
+        "Add the two numbers. Start with the ones.",
+        "When a column adds to 10 or more, regroup."
+      ],
+      "explanation": "4,813 + 3,604 = 8,417.",
+      "check": {
+        "kind": "expr",
+        "givens": [
+          4813,
+          3604
+        ],
+        "expr": "4813+3604",
+        "equals": 8417
+      },
+      "_review": {
+        "status": "pending",
+        "reviewed_by": null,
+        "verification": "code-verified",
+        "checks": [
+          "expr 4813+3604 = 8417",
+          "expr: answer key matches recomputation",
+          "regrouping present"
+        ],
+        "critic": {
+          "id": "d15",
+          "ok": true,
+          "issues": []
+        }
+      },
+      "_tid": "d15"
+    },
+    {
+      "bloom": "apply",
+      "type": "numericInput",
+      "prompt": "A school library has 4,394 books and receives 3,380 new books. How many books does it have now?",
+      "answer": "7774",
+      "hints": [
+        "Add the two numbers. Start with the ones.",
+        "When a column adds to 10 or more, regroup."
+      ],
+      "explanation": "4,394 + 3,380 = 7,774.",
+      "check": {
+        "kind": "expr",
+        "givens": [
+          4394,
+          3380
+        ],
+        "expr": "4394+3380",
+        "equals": 7774
+      },
+      "_review": {
+        "status": "pending",
+        "reviewed_by": null,
+        "verification": "code-verified",
+        "checks": [
+          "expr 4394+3380 = 7774",
+          "expr: answer key matches recomputation",
+          "regrouping present"
+        ],
+        "critic": {
+          "id": "d16",
+          "ok": true,
+          "issues": []
+        }
+      },
+      "_tid": "d16"
+    },
+    {
+      "bloom": "analyze",
+      "type": "multipleChoice",
+      "prompt": "Which sum is greater: 5,423 + 348 or 2,832 + 5,165?",
+      "choices": [
+        {
+          "text": "2,832 + 5,165",
+          "correct": true
+        },
+        {
+          "text": "5,423 + 348",
+          "misconception": "bigger_first_number_wins",
+          "feedback": "The first number is bigger, but the second number is much smaller. Add to check."
+        },
+        {
+          "text": "They are equal.",
+          "misconception": "assumes_equal",
+          "feedback": "Estimate each sum by rounding. They are not close to equal."
+        },
+        {
+          "text": "You cannot tell without using a calculator.",
+          "misconception": "avoids_estimation",
+          "feedback": "Rounding the numbers lets you compare without a calculator."
+        }
+      ],
+      "hints": [
+        "Round each number, then add the rounded numbers."
+      ],
+      "explanation": "5,423 + 348 = 5,771 and 2,832 + 5,165 = 7,997. The greater sum is 7,997.",
+      "check": {
+        "kind": "expr",
+        "givens": [
+          5423,
+          348,
+          2832,
+          5165
+        ],
+        "expr": "max(5423+348,2832+5165)",
+        "equals": 7997
+      },
+      "_review": {
+        "status": "pending",
+        "reviewed_by": null,
+        "verification": "code-verified",
+        "checks": [
+          "expr max(5423+348,2832+5165) = 7997",
+          "expr: correct choice evaluates to the computed value; no wrong choice does"
+        ],
+        "critic": {
+          "id": "d20",
+          "ok": true,
+          "issues": []
+        }
+      },
+      "_tid": "d20"
+    },
+    {
+      "bloom": "analyze",
+      "type": "multipleChoice",
+      "prompt": "Which sum is greater: 5,563 + 399 or 2,185 + 4,893?",
+      "choices": [
+        {
+          "text": "2,185 + 4,893",
+          "correct": true
+        },
+        {
+          "text": "5,563 + 399",
+          "misconception": "bigger_first_number_wins",
+          "feedback": "The first number is bigger, but the second number is much smaller. Add to check."
+        },
+        {
+          "text": "They are equal.",
+          "misconception": "assumes_equal",
+          "feedback": "Estimate each sum by rounding. They are not close to equal."
+        },
+        {
+          "text": "You cannot tell without using a calculator.",
+          "misconception": "avoids_estimation",
+          "feedback": "Rounding the numbers lets you compare without a calculator."
+        }
+      ],
+      "hints": [
+        "Round each number, then add the rounded numbers."
+      ],
+      "explanation": "5,563 + 399 = 5,962 and 2,185 + 4,893 = 7,078. The greater sum is 7,078.",
+      "check": {
+        "kind": "expr",
+        "givens": [
+          5563,
+          399,
+          2185,
+          4893
+        ],
+        "expr": "max(5563+399,2185+4893)",
+        "equals": 7078
+      },
+      "_review": {
+        "status": "pending",
+        "reviewed_by": null,
+        "verification": "code-verified",
+        "checks": [
+          "expr max(5563+399,2185+4893) = 7078",
+          "expr: correct choice evaluates to the computed value; no wrong choice does"
+        ],
+        "critic": {
+          "id": "d23",
+          "ok": true,
+          "issues": []
+        }
+      },
+      "_tid": "d23"
+    },
+    {
+      "bloom": "analyze",
+      "type": "multipleChoice",
+      "prompt": "Which sum is greater: 5,816 + 230 or 2,033 + 5,489?",
+      "choices": [
+        {
+          "text": "2,033 + 5,489",
+          "correct": true
+        },
+        {
+          "text": "5,816 + 230",
+          "misconception": "bigger_first_number_wins",
+          "feedback": "The first number is bigger, but the second number is much smaller. Add to check."
+        },
+        {
+          "text": "They are equal.",
+          "misconception": "assumes_equal",
+          "feedback": "Estimate each sum by rounding. They are not close to equal."
+        },
+        {
+          "text": "You cannot tell without using a calculator.",
+          "misconception": "avoids_estimation",
+          "feedback": "Rounding the numbers lets you compare without a calculator."
+        }
+      ],
+      "hints": [
+        "Round each number, then add the rounded numbers."
+      ],
+      "explanation": "5,816 + 230 = 6,046 and 2,033 + 5,489 = 7,522. The greater sum is 7,522.",
+      "check": {
+        "kind": "expr",
+        "givens": [
+          5816,
+          230,
+          2033,
+          5489
+        ],
+        "expr": "max(5816+230,2033+5489)",
+        "equals": 7522
+      },
+      "_review": {
+        "status": "pending",
+        "reviewed_by": null,
+        "verification": "code-verified",
+        "checks": [
+          "expr max(5816+230,2033+5489) = 7522",
+          "expr: correct choice evaluates to the computed value; no wrong choice does"
+        ],
+        "critic": {
+          "id": "d24",
+          "ok": true,
+          "issues": []
+        }
+      },
+      "_tid": "d24"
+    },
+    {
+      "bloom": "analyze",
+      "type": "multipleChoice",
+      "prompt": "Otieno says 2,993 + 3,834 = 5,727. The correct answer is 6,827. What mistake did Otieno make?",
+      "choices": [
+        {
+          "text": "They wrote the regrouped digits but forgot to add them into the next column.",
+          "correct": true
+        },
+        {
+          "text": "They added the ones column wrongly.",
+          "misconception": "wrong_diagnosis_ones",
+          "feedback": "Look again: the ones digit 7 is right."
+        },
+        {
+          "text": "They should have subtracted.",
+          "misconception": "wrong_operation",
+          "feedback": "The problem says add."
+        },
+        {
+          "text": "Nothing. Their answer is correct.",
+          "misconception": "accepts_wrong_answer",
+          "feedback": "Estimate first: the answer should be close to the correct one."
+        }
+      ],
+      "hints": [
+        "Estimate first: is the answer close to the correct one?",
+        "Check each column and the regrouped digit."
+      ],
+      "explanation": "2,993 + 3,834 = 6,827. Otieno forgot to add each regrouped digit into the next column, so the answer came out too small.",
+      "visual": {
+        "type": "columnAddition",
+        "a": 2993,
+        "b": 3834,
+        "showCarries": true,
+        "showResult": true,
+        "showWith": "hint"
+      },
+      "check": {
+        "kind": "expr",
+        "givens": [
+          2993,
+          3834
+        ],
+        "expr": "2993+3834",
+        "equals": 6827
+      },
+      "_review": {
+        "status": "pending",
+        "reviewed_by": null,
+        "verification": "human-only",
+        "checks": [
+          "expr 2993+3834 = 6827",
+          "expr: value verified, but a human must confirm the marked option is the right one",
+          "regrouping present",
+          "visual 'columnAddition' consistent with the prompt"
+        ],
+        "critic": {
+          "id": "d19",
+          "ok": true,
+          "issues": []
+        }
+      },
+      "_tid": "d19"
+    }
+  ],
+  "rejected": []
+}

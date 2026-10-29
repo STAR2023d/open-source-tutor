@@ -21,6 +21,7 @@ mastery, then move on.
 | `packages/content_pack` | Skills and questions as JSON (CC BY-SA 4.0) |
 | `apps/learner_app` | Flutter app (web PWA + Android) |
 | `tools/validate_content.py` | Content quality gate used by CI |
+| `tools/agents` | LangGraph pipeline: draft, verify, critique, human review, promote (see its README) |
 | `docs/` | Curriculum mapping, design system, teaching pictures, buddies and onboarding, architecture decisions |
 
 ## Run it
@@ -33,4 +34,4 @@ flutter pub get && flutter run -d chrome
 ```
 
 ## Licences
-Code: Apache-2.0 (add `LICENSE`). Content in `packages/content_pack`: CC BY-SA 4.0.
+Code: Apache-2.0 (add `LICENSE`, see SHIPPING notes in the project chat or run `curl -o LICENSE https://www.apache.org/licenses/LICENSE-2.0.txt`). Content in `packages/content_pack`: CC BY-SA 4.0.
