@@ -1,0 +1,426 @@
+{
+  "skills": [
+    {
+      "id": "g5.num.whole.place-value",
+      "title": "Place value up to hundreds of thousands",
+      "grade": 5,
+      "strand": "Numbers",
+      "subStrand": "Whole Numbers",
+      "prerequisites": [
+        "g4.num.whole.place-value"
+      ],
+      "status": "planned",
+      "kicdRef": "Gr5 Math 1.1 (a,b)",
+      "scope": "Place value and total value of digits up to hundreds of thousands; numbers up to hundreds of thousands in symbols."
+    },
+    {
+      "id": "g5.num.whole.read-order-round",
+      "title": "Read, order and round bigger numbers",
+      "grade": 5,
+      "strand": "Numbers",
+      "subStrand": "Whole Numbers",
+      "prerequisites": [
+        "g5.num.whole.place-value",
+        "g4.num.whole.read-write",
+        "g4.num.whole.order-round"
+      ],
+      "status": "planned",
+      "kicdRef": "Gr5 Math 1.1 (c,d,e)",
+      "scope": "Read and write numbers up to tens of thousands in words; order numbers up to tens of thousands; round to the nearest hundred and thousand."
+    },
+    {
+      "id": "g5.num.whole.divisibility",
+      "title": "Divisibility tests for 2, 5 and 10",
+      "grade": 5,
+      "strand": "Numbers",
+      "subStrand": "Whole Numbers",
+      "prerequisites": [
+        "g4.num.whole.factors-multiples"
+      ],
+      "status": "planned",
+      "kicdRef": "Gr5 Math 1.1 (f)",
+      "scope": "Apply divisibility tests of 2, 5 and 10."
+    },
+    {
+      "id": "g5.num.whole.hcf-gcd",
+      "title": "Highest common factor (HCF/GCD)",
+      "grade": 5,
+      "strand": "Numbers",
+      "subStrand": "Whole Numbers",
+      "prerequisites": [
+        "g4.num.whole.factors-multiples"
+      ],
+      "status": "planned",
+      "kicdRef": "Gr5 Math 1.1 (g)",
+      "scope": "Find the highest common factor (greatest common divisor) of numbers."
+    },
+    {
+      "id": "g5.num.whole.lcm",
+      "title": "Least common multiple (LCM)",
+      "grade": 5,
+      "strand": "Numbers",
+      "subStrand": "Whole Numbers",
+      "prerequisites": [
+        "g4.num.whole.factors-multiples"
+      ],
+      "status": "planned",
+      "kicdRef": "Gr5 Math 1.1 (h)",
+      "scope": "Find the least common multiple of numbers."
+    },
+    {
+      "id": "g5.num.add.six-digit",
+      "title": "Add up to 6-digit numbers",
+      "grade": 5,
+      "strand": "Numbers",
+      "subStrand": "Addition",
+      "prerequisites": [
+        "g4.num.add.regroup",
+        "g5.num.whole.place-value"
+      ],
+      "status": "planned",
+      "kicdRef": "Gr5 Math 1.2 (a-d)",
+      "scope": "Add up to three 6-digit numbers without regrouping and two 6-digit numbers with double regrouping (sums up to 1,000,000); estimate by rounding to the nearest hundred and thousand; addition patterns."
+    },
+    {
+      "id": "g5.num.sub.six-digit",
+      "title": "Subtract up to 6-digit numbers",
+      "grade": 5,
+      "strand": "Numbers",
+      "subStrand": "Subtraction",
+      "prerequisites": [
+        "g4.num.sub.regroup",
+        "g5.num.add.six-digit"
+      ],
+      "status": "planned",
+      "kicdRef": "Gr5 Math 1.3 (a-e)",
+      "scope": "Subtract up to 6-digit numbers without and with regrouping; estimate differences; combined addition and subtraction; subtraction patterns."
+    },
+    {
+      "id": "g5.num.mul.three-by-two",
+      "title": "Multiply 3-digit by 2-digit numbers",
+      "grade": 5,
+      "strand": "Numbers",
+      "subStrand": "Multiplication",
+      "prerequisites": [
+        "g4.num.mul.two-digit"
+      ],
+      "status": "planned",
+      "kicdRef": "Gr5 Math 1.4 (a,b,c)",
+      "scope": "Multiply up to a 3-digit number by up to a 2-digit number; estimate products by rounding to the nearest ten; multiplication patterns with products up to 100."
+    },
+    {
+      "id": "g5.num.div.three-by-two",
+      "title": "Divide 3-digit by 2-digit numbers",
+      "grade": 5,
+      "strand": "Numbers",
+      "subStrand": "Division",
+      "prerequisites": [
+        "g4.num.div.one-digit",
+        "g5.num.mul.three-by-two"
+      ],
+      "status": "planned",
+      "kicdRef": "Gr5 Math 1.5 (a,b,c)",
+      "scope": "Divide up to a 3-digit number by up to a 2-digit number; relate multiplication and division; estimate quotients by rounding to the nearest ten."
+    },
+    {
+      "id": "g5.num.ops.combined",
+      "title": "Combined operations",
+      "grade": 5,
+      "strand": "Numbers",
+      "subStrand": "Division",
+      "prerequisites": [
+        "g5.num.sub.six-digit",
+        "g5.num.mul.three-by-two",
+        "g5.num.div.three-by-two"
+      ],
+      "status": "planned",
+      "kicdRef": "Gr5 Math 1.5 (d)",
+      "scope": "Combined operations of addition, subtraction, multiplication and division of whole numbers."
+    },
+    {
+      "id": "g5.num.frac.equivalent-simplify",
+      "title": "Equivalent fractions and simplifying",
+      "grade": 5,
+      "strand": "Numbers",
+      "subStrand": "Fractions",
+      "prerequisites": [
+        "g4.num.frac.represent",
+        "g5.num.whole.hcf-gcd"
+      ],
+      "status": "planned",
+      "kicdRef": "Gr5 Math 1.6 (a)",
+      "scope": "Identify equivalent fractions and simplify fractions."
+    },
+    {
+      "id": "g5.num.frac.compare-order",
+      "title": "Compare and order fractions",
+      "grade": 5,
+      "strand": "Numbers",
+      "subStrand": "Fractions",
+      "prerequisites": [
+        "g5.num.frac.equivalent-simplify"
+      ],
+      "status": "planned",
+      "kicdRef": "Gr5 Math 1.6 (b,c)",
+      "scope": "Compare fractions and order fractions with denominators not exceeding 12."
+    },
+    {
+      "id": "g5.num.frac.add-sub",
+      "title": "Add and subtract fractions",
+      "grade": 5,
+      "strand": "Numbers",
+      "subStrand": "Fractions",
+      "prerequisites": [
+        "g5.num.frac.equivalent-simplify"
+      ],
+      "status": "planned",
+      "kicdRef": "Gr5 Math 1.6 (d-g)",
+      "scope": "Add and subtract fractions with the same denominator and with one renaming."
+    },
+    {
+      "id": "g5.num.dec.thousandths",
+      "title": "Decimals: place value and order",
+      "grade": 5,
+      "strand": "Numbers",
+      "subStrand": "Decimals",
+      "prerequisites": [
+        "g4.num.dec.tenths-hundredths"
+      ],
+      "status": "planned",
+      "kicdRef": "Gr5 Math 1.7 (a,b)",
+      "scope": "Place value of decimals up to thousandths; order decimals up to thousandths."
+    },
+    {
+      "id": "g5.num.dec.add-sub",
+      "title": "Add and subtract decimals",
+      "grade": 5,
+      "strand": "Numbers",
+      "subStrand": "Decimals",
+      "prerequisites": [
+        "g5.num.dec.thousandths",
+        "g4.num.add.regroup",
+        "g4.num.sub.regroup"
+      ],
+      "status": "planned",
+      "kicdRef": "Gr5 Math 1.7 (c,d)",
+      "scope": "Add and subtract decimals up to thousandths."
+    },
+    {
+      "id": "g5.num.equations.simple",
+      "title": "Simple equations",
+      "grade": 5,
+      "strand": "Numbers",
+      "subStrand": "Simple Equations",
+      "prerequisites": [
+        "g4.num.letters.expressions"
+      ],
+      "status": "planned",
+      "kicdRef": "Gr5 Math 1.8 (a,b)",
+      "scope": "Form and solve simple equations with one unknown from real-life situations."
+    },
+    {
+      "id": "g5.meas.length.km",
+      "title": "Kilometres and metres",
+      "grade": 5,
+      "strand": "Measurement",
+      "subStrand": "Length",
+      "prerequisites": [
+        "g4.meas.length.cm-m"
+      ],
+      "status": "planned",
+      "kicdRef": "Gr5 Math 2.1 (a-d)",
+      "scope": "The kilometre as a unit; estimate distance; relate and convert kilometres and metres."
+    },
+    {
+      "id": "g5.meas.length.operations",
+      "title": "Operations with kilometres and metres",
+      "grade": 5,
+      "strand": "Measurement",
+      "subStrand": "Length",
+      "prerequisites": [
+        "g5.meas.length.km",
+        "g5.num.mul.three-by-two",
+        "g5.num.div.three-by-two"
+      ],
+      "status": "planned",
+      "kicdRef": "Gr5 Math 2.1 (e-h)",
+      "scope": "Add, subtract, multiply and divide lengths in kilometres and metres."
+    },
+    {
+      "id": "g5.meas.area.cm2",
+      "title": "Area in square centimetres",
+      "grade": 5,
+      "strand": "Measurement",
+      "subStrand": "Area",
+      "prerequisites": [
+        "g4.meas.area.rows-columns"
+      ],
+      "status": "planned",
+      "kicdRef": "Gr5 Math 2.2 (a,b)",
+      "scope": "The square centimetre; area of rectangles and squares in square centimetres."
+    },
+    {
+      "id": "g5.meas.volume.cm3",
+      "title": "Volume of cubes and cuboids",
+      "grade": 5,
+      "strand": "Measurement",
+      "subStrand": "Volume",
+      "prerequisites": [
+        "g4.meas.volume.piling",
+        "g5.meas.area.cm2"
+      ],
+      "status": "planned",
+      "kicdRef": "Gr5 Math 2.3 (a-e)",
+      "scope": "The cubic centimetre; volume of cuboids (l x w x h) and cubes (s x s x s)."
+    },
+    {
+      "id": "g5.meas.capacity.millilitres",
+      "title": "Millilitres and litres",
+      "grade": 5,
+      "strand": "Measurement",
+      "subStrand": "Capacity",
+      "prerequisites": [
+        "g4.meas.capacity.litres"
+      ],
+      "status": "planned",
+      "kicdRef": "Gr5 Math 2.4 (a-e)",
+      "scope": "The millilitre; estimate and measure capacity in multiples of 5 millilitres; convert litres and millilitres."
+    },
+    {
+      "id": "g5.meas.capacity.operations",
+      "title": "Operations with litres and millilitres",
+      "grade": 5,
+      "strand": "Measurement",
+      "subStrand": "Capacity",
+      "prerequisites": [
+        "g5.meas.capacity.millilitres",
+        "g5.num.mul.three-by-two",
+        "g5.num.div.three-by-two"
+      ],
+      "status": "planned",
+      "kicdRef": "Gr5 Math 2.4 (f-i)",
+      "scope": "Add, subtract, multiply and divide capacity in litres and millilitres."
+    },
+    {
+      "id": "g5.meas.mass.grams",
+      "title": "Grams and kilograms",
+      "grade": 5,
+      "strand": "Measurement",
+      "subStrand": "Mass",
+      "prerequisites": [
+        "g4.meas.mass.kilograms"
+      ],
+      "status": "planned",
+      "kicdRef": "Gr5 Math 2.5 (a-e)",
+      "scope": "The gram; estimate and measure mass in grams; convert kilograms and grams."
+    },
+    {
+      "id": "g5.meas.mass.operations",
+      "title": "Operations with grams and kilograms",
+      "grade": 5,
+      "strand": "Measurement",
+      "subStrand": "Mass",
+      "prerequisites": [
+        "g5.meas.mass.grams",
+        "g5.num.mul.three-by-two",
+        "g5.num.div.three-by-two"
+      ],
+      "status": "planned",
+      "kicdRef": "Gr5 Math 2.5 (f-j)",
+      "scope": "Add, subtract, multiply and divide mass in grams and kilograms."
+    },
+    {
+      "id": "g5.meas.time.seconds",
+      "title": "Seconds and minutes",
+      "grade": 5,
+      "strand": "Measurement",
+      "subStrand": "Time",
+      "prerequisites": [
+        "g4.meas.time.convert-duration"
+      ],
+      "status": "planned",
+      "kicdRef": "Gr5 Math 2.6 (a,b,c,h)",
+      "scope": "The second as a unit of time; convert minutes and seconds; read time in seconds."
+    },
+    {
+      "id": "g5.meas.time.operations",
+      "title": "Operations with minutes and seconds",
+      "grade": 5,
+      "strand": "Measurement",
+      "subStrand": "Time",
+      "prerequisites": [
+        "g5.meas.time.seconds",
+        "g5.num.mul.three-by-two",
+        "g5.num.div.three-by-two"
+      ],
+      "status": "planned",
+      "kicdRef": "Gr5 Math 2.6 (d-g)",
+      "scope": "Add, subtract, multiply and divide minutes and seconds."
+    },
+    {
+      "id": "g5.meas.money.budget-tax-banks",
+      "title": "Budgets, tax and banks",
+      "grade": 5,
+      "strand": "Measurement",
+      "subStrand": "Money",
+      "prerequisites": [
+        "g4.meas.money.shopping-list"
+      ],
+      "status": "planned",
+      "kicdRef": "Gr5 Math 2.7 (a-f)",
+      "scope": "Meaning and importance of a budget; meaning of tax; bank services; saving wisely."
+    },
+    {
+      "id": "g5.geo.lines",
+      "title": "Types of lines",
+      "grade": 5,
+      "strand": "Geometry",
+      "subStrand": "Lines",
+      "prerequisites": [
+        "g4.geo.plane.identify-draw"
+      ],
+      "status": "planned",
+      "kicdRef": "Gr5 Math 3.1 (a-f)",
+      "scope": "Identify and draw horizontal, vertical, perpendicular and parallel lines."
+    },
+    {
+      "id": "g5.geo.angles.protractor",
+      "title": "Measuring angles in degrees",
+      "grade": 5,
+      "strand": "Geometry",
+      "subStrand": "Angles",
+      "prerequisites": [
+        "g4.geo.angles.identify"
+      ],
+      "status": "planned",
+      "kicdRef": "Gr5 Math 3.2 (a-e)",
+      "scope": "Relate a turn to angles; read and use a protractor; the degree as a unit; measure angles."
+    },
+    {
+      "id": "g5.geo.3d.describe",
+      "title": "3-D objects and their shapes",
+      "grade": 5,
+      "strand": "Geometry",
+      "subStrand": "3-D Objects",
+      "prerequisites": [
+        "g4.geo.plane.identify-draw"
+      ],
+      "status": "planned",
+      "kicdRef": "Gr5 Math 3.3 (a,b)",
+      "scope": "Describe cubes, cuboids, cylinders, spheres and pyramids and the 2-D shapes found in them."
+    },
+    {
+      "id": "g5.data.frequency-tables",
+      "title": "Tally marks and frequency tables",
+      "grade": 5,
+      "strand": "Data Handling",
+      "subStrand": "Data Representation",
+      "prerequisites": [
+        "g4.data.tables"
+      ],
+      "status": "planned",
+      "kicdRef": "Gr5 Math 4.1 (a-e)",
+      "scope": "Collect data of about 30 items; tables, tally marks and frequency tables; interpret them."
+    }
+  ]
+}

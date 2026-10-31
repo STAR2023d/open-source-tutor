@@ -141,13 +141,15 @@ def promote(path: Path, root: Path) -> list[str]:
     return new_ids
 
 
-def status_table(root: Path, target: int = 6) -> str:
+def status_table(root: Path, target: int = 6, grade: int | None = None, live_only: bool = False) -> str:
     repo = Repo(root)
-    rows = ["skill".ljust(34) + "status".ljust(9) + "  ".join(l[:4].ljust(5) for l in BLOOM_LEVELS[:4])]
+    rows = ["skill".ljust(42) + "status".ljust(9) + "  ".join(l[:4].ljust(5) for l in BLOOM_LEVELS[:4])]
     for sid, s in repo.skills().items():
+        if (grade is not None and s["grade"] != grade) or (live_only and s.get("status") != "live"):
+            continue
         c = repo.counts(sid)
         cells = "  ".join((f"{c.get(l, 0)}/{target}").ljust(5) for l in BLOOM_LEVELS[:4])
-        rows.append(sid.ljust(34) + s.get("status", "").ljust(9) + cells)
+        rows.append(sid.ljust(42) + s.get("status", "").ljust(9) + cells)
     return "\n".join(rows)
 
 
@@ -184,3 +186,34 @@ def recheck(path: Path, root: Path) -> dict:
         prompts.add(norm_prompt(probe["prompt"]))
     save(path, data)
     return summary
+
+
+def go_live(root: Path, skill_id: str, min_per_level: int = 4) -> None:
+    """Flip a skill to 'live' once every core Bloom level has enough questions, then re-validate.
+    Refuses if the skill is short of questions, so a half-empty skill never reaches learners."""
+    repo = Repo(root)
+    found = None
+    for g in repo.grade_dirs():
+        manifest = json.loads((g / "manifest.json").read_text())
+        path = g / manifest["skills"]
+        data = json.loads(path.read_text())
+        for s in data["skills"]:
+            if s["id"] == skill_id:
+                found = (path, data, s)
+    if not found:
+        raise KeyError(f"unknown skill {skill_id}")
+    path, data, skill = found
+    counts = repo.counts(skill_id)
+    short = {lv: counts.get(lv, 0) for lv in BLOOM_LEVELS[:4] if counts.get(lv, 0) < min_per_level}
+    if short:
+        raise ValueError(f"not ready: needs {min_per_level} questions per level, has {short}")
+    before = path.read_text()
+    skill["status"] = "live"
+    path.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n")
+    r = subprocess.run([sys.executable, str(Path(root) / "tools" / "validate_content.py")], capture_output=True, text=True, cwd=root)
+    if r.returncode != 0:
+        path.write_text(before)
+        raise RuntimeError("validator failed, change reverted:\n" + r.stdout + r.stderr)
+    report = Path(root) / "tools" / "curriculum_report.py"
+    if report.exists():
+        subprocess.run([sys.executable, str(report)], cwd=root, capture_output=True)

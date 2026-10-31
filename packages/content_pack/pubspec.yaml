@@ -14,3 +14,5 @@ dependencies:
 flutter:
   assets:
     - assets/grade4/
+    - assets/grade5/
+    - assets/grade6/

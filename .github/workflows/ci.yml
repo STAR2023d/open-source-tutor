@@ -10,6 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: python3 tools/validate_content.py
+      - run: python3 tools/curriculum_report.py --check
 
   agents:
     runs-on: ubuntu-latest

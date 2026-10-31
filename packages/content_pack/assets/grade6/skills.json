@@ -1,0 +1,463 @@
+{
+  "skills": [
+    {
+      "id": "g6.num.whole.place-value-millions",
+      "title": "Place value up to millions",
+      "grade": 6,
+      "strand": "Numbers",
+      "subStrand": "Whole Numbers",
+      "prerequisites": [
+        "g5.num.whole.place-value"
+      ],
+      "status": "planned",
+      "kicdRef": "Gr6 Math 1.1 (a,b)",
+      "scope": "Place value and total value of digits up to millions; numbers up to millions in symbols."
+    },
+    {
+      "id": "g6.num.whole.read-order-round",
+      "title": "Read, order and round numbers up to 100,000",
+      "grade": 6,
+      "strand": "Numbers",
+      "subStrand": "Whole Numbers",
+      "prerequisites": [
+        "g6.num.whole.place-value-millions",
+        "g5.num.whole.read-order-round"
+      ],
+      "status": "planned",
+      "kicdRef": "Gr6 Math 1.1 (c,d,e)",
+      "scope": "Read and write numbers up to 100,000 in words; order them; round to the nearest thousand."
+    },
+    {
+      "id": "g6.num.whole.squares-roots",
+      "title": "Squares and square roots",
+      "grade": 6,
+      "strand": "Numbers",
+      "subStrand": "Whole Numbers",
+      "prerequisites": [
+        "g5.num.mul.three-by-two"
+      ],
+      "status": "planned",
+      "kicdRef": "Gr6 Math 1.1 (f,g)",
+      "scope": "Squares of whole numbers up to 100; square roots of perfect squares up to 10,000."
+    },
+    {
+      "id": "g6.num.mul.four-by-two",
+      "title": "Multiply 4-digit by 2-digit numbers",
+      "grade": 6,
+      "strand": "Numbers",
+      "subStrand": "Multiplication",
+      "prerequisites": [
+        "g5.num.mul.three-by-two"
+      ],
+      "status": "planned",
+      "kicdRef": "Gr6 Math 1.2 (a,b,c)",
+      "scope": "Multiply up to a 4-digit number by a 2-digit number; estimate products; multiplication patterns with products not exceeding 1,000."
+    },
+    {
+      "id": "g6.num.div.four-by-three",
+      "title": "Divide up to 4-digit by 3-digit numbers",
+      "grade": 6,
+      "strand": "Numbers",
+      "subStrand": "Division",
+      "prerequisites": [
+        "g5.num.div.three-by-two",
+        "g6.num.mul.four-by-two"
+      ],
+      "status": "planned",
+      "kicdRef": "Gr6 Math 1.3 (a,b)",
+      "scope": "Divide up to a 4-digit number by up to a 3-digit number; estimate quotients by rounding to the nearest ten."
+    },
+    {
+      "id": "g6.num.ops.combined",
+      "title": "Combined operations up to 3-digit numbers",
+      "grade": 6,
+      "strand": "Numbers",
+      "subStrand": "Division",
+      "prerequisites": [
+        "g5.num.ops.combined",
+        "g6.num.div.four-by-three"
+      ],
+      "status": "planned",
+      "kicdRef": "Gr6 Math 1.3 (c)",
+      "scope": "Combined operations involving addition, subtraction, multiplication and division up to 3-digit numbers."
+    },
+    {
+      "id": "g6.num.frac.add-sub-lcm",
+      "title": "Add and subtract fractions using LCM",
+      "grade": 6,
+      "strand": "Numbers",
+      "subStrand": "Fractions",
+      "prerequisites": [
+        "g5.num.frac.add-sub",
+        "g5.num.whole.lcm"
+      ],
+      "status": "planned",
+      "kicdRef": "Gr6 Math 1.4 (a,b)",
+      "scope": "Add and subtract fractions using the LCM."
+    },
+    {
+      "id": "g6.num.frac.mixed",
+      "title": "Add and subtract mixed numbers",
+      "grade": 6,
+      "strand": "Numbers",
+      "subStrand": "Fractions",
+      "prerequisites": [
+        "g6.num.frac.add-sub-lcm",
+        "g4.num.frac.convert"
+      ],
+      "status": "planned",
+      "kicdRef": "Gr6 Math 1.4 (c,d)",
+      "scope": "Add and subtract mixed numbers."
+    },
+    {
+      "id": "g6.num.frac.reciprocal-squares",
+      "title": "Reciprocals and squares of fractions",
+      "grade": 6,
+      "strand": "Numbers",
+      "subStrand": "Fractions",
+      "prerequisites": [
+        "g6.num.frac.add-sub-lcm",
+        "g6.num.whole.squares-roots"
+      ],
+      "status": "planned",
+      "kicdRef": "Gr6 Math 1.4 (e,f)",
+      "scope": "Reciprocal of proper fractions up to a 2-digit number; squares of fractions with a one-digit numerator and a 2-digit denominator."
+    },
+    {
+      "id": "g6.num.frac.percent",
+      "title": "Fractions and percentages",
+      "grade": 6,
+      "strand": "Numbers",
+      "subStrand": "Fractions",
+      "prerequisites": [
+        "g5.num.frac.equivalent-simplify"
+      ],
+      "status": "planned",
+      "kicdRef": "Gr6 Math 1.4 (g,h)",
+      "scope": "Express a fraction as a percentage; convert a percentage to a fraction."
+    },
+    {
+      "id": "g6.num.dec.ten-thousandths-round",
+      "title": "Decimals: ten-thousandths and rounding",
+      "grade": 6,
+      "strand": "Numbers",
+      "subStrand": "Decimals",
+      "prerequisites": [
+        "g5.num.dec.thousandths"
+      ],
+      "status": "planned",
+      "kicdRef": "Gr6 Math 1.5 (a,b)",
+      "scope": "Identify decimals up to ten thousandths; round decimals up to 3 decimal places."
+    },
+    {
+      "id": "g6.num.dec.convert",
+      "title": "Decimals, fractions and percentages",
+      "grade": 6,
+      "strand": "Numbers",
+      "subStrand": "Decimals",
+      "prerequisites": [
+        "g6.num.dec.ten-thousandths-round",
+        "g6.num.frac.percent"
+      ],
+      "status": "planned",
+      "kicdRef": "Gr6 Math 1.5 (c,d)",
+      "scope": "Convert between decimals and fractions and between decimals and percentages."
+    },
+    {
+      "id": "g6.num.dec.add-sub",
+      "title": "Add and subtract decimals (4 places)",
+      "grade": 6,
+      "strand": "Numbers",
+      "subStrand": "Decimals",
+      "prerequisites": [
+        "g5.num.dec.add-sub",
+        "g6.num.dec.ten-thousandths-round"
+      ],
+      "status": "planned",
+      "kicdRef": "Gr6 Math 1.5 (e,f)",
+      "scope": "Add and subtract decimals up to 4 decimal places."
+    },
+    {
+      "id": "g6.num.inequalities",
+      "title": "Simple inequalities",
+      "grade": 6,
+      "strand": "Numbers",
+      "subStrand": "Inequalities",
+      "prerequisites": [
+        "g5.num.equations.simple"
+      ],
+      "status": "planned",
+      "kicdRef": "Gr6 Math 1.6 (a,b,c)",
+      "scope": "Form, simplify and solve simple inequalities in one unknown."
+    },
+    {
+      "id": "g6.meas.length.mm",
+      "title": "Millimetres and centimetres",
+      "grade": 6,
+      "strand": "Measurement",
+      "subStrand": "Length",
+      "prerequisites": [
+        "g4.meas.length.cm-m"
+      ],
+      "status": "planned",
+      "kicdRef": "Gr6 Math 2.1 (a,b,c)",
+      "scope": "The millimetre; relate and convert millimetres and centimetres."
+    },
+    {
+      "id": "g6.meas.length.operations",
+      "title": "Operations with centimetres and millimetres",
+      "grade": 6,
+      "strand": "Measurement",
+      "subStrand": "Length",
+      "prerequisites": [
+        "g6.meas.length.mm",
+        "g6.num.mul.four-by-two",
+        "g6.num.div.four-by-three"
+      ],
+      "status": "planned",
+      "kicdRef": "Gr6 Math 2.1 (d-g)",
+      "scope": "Add, subtract, multiply and divide lengths in centimetres and millimetres."
+    },
+    {
+      "id": "g6.meas.length.circumference",
+      "title": "Circumference and diameter",
+      "grade": 6,
+      "strand": "Measurement",
+      "subStrand": "Length",
+      "prerequisites": [
+        "g6.meas.length.mm",
+        "g5.num.dec.thousandths"
+      ],
+      "status": "planned",
+      "kicdRef": "Gr6 Math 2.1 (h,i)",
+      "scope": "Measure the circumference of a circle; relate circumference and diameter (pi)."
+    },
+    {
+      "id": "g6.meas.area.triangles",
+      "title": "Area of triangles and combined shapes",
+      "grade": 6,
+      "strand": "Measurement",
+      "subStrand": "Area",
+      "prerequisites": [
+        "g5.meas.area.cm2"
+      ],
+      "status": "planned",
+      "kicdRef": "Gr6 Math 2.2 (a,b)",
+      "scope": "Area of triangles in square centimetres; area of combined shapes of squares, rectangles and triangles."
+    },
+    {
+      "id": "g6.meas.area.circles-estimate",
+      "title": "Estimate the area of circles",
+      "grade": 6,
+      "strand": "Measurement",
+      "subStrand": "Area",
+      "prerequisites": [
+        "g5.meas.area.cm2"
+      ],
+      "status": "planned",
+      "kicdRef": "Gr6 Math 2.2 (c)",
+      "scope": "Estimate the area of circles by counting squares."
+    },
+    {
+      "id": "g6.meas.capacity.cm3-ml-l",
+      "title": "Cubic centimetres, millilitres and litres",
+      "grade": 6,
+      "strand": "Measurement",
+      "subStrand": "Capacity",
+      "prerequisites": [
+        "g5.meas.capacity.millilitres",
+        "g5.meas.volume.cm3"
+      ],
+      "status": "planned",
+      "kicdRef": "Gr6 Math 2.3 (a-c)",
+      "scope": "Relate cubic centimetres, millilitres and litres; convert litres and millilitres."
+    },
+    {
+      "id": "g6.meas.mass.tonnes",
+      "title": "Tonnes and kilograms",
+      "grade": 6,
+      "strand": "Measurement",
+      "subStrand": "Mass",
+      "prerequisites": [
+        "g5.meas.mass.grams"
+      ],
+      "status": "planned",
+      "kicdRef": "Gr6 Math 2.4 (a-e)",
+      "scope": "The tonne as a unit; relate and convert kilograms and tonnes; estimate mass in tonnes."
+    },
+    {
+      "id": "g6.meas.mass.operations",
+      "title": "Operations with tonnes and kilograms",
+      "grade": 6,
+      "strand": "Measurement",
+      "subStrand": "Mass",
+      "prerequisites": [
+        "g6.meas.mass.tonnes",
+        "g6.num.mul.four-by-two",
+        "g6.num.div.four-by-three"
+      ],
+      "status": "planned",
+      "kicdRef": "Gr6 Math 2.4 (f-i)",
+      "scope": "Add, subtract, multiply and divide mass in tonnes and kilograms."
+    },
+    {
+      "id": "g6.meas.time.am-pm-24h",
+      "title": "12-hour and 24-hour clocks",
+      "grade": 6,
+      "strand": "Measurement",
+      "subStrand": "Time",
+      "prerequisites": [
+        "g4.meas.time.read-tell"
+      ],
+      "status": "planned",
+      "kicdRef": "Gr6 Math 2.5 (a-d)",
+      "scope": "Identify and write time in a.m. and p.m.; relate and convert the 12-hour and 24-hour systems."
+    },
+    {
+      "id": "g6.meas.time.timetables",
+      "title": "Travel timetables",
+      "grade": 6,
+      "strand": "Measurement",
+      "subStrand": "Time",
+      "prerequisites": [
+        "g6.meas.time.am-pm-24h",
+        "g5.meas.time.operations"
+      ],
+      "status": "planned",
+      "kicdRef": "Gr6 Math 2.5 (e)",
+      "scope": "Interpret travel timetables."
+    },
+    {
+      "id": "g6.meas.money.budget",
+      "title": "Simple budgets",
+      "grade": 6,
+      "strand": "Measurement",
+      "subStrand": "Money",
+      "prerequisites": [
+        "g5.meas.money.budget-tax-banks"
+      ],
+      "status": "planned",
+      "kicdRef": "Gr6 Math 2.6 (a)",
+      "scope": "Prepare a simple budget."
+    },
+    {
+      "id": "g6.meas.money.profit-loss",
+      "title": "Prices, profit and loss",
+      "grade": 6,
+      "strand": "Measurement",
+      "subStrand": "Money",
+      "prerequisites": [
+        "g6.meas.money.budget",
+        "g5.num.sub.six-digit"
+      ],
+      "status": "planned",
+      "kicdRef": "Gr6 Math 2.6 (b,c,d)",
+      "scope": "Buying and selling prices; work out profit and loss from sales."
+    },
+    {
+      "id": "g6.meas.money.taxes",
+      "title": "Types of taxes",
+      "grade": 6,
+      "strand": "Measurement",
+      "subStrand": "Money",
+      "prerequisites": [
+        "g5.meas.money.budget-tax-banks"
+      ],
+      "status": "planned",
+      "kicdRef": "Gr6 Math 2.6 (e)",
+      "scope": "Identify types of taxes, including income tax and VAT."
+    },
+    {
+      "id": "g6.geo.lines.construct",
+      "title": "Constructing lines",
+      "grade": 6,
+      "strand": "Geometry",
+      "subStrand": "Lines",
+      "prerequisites": [
+        "g5.geo.lines"
+      ],
+      "status": "planned",
+      "kicdRef": "Gr6 Math 3.1 (a,b,c)",
+      "scope": "Construct parallel and perpendicular lines; bisect lines by construction."
+    },
+    {
+      "id": "g6.geo.angles.straight-line",
+      "title": "Angles on a straight line",
+      "grade": 6,
+      "strand": "Geometry",
+      "subStrand": "Angles",
+      "prerequisites": [
+        "g5.geo.angles.protractor"
+      ],
+      "status": "planned",
+      "kicdRef": "Gr6 Math 3.2 (a,b,c)",
+      "scope": "Identify, measure and add angles on a straight line at a point."
+    },
+    {
+      "id": "g6.geo.angles.sum",
+      "title": "Angle sums in triangles and rectangles",
+      "grade": 6,
+      "strand": "Geometry",
+      "subStrand": "Angles",
+      "prerequisites": [
+        "g6.geo.angles.straight-line"
+      ],
+      "status": "planned",
+      "kicdRef": "Gr6 Math 3.2 (d)",
+      "scope": "Sum of angles in rectangles and triangles."
+    },
+    {
+      "id": "g6.geo.triangles.construct",
+      "title": "Construct and measure triangles",
+      "grade": 6,
+      "strand": "Geometry",
+      "subStrand": "Angles",
+      "prerequisites": [
+        "g6.geo.lines.construct",
+        "g6.geo.angles.sum"
+      ],
+      "status": "planned",
+      "kicdRef": "Gr6 Math 3.2 (e,f)",
+      "scope": "Construct equilateral, right-angled and isosceles triangles; measure their interior angles."
+    },
+    {
+      "id": "g6.geo.3d.faces-edges",
+      "title": "Faces, edges, vertices and nets",
+      "grade": 6,
+      "strand": "Geometry",
+      "subStrand": "3-D Objects",
+      "prerequisites": [
+        "g5.geo.3d.describe"
+      ],
+      "status": "planned",
+      "kicdRef": "Gr6 Math 3.3 (a,b,c)",
+      "scope": "Vertices, faces and edges of cuboids, cubes and cylinders; plane figures in 3-D objects; nets."
+    },
+    {
+      "id": "g6.data.pictographs-frequency",
+      "title": "Frequency tables, pictographs and piling",
+      "grade": 6,
+      "strand": "Data Handling",
+      "subStrand": "Bar Graphs",
+      "prerequisites": [
+        "g5.data.frequency-tables"
+      ],
+      "status": "planned",
+      "kicdRef": "Gr6 Math 4.1 (a,b,c)",
+      "scope": "Draw a frequency table; represent data using pictographs and piling."
+    },
+    {
+      "id": "g6.data.bar-graphs",
+      "title": "Bar graphs",
+      "grade": 6,
+      "strand": "Data Handling",
+      "subStrand": "Bar Graphs",
+      "prerequisites": [
+        "g6.data.pictographs-frequency"
+      ],
+      "status": "planned",
+      "kicdRef": "Gr6 Math 4.1 (d,e)",
+      "scope": "Represent data using bar graphs; interpret bar graphs."
+    }
+  ]
+}

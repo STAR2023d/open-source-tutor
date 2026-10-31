@@ -48,12 +48,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     if (_isLast) {
       _finish();
     } else {
-      //if animations disabled, use jump to page to avoid the assertion
-      if (MediaQuery.of(context).disableAnimations) {
-        _pages.jumpToPage((_pages.page ?? 0).round() + 1);
-      } else {
-        _pages.nextPage(duration: _slide, curve: Curves.easeOut);
-      }
+      _pages.nextPage(duration: _slide, curve: Curves.easeOut);
     }
   }
 
@@ -83,12 +78,10 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 Align(
                   alignment: Alignment.centerRight,
                   child: Padding(
-                    padding:
-                        const EdgeInsets.only(top: Space.s, right: Space.s),
+                    padding: const EdgeInsets.only(top: Space.s, right: Space.s),
                     child: _isLast
                         ? const SizedBox(height: 48)
-                        : TextButton(
-                            onPressed: _skip, child: const Text('Skip')),
+                        : TextButton(onPressed: _skip, child: const Text('Skip')),
                   ),
                 ),
                 Expanded(
@@ -134,8 +127,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                 for (var i = 0; i < _pageCount; i++)
                                   AnimatedContainer(
                                     duration: _slide,
-                                    margin: const EdgeInsets.symmetric(
-                                        horizontal: 4),
+                                    margin: const EdgeInsets.symmetric(horizontal: 4),
                                     width: i == _page ? 24 : 10,
                                     height: 10,
                                     decoration: BoxDecoration(
@@ -176,8 +168,7 @@ class _PageFrame extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => ListView(
-        padding:
-            const EdgeInsets.symmetric(horizontal: Space.l, vertical: Space.m),
+        padding: const EdgeInsets.symmetric(horizontal: Space.l, vertical: Space.m),
         children: children,
       );
 }
@@ -192,8 +183,7 @@ class _WelcomePage extends StatelessWidget {
     final text = Theme.of(context).textTheme;
     return _PageFrame(children: [
       const SizedBox(height: Space.l),
-      Center(
-          child: BouncyMascot(kind: kind, mood: MascotMood.cheer, size: 200)),
+      Center(child: BouncyMascot(kind: kind, mood: MascotMood.cheer, size: 200)),
       const SizedBox(height: Space.l),
       Text('Jambo! Karibu Hesabu.',
           textAlign: TextAlign.center, style: text.headlineMedium),
@@ -314,8 +304,7 @@ class _ChoosePage extends StatelessWidget {
         ],
         decoration: const InputDecoration(
           labelText: 'Your nickname',
-          helperText:
-              'Use a nickname, not your full name. It stays on this device.',
+          helperText: 'Use a nickname, not your full name. It stays on this device.',
           helperMaxLines: 2,
         ),
         onSubmitted: (_) => onDone(),

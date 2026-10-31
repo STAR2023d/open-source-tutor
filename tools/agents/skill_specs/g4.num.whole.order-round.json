@@ -1,0 +1,5 @@
+{
+  "max_value": 1000,
+  "contexts": ["prices in shillings", "pupils in schools", "distances between towns in kilometres", "sacks of maize"],
+  "notes": "Grade 4: order numbers up to 1,000 (smallest to largest and largest to smallest); round numbers up to 1,000 to the nearest ten (5 rounds up)."
+}

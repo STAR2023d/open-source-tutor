@@ -1,0 +1,8 @@
+{
+  "max_value": 99,
+  "max_result": 8910,
+  "plain_op": "*",
+  "a_min": 2, "a_max": 99, "b_min": 10, "b_max": 90, "b_multiple_of": 10,
+  "contexts": ["boxes of pencils", "bundles of sugarcane", "rows of seedlings", "bags of rice"],
+  "notes": "Grade 4: multiply a number up to two digits by a multiple of 10 (10, 20, ... 90)."
+}

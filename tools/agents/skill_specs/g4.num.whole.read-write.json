@@ -1,0 +1,5 @@
+{
+  "max_value": 1000,
+  "contexts": ["prices", "pupils in a school", "pages in a book", "number of cattle"],
+  "notes": "Grade 4: read and write numbers up to 1,000 in words (British spelling, for example four hundred and twenty-six; use hyphens from 21 to 99)."
+}

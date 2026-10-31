@@ -12,8 +12,10 @@ from collections import Counter
 from dataclasses import dataclass, field
 
 from .content_io import BLOOM_LEVELS, norm_prompt, question_key
+from .numwords import from_words, to_words
 from .safe_math import (
     UnsafeExpression,
+    has_borrow,
     has_carry,
     int_list_in,
     ints_in,
@@ -93,6 +95,159 @@ def check_schema(q: dict, res: Result) -> None:
 
 
 # -------------------------------------------------------------------- math
+
+def check_plain_rules(q: dict, spec: dict, a: int, op: str, b: int, res: Result) -> None:
+    """Rules for a plain two-number sum, difference or product (for example 3648-2975)."""
+    if op == "-":
+        if a < b:
+            res.issues.append("subtraction must not have a negative answer at this grade")
+            return
+        if q["bloom"] in spec.get("borrow_required_levels", []):
+            if has_borrow(a, b):
+                res.checks.append("regrouping (borrowing) present")
+            else:
+                res.issues.append(f"'{q['bloom']}' questions on this skill must involve regrouping (borrowing)")
+    if op == "+" and q["bloom"] in spec.get("regroup_required_levels", []):
+        if has_carry(a, b):
+            res.checks.append("regrouping present")
+        else:
+            res.issues.append(f"'{q['bloom']}' questions on this skill must involve regrouping")
+    if spec.get("plain_op") == op:
+        limits = {"a_min": a, "a_max": a, "b_min": b, "b_max": b}
+        for key, val in limits.items():
+            bound = spec.get(key)
+            if bound is None:
+                continue
+            if key.endswith("_min") and val < bound or key.endswith("_max") and val > bound:
+                res.issues.append(f"first/second number {val} is outside the allowed range ({key} = {bound})")
+        mult = spec.get("b_multiple_of")
+        if mult and b % mult:
+            res.issues.append(f"second number must be a multiple of {mult}")
+
+
+def _nums_in_prompt(q: dict, nums: list[int], res: Result, what: str) -> bool:
+    have = Counter(int_list_in(q["prompt"]))
+    missing = sorted(n for n, c in Counter(nums).items() if have[n] < c)
+    if missing:
+        res.issues.append(f"{what} {missing} must appear in the prompt (as often as they are used)")
+        return False
+    return True
+
+
+_QR = re.compile(r"^\s*(\d+)\s*(?:r|rem|remainder)\.?\s*(\d+)\s*$", re.I)
+
+
+def check_division(q: dict, chk: dict, spec: dict, res: Result) -> None:
+    from fractions import Fraction
+    dividend, divisor, ask = chk.get("dividend"), chk.get("divisor"), chk.get("ask")
+    if not (isinstance(dividend, int) and isinstance(divisor, int) and divisor >= 2 and dividend >= 0
+            and ask in ("quotient", "remainder", "quotient_and_remainder")):
+        res.issues.append("division check needs dividend, divisor (>= 2) and ask")
+        return
+    if not _nums_in_prompt(q, [dividend, divisor], res, "dividend and divisor"):
+        return
+    for key, val in (("dividend_max", dividend), ("divisor_min", divisor), ("divisor_max", divisor)):
+        bound = spec.get(key)
+        if bound is not None and (val > bound if key.endswith("max") else val < bound):
+            res.issues.append(f"{key.split('_')[0]} {val} is outside the allowed range ({key} = {bound})")
+            return
+    quotient, rem = divmod(dividend, divisor)
+    if ask in ("remainder", "quotient_and_remainder") and rem == 0:
+        res.issues.append("this question is about a remainder, but the division is exact")
+        return
+    if ask == "quotient_and_remainder":
+        if q["type"] != "multipleChoice":
+            res.issues.append("quotient_and_remainder needs a multiple choice question")
+            return
+        for c in q["choices"]:
+            m = _QR.match(str(c.get("text", "")))
+            if not m:
+                res.issues.append(f"choice '{c.get('text')}' must look like '9 remainder 2'")
+                return
+            is_right = (int(m[1]), int(m[2])) == (quotient, rem)
+            if is_right != (c.get("correct") is True):
+                res.issues.append(f"choice '{c['text']}' is {'right' if is_right else 'wrong'} "
+                                  f"({dividend} / {divisor} = {quotient} remainder {rem}) but is marked the other way")
+                return
+        res.checks.append(f"{dividend} / {divisor} = {quotient} remainder {rem}; only the marked choice says so")
+        return
+    value = Fraction(quotient if ask == "quotient" else rem)
+    res.checks.append(f"{dividend} / {divisor} = {quotient} remainder {rem}")
+    _tie_to_answer(q, value, q["explanation"], res, ask)
+
+
+def check_order(q: dict, chk: dict, spec: dict, res: Result) -> None:
+    nums, direction = chk.get("numbers"), chk.get("direction")
+    if not (isinstance(nums, list) and 3 <= len(nums) <= 6 and all(isinstance(n, int) for n in nums)
+            and direction in ("ascending", "descending")) or q["type"] != "multipleChoice":
+        res.issues.append("order check needs 3-6 whole numbers, a direction and a multiple choice question")
+        return
+    if len(set(nums)) != len(nums):
+        res.issues.append("numbers to order must all be different")
+        return
+    if not _nums_in_prompt(q, nums, res, "numbers"):
+        return
+    if any(n > spec.get("max_value", 99999) for n in nums):
+        res.issues.append("numbers exceed the allowed range for this skill")
+        return
+    low = q["prompt"].lower()
+    words = (("smallest to", "least to", "lowest to", "ascending", "increasing")
+             if direction == "ascending" else ("largest to", "greatest to", "biggest to", "highest to", "descending", "decreasing"))
+    if not any(w in low for w in words):
+        res.issues.append(f"the prompt must say the order ({direction}): for example 'from smallest to largest'")
+        return
+    right = sorted(nums, reverse=(direction == "descending"))
+    for c in q["choices"]:
+        listed = int_list_in(str(c.get("text", "")))
+        if sorted(listed) != sorted(nums):
+            res.issues.append(f"choice '{c.get('text')}' must list exactly the same numbers")
+            return
+        if (listed == right) != (c.get("correct") is True):
+            res.issues.append(f"choice '{c['text']}' is {'in' if listed == right else 'not in'} the right order "
+                              "but is marked the other way")
+            return
+    res.checks.append(f"only the marked choice is in {direction} order")
+
+
+def check_words(q: dict, chk: dict, spec: dict, res: Result) -> None:
+    number, ask = chk.get("number"), chk.get("ask")
+    if not (isinstance(number, int) and 0 <= number <= spec.get("max_value", 999_999) and ask in ("to_digits", "to_words")):
+        res.issues.append("words check needs a number in range and ask 'to_digits' or 'to_words'")
+        return
+    canonical = to_words(number)
+    if ask == "to_digits":
+        said = re.sub(r"[-,]", " ", q["prompt"].lower())
+        found = [w for w in {canonical, canonical.replace(" and ", " ")} if w.replace("-", " ") in said]
+        if not found:
+            res.issues.append(f"the prompt must contain the number in words: '{canonical}'")
+            return
+        if q["type"] == "numericInput":
+            if parse_number(q["answer"]) != number:
+                res.issues.append(f"answer should be {number}")
+                return
+            res.checks.append(f"'{canonical}' = {number}")
+            return
+        for c in q["choices"]:
+            val = parse_number(c.get("text"))
+            if (val == number) != (c.get("correct") is True):
+                res.issues.append(f"choice '{c.get('text')}' is {'right' if val == number else 'wrong'} but marked the other way")
+                return
+        res.checks.append(f"'{canonical}' = {number}; only the marked choice says so")
+        return
+    if q["type"] != "multipleChoice" or not _nums_in_prompt(q, [number], res, "number"):
+        if q["type"] != "multipleChoice":
+            res.issues.append("to_words needs a multiple choice question")
+        return
+    for c in q["choices"]:
+        val = from_words(str(c.get("text", "")))
+        if val is None:
+            res.issues.append(f"choice '{c.get('text')}' is not a valid number in words")
+            return
+        if (val == number) != (c.get("correct") is True):
+            res.issues.append(f"choice '{c['text']}' is {'right' if val == number else 'wrong'} but marked the other way")
+            return
+    res.checks.append(f"{number} = '{canonical}'; only the marked choice says so")
+
 def _correct_choice_text(q: dict) -> str | None:
     for c in q.get("choices", []):
         if c.get("correct") is True:
@@ -201,12 +356,9 @@ def check_math(q: dict, spec: dict, res: Result) -> None:
         if any(g > max_value for g in givens) or computed > spec.get("max_result", max_value):
             res.issues.append(f"numbers exceed the allowed range for this skill ({max_value})")
         _tie_to_answer(q, computed, q["explanation"], res, "expr")
-        plain_add = re.fullmatch(r"\s*(\d+)\s*\+\s*(\d+)\s*", str(chk["expr"]))
-        if plain_add and q["bloom"] in spec.get("regroup_required_levels", []):
-            if not has_carry(int(plain_add[1]), int(plain_add[2])):
-                res.issues.append(f"'{q['bloom']}' questions on this skill must involve regrouping")
-            else:
-                res.checks.append("regrouping present")
+        plain = re.fullmatch(r"\s*(\d+)\s*([+\-*])\s*(\d+)\s*", str(chk["expr"]))
+        if plain:
+            check_plain_rules(q, spec, int(plain[1]), plain[2], int(plain[3]), res)
         return
 
     if kind == "place_value":
@@ -260,6 +412,16 @@ def check_math(q: dict, spec: dict, res: Result) -> None:
                     f"but it is marked {'correct' if c.get('correct') else 'wrong'}")
                 return
         res.checks.append(f"only the correct choice has {digit} in the {place} place")
+        return
+
+    if kind == "division":
+        check_division(q, chk, spec, res)
+        return
+    if kind == "order":
+        check_order(q, chk, spec, res)
+        return
+    if kind == "words":
+        check_words(q, chk, spec, res)
         return
 
     res.issues.append(f"unknown check kind '{kind}'")

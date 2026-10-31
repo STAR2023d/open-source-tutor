@@ -8,7 +8,7 @@ from pathlib import Path
 from .content_io import find_repo_root, load_dotenv
 from .graph import RunConfig, run
 from .llm import GeminiLLM, LLMError, OpenAICompatibleLLM, TemplateLLM
-from .review import interactive_review, promote, recheck, status_table
+from .review import go_live, interactive_review, promote, recheck, status_table
 
 
 def make_llm(args):
@@ -30,7 +30,7 @@ def main(argv=None) -> int:
     sub = p.add_subparsers(dest="cmd", required=True)
 
     g = sub.add_parser("generate", help="draft, verify and critique new questions into proposals/")
-    g.add_argument("--skill", required=True)
+    g.add_argument("--skill", required=True, nargs="+", help="one or more skill ids")
     g.add_argument("--per-level", type=int, default=6, help="target questions per Bloom level")
     g.add_argument("--llm", choices=["template", "openai", "gemini"], default="template")
     g.add_argument("--model")
@@ -47,27 +47,39 @@ def main(argv=None) -> int:
     rc = sub.add_parser("recheck", help="re-run the current verifier on an older proposal file")
     rc.add_argument("proposal")
 
+    gl = sub.add_parser("golive", help="mark a skill live once it has enough verified questions")
+    gl.add_argument("--skill", required=True)
+    gl.add_argument("--min-per-level", type=int, default=4)
+
     pr = sub.add_parser("promote", help="merge approved questions into the content pack (runs the validator)")
     pr.add_argument("proposal")
 
-    sub.add_parser("status", help="show question coverage per skill and Bloom level")
+    st = sub.add_parser("status", help="show question coverage per skill and Bloom level")
+    st.add_argument("--grade", type=int)
+    st.add_argument("--live", action="store_true", help="only live skills")
     args = p.parse_args(argv)
 
     root = find_repo_root()
     load_dotenv(root / ".env")  # secrets live in hesabu/.env (git-ignored)
     try:
         if args.cmd == "status":
-            print(status_table(root))
+            print(status_table(root, grade=args.grade, live_only=args.live))
         elif args.cmd == "generate":
-            state = run(make_llm(args), RunConfig(root=root, skill_id=args.skill, per_level=args.per_level,
-                                                  max_attempts=args.max_attempts, use_critic=not args.no_critic,
-                                                  include_pending=not args.no_pending))
-            print("\n".join(state["log"]))
-            if state.get("proposal_path"):
-                print(f"\nNext: python -m hesabu_agents review {state['proposal_path']} --reviewer YOUR_NAME")
+            llm = make_llm(args)
+            for skill_id in args.skill:
+                print(f"\n=== {skill_id} ===")
+                state = run(llm, RunConfig(root=root, skill_id=skill_id, per_level=args.per_level,
+                                           max_attempts=args.max_attempts, use_critic=not args.no_critic,
+                                           include_pending=not args.no_pending))
+                print("\n".join(state["log"]))
+                if state.get("proposal_path"):
+                    print(f"Next: python -m hesabu_agents review {state['proposal_path']} --reviewer YOUR_NAME")
         elif args.cmd == "review":
             interactive_review(Path(args.proposal), args.reviewer)
             print("Saved. When done: python -m hesabu_agents promote", args.proposal)
+        elif args.cmd == "golive":
+            go_live(root, args.skill, args.min_per_level)
+            print(f"{args.skill} is now live. Commit the change; the curriculum doc was regenerated.")
         elif args.cmd == "recheck":
             s = recheck(Path(args.proposal), root)
             print(f"Rechecked {s['checked']} questions: {s['flagged']} with problems, "

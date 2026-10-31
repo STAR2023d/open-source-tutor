@@ -1,0 +1,6 @@
+{
+  "max_value": 9999,
+  "borrow_required_levels": ["apply", "analyze"],
+  "contexts": ["shop stock and sales in shillings", "shamba harvests", "school enrolment", "matatu passengers"],
+  "notes": "Grade 4: subtract up to 4-digit numbers without and with regrouping; estimate differences by rounding to the nearest ten. Answers are never negative."
+}

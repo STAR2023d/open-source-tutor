@@ -114,3 +114,15 @@ def has_carry(a: int, b: int) -> bool:
         a //= 10
         b //= 10
     return False
+
+
+def has_borrow(a: int, b: int) -> bool:
+    """True if a - b needs regrouping (borrowing) in some column."""
+    borrow = 0
+    while a or b:
+        if a % 10 - borrow < b % 10:
+            return True
+        borrow = 0
+        a //= 10
+        b //= 10
+    return False

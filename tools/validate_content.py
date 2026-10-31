@@ -72,33 +72,26 @@ def check_grade(folder: Path):
     for qf in manifest["questions"]:
         questions += json.loads((folder / qf).read_text())["questions"]
 
+    grade = manifest.get("grade")
     ids = [s["id"] for s in skills]
     if len(ids) != len(set(ids)):
         err(f"{folder.name}: duplicate skill ids")
     skill_by_id = {s["id"]: s for s in skills}
 
     for s in skills:
+        sid = s["id"]
+        if s.get("grade") != grade or not sid.startswith(f"g{grade}."):
+            err(f"skill {sid}: must have grade {grade} and an id starting with 'g{grade}.'")
+        if s.get("status") not in ("live", "planned"):
+            err(f"skill {sid}: status must be 'live' or 'planned'")
+        for key in ("title", "strand", "subStrand", "kicdRef", "scope"):
+            if not str(s.get(key, "")).strip():
+                err(f"skill {sid}: missing '{key}'")
         for p in s.get("prerequisites", []):
-            if p not in skill_by_id:
-                err(f"skill {s['id']}: unknown prerequisite {p}")
-
-    # cycle check (depth-first search)
-    state = {}
-
-    def visit(sid):
-        if state.get(sid) == 1:
-            err(f"prerequisite cycle through {sid}")
-            return
-        if state.get(sid) == 2:
-            return
-        state[sid] = 1
-        for p in skill_by_id[sid].get("prerequisites", []):
-            if p in skill_by_id:
-                visit(p)
-        state[sid] = 2
-
-    for sid in skill_by_id:
-        visit(sid)
+            if p not in ALL_SKILLS:
+                err(f"skill {sid}: unknown prerequisite {p}")
+            elif ALL_SKILLS[p]["grade"] > s.get("grade", 0):
+                err(f"skill {sid}: prerequisite {p} is from a later grade")
 
     qids = [q["id"] for q in questions]
     if len(qids) != len(set(qids)):
@@ -144,10 +137,40 @@ def check_grade(folder: Path):
             for lvl in CORE_LEVELS:
                 if counts.get(lvl, 0) < MIN_PER_LEVEL:
                     err(f"live skill {s['id']}: needs >= {MIN_PER_LEVEL} questions at '{lvl}' (has {counts.get(lvl, 0)})")
-    print(f"{folder.name}: {len(skills)} skills, {len(questions)} questions")
+    live = sum(1 for s in skills if s.get("status") == "live")
+    print(f"{folder.name}: {len(skills)} skills ({live} live), {len(questions)} questions")
 
 
-for g in sorted(p for p in ROOT.iterdir() if p.is_dir()):
+GRADE_DIRS = sorted(p for p in ROOT.iterdir() if p.is_dir())
+ALL_SKILLS = {}
+for _g in GRADE_DIRS:
+    _m = json.loads((_g / "manifest.json").read_text())
+    for _s in json.loads((_g / _m["skills"]).read_text())["skills"]:
+        if _s["id"] in ALL_SKILLS:
+            err(f"duplicate skill id across grades: {_s['id']}")
+        ALL_SKILLS[_s["id"]] = _s
+
+# prerequisite cycles, across all grades
+_state = {}
+
+
+def _visit(sid, trail=()):
+    if _state.get(sid) == 1:
+        err("prerequisite cycle: " + " -> ".join([*trail, sid]))
+        return
+    if _state.get(sid) == 2:
+        return
+    _state[sid] = 1
+    for p in ALL_SKILLS[sid].get("prerequisites", []):
+        if p in ALL_SKILLS:
+            _visit(p, (*trail, sid))
+    _state[sid] = 2
+
+
+for _sid in ALL_SKILLS:
+    _visit(_sid)
+
+for g in GRADE_DIRS:
     check_grade(g)
 
 for w in warnings:

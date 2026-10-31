@@ -17,6 +17,15 @@ Future<ProfileController> pumpOnboarding(WidgetTester tester) async {
   return profile;
 }
 
+/// Taps Next and lets the page slide finish. We cannot use pumpAndSettle because the
+/// welcome buddy hops forever. A ticker starts on the first frame, so we pump once to start
+/// the slide and once more to move the clock past its 300 ms duration.
+Future<void> goNext(WidgetTester tester) async {
+  await tester.tap(find.text('Next'));
+  await tester.pump();
+  await tester.pump(const Duration(milliseconds: 500));
+}
+
 void main() {
   test('sanitizeNickname strips symbols and limits length', () {
     expect(sanitizeNickname('  Amina<script>  '), 'Aminascript');
@@ -29,12 +38,10 @@ void main() {
     final profile = await pumpOnboarding(tester);
     expect(find.textContaining('Jambo'), findsWidgets);
 
-    await tester.tap(find.text('Next'));
-    await tester.pump(const Duration(milliseconds: 500));
+    await goNext(tester);
     expect(find.text('How Hesabu helps you learn'), findsOneWidget);
 
-    await tester.tap(find.text('Next'));
-    await tester.pump(const Duration(milliseconds: 500));
+    await goNext(tester);
     expect(find.text('Choose your maths buddy'), findsOneWidget);
 
     await tester.tap(find.text('Chui'));

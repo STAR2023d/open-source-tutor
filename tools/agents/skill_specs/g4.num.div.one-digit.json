@@ -1,0 +1,8 @@
+{
+  "max_value": 99,
+  "dividend_max": 99,
+  "divisor_min": 2,
+  "divisor_max": 9,
+  "contexts": ["sharing mandazi", "packing eggs into trays", "seating pupils in rows", "sharing sweets"],
+  "notes": "Grade 4: divide up to a two-digit number by a one-digit number, with and without a remainder; link division to multiplication. Use remainders in sharing situations."
+}

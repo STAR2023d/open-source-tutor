@@ -25,7 +25,10 @@ python -m hesabu_agents status
 python -m hesabu_agents generate --skill g4.num.add.regroup --per-level 6        # offline TemplateLLM
 python -m hesabu_agents review proposals/<file>.json --reviewer "Your Name"
 python -m hesabu_agents promote proposals/<file>.json
+python -m hesabu_agents golive --skill g4.num.add.regroup   # when it has enough questions
 ```
+
+See `docs/content-runbook.md` for the full routine and the reviewer checklist.
 
 ## Use a real model (free options)
 Model names and free quotas change, so nothing is hard-coded. Look up a current model first.
@@ -59,6 +62,9 @@ Every drafted question must carry a `check`. Code re-derives the answer using ex
 | `expr` | the numbers come from the prompt (as often as they are used), the expression equals the answer key, results stay in the skill's range, regrouping is present where required |
 | `place_value` | the digit really sits in that place; total value or place name matches the key |
 | `digit_place` | only the marked option has the digit in that place |
+| `division` | quotient or remainder is right; "9 remainder 2" style options; only the marked option is correct |
+| `order` | only the marked list is in the stated order; direction is stated in the prompt |
+| `words` | number words and digits agree both ways (British spelling); distractors are valid number words |
 | visual rules | picture numbers match the prompt and the picture does not print the answer |
 | lint | Kenyan currency, sentence length, no very long words; no duplicates |
 

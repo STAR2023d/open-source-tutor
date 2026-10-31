@@ -5,7 +5,7 @@ aligned to the national competency-based curriculum designs (KICD).
 Learners practise a skill with examples, questions and games until they show
 mastery, then move on.
 
-**Status:** pre-alpha. Grade 4 Numbers: place value and addition are live. Themed UI, teaching pictures, a buddy and onboarding are in.
+**Status:** pre-alpha. 97 skills mapped for Grades 4 to 6 from the KICD designs. Grade 4 Numbers: place value and addition are live. Themed UI, teaching pictures, a buddy and onboarding are in.
 
 ## Principles
 1. Mastery before progress: a learner moves on only after showing mastery.
@@ -20,7 +20,8 @@ mastery, then move on.
 | `packages/mastery_core` | Pure Dart learning engine and its tests |
 | `packages/content_pack` | Skills and questions as JSON (CC BY-SA 4.0) |
 | `apps/learner_app` | Flutter app (web PWA + Android) |
-| `tools/validate_content.py` | Content quality gate used by CI |
+| `tools/validate_content.py` | Content quality gate used by CI (skills across all grades, questions, pictures) |
+| `tools/curriculum_report.py` | Regenerates `docs/curriculum-mapping.md` from the skill files |
 | `tools/agents` | LangGraph pipeline: draft, verify, critique, human review, promote (see its README) |
 | `docs/` | Curriculum mapping, design system, teaching pictures, buddies and onboarding, architecture decisions |
 

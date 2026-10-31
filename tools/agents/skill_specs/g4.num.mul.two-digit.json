@@ -1,0 +1,8 @@
+{
+  "max_value": 99,
+  "max_result": 9801,
+  "plain_op": "*",
+  "a_min": 10, "a_max": 99, "b_min": 10, "b_max": 99,
+  "contexts": ["crates of bottles", "classroom desks", "trays of eggs", "rows of maize plants"],
+  "notes": "Grade 4: multiply a two-digit number by a two-digit number with and without regrouping; estimate products by rounding each number to the nearest ten."
+}

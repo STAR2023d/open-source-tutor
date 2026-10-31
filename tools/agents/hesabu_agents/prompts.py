@@ -38,7 +38,16 @@ THE `check` FIELD lets plain code verify your answer. It is mandatory:
   places: ones, tens, hundreds, thousands, ten thousands. For ask=place_name the correct choice text is the place name.
 - {{"kind":"digit_place","digit":4,"place":"ten thousands","reference":{{"number":4365,"digit":6,"place":"tens"}}}}
   for "which number has digit D in place P": only the correct choice has D in P. `reference` is optional.
+- {{"kind":"division","dividend":47,"divisor":5,"ask":"quotient"|"remainder"|"quotient_and_remainder"}}
+  for division. Both numbers must appear in the prompt. For quotient_and_remainder the 4 choices read like "9 remainder 2".
+- {{"kind":"order","numbers":[482,428,842,248],"direction":"ascending"|"descending"}}
+  multiple choice only: each choice lists the same numbers; only the correct choice is in order. The prompt must say
+  "from smallest to largest" (or "largest to smallest").
+- {{"kind":"words","number":426,"ask":"to_digits"|"to_words"}}
+  for to_digits the prompt contains the number in words (British style: "four hundred and twenty-six") and the answer is
+  the number; for to_words the prompt contains the number and the choices are number words.
 - {{"kind":"none","reason":"why code cannot check this"}} only for multiple choice. Avoid it: a human must check it by hand.
+Rounding questions use kind expr with round_to, for example expr "round_to(738,10)" equals 740.
 
 VISUALS (optional; pictures must never print the answer). The visual object ALWAYS has a "type" key, for example
 {{"type":"columnAddition","a":4568,"b":2175,"showCarries":true,"showResult":false,"showWith":"hint"}}
@@ -71,6 +80,7 @@ def gen_user(skill: dict, spec: dict, level: str, count: int, examples: list[dic
     lines = [
         f"Write {count} DIFFERENT questions at Bloom level '{level}' for this skill.",
         f"Skill: {skill['title']} (grade {skill['grade']}, strand {skill['strand']}, sub-strand {skill['subStrand']}).",
+        f"Curriculum scope (stay inside it): {skill.get('scope', 'not given')}",
         f"Largest number allowed: {spec.get('max_value')}. Largest result allowed: {spec.get('max_result', spec.get('max_value'))}.",
     ]
     if spec.get("notes"):
