@@ -32,7 +32,7 @@
         "equals": 3235
       },
       "_review": {
-        "status": "approved",
+        "status": "promoted",
         "reviewed_by": "Dan",
         "verification": "code-verified",
         "checks": [
@@ -84,7 +84,7 @@
         "equals": 3534
       },
       "_review": {
-        "status": "approved",
+        "status": "promoted",
         "reviewed_by": "Dan",
         "verification": "code-verified",
         "checks": [
@@ -136,7 +136,7 @@
         "equals": 50
       },
       "_review": {
-        "status": "approved",
+        "status": "promoted",
         "reviewed_by": "Dan",
         "verification": "code-verified",
         "checks": [
@@ -188,7 +188,7 @@
         "equals": 416
       },
       "_review": {
-        "status": "approved",
+        "status": "promoted",
         "reviewed_by": "Dan",
         "verification": "code-verified",
         "checks": [
@@ -220,7 +220,7 @@
         "equals": 4364
       },
       "_review": {
-        "status": "approved",
+        "status": "promoted",
         "reviewed_by": "Dan",
         "verification": "code-verified",
         "checks": [

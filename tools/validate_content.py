@@ -72,6 +72,13 @@ def check_grade(folder: Path):
     for qf in manifest["questions"]:
         questions += json.loads((folder / qf).read_text())["questions"]
 
+    listed = set(manifest["questions"])
+    for f in sorted(folder.glob("questions_*.json")):
+        if f.name not in listed:
+            err(f"{folder.name}: {f.name} exists but is not listed in manifest.json (its questions would be invisible)")
+    for f in sorted(listed):
+        if not (folder / f).exists():
+            err(f"{folder.name}: manifest.json lists {f} but the file does not exist")
     grade = manifest.get("grade")
     ids = [s["id"] for s in skills]
     if len(ids) != len(set(ids)):
