@@ -31,6 +31,24 @@ class LLMError(RuntimeError):
     pass
 
 
+class LLMUnavailable(LLMError):
+    """The model is unreachable, out of quota, or misconfigured. Stop the run instead of retrying everything."""
+
+
+class BudgetLLM:
+    """Caps the number of model calls in one run, to protect a free-tier quota."""
+
+    def __init__(self, inner, max_calls: int):
+        self.inner, self.max_calls, self.calls = inner, max_calls, 0
+        self.name = inner.name
+
+    def complete(self, system: str, user: str) -> str:
+        if self.calls >= self.max_calls:
+            raise LLMUnavailable(f"call budget reached ({self.max_calls} calls). Raise it with --max-calls")
+        self.calls += 1
+        return self.inner.complete(system, user)
+
+
 def extract_json(text: str):
     """Pull the first JSON object out of a model reply (handles ``` fences)."""
     text = re.sub(r"```(?:json)?", "", text or "")
@@ -68,14 +86,14 @@ def _post(url: str, payload: dict, headers: dict, timeout: int = 120, retries: i
                 print(f"  model busy (HTTP {e.code}); retrying in {wait}s ({attempt + 1}/{retries})", file=sys.stderr)
                 time.sleep(wait)
                 continue
-            raise LLMError(f"HTTP {e.code}: {detail}") from e
+            raise LLMUnavailable(f"HTTP {e.code}: {detail}") from e
         except (urllib.error.URLError, TimeoutError) as e:
             if attempt < retries:
                 wait = RETRY_DELAYS[min(attempt, len(RETRY_DELAYS) - 1)]
                 print(f"  network problem ({e}); retrying in {wait}s ({attempt + 1}/{retries})", file=sys.stderr)
                 time.sleep(wait)
                 continue
-            raise LLMError(f"network error: {e}") from e
+            raise LLMUnavailable(f"network error: {e}") from e
     raise LLMError("unreachable")
 
 

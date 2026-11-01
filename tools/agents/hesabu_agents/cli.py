@@ -7,7 +7,8 @@ from pathlib import Path
 
 from .content_io import find_repo_root, load_dotenv
 from .graph import RunConfig, run
-from .llm import GeminiLLM, LLMError, OpenAICompatibleLLM, TemplateLLM
+from .content_io import CORE_LEVELS
+from .llm import BudgetLLM, GeminiLLM, LLMError, OpenAICompatibleLLM, TemplateLLM
 from .review import go_live, interactive_review, promote, recheck, status_table
 
 
@@ -38,6 +39,8 @@ def main(argv=None) -> int:
     g.add_argument("--seed", type=int, default=1, help="template provider only")
     g.add_argument("--max-attempts", type=int, default=3)
     g.add_argument("--no-critic", action="store_true")
+    g.add_argument("--levels", nargs="+", choices=CORE_LEVELS, help="only these Bloom levels (saves quota)")
+    g.add_argument("--max-calls", type=int, default=12, help="stop after this many model calls (protects free quotas)")
     g.add_argument("--no-pending", action="store_true", help="ignore unpromoted proposals when planning")
 
     r = sub.add_parser("review", help="approve or reject proposed questions one by one")
@@ -65,15 +68,20 @@ def main(argv=None) -> int:
         if args.cmd == "status":
             print(status_table(root, grade=args.grade, live_only=args.live))
         elif args.cmd == "generate":
-            llm = make_llm(args)
+            llm = BudgetLLM(make_llm(args), args.max_calls)
             for skill_id in args.skill:
                 print(f"\n=== {skill_id} ===")
                 state = run(llm, RunConfig(root=root, skill_id=skill_id, per_level=args.per_level,
                                            max_attempts=args.max_attempts, use_critic=not args.no_critic,
-                                           include_pending=not args.no_pending))
+                                           include_pending=not args.no_pending,
+                                           levels=tuple(args.levels or CORE_LEVELS)))
                 print("\n".join(state["log"]))
                 if state.get("proposal_path"):
                     print(f"Next: python -m hesabu_agents review {state['proposal_path']} --reviewer YOUR_NAME")
+                if state.get("aborted"):
+                    print(f"Stopped early after {llm.calls} model calls: the model is busy, out of quota or unreachable.\n"
+                          "Whatever was drafted is kept. Wait a while, check your internet, then run the same command again.")
+                    break
         elif args.cmd == "review":
             interactive_review(Path(args.proposal), args.reviewer)
             print("Saved. When done: python -m hesabu_agents promote", args.proposal)
@@ -87,6 +95,9 @@ def main(argv=None) -> int:
         elif args.cmd == "promote":
             ids = promote(Path(args.proposal), root)
             print(f"Promoted {len(ids)} questions: {', '.join(ids)}\nNow review the diff and commit.")
+    except KeyboardInterrupt:
+        print("\nStopped by you. Nothing was lost: finished work is already saved.", file=sys.stderr)
+        return 130
     except (LLMError, KeyError, ValueError, RuntimeError, FileNotFoundError) as e:
         print(f"error: {e}", file=sys.stderr)
         return 1

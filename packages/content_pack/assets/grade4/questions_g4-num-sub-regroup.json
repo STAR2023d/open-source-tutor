@@ -1,0 +1,83 @@
+{
+  "questions": [
+    {
+      "id": "g4-num-sub-regroup-001",
+      "skillId": "g4.num.sub.regroup",
+      "bloom": "remember",
+      "type": "numericInput",
+      "prompt": "A farmer harvested 4,325 bags of maize. He sold 1,842 bags. How many bags of maize were left?",
+      "answer": "2483",
+      "hints": [
+        "Set up the subtraction: 4,325 - 1,842.",
+        "Subtract starting from the ones place, regrouping where the top digit is smaller than the bottom digit."
+      ],
+      "explanation": "Subtract place by place:\nOnes: 5 - 2 = 3\nTens: Regroup 1 hundred to get 12 tens. 12 - 4 = 8\nHundreds: Regroup 1 thousand to get 12 hundreds. 12 - 8 = 4\nThousands: 3 - 1 = 2\nSo, 4,325 - 1,842 = 2,483."
+    },
+    {
+      "id": "g4-num-sub-regroup-002",
+      "skillId": "g4.num.sub.regroup",
+      "bloom": "remember",
+      "type": "multipleChoice",
+      "prompt": "What is 7,342 minus 3,581?",
+      "choices": [
+        {
+          "text": "3,761",
+          "correct": true
+        },
+        {
+          "text": "3,861",
+          "misconception": "forgot_to_reduce_hundreds",
+          "feedback": "After you regroup 1 hundred into the tens, the hundreds digit goes down by 1."
+        },
+        {
+          "text": "4,241",
+          "misconception": "subtracted_smaller_from_larger",
+          "feedback": "When the top digit is smaller than the bottom digit, you must regroup from the next place value."
+        },
+        {
+          "text": "3,751",
+          "misconception": "subtraction_fact_error",
+          "feedback": "Check your subtraction in the tens place after regrouping."
+        }
+      ],
+      "hints": [
+        "Align the numbers by place value and subtract from right to left.",
+        "Regroup from the next place value whenever the top digit is smaller."
+      ],
+      "explanation": "7,342 - 3,581:\nOnes: 2 - 1 = 1\nTens: Regroup 1 hundred to make 14 tens. 14 - 8 = 6\nHundreds: Regroup 1 thousand to make 12 hundreds. 12 - 5 = 7\nThousands: 6 - 3 = 3\nAnswer: 3,761."
+    },
+    {
+      "id": "g4-num-sub-regroup-003",
+      "skillId": "g4.num.sub.regroup",
+      "bloom": "remember",
+      "type": "multipleChoice",
+      "prompt": "A shopkeeper had 6,240 shillings. She spent 2,615 shillings to buy stock. How many shillings did she have left?",
+      "choices": [
+        {
+          "text": "3,625",
+          "correct": true
+        },
+        {
+          "text": "3,635",
+          "misconception": "off_by_ten",
+          "feedback": "Remember that after borrowing 1 ten for the ones place, only 3 tens remain."
+        },
+        {
+          "text": "4,625",
+          "misconception": "forgot_to_reduce_regrouped_digit",
+          "feedback": "Remember to decrease the thousands digit from 6 to 5 after regrouping to the hundreds place."
+        },
+        {
+          "text": "3,615",
+          "misconception": "subtraction_fact_error",
+          "feedback": "Check your subtraction again in the tens place."
+        }
+      ],
+      "hints": [
+        "Subtract 2,615 from 6,240.",
+        "Remember to regroup across zeros: borrow 1 ten to make 10 ones."
+      ],
+      "explanation": "6,240 - 2,615:\nOnes: Regroup 1 ten into 10 ones. 10 - 5 = 5\nTens: 3 - 1 = 2\nHundreds: Regroup 1 thousand into 12 hundreds. 12 - 6 = 6\nThousands: 5 - 2 = 3\nAnswer: 3,625 shillings."
+    }
+  ]
+}

@@ -23,7 +23,7 @@ from . import prompts
 from collections import Counter
 
 from .content_io import CORE_LEVELS, Repo, norm_prompt, question_key
-from .llm import LLMClient, LLMError, extract_json
+from .llm import LLMClient, LLMError, LLMUnavailable, extract_json
 from .verifiers import verify_question
 
 
@@ -49,6 +49,7 @@ class GenState(TypedDict, total=False):
     rejected: list[dict]
     attempt: int
     shortfall: dict[str, int]
+    aborted: bool
     proposal_path: str
     log: Annotated[list[str], operator.add]
 
@@ -86,6 +87,9 @@ def build_graph(llm: LLMClient, cfg: RunConfig):
             try:
                 reply = extract_json(llm.complete(prompts.GEN_SYSTEM, prompts.gen_user(skill, spec, level, count, examples)))
                 items = reply.get("questions", [])
+            except LLMUnavailable as e:
+                log.append(f"generate[{level}]: STOPPED, model unavailable: {e}")
+                return {"drafts": drafts, "aborted": True, "log": log}
             except LLMError as e:
                 log.append(f"generate[{level}]: FAILED {e}")
                 continue
@@ -120,14 +124,19 @@ def build_graph(llm: LLMClient, cfg: RunConfig):
         if not survivors:
             return {"log": ["critic: nothing to review"]}
         reviews: dict[str, dict] = {}
+        aborted = bool(state.get("aborted"))
         note = "critic: skipped"
-        if cfg.use_critic:
+        if state.get("aborted"):
+            note = "critic: skipped (model unavailable); code checks only"
+        elif cfg.use_critic:
             try:
                 reply = extract_json(llm.complete(prompts.CRITIC_SYSTEM, prompts.critic_user(skill, survivors)))
                 reviews = {r["id"]: r for r in reply.get("reviews", []) if isinstance(r, dict) and "id" in r}
                 note = f"critic: reviewed {len(reviews)}/{len(survivors)}"
             except LLMError as e:
                 note = f"critic: UNAVAILABLE ({e}); passing on code checks only"
+                if isinstance(e, LLMUnavailable):
+                    aborted = True
         for q in survivors:
             r = reviews.get(q["_tid"])
             if r is not None and r.get("ok") is False:
@@ -135,7 +144,7 @@ def build_graph(llm: LLMClient, cfg: RunConfig):
             else:
                 q["_critic"] = r
                 accepted.append(q)
-        return {"accepted": accepted, "rejected": rejected, "survivors": [], "log": [note]}
+        return {"accepted": accepted, "rejected": rejected, "survivors": [], "aborted": aborted, "log": [note]}
 
     def revise(state: GenState) -> dict:
         attempt = state.get("attempt", 0) + 1
@@ -147,6 +156,9 @@ def build_graph(llm: LLMClient, cfg: RunConfig):
             try:
                 reply = extract_json(llm.complete(prompts.REVISE_SYSTEM, prompts.revise_user(skill, spec, q, item["issues"])))
                 fixed = reply.get("questions", [None])[0]
+            except LLMUnavailable as e:
+                log.append(f"revise: STOPPED, model unavailable: {e}")
+                return {"attempt": attempt, "drafts": drafts, "rejected": [], "aborted": True, "log": log}
             except (LLMError, IndexError) as e:
                 log.append(f"revise: FAILED for {q.get('_tid')}: {e}")
                 continue
@@ -157,7 +169,7 @@ def build_graph(llm: LLMClient, cfg: RunConfig):
         return {"attempt": attempt, "drafts": drafts, "rejected": [], "log": log}
 
     def route(state: GenState) -> str:
-        if state.get("rejected") and state.get("attempt", 0) < cfg.max_attempts and _remaining(state["plan"], state.get("accepted", [])) > 0:
+        if not state.get("aborted") and state.get("rejected") and state.get("attempt", 0) < cfg.max_attempts and _remaining(state["plan"], state.get("accepted", [])) > 0:
             return "revise"
         return "finalize"
 

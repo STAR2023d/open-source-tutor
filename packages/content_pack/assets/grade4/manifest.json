@@ -3,6 +3,7 @@
   "skills": "skills.json",
   "questions": [
     "questions_place_value.json",
-    "questions_addition.json"
+    "questions_addition.json",
+    "questions_g4-num-sub-regroup.json"
   ]
 }
