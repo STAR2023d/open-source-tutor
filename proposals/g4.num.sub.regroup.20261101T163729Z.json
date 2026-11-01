@@ -1,0 +1,172 @@
+{
+  "skillId": "g4.num.sub.regroup",
+  "generatedAt": "20261101T163729Z",
+  "model": "gemini:gemini-3.6-flash",
+  "promptVersion": "2026-10-v1",
+  "perLevelTarget": 3,
+  "shortfall": {},
+  "log": [
+    "plan: existing+pending {'remember': 3} (0 pending in proposals/); need {'understand': 3}",
+    "generate[understand]: 4 drafts",
+    "verify: 2 passed, 2 rejected",
+    "critic: skipped",
+    "revise (attempt 1): 2 revised drafts",
+    "verify: 2 passed, 0 rejected",
+    "critic: skipped"
+  ],
+  "questions": [
+    {
+      "bloom": "understand",
+      "type": "multipleChoice",
+      "prompt": "A matatu driver collected 4,837 shillings in the morning and 2,162 shillings in the afternoon. Estimate how much more money was collected in the morning by rounding each amount to the nearest ten first.",
+      "choices": [
+        {
+          "text": "2,680",
+          "correct": true
+        },
+        {
+          "text": "2,675",
+          "misconception": "did_not_round",
+          "feedback": "Remember to round each number to the nearest ten before subtracting."
+        },
+        {
+          "text": "2,600",
+          "misconception": "rounded_to_hundreds",
+          "feedback": "You rounded to the nearest hundred instead of the nearest ten."
+        },
+        {
+          "text": "2,670",
+          "misconception": "rounding_error",
+          "feedback": "4,837 rounded to the nearest ten is 4,840, not 4,830."
+        }
+      ],
+      "hints": [
+        "First, round 4,837 to the nearest ten (4,840) and 2,162 to the nearest ten (2,160).",
+        "Then subtract the rounded numbers: 4,840 - 2,160."
+      ],
+      "explanation": "Round each number to the nearest ten first:\n4,837 rounds to 4,840\n2,162 rounds to 2,160\nSubtract: 4,840 - 2,160 = 2,680 shillings.",
+      "check": {
+        "kind": "expr",
+        "givens": [
+          4837,
+          2162
+        ],
+        "expr": "round_to(4837,10)-round_to(2162,10)",
+        "equals": 2680
+      },
+      "_review": {
+        "status": "pending",
+        "reviewed_by": null,
+        "verification": "code-verified",
+        "checks": [
+          "expr round_to(4837,10)-round_to(2162,10) = 2680",
+          "expr: correct choice matches recomputation"
+        ],
+        "warnings": [],
+        "critic": null
+      },
+      "_tid": "d1"
+    },
+    {
+      "bloom": "understand",
+      "type": "numericInput",
+      "prompt": "To subtract 4,325 - 1,618, Juma regroups 1 ten into 10 ones. Combining the existing 5 ones with these 10 ones gives how many ones in total?",
+      "answer": "15",
+      "hints": [
+        "Look at the ones place digit in 4,325, which is 5.",
+        "Add 10 ones to the 5 ones you already have."
+      ],
+      "explanation": "When Juma regroups 1 ten, it becomes 10 ones. Adding these to the 5 ones gives 5 + 10 = 15 ones.",
+      "visual": {
+        "type": "placeValueChart",
+        "value": 4325,
+        "mode": "digits",
+        "showLabels": true,
+        "showWith": "hint"
+      },
+      "check": {
+        "kind": "expr",
+        "givens": [
+          5,
+          10
+        ],
+        "expr": "5+10",
+        "equals": 15
+      },
+      "_review": {
+        "status": "pending",
+        "reviewed_by": null,
+        "verification": "code-verified",
+        "checks": [
+          "expr 5+10 = 15",
+          "expr: answer key matches recomputation",
+          "visual 'placeValueChart' consistent with the prompt"
+        ],
+        "warnings": [],
+        "critic": null
+      },
+      "_tid": "d2"
+    },
+    {
+      "bloom": "understand",
+      "type": "multipleChoice",
+      "prompt": "A shamba harvested 7,240 kg of maize. A trader bought 3,585 kg. How many kilograms of maize were left?",
+      "choices": [
+        {
+          "text": "3,655",
+          "correct": true
+        },
+        {
+          "text": "4,345",
+          "misconception": "subtract_smaller_from_larger",
+          "feedback": "When a top digit is smaller than the bottom digit, regroup from the column to the left instead of subtracting the smaller number from the larger one."
+        },
+        {
+          "text": "3,755",
+          "misconception": "forgot_to_reduce_regrouped_digit",
+          "feedback": "When you regroup 1 hundred to tens, remember to decrease the hundreds digit from 2 to 1."
+        },
+        {
+          "text": "3,665",
+          "misconception": "subtraction_fact_error",
+          "feedback": "Check your subtraction after regrouping: 13 tens minus 8 tens is 5 tens, not 6."
+        }
+      ],
+      "hints": [
+        "Set up the vertical subtraction problem: 7,240 minus 3,585.",
+        "Regroup step-by-step from left to right whenever the top digit is smaller than the bottom digit."
+      ],
+      "explanation": "Subtract 3,585 from 7,240 using regrouping:\n- Ones column: 0 - 5 requires regrouping 1 ten (leaves 3 tens), making 10 ones. 10 - 5 = 5.\n- Tens column: 3 - 8 requires regrouping 1 hundred (leaves 1 hundred), making 13 tens. 13 - 8 = 5.\n- Hundreds column: 1 - 5 requires regrouping 1 thousand (leaves 6 thousands), making 11 hundreds. 11 - 5 = 6.\n- Thousands column: 6 - 3 = 3.\n\n7,240 - 3,585 = 3,655 kg.",
+      "visual": {
+        "type": "placeValueChart",
+        "value": 7240,
+        "mode": "digits",
+        "showLabels": true,
+        "showWith": "hint"
+      },
+      "check": {
+        "kind": "expr",
+        "givens": [
+          7240,
+          3585
+        ],
+        "expr": "7240-3585",
+        "equals": 3655
+      },
+      "_review": {
+        "status": "pending",
+        "reviewed_by": null,
+        "verification": "code-verified",
+        "checks": [
+          "expr 7240-3585 = 3655",
+          "expr: correct choice matches recomputation",
+          "visual 'placeValueChart' consistent with the prompt"
+        ],
+        "warnings": [],
+        "critic": null
+      },
+      "_tid": "d5"
+    }
+  ],
+  "rejected": []
+}
