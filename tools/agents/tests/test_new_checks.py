@@ -167,3 +167,19 @@ def test_golive_refuses_until_enough_questions_then_flips_status(repo_copy):
     go_live(repo_copy, "g4.num.sub.regroup")
     skills = json.loads((repo_copy / "packages/content_pack/assets/grade4/skills.json").read_text())["skills"]
     assert next(s for s in skills if s["id"] == "g4.num.sub.regroup")["status"] == "live"
+
+
+def test_easy_levels_limit_how_many_borrows_a_subtraction_needs():
+    from hesabu_agents.safe_math import count_borrows
+    assert count_borrows(4325, 1842) == 2 and count_borrows(6240, 2615) == 2 and count_borrows(7342, 3581) == 2
+    assert count_borrows(4325, 1812) == 1 and count_borrows(4378, 1245) == 0
+    q = {"bloom": "remember", "type": "numericInput", "_requested": "remember",
+         "prompt": "A farmer harvested 4,325 bags of maize. He sold 1,842 bags. How many bags of maize were left?",
+         "answer": "2483", "hints": ["Subtract the bags sold."], "explanation": "4,325 - 1,842 = 2,483.",
+         "check": {"kind": "expr", "givens": [4325, 1842], "expr": "4325-1842", "equals": 2483}}
+    assert any("at most 1 borrowing" in i for i in verdict(q, SUB).issues)          # two borrows: too hard for remember
+    easy = dict(q, prompt="A farmer harvested 4,325 bags of maize. He sold 1,812 bags. How many bags of maize were left?",
+                answer="2513", explanation="4,325 - 1,812 = 2,513.",
+                check={"kind": "expr", "givens": [4325, 1812], "expr": "4325-1812", "equals": 2513})
+    assert verdict(easy, SUB).issues == []
+    assert verdict(dict(q, bloom="apply", _requested="apply"), SUB).issues == []     # apply: no cap, borrowing required

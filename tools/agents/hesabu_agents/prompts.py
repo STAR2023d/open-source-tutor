@@ -87,6 +87,9 @@ def gen_user(skill: dict, spec: dict, level: str, count: int, examples: list[dic
         lines.append("Skill notes: " + spec["notes"])
     if spec.get("contexts"):
         lines.append("Contexts you may use: " + ", ".join(spec["contexts"]))
+    cap = (spec.get("max_borrows") or {}).get(level)
+    if cap is not None:
+        lines.append(f"Keep it easy: at most {cap} column(s) may need borrowing (regrouping) in a subtraction.")
     if spec.get("regroup_required_levels") and level in spec["regroup_required_levels"]:
         lines.append("Every plain addition MUST need regrouping (a column adding to 10 or more).")
     if examples:

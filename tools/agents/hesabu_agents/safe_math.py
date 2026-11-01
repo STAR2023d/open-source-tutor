@@ -126,3 +126,16 @@ def has_borrow(a: int, b: int) -> bool:
         a //= 10
         b //= 10
     return False
+
+
+def count_borrows(a: int, b: int) -> int:
+    """How many columns of a - b need to borrow (regroup)."""
+    n = borrow = 0
+    while a or b:
+        if a % 10 - borrow < b % 10:
+            n, borrow = n + 1, 1
+        else:
+            borrow = 0
+        a //= 10
+        b //= 10
+    return n

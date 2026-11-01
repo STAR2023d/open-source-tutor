@@ -1,0 +1,263 @@
+{
+  "skillId": "g4.num.sub.regroup",
+  "generatedAt": "20261101T164611Z",
+  "model": "gemini:gemini-3.6-flash",
+  "promptVersion": "2026-10-v1",
+  "perLevelTarget": 5,
+  "shortfall": {},
+  "log": [
+    "plan: existing+pending {'understand': 3} (3 pending in proposals/); need {'remember': 5}",
+    "generate[remember]: 7 drafts",
+    "verify: 6 passed, 1 rejected",
+    "critic: skipped"
+  ],
+  "questions": [
+    {
+      "bloom": "remember",
+      "type": "numericInput",
+      "prompt": "Work out: 4,582 - 1,347",
+      "answer": "3235",
+      "hints": [
+        "Start with the ones place: 2 - 7 needs regrouping from the tens column.",
+        "Borrow 1 ten from 8 tens to make 12 ones. Then subtract: 12 - 7 = 5."
+      ],
+      "explanation": "Regroup 1 ten from 8 tens to make 12 ones (leaving 7 tens).\nOnes: 12 - 7 = 5\nTens: 7 - 4 = 3\nHundreds: 5 - 3 = 2\nThousands: 4 - 1 = 3\nSo, 4,582 - 1,347 = 3,235.",
+      "check": {
+        "kind": "expr",
+        "givens": [
+          4582,
+          1347
+        ],
+        "expr": "4582-1347",
+        "equals": 3235
+      },
+      "_review": {
+        "status": "approved",
+        "reviewed_by": "Dan",
+        "verification": "code-verified",
+        "checks": [
+          "expr 4582-1347 = 3235",
+          "expr: answer key matches recomputation"
+        ],
+        "warnings": [],
+        "critic": null
+      },
+      "_tid": "d1"
+    },
+    {
+      "bloom": "remember",
+      "type": "multipleChoice",
+      "prompt": "What is 5,672 - 2,138?",
+      "choices": [
+        {
+          "text": "3,534",
+          "correct": true
+        },
+        {
+          "text": "3,536",
+          "misconception": "smaller_from_larger",
+          "feedback": "Borrow 1 ten from the tens column when subtracting 8 from 2."
+        },
+        {
+          "text": "3,544",
+          "misconception": "forgot_to_decrement",
+          "feedback": "After regrouping 1 ten to the ones column, decrease the 7 tens to 6 tens."
+        },
+        {
+          "text": "7,810",
+          "misconception": "added_instead_of_subtracted",
+          "feedback": "Subtract 2,138 from 5,672, do not add them."
+        }
+      ],
+      "hints": [
+        "In the ones place, 2 is smaller than 8, so borrow 1 ten from 7 tens.",
+        "12 - 8 = 4, and 6 tens - 3 tens = 3 tens."
+      ],
+      "explanation": "5,672 - 2,138:\nBorrow 1 ten from 7 tens to make 12 ones (leaving 6 tens).\nOnes: 12 - 8 = 4\nTens: 6 - 3 = 3\nHundreds: 6 - 1 = 5\nThousands: 5 - 2 = 3\nAnswer: 3,534.",
+      "check": {
+        "kind": "expr",
+        "givens": [
+          5672,
+          2138
+        ],
+        "expr": "5672-2138",
+        "equals": 3534
+      },
+      "_review": {
+        "status": "approved",
+        "reviewed_by": "Dan",
+        "verification": "code-verified",
+        "checks": [
+          "expr 5672-2138 = 3534",
+          "expr: correct choice matches recomputation"
+        ],
+        "warnings": [],
+        "critic": null
+      },
+      "_tid": "d3"
+    },
+    {
+      "bloom": "remember",
+      "type": "multipleChoice",
+      "prompt": "Estimate the difference of 84 - 27 by rounding each number to the nearest ten first.",
+      "choices": [
+        {
+          "text": "50",
+          "correct": true
+        },
+        {
+          "text": "60",
+          "misconception": "rounded_down_instead_of_up",
+          "feedback": "27 has 7 in the ones place, so it rounds up to 30."
+        },
+        {
+          "text": "57",
+          "misconception": "did_not_round",
+          "feedback": "Round 84 to 80 and 27 to 30 before finding the difference."
+        },
+        {
+          "text": "110",
+          "misconception": "added_instead_of_subtracted",
+          "feedback": "Difference means subtract the smaller rounded number from the larger one."
+        }
+      ],
+      "hints": [
+        "Round 84 to the nearest ten (80).",
+        "Round 27 to the nearest ten (30). Then subtract 80 - 30."
+      ],
+      "explanation": "84 rounded to the nearest ten is 80.\n27 rounded to the nearest ten is 30.\n80 - 30 = 50.\nThe estimated difference is 50.",
+      "check": {
+        "kind": "expr",
+        "givens": [
+          84,
+          27
+        ],
+        "expr": "round_to(84,10)-round_to(27,10)",
+        "equals": 50
+      },
+      "_review": {
+        "status": "approved",
+        "reviewed_by": "Dan",
+        "verification": "code-verified",
+        "checks": [
+          "expr round_to(84,10)-round_to(27,10) = 50",
+          "expr: correct choice matches recomputation"
+        ],
+        "warnings": [],
+        "critic": null
+      },
+      "_tid": "d5"
+    },
+    {
+      "bloom": "remember",
+      "type": "multipleChoice",
+      "prompt": "A farmer harvested 654 bags of maize from her shamba. She sold 238 bags. How many bags remained?",
+      "choices": [
+        {
+          "text": "416",
+          "correct": true
+        },
+        {
+          "text": "414",
+          "misconception": "smaller_from_larger",
+          "feedback": "Borrow 1 ten from the tens digit so that 4 becomes 14 ones."
+        },
+        {
+          "text": "426",
+          "misconception": "forgot_to_decrement",
+          "feedback": "Remember to decrease the 5 tens to 4 tens after borrowing."
+        },
+        {
+          "text": "892",
+          "misconception": "added_instead_of_subtracted",
+          "feedback": "Subtract the sold bags from the total to find how many remained."
+        }
+      ],
+      "hints": [
+        "Subtract 238 from 654.",
+        "4 - 8 needs borrowing 1 ten from 5 tens, making 14 - 8 = 6 ones."
+      ],
+      "explanation": "654 - 238:\nRegroup 1 ten from 5 tens to make 14 ones (leaving 4 tens).\nOnes: 14 - 8 = 6\nTens: 4 - 3 = 1\nHundreds: 6 - 2 = 4\n416 bags remained.",
+      "check": {
+        "kind": "expr",
+        "givens": [
+          654,
+          238
+        ],
+        "expr": "654-238",
+        "equals": 416
+      },
+      "_review": {
+        "status": "approved",
+        "reviewed_by": "Dan",
+        "verification": "code-verified",
+        "checks": [
+          "expr 654-238 = 416",
+          "expr: correct choice matches recomputation"
+        ],
+        "warnings": [],
+        "critic": null
+      },
+      "_tid": "d6"
+    },
+    {
+      "bloom": "remember",
+      "type": "numericInput",
+      "prompt": "Work out: 7,825 - 3,461",
+      "answer": "4364",
+      "hints": [
+        "Ones column: 5 - 1 = 4.",
+        "Tens column: 2 - 6 needs borrowing 1 hundred from 8 hundreds to make 12 tens."
+      ],
+      "explanation": "7,825 - 3,461:\nOnes: 5 - 1 = 4\nTens: Borrow 1 hundred from 8 hundreds to make 12 tens (leaving 7 hundreds). 12 - 6 = 6\nHundreds: 7 - 4 = 3\nThousands: 7 - 3 = 4\nResult: 4,364.",
+      "check": {
+        "kind": "expr",
+        "givens": [
+          7825,
+          3461
+        ],
+        "expr": "7825-3461",
+        "equals": 4364
+      },
+      "_review": {
+        "status": "approved",
+        "reviewed_by": "Dan",
+        "verification": "code-verified",
+        "checks": [
+          "expr 7825-3461 = 4364",
+          "expr: answer key matches recomputation"
+        ],
+        "warnings": [],
+        "critic": null
+      },
+      "_tid": "d7"
+    }
+  ],
+  "rejected": [
+    {
+      "question": {
+        "bloom": "remember",
+        "type": "numericInput",
+        "prompt": "What is the missing number in this subtraction pattern?\n8,000, 7,500, 7,000, ____, 6,000",
+        "answer": "6500",
+        "hints": [
+          "Look at how much the numbers decrease each step.",
+          "Each number is 500 less than the previous one: 7,000 - 500."
+        ],
+        "explanation": "The pattern subtracts 500 each time:\n8,000 - 500 = 7,500\n7,500 - 500 = 7,000\n7,000 - 500 = 6,500\n6,500 - 500 = 6,000\nSo the missing number is 6,500.",
+        "check": {
+          "kind": "expr",
+          "givens": [
+            7000,
+            500
+          ],
+          "expr": "7000-500",
+          "equals": 6500
+        }
+      },
+      "issues": [
+        "givens [500] do not appear in the prompt (as often as they are used)"
+      ]
+    }
+  ]
+}

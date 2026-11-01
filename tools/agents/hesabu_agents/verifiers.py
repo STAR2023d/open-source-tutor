@@ -15,6 +15,7 @@ from .content_io import BLOOM_LEVELS, norm_prompt, question_key
 from .numwords import from_words, to_words
 from .safe_math import (
     UnsafeExpression,
+    count_borrows,
     has_borrow,
     has_carry,
     int_list_in,
@@ -102,6 +103,9 @@ def check_plain_rules(q: dict, spec: dict, a: int, op: str, b: int, res: Result)
         if a < b:
             res.issues.append("subtraction must not have a negative answer at this grade")
             return
+        cap = spec.get("max_borrows", {}).get(q["bloom"])
+        if cap is not None and count_borrows(a, b) > cap:
+            res.issues.append(f"'{q['bloom']}' questions may need at most {cap} borrowing column(s); this one needs {count_borrows(a, b)}")
         if q["bloom"] in spec.get("borrow_required_levels", []):
             if has_borrow(a, b):
                 res.checks.append("regrouping (borrowing) present")
@@ -448,6 +452,11 @@ def check_visual(q: dict, res: Result) -> None:
             res.issues.append(f"visual {label} {missing} must appear in the prompt")
 
     if t == "columnAddition":
+        chk = q.get("check") if isinstance(q.get("check"), dict) else {}
+        m = re.fullmatch(r"\s*(\d+)\s*\+\s*(\d+)\s*", str(chk.get("expr", "")))
+        if not m or {int(m[1]), int(m[2])} != {v.get("a"), v.get("b")}:
+            res.issues.append("the columnAddition picture shows an ADDITION, but this question is not that addition "
+                              "(there is no subtraction picture yet: leave the picture out)")
         must_be_in_prompt([v.get("a"), v.get("b")], "numbers")
         if v.get("showResult") and reveal == "prompt":
             res.issues.append("visual would reveal the answer (showResult with showWith 'prompt')")
