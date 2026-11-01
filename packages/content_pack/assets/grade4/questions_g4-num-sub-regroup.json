@@ -203,6 +203,191 @@
         "Tens column: 2 - 6 needs borrowing 1 hundred from 8 hundreds to make 12 tens."
       ],
       "explanation": "7,825 - 3,461:\nOnes: 5 - 1 = 4\nTens: Borrow 1 hundred from 8 hundreds to make 12 tens (leaving 7 hundreds). 12 - 6 = 6\nHundreds: 7 - 4 = 3\nThousands: 7 - 3 = 4\nResult: 4,364."
+    },
+    {
+      "id": "g4-num-sub-regroup-009",
+      "skillId": "g4.num.sub.regroup",
+      "bloom": "understand",
+      "type": "multipleChoice",
+      "prompt": "A matatu driver collected 4,837 shillings in the morning and 2,162 shillings in the afternoon. Estimate how much more money was collected in the morning by rounding each amount to the nearest ten first.",
+      "choices": [
+        {
+          "text": "2,680",
+          "correct": true
+        },
+        {
+          "text": "2,675",
+          "misconception": "did_not_round",
+          "feedback": "Remember to round each number to the nearest ten before subtracting."
+        },
+        {
+          "text": "2,600",
+          "misconception": "rounded_to_hundreds",
+          "feedback": "You rounded to the nearest hundred instead of the nearest ten."
+        },
+        {
+          "text": "2,670",
+          "misconception": "rounding_error",
+          "feedback": "4,837 rounded to the nearest ten is 4,840, not 4,830."
+        }
+      ],
+      "hints": [
+        "First, round 4,837 to the nearest ten (4,840) and 2,162 to the nearest ten (2,160).",
+        "Then subtract the rounded numbers: 4,840 - 2,160."
+      ],
+      "explanation": "Round each number to the nearest ten first:\n4,837 rounds to 4,840\n2,162 rounds to 2,160\nSubtract: 4,840 - 2,160 = 2,680 shillings."
+    },
+    {
+      "id": "g4-num-sub-regroup-010",
+      "skillId": "g4.num.sub.regroup",
+      "bloom": "understand",
+      "type": "numericInput",
+      "prompt": "To subtract 4,325 - 1,618, Juma regroups 1 ten into 10 ones. Combining the existing 5 ones with these 10 ones gives how many ones in total?",
+      "answer": "15",
+      "hints": [
+        "Look at the ones place digit in 4,325, which is 5.",
+        "Add 10 ones to the 5 ones you already have."
+      ],
+      "explanation": "When Juma regroups 1 ten, it becomes 10 ones. Adding these to the 5 ones gives 5 + 10 = 15 ones.",
+      "visual": {
+        "type": "placeValueChart",
+        "value": 4325,
+        "mode": "digits",
+        "showLabels": true,
+        "showWith": "hint"
+      }
+    },
+    {
+      "id": "g4-num-sub-regroup-011",
+      "skillId": "g4.num.sub.regroup",
+      "bloom": "understand",
+      "type": "multipleChoice",
+      "prompt": "A shamba harvested 7,240 kg of maize. A trader bought 3,585 kg. How many kilograms of maize were left?",
+      "choices": [
+        {
+          "text": "3,655",
+          "correct": true
+        },
+        {
+          "text": "4,345",
+          "misconception": "subtract_smaller_from_larger",
+          "feedback": "When a top digit is smaller than the bottom digit, regroup from the column to the left instead of subtracting the smaller number from the larger one."
+        },
+        {
+          "text": "3,755",
+          "misconception": "forgot_to_reduce_regrouped_digit",
+          "feedback": "When you regroup 1 hundred to tens, remember to decrease the hundreds digit from 2 to 1."
+        },
+        {
+          "text": "3,665",
+          "misconception": "subtraction_fact_error",
+          "feedback": "Check your subtraction after regrouping: 13 tens minus 8 tens is 5 tens, not 6."
+        }
+      ],
+      "hints": [
+        "Set up the vertical subtraction problem: 7,240 minus 3,585.",
+        "Regroup step-by-step from left to right whenever the top digit is smaller than the bottom digit."
+      ],
+      "explanation": "Subtract 3,585 from 7,240 using regrouping:\n- Ones column: 0 - 5 requires regrouping 1 ten (leaves 3 tens), making 10 ones. 10 - 5 = 5.\n- Tens column: 3 - 8 requires regrouping 1 hundred (leaves 1 hundred), making 13 tens. 13 - 8 = 5.\n- Hundreds column: 1 - 5 requires regrouping 1 thousand (leaves 6 thousands), making 11 hundreds. 11 - 5 = 6.\n- Thousands column: 6 - 3 = 3.\n\n7,240 - 3,585 = 3,655 kg.",
+      "visual": {
+        "type": "placeValueChart",
+        "value": 7240,
+        "mode": "digits",
+        "showLabels": true,
+        "showWith": "hint"
+      }
+    },
+    {
+      "id": "g4-num-sub-regroup-012",
+      "skillId": "g4.num.sub.regroup",
+      "bloom": "apply",
+      "type": "multipleChoice",
+      "prompt": "A shopkeeper had 8,150 shillings. He spent 3,475 shillings to restock flour in his shop. How many shillings does he have left?",
+      "choices": [
+        {
+          "text": "4,675",
+          "correct": true
+        },
+        {
+          "text": "4,775",
+          "misconception": "forgot_to_reduce_hundreds",
+          "feedback": "Remember to decrease the hundreds digit by 1 after regrouping 1 hundred into tens."
+        },
+        {
+          "text": "5,325",
+          "misconception": "subtracted_smaller_from_larger",
+          "feedback": "When the top digit is smaller than the bottom digit, regroup from the place to the left instead of subtracting smaller from larger."
+        },
+        {
+          "text": "4,685",
+          "misconception": "off_by_ten",
+          "feedback": "Check your subtraction in the tens place after regrouping."
+        }
+      ],
+      "hints": [
+        "Subtract 3,475 from 8,150.",
+        "Be careful to regroup correctly across the tens, hundreds, and thousands."
+      ],
+      "explanation": "8,150 - 3,475:\nOnes: Regroup 1 ten: 10 - 5 = 5\nTens: 4 - 7 requires regrouping. 14 - 7 = 7\nHundreds: 0 - 4 requires regrouping. 10 - 4 = 6\nThousands: 7 - 3 = 4\n8,150 - 3,475 = 4,675 shillings."
+    },
+    {
+      "id": "g4-num-sub-regroup-013",
+      "skillId": "g4.num.sub.regroup",
+      "bloom": "apply",
+      "type": "numericInput",
+      "prompt": "A primary school has 3,412 pupils in total. If 1,756 of the pupils are boys, how many pupils are girls?",
+      "answer": "1656",
+      "hints": [
+        "Subtract the number of boys from the total number of pupils: 3,412 - 1,756.",
+        "Work digit by digit from right to left, regrouping when needed."
+      ],
+      "explanation": "3,412 - 1,756:\nOnes: Regroup 1 ten to get 12 ones. 12 - 6 = 6\nTens: 0 tens remain. Regroup 1 hundred to get 10 tens. 10 - 5 = 5\nHundreds: 3 hundreds remain. Regroup 1 thousand to get 13 hundreds. 13 - 7 = 6\nThousands: 2 - 1 = 1\n3,412 - 1,756 = 1,656 girls."
+    },
+    {
+      "id": "g4-num-sub-regroup-014",
+      "skillId": "g4.num.sub.regroup",
+      "bloom": "apply",
+      "type": "multipleChoice",
+      "prompt": "A bakery made 4,368 mandazi. By afternoon, 2,143 mandazi were sold. Estimate how many mandazi were left by rounding each number to the nearest ten before subtracting.",
+      "choices": [
+        {
+          "text": "2,230",
+          "correct": true
+        },
+        {
+          "text": "2,225",
+          "misconception": "subtracted_without_rounding",
+          "feedback": "Remember to round each number to the nearest ten before subtracting."
+        },
+        {
+          "text": "2,300",
+          "misconception": "rounded_to_nearest_hundred",
+          "feedback": "The question asks you to round to the nearest ten, not the nearest hundred."
+        },
+        {
+          "text": "2,240",
+          "misconception": "rounding_error",
+          "feedback": "Check your rounding: 2,143 rounded to the nearest ten is 2,140."
+        }
+      ],
+      "hints": [
+        "First round 4,368 to the nearest ten (4,370).",
+        "Next round 2,143 to the nearest ten (2,140), then subtract."
+      ],
+      "explanation": "4,368 rounded to the nearest ten is 4,370.\n2,143 rounded to the nearest ten is 2,140.\n4,370 - 2,140 = 2,230 mandazi."
+    },
+    {
+      "id": "g4-num-sub-regroup-015",
+      "skillId": "g4.num.sub.regroup",
+      "bloom": "apply",
+      "type": "numericInput",
+      "prompt": "A dairy co-operative collected 6,000 litres of milk. They processed 3,428 litres into cheese. How many litres of milk were left?",
+      "answer": "2572",
+      "hints": [
+        "Set up 6,000 - 3,428.",
+        "Regroup across the zeros from the thousands place to the ones place."
+      ],
+      "explanation": "6,000 - 3,428:\nRegroup 1 thousand as 9 hundreds, 9 tens, and 10 ones:\nOnes: 10 - 8 = 2\nTens: 9 - 2 = 7\nHundreds: 9 - 4 = 5\nThousands: 5 - 3 = 2\n6,000 - 3,428 = 2,572 litres."
     }
   ]
 }

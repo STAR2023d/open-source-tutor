@@ -55,8 +55,8 @@
         "equals": 2680
       },
       "_review": {
-        "status": "pending",
-        "reviewed_by": null,
+        "status": "promoted",
+        "reviewed_by": "Dan",
         "verification": "code-verified",
         "checks": [
           "expr round_to(4837,10)-round_to(2162,10) = 2680",
@@ -94,8 +94,8 @@
         "equals": 15
       },
       "_review": {
-        "status": "pending",
-        "reviewed_by": null,
+        "status": "promoted",
+        "reviewed_by": "Dan",
         "verification": "code-verified",
         "checks": [
           "expr 5+10 = 15",
@@ -154,8 +154,8 @@
         "equals": 3655
       },
       "_review": {
-        "status": "pending",
-        "reviewed_by": null,
+        "status": "promoted",
+        "reviewed_by": "Dan",
         "verification": "code-verified",
         "checks": [
           "expr 7240-3585 = 3655",
