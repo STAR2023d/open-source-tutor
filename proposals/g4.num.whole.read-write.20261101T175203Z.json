@@ -1,0 +1,148 @@
+{
+  "skillId": "g4.num.whole.read-write",
+  "generatedAt": "20261101T175203Z",
+  "model": "gemini:gemini-3.6-flash",
+  "promptVersion": "2026-10-v1",
+  "perLevelTarget": 4,
+  "shortfall": {},
+  "log": [
+    "plan: existing+pending {'remember': 4, 'understand': 4} (8 pending in proposals/); need {'apply': 4}",
+    "generate[apply]: 6 drafts",
+    "verify: 3 passed, 3 rejected",
+    "critic: skipped",
+    "revise: STOPPED, model unavailable: call budget reached (3 calls). Raise it with --max-calls",
+    "verify: 2 passed, 0 rejected",
+    "critic: skipped (model unavailable); code checks only"
+  ],
+  "questions": [
+    {
+      "bloom": "apply",
+      "type": "numericInput",
+      "prompt": "A storybook costs seven hundred and thirty-four shillings at a bookshop in Nairobi. Write this price in figures.",
+      "answer": "734",
+      "hints": [
+        "Seven hundred means put 7 in the hundreds place.",
+        "Thirty-four is 3 tens and 4 ones."
+      ],
+      "explanation": "Seven hundred is 700, and thirty-four is 34. Put together, seven hundred and thirty-four is 734.",
+      "check": {
+        "kind": "words",
+        "number": 734,
+        "ask": "to_digits"
+      },
+      "_review": {
+        "status": "pending",
+        "reviewed_by": null,
+        "verification": "code-verified",
+        "checks": [
+          "'seven hundred and thirty-four' = 734"
+        ],
+        "warnings": [],
+        "critic": null
+      },
+      "_tid": "d2"
+    },
+    {
+      "bloom": "apply",
+      "type": "numericInput",
+      "prompt": "Farmer Otieno counted six hundred and fifteen cows on his shamba. Write the number of cows in figures.",
+      "answer": "615",
+      "hints": [
+        "Six hundred gives 6 in the hundreds place.",
+        "Fifteen is written as 15."
+      ],
+      "explanation": "Six hundred is 600, and fifteen is 15. Combining them gives 615.",
+      "check": {
+        "kind": "words",
+        "number": 615,
+        "ask": "to_digits"
+      },
+      "_review": {
+        "status": "pending",
+        "reviewed_by": null,
+        "verification": "code-verified",
+        "checks": [
+          "'six hundred and fifteen' = 615"
+        ],
+        "warnings": [],
+        "critic": null
+      },
+      "_tid": "d4"
+    },
+    {
+      "bloom": "apply",
+      "type": "numericInput",
+      "prompt": "A baker made nine hundred and forty mandazi for a school party. Write this total number of mandazi in figures.",
+      "answer": "940",
+      "hints": [
+        "Nine hundred is 9 in the hundreds place.",
+        "Forty is 4 tens and 0 ones."
+      ],
+      "explanation": "Nine hundred is 900, and forty is 40. Writing these together in figures gives 940.",
+      "check": {
+        "kind": "words",
+        "number": 940,
+        "ask": "to_digits"
+      },
+      "_review": {
+        "status": "pending",
+        "reviewed_by": null,
+        "verification": "code-verified",
+        "checks": [
+          "'nine hundred and forty' = 940"
+        ],
+        "warnings": [],
+        "critic": null
+      },
+      "_tid": "d6"
+    },
+    {
+      "bloom": "apply",
+      "type": "multipleChoice",
+      "prompt": "A primary school in Nakuru has 458 pupils. How do you write the number of pupils in words?",
+      "choices": [
+        {
+          "text": "four hundred and fifty-eight",
+          "correct": true
+        },
+        {
+          "text": "four hundred and eighty-five",
+          "misconception": "swapped_tens_and_ones",
+          "feedback": "Check the tens and ones: 5 is in the tens place and 8 is in the ones place."
+        },
+        {
+          "text": "five hundred and forty-eight",
+          "misconception": "swapped_hundreds_and_tens",
+          "feedback": "Check the hundreds place: 4 is in the hundreds place, not 5."
+        },
+        {
+          "text": "four hundred and fifty",
+          "misconception": "forgot_ones_digit",
+          "feedback": "Remember to include the 8 in the ones place."
+        }
+      ],
+      "hints": [
+        "Break 458 into hundreds, tens, and ones: 4 hundreds, 5 tens, and 8 ones.",
+        "400 is 'four hundred', 50 is 'fifty', and 8 is 'eight'."
+      ],
+      "explanation": "458 has 4 hundreds, 5 tens, and 8 ones. Combining these in words gives 'four hundred and fifty-eight'.",
+      "check": {
+        "kind": "words",
+        "number": 458,
+        "ask": "to_words"
+      },
+      "_review": {
+        "status": "pending",
+        "reviewed_by": null,
+        "verification": "code-verified",
+        "checks": [
+          "458 = 'four hundred and fifty-eight'; only the marked choice says so"
+        ],
+        "warnings": [],
+        "critic": null
+      },
+      "_tid": "d7"
+    }
+  ],
+  "rejected": []
+}

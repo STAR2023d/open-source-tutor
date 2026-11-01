@@ -1,0 +1,177 @@
+{
+  "skillId": "g4.num.whole.read-write",
+  "generatedAt": "20261101T175007Z",
+  "model": "gemini:gemini-3.6-flash",
+  "promptVersion": "2026-10-v1",
+  "perLevelTarget": 4,
+  "shortfall": {},
+  "log": [
+    "plan: existing+pending {} (0 pending in proposals/); need {'remember': 4}",
+    "generate[remember]: 6 drafts",
+    "verify: 2 passed, 4 rejected",
+    "critic: skipped",
+    "revise: STOPPED, model unavailable: call budget reached (3 calls). Raise it with --max-calls",
+    "verify: 2 passed, 0 rejected",
+    "critic: skipped (model unavailable); code checks only"
+  ],
+  "questions": [
+    {
+      "bloom": "remember",
+      "type": "multipleChoice",
+      "prompt": "Farmer Otieno sold a goat for eight hundred and ninety-four shillings. How is this amount written in digits?",
+      "choices": [
+        {
+          "text": "894",
+          "correct": true
+        },
+        {
+          "text": "849",
+          "misconception": "swapped_digits",
+          "feedback": "Ninety-four means 9 tens and 4 ones, so the last two digits are 94."
+        },
+        {
+          "text": "8094",
+          "misconception": "extra_zero_place_value",
+          "feedback": "Eight hundred and ninety-four is a 3-digit number, 894."
+        },
+        {
+          "text": "8904",
+          "misconception": "expanded_form_concat",
+          "feedback": "Eight hundred and ninety-four is written as 894, not 8904."
+        }
+      ],
+      "hints": [
+        "Eight hundred is 800.",
+        "Ninety-four is 94. Combine them to get 894."
+      ],
+      "explanation": "Eight hundred and ninety-four in digits is 894.",
+      "check": {
+        "kind": "words",
+        "number": 894,
+        "ask": "to_digits"
+      },
+      "_review": {
+        "status": "pending",
+        "reviewed_by": null,
+        "verification": "code-verified",
+        "checks": [
+          "'eight hundred and ninety-four' = 894; only the marked choice says so"
+        ],
+        "warnings": [],
+        "critic": null
+      },
+      "_tid": "d3"
+    },
+    {
+      "bloom": "remember",
+      "type": "numericInput",
+      "prompt": "A matatu carried three hundred and fifty passengers in one week. Write this number in digits.",
+      "answer": "350",
+      "hints": [
+        "Three hundred is 300.",
+        "Fifty is 50. Put them together to get 350."
+      ],
+      "explanation": "Three hundred and fifty written in digits is 350.",
+      "check": {
+        "kind": "words",
+        "number": 350,
+        "ask": "to_digits"
+      },
+      "_review": {
+        "status": "pending",
+        "reviewed_by": null,
+        "verification": "code-verified",
+        "checks": [
+          "'three hundred and fifty' = 350"
+        ],
+        "warnings": [],
+        "critic": null
+      },
+      "_tid": "d5"
+    },
+    {
+      "bloom": "remember",
+      "type": "multipleChoice",
+      "prompt": "A primary school in Machakos has 426 pupils. What is 426 written in words?",
+      "choices": [
+        {
+          "text": "four hundred and twenty-six",
+          "correct": true
+        },
+        {
+          "text": "four hundred and sixty-two",
+          "misconception": "transposed_digits",
+          "feedback": "You swapped the tens and ones digits. 426 has 2 tens and 6 ones."
+        },
+        {
+          "text": "two hundred and forty-six",
+          "misconception": "swapped_hundreds",
+          "feedback": "Look at the hundreds digit. 426 starts with 4 hundreds, not 2."
+        },
+        {
+          "text": "four thousand and twenty-six",
+          "misconception": "wrong_place_value",
+          "feedback": "426 has 4 hundreds, not 4 thousands."
+        }
+      ],
+      "hints": [
+        "Break down 426: 4 hundreds, 2 tens, and 6 ones.",
+        "Write out each part: four hundred, twenty, and six."
+      ],
+      "explanation": "426 has 4 hundreds, 2 tens, and 6 ones. In words, it is written as four hundred and twenty-six.",
+      "visual": {
+        "type": "placeValueChart",
+        "value": 426,
+        "mode": "digits",
+        "showLabels": true,
+        "showValues": true,
+        "showWith": "hint"
+      },
+      "check": {
+        "kind": "words",
+        "number": 426,
+        "ask": "to_words"
+      },
+      "_review": {
+        "status": "pending",
+        "reviewed_by": null,
+        "verification": "code-verified",
+        "checks": [
+          "426 = 'four hundred and twenty-six'; only the marked choice says so",
+          "visual 'placeValueChart' consistent with the prompt"
+        ],
+        "warnings": [],
+        "critic": null
+      },
+      "_tid": "d7"
+    },
+    {
+      "bloom": "remember",
+      "type": "numericInput",
+      "prompt": "A storybook has seven hundred and fifteen pages. Write this number using digits.",
+      "answer": "715",
+      "hints": [
+        "Seven hundred means 7 in the hundreds place.",
+        "Fifteen is written as 15."
+      ],
+      "explanation": "Seven hundred and fifteen written in digits is 715.",
+      "check": {
+        "kind": "words",
+        "number": 715,
+        "ask": "to_digits"
+      },
+      "_review": {
+        "status": "pending",
+        "reviewed_by": null,
+        "verification": "code-verified",
+        "checks": [
+          "'seven hundred and fifteen' = 715"
+        ],
+        "warnings": [],
+        "critic": null
+      },
+      "_tid": "d8"
+    }
+  ],
+  "rejected": []
+}

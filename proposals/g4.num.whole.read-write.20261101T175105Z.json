@@ -1,0 +1,197 @@
+{
+  "skillId": "g4.num.whole.read-write",
+  "generatedAt": "20261101T175105Z",
+  "model": "gemini:gemini-3.6-flash",
+  "promptVersion": "2026-10-v1",
+  "perLevelTarget": 4,
+  "shortfall": {},
+  "log": [
+    "plan: existing+pending {'remember': 4} (4 pending in proposals/); need {'understand': 4}",
+    "generate[understand]: 6 drafts",
+    "verify: 3 passed, 3 rejected",
+    "critic: skipped",
+    "revise: STOPPED, model unavailable: call budget reached (3 calls). Raise it with --max-calls",
+    "verify: 2 passed, 0 rejected",
+    "critic: skipped (model unavailable); code checks only"
+  ],
+  "questions": [
+    {
+      "bloom": "understand",
+      "type": "multipleChoice",
+      "prompt": "Wanjiku counted seven hundred and fourteen pupils at her school. How is this number written in digits?",
+      "choices": [
+        {
+          "text": "714",
+          "correct": true
+        },
+        {
+          "text": "741",
+          "misconception": "digit_reversal",
+          "feedback": "Fourteen is written as 14, not 41."
+        },
+        {
+          "text": "70014",
+          "misconception": "place_value_concatenation",
+          "feedback": "Combine the hundreds, tens, and ones into a 3-digit number instead of writing 700 next to 14."
+        },
+        {
+          "text": "740",
+          "misconception": "confused_forty_fourteen",
+          "feedback": "Fourteen is 14, while forty is 40."
+        }
+      ],
+      "hints": [
+        "Seven hundred means 7 in the hundreds place.",
+        "Fourteen means 1 ten and 4 ones (14)."
+      ],
+      "explanation": "Seven hundred gives 700 and fourteen gives 14. Combining them gives 714.",
+      "check": {
+        "kind": "words",
+        "number": 714,
+        "ask": "to_digits"
+      },
+      "_review": {
+        "status": "pending",
+        "reviewed_by": null,
+        "verification": "code-verified",
+        "checks": [
+          "'seven hundred and fourteen' = 714; only the marked choice says so"
+        ],
+        "warnings": [],
+        "critic": null
+      },
+      "_tid": "d2"
+    },
+    {
+      "bloom": "understand",
+      "type": "numericInput",
+      "prompt": "A textbook has eight hundred and sixty-two pages. Write this number in digits.",
+      "answer": "862",
+      "hints": [
+        "Eight hundred means the hundreds digit is 8.",
+        "Sixty-two means 6 tens and 2 ones (62)."
+      ],
+      "explanation": "Eight hundred corresponds to 800 and sixty-two corresponds to 62. Together they make 862.",
+      "check": {
+        "kind": "words",
+        "number": 862,
+        "ask": "to_digits"
+      },
+      "_review": {
+        "status": "pending",
+        "reviewed_by": null,
+        "verification": "code-verified",
+        "checks": [
+          "'eight hundred and sixty-two' = 862"
+        ],
+        "warnings": [],
+        "critic": null
+      },
+      "_tid": "d4"
+    },
+    {
+      "bloom": "understand",
+      "type": "multipleChoice",
+      "prompt": "A matatu driver collected five hundred and six shillings. Which number in digits shows this amount?",
+      "choices": [
+        {
+          "text": "506",
+          "correct": true
+        },
+        {
+          "text": "560",
+          "misconception": "confused_six_sixty",
+          "feedback": "Five hundred and six has 0 in the tens place and 6 in the ones place, not 6 tens."
+        },
+        {
+          "text": "5006",
+          "misconception": "place_value_concatenation",
+          "feedback": "Five hundred and six is a 3-digit number, not 500 written next to 6."
+        },
+        {
+          "text": "56",
+          "misconception": "omitted_zero_placeholder",
+          "feedback": "You need a zero in the tens place to show there are 0 tens."
+        }
+      ],
+      "hints": [
+        "Five hundred means 5 in the hundreds place.",
+        "Since there are no tens mentioned, write 0 in the tens place and 6 in the ones place."
+      ],
+      "explanation": "Five hundred is 500, and six is 6 ones. With 0 tens, the number is 506.",
+      "check": {
+        "kind": "words",
+        "number": 506,
+        "ask": "to_digits"
+      },
+      "_review": {
+        "status": "pending",
+        "reviewed_by": null,
+        "verification": "code-verified",
+        "checks": [
+          "'five hundred and six' = 506; only the marked choice says so"
+        ],
+        "warnings": [],
+        "critic": null
+      },
+      "_tid": "d5"
+    },
+    {
+      "bloom": "understand",
+      "type": "multipleChoice",
+      "prompt": "A school library has 358 storybooks. Which choice shows 358 written in words?",
+      "choices": [
+        {
+          "text": "three hundred and fifty-eight",
+          "correct": true
+        },
+        {
+          "text": "three hundred and eighty-five",
+          "misconception": "digit_reversal",
+          "feedback": "Look closely at the tens digit (5) and ones digit (8)."
+        },
+        {
+          "text": "three hundred and fifty",
+          "misconception": "omitted_ones",
+          "feedback": "Do not forget to include the 8 ones at the end."
+        },
+        {
+          "text": "three thousand and fifty-eight",
+          "misconception": "incorrect_place_value",
+          "feedback": "The digit 3 is in the hundreds place, not the thousands place."
+        }
+      ],
+      "hints": [
+        "Break 358 into hundreds, tens, and ones: 3 hundreds, 5 tens, and 8 ones.",
+        "Combine 3 hundred with 'and fifty-eight'."
+      ],
+      "explanation": "358 has 3 hundreds (three hundred), 5 tens (fifty), and 8 ones (eight). Written in words, it is three hundred and fifty-eight.",
+      "visual": {
+        "type": "placeValueChart",
+        "value": 358,
+        "mode": "digits",
+        "showLabels": true,
+        "showValues": true,
+        "showWith": "hint"
+      },
+      "check": {
+        "kind": "words",
+        "number": 358,
+        "ask": "to_words"
+      },
+      "_review": {
+        "status": "pending",
+        "reviewed_by": null,
+        "verification": "code-verified",
+        "checks": [
+          "358 = 'three hundred and fifty-eight'; only the marked choice says so",
+          "visual 'placeValueChart' consistent with the prompt"
+        ],
+        "warnings": [],
+        "critic": null
+      },
+      "_tid": "d7"
+    }
+  ],
+  "rejected": []
+}

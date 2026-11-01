@@ -40,19 +40,28 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
 
   bool get _isLast => _page == _pageCount - 1;
 
-  Duration get _slide => MediaQuery.of(context).disableAnimations
-      ? Duration.zero
-      : const Duration(milliseconds: 300);
+  Duration get _slide => const Duration(milliseconds: 300);
+
+  void _goTo(int page) {
+    if (MediaQuery.of(context).disableAnimations) {
+      _pages.jumpToPage(page);
+    } else {
+      _pages.animateToPage(page, duration: _slide, curve: Curves.easeOut);
+    }
+  }
 
   void _next() {
     if (_isLast) {
       _finish();
     } else {
-      _pages.nextPage(duration: _slide, curve: Curves.easeOut);
+      _goTo((_pages.page ?? 0).round() + 1);
     }
   }
 
-  void _back() => _pages.previousPage(duration: _slide, curve: Curves.easeOut);
+  void _back() {
+    final current = (_pages.page ?? 0).round();
+    if (current > 0) _goTo(current - 1);
+  }
 
   void _finish() => widget.profile.completeOnboarding(
         nickname: _name.text,
@@ -78,10 +87,12 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 Align(
                   alignment: Alignment.centerRight,
                   child: Padding(
-                    padding: const EdgeInsets.only(top: Space.s, right: Space.s),
+                    padding:
+                        const EdgeInsets.only(top: Space.s, right: Space.s),
                     child: _isLast
                         ? const SizedBox(height: 48)
-                        : TextButton(onPressed: _skip, child: const Text('Skip')),
+                        : TextButton(
+                            onPressed: _skip, child: const Text('Skip')),
                   ),
                 ),
                 Expanded(
@@ -127,7 +138,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                 for (var i = 0; i < _pageCount; i++)
                                   AnimatedContainer(
                                     duration: _slide,
-                                    margin: const EdgeInsets.symmetric(horizontal: 4),
+                                    margin: const EdgeInsets.symmetric(
+                                        horizontal: 4),
                                     width: i == _page ? 24 : 10,
                                     height: 10,
                                     decoration: BoxDecoration(
@@ -168,7 +180,8 @@ class _PageFrame extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => ListView(
-        padding: const EdgeInsets.symmetric(horizontal: Space.l, vertical: Space.m),
+        padding:
+            const EdgeInsets.symmetric(horizontal: Space.l, vertical: Space.m),
         children: children,
       );
 }
@@ -183,7 +196,8 @@ class _WelcomePage extends StatelessWidget {
     final text = Theme.of(context).textTheme;
     return _PageFrame(children: [
       const SizedBox(height: Space.l),
-      Center(child: BouncyMascot(kind: kind, mood: MascotMood.cheer, size: 200)),
+      Center(
+          child: BouncyMascot(kind: kind, mood: MascotMood.cheer, size: 200)),
       const SizedBox(height: Space.l),
       Text('Jambo! Karibu Hesabu.',
           textAlign: TextAlign.center, style: text.headlineMedium),
@@ -304,7 +318,8 @@ class _ChoosePage extends StatelessWidget {
         ],
         decoration: const InputDecoration(
           labelText: 'Your nickname',
-          helperText: 'Use a nickname, not your full name. It stays on this device.',
+          helperText:
+              'Use a nickname, not your full name. It stays on this device.',
           helperMaxLines: 2,
         ),
         onSubmitted: (_) => onDone(),

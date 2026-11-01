@@ -1,0 +1,68 @@
+{
+  "skillId": "g4.num.whole.read-write",
+  "generatedAt": "20261101T175454Z",
+  "model": "gemini:gemini-3.6-flash",
+  "promptVersion": "2026-10-v1",
+  "perLevelTarget": 4,
+  "shortfall": {
+    "analyze": 3
+  },
+  "log": [
+    "plan: existing+pending {'remember': 4, 'understand': 4, 'apply': 4} (12 pending in proposals/); need {'analyze': 4}",
+    "generate[analyze]: 6 drafts",
+    "verify: 0 passed, 6 rejected",
+    "critic: nothing to review",
+    "revise: STOPPED, model unavailable: HTTP 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota ex",
+    "verify: 1 passed, 0 rejected",
+    "critic: skipped (model unavailable); code checks only"
+  ],
+  "questions": [
+    {
+      "bloom": "analyze",
+      "type": "multipleChoice",
+      "prompt": "Amina read a number written in words: 'seven hundred and five'. She wrote the digits as 750. What mistake did Amina make?",
+      "choices": [
+        {
+          "text": "She placed 5 in the tens place instead of the ones place.",
+          "correct": true
+        },
+        {
+          "text": "She placed 7 in the tens place instead of the hundreds place.",
+          "misconception": "misplaced_hundreds",
+          "feedback": "The digit 7 is correctly in the hundreds place in 750."
+        },
+        {
+          "text": "She forgot to write the digit 7.",
+          "misconception": "missing_digit",
+          "feedback": "Amina wrote 750, which still includes the digit 7."
+        },
+        {
+          "text": "She wrote five ones instead of five tens.",
+          "misconception": "inverted_explanation",
+          "feedback": "750 has 5 tens, but 'five' means 5 ones."
+        }
+      ],
+      "hints": [
+        "Look at the word 'five'. Does it mean 5 tens or 5 ones?",
+        "'Seven hundred and five' has 7 hundreds, 0 tens, and 5 ones, which is 705."
+      ],
+      "explanation": "The words 'seven hundred and five' mean 7 hundreds, 0 tens, and 5 ones (705). Amina wrote 750, which puts the digit 5 in the tens place instead of the ones place.",
+      "check": {
+        "kind": "none",
+        "reason": "Analyzing place value error when writing numbers from words to digits"
+      },
+      "_review": {
+        "status": "pending",
+        "reviewed_by": null,
+        "verification": "human-only",
+        "checks": [
+          "not machine-checkable: human reviewer must verify"
+        ],
+        "warnings": [],
+        "critic": null
+      },
+      "_tid": "d7"
+    }
+  ],
+  "rejected": []
+}
