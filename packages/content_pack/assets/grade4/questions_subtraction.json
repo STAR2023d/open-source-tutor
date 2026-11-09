@@ -1,0 +1,198 @@
+{
+  "questions": [
+    {
+      "id": "g4sub-r1",
+      "skillId": "g4.num.sub.regroup",
+      "bloom": "remember",
+      "type": "numericInput",
+      "prompt": "Work out: 4,205 \u2212 1,837",
+      "answer": "2368",
+      "hints": [
+        "Ones: 5 is less than 7, so regroup. The tens digit is 0, so you must borrow from the hundreds first.",
+        "After the first borrow, the tens column is 9; subtract the tens next.",
+        "The hundreds column becomes 11 after lending for the tens."
+      ],
+      "explanation": "4,205 \u2212 1,837 = 2,368. Borrow from the hundreds: the tens go 0\u21929 and the ones go 5\u219215; 15\u22127=8, 9\u22123=6, then borrowing again, 11\u22128=3 and 3\u22121=2."
+    },
+    {
+      "id": "g4sub-r2",
+      "skillId": "g4.num.sub.regroup",
+      "bloom": "remember",
+      "type": "multipleChoice",
+      "prompt": "For 4,052 \u2212 2,786, what value is in the tens place after the tens column has been regrouped once?",
+      "choices": [
+        {
+          "text": "14",
+          "correct": true
+        },
+        {
+          "text": "4",
+          "misconception": "no_borrow_seen"
+        },
+        {
+          "text": "5",
+          "misconception": "borrow_not_applied"
+        },
+        {
+          "text": "10",
+          "misconception": "borrowed_twice"
+        }
+      ],
+      "hints": [
+        "The hundreds digit is 0, so the tens must be regrouped in two steps.",
+        "After borrowing from the thousands the tens column becomes 14.",
+        "Subtract the 8 from the regrouped tens."
+      ],
+      "explanation": "4,052 has a 0 in the hundreds place, so the tens (5) is regrouped in two steps: thousands 4\u21923, hundreds 0\u219210, then tens 5\u219214. The tens column is therefore 14 before subtracting the 8."
+    },
+    {
+      "id": "g4sub-u1",
+      "skillId": "g4.num.sub.regroup",
+      "bloom": "understand",
+      "type": "multipleChoice",
+      "prompt": "When you regroup to subtract 5,408 \u2212 2,739, what happens to the hundreds digit before you subtract it?",
+      "choices": [
+        {
+          "text": "It decreases by 1 (from 4 to 3) because it lends a ten to the tens column",
+          "correct": true
+        },
+        {
+          "text": "It increases by 1 (from 4 to 5) as tens are added",
+          "misconception": "hints_not_subtracted"
+        },
+        {
+          "text": "It stays the same (4) because the tens column holds the regrouped amount",
+          "misconception": "tens_holds_borrow"
+        },
+        {
+          "text": "It becomes 0 when the thousands column is regrouped",
+          "misconception": "wrong_place"
+        }
+      ],
+      "hints": [
+        "Look at the hundreds column in 5,408.",
+        "Regroup the ones first; the tens column ends up 9.",
+        "Then the hundreds lend a ten to the tens column."
+      ],
+      "explanation": "5,408 \u2212 2,739: the ones borrow makes the tens 10, then the tens lend 1 to the ones (tens\u21929). The hundreds digit 4 then lends a ten to the tens column, so it goes 4\u21923 before the tens column is subtracted."
+    },
+    {
+      "id": "g4sub-u2",
+      "skillId": "g4.num.sub.regroup",
+      "bloom": "understand",
+      "type": "multipleChoice",
+      "prompt": "A learner works out 4,002 \u2212 1,987 and writes 2,115. Which regrouping did they most likely skip?",
+      "choices": [
+        {
+          "text": "They did not pass the ten across the two zeros, so the hundreds column stayed 10 and came out 1 (2,115) instead of 0 (2,015)",
+          "correct": true
+        },
+        {
+          "text": "They subtracted the tens column before regrouping it, so the 8 was subtracted from 0",
+          "misconception": "regroup_order"
+        },
+        {
+          "text": "They borrowed from the thousands but also subtracted 1 from the ten-thousands place",
+          "misconception": "borrowed_from_wrong_column"
+        },
+        {
+          "text": "They regrouped the ones column twice, ringing a ten and losing a ten",
+          "misconception": "double_regroup_ones"
+        }
+      ],
+      "hints": [
+        "Write both numbers in a place-value grid.",
+        "Compare 2,115 with the correct 2,015.",
+        "Look at the hundreds column specifically."
+      ],
+      "explanation": "4,002 \u2212 1,987 = 2,015. In 4,002 the hundreds and tens are both 0, so the hundreds column is reached by passing a ten through two zeros. If the second pass is skipped, the hundreds column stays 10 and gives 1 (2,115) instead of 0."
+    },
+    {
+      "id": "g4sub-a1",
+      "skillId": "g4.num.sub.regroup",
+      "bloom": "apply",
+      "type": "numericInput",
+      "prompt": "A school collected 7,842 empty bottles in week 1 and 3,965 in week 2. How many more bottles did week 1 collect?",
+      "answer": "3877",
+      "hints": [
+        "This is a comparison, so subtract the smaller amount from the larger.",
+        "Write it as 7,842 \u2212 3,965, then subtract column by column.",
+        "Borrow where a top digit is smaller than the bottom digit."
+      ],
+      "explanation": "7,842 \u2212 3,965 = 3,877 bottles. 7,842 \u2212 4,000 = 3,842, then add the 35 you took away too much: 3,877."
+    },
+    {
+      "id": "g4sub-a2",
+      "skillId": "g4.num.sub.regroup",
+      "bloom": "apply",
+      "type": "numericInput",
+      "prompt": "Fill in the missing digit: 3,4_7 \u2212 2,598 = 809",
+      "answer": "0",
+      "hints": [
+        "Rearrange the sentence: the missing number is 809 + 2,598.",
+        "809 + 2,598 = 3,407.",
+        "The missing digit sits in the tens place, so it is 0."
+      ],
+      "explanation": "3,407 \u2212 2,598 = 809. Adding 2,598 back gives 3,407, so the missing tens digit is 0."
+    },
+    {
+      "id": "g4sub-an1",
+      "skillId": "g4.num.sub.regroup",
+      "bloom": "analyze",
+      "type": "multipleChoice",
+      "prompt": "Ruth solved 6,704 \u2212 3,859 and wrote 2,855. Which step was wrong?",
+      "choices": [
+        {
+          "text": "She did not re-borrow in the tens column, so 10 \u2212 5 = 5 instead of 9 \u2212 5 = 4",
+          "correct": true
+        },
+        {
+          "text": "She subtracted the ones column without regrouping, leaving 4 instead of 14",
+          "misconception": "no_ones_regroup"
+        },
+        {
+          "text": "She carried the regrouped digit from the tens column into the ones column",
+          "misconception": "wrong_carry_direction"
+        },
+        {
+          "text": "She subtracted the hundreds column from the thousands column instead of from the hundreds",
+          "misconception": "wrong_column_subtraction"
+        }
+      ],
+      "hints": [
+        "Work out the correct answer first: 6,704 \u2212 3,859 = 2,845.",
+        "Compare the tens columns of the wrong and the correct answer.",
+        "Trace the borrow chain: ones \u2192 tens \u2192 hundreds."
+      ],
+      "explanation": "6,704 \u2212 3,859 = 2,845. The tens column is 10 after the ones borrow, but the ones borrow reduced it to 9, so the subtraction is 9 \u2212 5 = 4, not 10 \u2212 5 = 5."
+    },
+    {
+      "id": "g4sub-an2",
+      "skillId": "g4.num.sub.regroup",
+      "bloom": "analyze",
+      "type": "multipleChoice",
+      "prompt": "Which subtraction has the same value as 7,000 \u2212 2,468?",
+      "choices": [
+        {
+          "text": "6,999 \u2212 2,467",
+          "correct": true
+        },
+        {
+          "text": "6,999 \u2212 2,469","misconception": "rounded_denominator_up1"
+        },
+        {
+          "text": "5,000 \u2212 2,468","misconception": "rounded_minuend_down"
+        },
+        {
+          "text": "7,000 \u2212 2,469","misconception": "rounded_denominator_up2"
+        }
+      ],
+      "hints": [
+        "Work out 7,000 \u2212 2,468 first.",
+        "Notice that subtracting 1 from both numbers leaves the difference unchanged.",
+        "Try each option against 4,532."
+      ],
+      "explanation": "7,000 \u2212 2,468 = 4,532. Since both the minuend and subtrahend drop by the same amount, 6,999 \u2212 2,467 keeps the difference at 4,532."
+    }
+  ]
+}

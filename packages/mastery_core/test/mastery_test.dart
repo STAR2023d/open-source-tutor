@@ -163,4 +163,68 @@ void main() {
       expect(q.visual, isNull);
     });
   });
+
+  group('g4.num.sub.regroup', () {
+    const skillId = 'g4.num.sub.regroup';
+    final questionIds = [
+      'g4sub-r1',
+      'g4sub-r2',
+      'g4sub-u1',
+      'g4sub-u2',
+      'g4sub-a1',
+      'g4sub-a2',
+      'g4sub-an1',
+      'g4sub-an2',
+    ];
+
+    test('next() starts at Remember and stops when the skill is mastered', () {
+      final questions = questionIds.map((id) {
+        return Question(
+          id: id,
+          skillId: skillId,
+          bloom: coreLevels[questionIds.indexOf(id) % coreLevels.length],
+          type: QuestionType.numericInput,
+          prompt: '?',
+          answer: '1',
+          explanation: 'e',
+        );
+      }).toList();
+
+      final session = PracticeSession(
+        skill: const Skill(
+          id: skillId,
+          title: 'Subtraction with regrouping (up to 4 digits)',
+          grade: 4,
+          strand: 'Numbers',
+          subStrand: 'Subtraction',
+          prerequisites: const ['g4.num.add.regroup'],
+        ),
+        questions: questions,
+        progress: const SkillProgress(skillId: skillId),
+      );
+
+      expect(session.next()!.id, 'g4sub-r1');
+
+      for (final b in coreLevels) {
+        for (var i = 0; i < 2; i++) {
+          session.submit(session.next()!, '1');
+        }
+      }
+
+      expect(session.progress.isMastered, isTrue);
+      expect(session.next(), isNull);
+    });
+
+    test('a wrong answer at any level leaves the skill unmastered', () {
+      var progress = const SkillProgress(skillId: skillId);
+      for (final b in coreLevels) {
+        for (var i = 0; i < 2; i++) {
+          progress = progress.record(attempt(b));
+        }
+        progress = progress.record(attempt(b, correct: false));
+      }
+      expect(progress.isMastered, isFalse);
+      expect(progress.nextTargetLevel, BloomLevel.remember);
+    });
+  });
 }
