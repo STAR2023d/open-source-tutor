@@ -178,17 +178,51 @@ void main() {
     ];
 
     test('next() starts at Remember and stops when the skill is mastered', () {
-      final questions = questionIds.map((id) {
-        return Question(
-          id: id,
+      final questions = <Question>[];
+      for (var i = 0; i < 2; i++) {
+        questions.add(Question(
+          id: 'g4sub-r$i',
           skillId: skillId,
-          bloom: coreLevels[questionIds.indexOf(id) % coreLevels.length],
+          bloom: BloomLevel.remember,
           type: QuestionType.numericInput,
           prompt: '?',
           answer: '1',
           explanation: 'e',
-        );
-      }).toList();
+        ));
+      }
+      for (var i = 0; i < 2; i++) {
+        questions.add(Question(
+          id: 'g4sub-u$i',
+          skillId: skillId,
+          bloom: BloomLevel.understand,
+          type: QuestionType.numericInput,
+          prompt: '?',
+          answer: '1',
+          explanation: 'e',
+        ));
+      }
+      for (var i = 0; i < 2; i++) {
+        questions.add(Question(
+          id: 'g4sub-a$i',
+          skillId: skillId,
+          bloom: BloomLevel.apply,
+          type: QuestionType.numericInput,
+          prompt: '?',
+          answer: '1',
+          explanation: 'e',
+        ));
+      }
+      for (var i = 0; i < 2; i++) {
+        questions.add(Question(
+          id: 'g4sub-an$i',
+          skillId: skillId,
+          bloom: BloomLevel.analyze,
+          type: QuestionType.numericInput,
+          prompt: '?',
+          answer: '1',
+          explanation: 'e',
+        ));
+      }
 
       final session = PracticeSession(
         skill: const Skill(
@@ -203,14 +237,27 @@ void main() {
         progress: const SkillProgress(skillId: skillId),
       );
 
-      expect(session.next()!.id, 'g4sub-r1');
-
+      final served = <BloomLevel>[];
       for (final b in coreLevels) {
         for (var i = 0; i < 2; i++) {
+          served.add(session.next()!.bloom);
           session.submit(session.next()!, '1');
         }
       }
 
+      expect(
+        served,
+        equals(<BloomLevel>[
+          BloomLevel.remember,
+          BloomLevel.remember,
+          BloomLevel.understand,
+          BloomLevel.understand,
+          BloomLevel.apply,
+          BloomLevel.apply,
+          BloomLevel.analyze,
+          BloomLevel.analyze,
+        ]),
+      );
       expect(session.progress.isMastered, isTrue);
       expect(session.next(), isNull);
     });

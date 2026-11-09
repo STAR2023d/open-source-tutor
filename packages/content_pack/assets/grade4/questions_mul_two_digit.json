@@ -1,0 +1,70 @@
+{
+  "questions": [
+    {
+      "id": "g4mt-r1",
+      "skillId": "g4.num.mul.two-digit",
+      "bloom": "remember",
+      "type": "multipleChoice",
+      "prompt": "What is 14 \u00d7 12?",
+      "choices": [
+        {
+          "text": "168",
+          "correct": true
+        },
+        {
+          "text": "128",
+          "misconception": "digit_reversal",
+          "feedback": "14 \u00d7 12 is 168, not 128. The 2 from the ones is missing in the tens column."
+        },
+        {
+          "text": "140",
+          "misconception": "forgot_regroup",
+          "feedback": "This is 14 \u00d7 10. The extra 14 \u00d7 2 (28) is missing."
+        },
+        {
+          "text": "268",
+          "misconception": "column_add",
+          "feedback": "This adds 14 and 12 instead of multiplying. 14 \u00d7 12 means 14 twelve times."
+        }
+      ],
+      "hints": [
+        "Work it out in columns: 14 \u00d7 2 = 28, then 14 \u00d7 10 = 140.",
+        "Add the two results: 140 + 28 = 168."
+      ],
+      "explanation": "14 \u00d7 12 = 14 \u00d7 10 + 14 \u00d7 2 = 140 + 28 = 168."
+    },
+    {
+      "id": "g4mt-u1",
+      "skillId": "g4.num.mul.two-digit",
+      "bloom": "understand",
+      "type": "multipleChoice",
+      "prompt": "Which area model represents 14 \u00d7 13?",
+      "choices": [
+        {
+          "text": "A grid split into 10+4 and 10+3; parts 10\u00d710, 10\u00d73, 4\u00d710, 4\u00d73",
+          "correct": true
+        },
+        {
+          "text": "A grid split into 10+4 and 3+10; parts 10\u00d73, 10\u00d74, 4\u00d710, 4\u00d73",
+          "misconception": "column_alignment",
+          "feedback": "That reverses the tens and ones of 13, which does not match 14 \u00d7 13."
+        },
+        {
+          "text": "A grid split into 14 and 13; parts 14\u00d71, 14\u00d73, 14\u00d710",
+          "misconception": "no_breakdown_tens",
+          "feedback": "14 must be split into 10 + 4 so the tens and ones are multiplied separately."
+        },
+        {
+          "text": "A grid split into 10 and 3; parts 10\u00d710, 10\u00d73",
+          "misconception": "missed_factor_4",
+          "feedback": "This uses 13 but ignores the 4 ones, so it is 13 \u00d7 10, not 13 \u00d7 14."
+        }
+      ],
+      "hints": [
+        "Split both numbers into tens and ones: 14 = 10 + 4 and 13 = 10 + 3.",
+        "Multiply each part of the first split by each part of the second."
+      ],
+      "explanation": "14 \u00d7 13 = (10 + 4) \u00d7 (10 + 3) = 10\u00d710 + 10\u00d73 + 4\u00d710 + 4\u00d73 = 100 + 30 + 40 + 12 = 182."
+    }
+  ]
+}

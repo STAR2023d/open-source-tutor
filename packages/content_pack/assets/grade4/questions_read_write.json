@@ -1,0 +1,40 @@
+{
+  "questions": [
+    {
+      "id": "g4rw-r1",
+      "skillId": "g4.num.whole.read-write",
+      "bloom": "remember",
+      "type": "multipleChoice",
+      "prompt": "What is the value of the digit 4 in 4,032?",
+      "choices": [
+        {"text": "4,000", "correct": true},
+        {"text": "400", "misconception": "hundreds", "feedback": "4 is in the hundreds place, but here it is in the thousands place, so its value is 4,000."},
+        {"text": "40", "misconception": "tens", "feedback": "4 is in the hundreds place, not the tens place."},
+        {"text": "4", "misconception": "ones", "feedback": "4 is in the thousands place, not the ones place."}
+      ],
+      "hints": [
+        "Find the position of the digit 4 in the number.",
+        "Thousands, hundreds, tens, ones — read from left to right after the first digit."
+      ],
+      "explanation": "In 4,032, the digit 4 is the thousands digit, so its value is 4,000."
+    },
+    {
+      "id": "g4rw-u1",
+      "skillId": "g4.num.whole.read-write",
+      "bloom": "understand",
+      "type": "multipleChoice",
+      "prompt": "Which shows 7,004 written in expanded form?",
+      "choices": [
+        {"text": "7,000 + 4", "correct": true},
+        {"text": "7,000 + 40", "misconception": "tens_instead_of_ones", "feedback": "7,004 has 0 tens, so only 4 sits in the ones place."},
+        {"text": "700 + 4", "misconception": "missing_thousands", "feedback": "7,004 has 7 in the thousands place, not the hundreds place."},
+        {"text": "7,000 + 400 + 4", "misconception": "extra_hundreds", "feedback": "7,004 has 0 hundreds, so there is no 400 in its expanded form."}
+      ],
+      "hints": [
+        "Expanded form breaks a number into the sum of each digit's value.",
+        "Use 0 for places that have no value, e.g. 7,004 = 7,000 + 0 + 0 + 4."
+      ],
+      "explanation": "7,004 = 7,000 + 0 + 0 + 4, so the expanded form is 7,000 + 4."
+    }
+  ]
+}

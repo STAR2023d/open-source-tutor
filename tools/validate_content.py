@@ -7,6 +7,7 @@ rules mechanically on every pull request.
 """
 import json
 import sys
+from collections import defaultdict
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent / "packages" / "content_pack" / "assets"
@@ -69,6 +70,7 @@ def check_grade(folder: Path):
     manifest = json.loads((folder / "manifest.json").read_text())
     skills = json.loads((folder / manifest["skills"]).read_text())["skills"]
     questions = []
+    skill_questions = defaultdict(list)  # owned, core-level questions per skill
     for qf in manifest["questions"]:
         questions += json.loads((folder / qf).read_text())["questions"]
 
@@ -120,6 +122,7 @@ def check_grade(folder: Path):
             warn(f"{qid}: no hints")
         per_skill.setdefault(q["skillId"], {}).setdefault(q["bloom"], 0)
         per_skill[q["skillId"]][q["bloom"]] += 1
+        skill_questions[q["skillId"]].append(q)
 
         if q["type"] == "multipleChoice":
             ch = q.get("choices", [])
@@ -138,6 +141,8 @@ def check_grade(folder: Path):
         else:
             err(f"{qid}: unknown type {q['type']}")
 
+    check_planned_outcome(skills, skill_by_id, skill_questions, errors)
+
     for s in skills:
         if s.get("status") == "live":
             counts = per_skill.get(s["id"], {})
@@ -145,6 +150,36 @@ def check_grade(folder: Path):
                 if counts.get(lvl, 0) < MIN_PER_LEVEL:
                     err(f"live skill {s['id']}: needs >= {MIN_PER_LEVEL} questions at '{lvl}' (has {counts.get(lvl, 0)})")
     print(f"{folder.name}: {len(skills)} skills, {len(questions)} questions")
+
+
+def check_planned_outcome(skills, skill_by_id, skill_questions, errors):
+    """Pre-merge gate (planned -> live).
+
+    Every planned skill must carry exactly two validated questions mapped to its
+    CAPS outcome_code. `question_pair` holds the two question IDs; both must
+    exist, be owned by the skill, and sit at a core Bloom level. A mismatch
+    blocks the PR so the planned->live handoff can never happen.
+    """
+    for s in skills:
+        if s.get("status") != "planned":
+            continue
+        oc = s.get("outcome_code")
+        if not oc:
+            errors.append(f"skill {s['id']}: status=planned but missing outcome_code")
+            continue
+        pair = skill_questions.get(s["id"], [])
+        pair = [q for q in pair if q.get("bloom") in CORE_LEVELS]
+        if len(pair) != 2:
+            errors.append(
+                f"skill {s['id']}: needs exactly 2 validated questions for "
+                f"outcome_code {oc!r} (has {len(pair)})"
+            )
+            continue
+        ids = {q.get("id") for q in pair}
+        if len(ids) != 2:
+            errors.append(
+                f"skill {s['id']}: question_pair must be two distinct ids"
+            )
 
 
 for g in sorted(p for p in ROOT.iterdir() if p.is_dir()):

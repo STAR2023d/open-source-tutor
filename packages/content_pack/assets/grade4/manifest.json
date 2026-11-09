@@ -4,6 +4,14 @@
   "questions": [
     "questions_place_value.json",
     "questions_addition.json",
-    "questions_subtraction.json"
+    "questions_subtraction.json",
+    "questions_order_round.json",
+    "questions_read_write.json",
+    "questions_factors_multiples.json",
+    "questions_mul_two_digit.json",
+    "questions_div_one_digit.json",
+    "questions_frac_represent.json",
+    "questions_frac_convert.json",
+    "questions_dec_tenths_hundredths.json"
   ]
 }

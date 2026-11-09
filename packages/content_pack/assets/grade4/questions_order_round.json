@@ -1,0 +1,69 @@
+{
+  "questions": [
+    {
+      "id": "g4ord-r1",
+      "skillId": "g4.num.whole.order-round",
+      "bloom": "analyze",
+      "type": "multipleChoice",
+      "prompt": "Arrange these numbers in order from smallest to largest: 3,412 / 3,142 / 3,421",
+      "choices": [
+        {
+          "text": "3,142 / 3,412 / 3,421",
+          "correct": true
+        },
+        {
+          "text": "3,412 / 3,142 / 3,421",
+          "misconception": "tens_and_hundreds_swapped",
+          "feedback": "3,142 has 1 hundred while 3,412 has 4 hundreds, so 3,142 is smaller than 3,412."
+        },
+        {
+          "text": "3,421 / 3,412 / 3,142",
+          "misconception": "descending_order",
+          "feedback": "That lists the numbers from largest to smallest, not smallest to largest."
+        },
+        {
+          "text": "3,142 / 3,421 / 3,412",
+          "misconception": "hundreds_then_ones",
+          "feedback": "3,412 is smaller than 3,421 because it has 1 ten and 3,421 has 2 tens."
+        }
+      ],
+      "hints": [
+        "Compare digit by digit from the thousands place.",
+        "3,142 has 1 hundred, 3,412 has 4 hundreds, and 3,421 has 4 hundreds plus 2 tens."
+      ],
+      "explanation": "3,142 (1 hundred) < 3,412 (4 hundreds) < 3,421 (4 hundreds and 2 tens)."
+    },
+    {
+      "id": "g4ord-r2",
+      "skillId": "g4.num.whole.order-round",
+      "bloom": "analyze",
+      "type": "multipleChoice",
+      "prompt": "Which set of numbers is in order from smallest to largest?",
+      "choices": [
+        {
+          "text": "1,002 / 1,020 / 1,200 / 1,202",
+          "correct": true
+        },
+        {
+          "text": "1,202 / 1,200 / 1,020 / 1,002",
+          "misconception": "descending_order",
+          "feedback": "That lists the numbers from largest to smallest."
+        },
+        {
+          "text": "1,002 / 1,200 / 1,020 / 1,202",
+          "misconception": "hundreds_then_tens",
+          "feedback": "1,020 is less than 1,200, so it belongs between 1,002 and 1,200."
+        },
+        {
+          "text": "1,200 / 1,002 / 1,020 / 1,202",
+          "misconception": "first_digit_rule",
+          "feedback": "All of these are 4-digit numbers, so compare the hundreds place after the thousands digit."
+        }
+      ],
+      "hints": [
+        "Compare the thousands digit first, then the hundreds, then the tens, then the ones."
+      ],
+      "explanation": "1,002 < 1,020 < 1,200 < 1,202, so only the first set is in ascending order."
+    }
+  ]
+}

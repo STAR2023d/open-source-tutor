@@ -1,0 +1,70 @@
+{
+  "questions": [
+    {
+      "id": "g4div-r1",
+      "skillId": "g4.num.div.one-digit",
+      "bloom": "remember",
+      "type": "multipleChoice",
+      "prompt": "What is 84 \u00f7 6?",
+      "choices": [
+        {
+          "text": "14",
+          "correct": true
+        },
+        {
+          "text": "12",
+          "misconception": "subtract_instead",
+          "feedback": "84 \u00f7 6 is 14. Subtracting 6 eight times gives 0, not a quotient."
+        },
+        {
+          "text": "18",
+          "misconception": "multiply_backwards",
+          "feedback": "This is 6 \u00d7 18, not 84 \u00f7 6."
+        },
+        {
+          "text": "4",
+          "misconception": "ones_digit_only",
+          "feedback": "4 is the ones digit of 84, not the quotient."
+        }
+      ],
+      "hints": [
+        "Think: what number times 6 equals 84?",
+        "6 \u00d7 10 = 60, and 6 \u00d7 4 = 24. 60 + 24 = 84."
+      ],
+      "explanation": "6 \u00d7 14 = 84, so 84 \u00f7 6 = 14."
+    },
+    {
+      "id": "g4div-u1",
+      "skillId": "g4.num.div.one-digit",
+      "bloom": "understand",
+      "type": "multipleChoice",
+      "prompt": "A box holds 30 apples. How many boxes of 6 apples can you fill?",
+      "choices": [
+        {
+          "text": "5",
+          "correct": true
+        },
+        {
+          "text": "24",
+          "misconception": "subtracted_shared",
+          "feedback": "24 is 30 minus 6, but the question asks how many groups of 6."
+        },
+        {
+          "text": "180",
+          "misconception": "multiplied_groups",
+          "feedback": "180 is 30 \u00d7 6, but you are sharing 30 into groups of 6."
+        },
+        {
+          "text": "6",
+          "misconception": "used_divisor",
+          "feedback": "6 is the size of each group, not the number of groups."
+        }
+      ],
+      "hints": [
+        "This is a sharing question: 30 apples shared into groups of 6.",
+        "How many 6s are in 30? 6 \u00d7 5 = 30."
+      ],
+      "explanation": "30 \u00f7 6 = 5, so you can fill 5 boxes of 6 apples."
+    }
+  ]
+}

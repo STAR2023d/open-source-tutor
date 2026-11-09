@@ -1,0 +1,70 @@
+{
+  "questions": [
+    {
+      "id": "g4dec-r1",
+      "skillId": "g4.num.dec.tenths-hundredths",
+      "bloom": "remember",
+      "type": "multipleChoice",
+      "prompt": "Which decimal is shown by 37 tenths?",
+      "choices": [
+        {
+          "text": "3.7",
+          "correct": true
+        },
+        {
+          "text": "0.37",
+          "misconception": "tenths_as_hundredths",
+          "feedback": "37 tenths is 3.7, not 0.37."
+        },
+        {
+          "text": "37.0",
+          "misconception": "decimal_point",
+          "feedback": "37 tenths is 3.7, not 37.0."
+        },
+        {
+          "text": "0.037",
+          "misconception": "extra_zeros",
+          "feedback": "37 tenths is 3.7, not 0.037."
+        }
+      ],
+      "hints": [
+        "37 tenths = 37/10.",
+        "Divide 37 by 10 to get 3.7."
+      ],
+      "explanation": "37 \u00f7 10 = 3.7, so 37 tenths is 3.7."
+    },
+    {
+      "id": "g4dec-u1",
+      "skillId": "g4.num.dec.tenths-hundredths",
+      "bloom": "understand",
+      "type": "multipleChoice",
+      "prompt": "Which is larger: 2.5 or 2.05?",
+      "choices": [
+        {
+          "text": "2.5",
+          "correct": true
+        },
+        {
+          "text": "2.05",
+          "misconception": "zeros_make_it",
+          "feedback": "2.5 is 2.50, which is larger than 2.05."
+        },
+        {
+          "text": "They are equal",
+          "misconception": "same_digits",
+          "feedback": "2.5 = 2.50, which is not the same as 2.05."
+        },
+        {
+          "text": "2.05 is bigger",
+          "misconception": "more_zeros",
+          "feedback": "2.05 has a 5 in the hundredths place while 2.5 has 5 in the tenths place; 2.5 is bigger."
+        }
+      ],
+      "hints": [
+        "Compare the digits after the decimal point.",
+        "2.5 = 2.50, so compare 2.50 with 2.05."
+      ],
+      "explanation": "2.5 = 2.50, and 2.50 > 2.05, so 2.5 is larger."
+    }
+  ]
+}

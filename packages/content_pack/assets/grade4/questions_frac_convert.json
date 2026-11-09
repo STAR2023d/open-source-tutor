@@ -1,0 +1,70 @@
+{
+  "questions": [
+    {
+      "id": "g4frac2-r1",
+      "skillId": "g4.num.frac.convert",
+      "bloom": "remember",
+      "type": "multipleChoice",
+      "prompt": "Which is 7/4 as a mixed number?",
+      "choices": [
+        {
+          "text": "1 3/4",
+          "correct": true
+        },
+        {
+          "text": "3 1/4",
+          "misconception": "numerator_swapped",
+          "feedback": "7 \u00f7 4 = 1 remainder 3, so the mixed number is 1 3/4."
+        },
+        {
+          "text": "1 4/7",
+          "misconception": "remainder_as_fraction",
+          "feedback": "The remainder 3 becomes the numerator over the original denominator 4, giving 1 3/4."
+        },
+        {
+          "text": "7 1/4",
+          "misconception": "whole_from_numerator",
+          "feedback": "7/4 is less than 2, so the whole number part is 1, not 7."
+        }
+      ],
+      "hints": [
+        "Divide the numerator by the denominator: 7 \u00f7 4 = 1 remainder 3.",
+        "The quotient is the whole number; the remainder goes over the original denominator."
+      ],
+      "explanation": "7 \u00f7 4 = 1 remainder 3, so 7/4 = 1 3/4."
+    },
+    {
+      "id": "g4frac2-u1",
+      "skillId": "g4.num.frac.convert",
+      "bloom": "understand",
+      "type": "multipleChoice",
+      "prompt": "What is 5/2 as a mixed number?",
+      "choices": [
+        {
+          "text": "2 1/2",
+          "correct": true
+        },
+        {
+          "text": "2 2/5",
+          "misconception": "denominator_swapped",
+          "feedback": "5 \u00f7 2 = 2 remainder 1, so the fractional part is 1/2."
+        },
+        {
+          "text": "5/2 = 2.5 only",
+          "misconception": "no_fraction_part",
+          "feedback": "5/2 is 2 1/2, not just 2.5."
+        },
+        {
+          "text": "1 3/2",
+          "misconception": "whole_less_than_quotient",
+          "feedback": "5 \u00f7 2 = 2 remainder 1, so the whole number is 2."
+        }
+      ],
+      "hints": [
+        "Divide: 5 \u00f7 2 = 2 remainder 1.",
+        "The remainder 1 becomes 1/2."
+      ],
+      "explanation": "5 \u00f7 2 = 2 remainder 1, so 5/2 = 2 1/2."
+    }
+  ]
+}

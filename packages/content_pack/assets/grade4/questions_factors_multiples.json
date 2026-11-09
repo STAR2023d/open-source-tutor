@@ -1,0 +1,40 @@
+{
+  "questions": [
+    {
+      "id": "g4fm-r1",
+      "skillId": "g4.num.whole.factors-multiples",
+      "bloom": "remember",
+      "type": "multipleChoice",
+      "prompt": "Which list shows all the factors of 12?",
+      "choices": [
+        {"text": "1, 2, 3, 4, 6, 12", "correct": true},
+        {"text": "1, 2, 3, 4, 6", "misconception": "missed_twelve", "feedback": "12 is a factor of 12 (12 × 1 = 12), so it must be included."},
+        {"text": "2, 3, 4, 6", "misconception": "missed_one_and_twelve", "feedback": "1 and 12 are factors of 12, so they must be included."},
+        {"text": "1, 2, 3, 4, 6, 12, 24", "misconception": "included_multiple", "feedback": "24 is a multiple of 12, not a factor, so it should not be included."}
+      ],
+      "hints": [
+        "A factor divides a number exactly, leaving no remainder.",
+        "Check every number from 1 up to the number itself."
+      ],
+      "explanation": "The factors of 12 are 1, 2, 3, 4, 6, and 12 (1×12, 2×6, 3×4)."
+    },
+    {
+      "id": "g4fm-a1",
+      "skillId": "g4.num.whole.factors-multiples",
+      "bloom": "apply",
+      "type": "multipleChoice",
+      "prompt": "Which number is a multiple of both 4 and 6?",
+      "choices": [
+        {"text": "12", "correct": true},
+        {"text": "8", "misconception": "multiple_of_4_only", "feedback": "8 is divisible by 4 but not by 6, so it is not a multiple of both."},
+        {"text": "9", "misconception": "multiple_of_3_only", "feedback": "9 is divisible by 3 but not by 6, so it is not a multiple of both."},
+        {"text": "18", "misconception": "multiple_of_6_only", "feedback": "18 is divisible by 6 but not by 4, so it is not a multiple of both."}
+      ],
+      "hints": [
+        "A multiple of a number is the product of that number and a whole number.",
+        "List the multiples of 4 and the multiples of 6, then find the common one."
+      ],
+      "explanation": "The multiples of 4 are 4, 8, 12, 16, … and the multiples of 6 are 6, 12, 18, … The common multiple is 12."
+    }
+  ]
+}
