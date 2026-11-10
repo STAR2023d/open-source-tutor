@@ -58,6 +58,7 @@ class ProfileController extends ChangeNotifier {
 
   Future<void> completeOnboarding({required String nickname, required MascotKind mascot}) async {
     _onboarded = true;
+    notifyListeners();
     await save(nickname: nickname, mascot: mascot);
     await _prefs.setBool(_kDone, true);
   }
