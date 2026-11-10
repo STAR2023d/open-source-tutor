@@ -1,0 +1,275 @@
+{
+  "questions": [
+    {
+      "id": "g4m4.length-r1",
+      "skillId": "g4.num.measurement.length",
+      "bloom": "remember",
+      "type": "multipleChoice",
+      "prompt": "What unit of length is most appropriate for measuring the length of a pencil?",
+      "choices": [
+        {
+          "text": "centimetres",
+          "correct": true
+        },
+        {
+          "text": "metres",
+          "misconception": "unit_scale",
+          "feedback": "Metres are too large for a pencil. Use centimetres for short objects."
+        },
+        {
+          "text": "kilometres",
+          "misconception": "unit_scale",
+          "feedback": "Kilometres measure very long distances, not pencil lengths."
+        },
+        {
+          "text": "millimetres",
+          "misconception": "unit_scale_overly_precise",
+          "feedback": "Millimetres are too small to be the most practical unit here."
+        }
+      ],
+      "hints": [
+        "Think about the size of a pencil: it is about 15 cm long.",
+        "A metre is about the height of a door. A pencil is much shorter."
+      ],
+      "explanation": "A pencil is best measured in centimetres (cm) because it is about 15 cm long. Metres and kilometres are for longer distances; millimetres are unnecessarily precise here."
+    },
+    {
+      "id": "g4m4.length-r2",
+      "skillId": "g4.num.measurement.length",
+      "bloom": "remember",
+      "type": "multipleChoice",
+      "prompt": "How many centimetres are in 1 metre?",
+      "choices": [
+        {
+          "text": "10",
+          "correct": false,
+          "misconception": "tens_place",
+          "feedback": "10 centimetres is only 0.1 m. There are 100 cm in 1 m."
+        },
+        {
+          "text": "100",
+          "correct": true
+        },
+        {
+          "text": "1000",
+          "misconception": "millimetre_confusion",
+          "feedback": "1000 mm = 1 m, but centimetres use 100."
+        },
+        {
+          "text": "10000",
+          "misconception": "added_zeros",
+          "feedback": "10000 cm = 100 m. There are 100 cm in 1 m."
+        }
+      ],
+      "hints": [
+        "The prefix 'centi-' means one hundredth (1/100).",
+        "100 centimetres lined up end-to-end make 1 metre."
+      ],
+      "explanation": "1 metre = 100 centimetres, because 'centi-' means one hundredth. 100 cm = 1 m."
+    },
+    {
+      "id": "g4m4.length-u1",
+      "skillId": "g4.num.measurement.length",
+      "bloom": "understand",
+      "type": "multipleChoice",
+      "prompt": "Convert 3 metres to centimetres.",
+      "choices": [
+        {
+          "text": "30 cm",
+          "correct": false,
+          "misconception": "forgot_zeros",
+          "feedback": "3 m = 300 cm (3 \u00d7 100), not 30 cm."
+        },
+        {
+          "text": "300 cm",
+          "correct": true
+        },
+        {
+          "text": "3 cm",
+          "misconception": "copied_digits",
+          "feedback": "3 m = 300 cm, not 3 cm. Multiplying by 100 adds two zeros."
+        },
+        {
+          "text": "3000 cm",
+          "misconception": "multiplied_by_1000",
+          "feedback": "3 m = 300 cm. 3000 cm would be 30 m."
+        }
+      ],
+      "hints": [
+        "1 m = 100 cm, so multiply the number of metres by 100.",
+        "3 \u00d7 100 = 300."
+      ],
+      "explanation": "3 m \u00d7 100 = 300 cm. Three metres is 300 centimetres."
+    },
+    {
+      "id": "g4m4.length-u2",
+      "skillId": "g4.num.measurement.length",
+      "bloom": "understand",
+      "type": "multipleChoice",
+      "prompt": "Why do we prefer using metres instead of centimetres to measure the length of a classroom?",
+      "choices": [
+        {
+          "text": "Metres are a larger unit, so the number is easier to read and understand for long distances",
+          "correct": true
+        },
+        {
+          "text": "Metres are more precise than centimetres",
+          "misconception": "more_precise",
+          "feedback": "Metres are LESS precise. Centimetres give more detail."
+        },
+        {
+          "text": "Metres are the only units taught for length",
+          "misconception": "unit_myth",
+          "feedback": "Centimetres are also used (e.g., for pencils). The preference is practical."
+        },
+        {
+          "text": "Metres are required by the government for classrooms",
+          "misconception": "mandatory_unit",
+          "feedback": "No such rule exists. It is a matter of convenience."
+        }
+      ],
+      "hints": [
+        "A classroom is long (about 6\u201310 m).",
+        "Measuring 600 cm vs 6 m \u2014 both are correct, but which is easier?",
+        "When a number has fewer digits, it is usually easier to work with."
+      ],
+      "explanation": "Metres are preferred because they give a smaller, more manageable number for long distances. A classroom is about 6\u201310 m, not 600\u20131000 cm. Larger units are more practical for longer lengths."
+    },
+    {
+      "id": "g4m4.length-a1",
+      "skillId": "g4.num.measurement.length",
+      "bloom": "apply",
+      "type": "multipleChoice",
+      "prompt": "A rope is 3 m 25 cm long. What is its total length in centimetres?",
+      "choices": [
+        {
+          "text": "325 cm",
+          "correct": true
+        },
+        {
+          "text": "3025 cm",
+          "misconception": "added_without_converting",
+          "feedback": "3 m 25 cm = 300 cm + 25 cm = 325 cm, not 3025 cm."
+        },
+        {
+          "text": "300 cm",
+          "misconception": "ignored_remaining_part",
+          "feedback": "3 m 25 cm includes 25 cm beyond the 3 m. The total is 325 cm, not 300 cm."
+        },
+        {
+          "text": "350 cm",
+          "misconception": "added_digits_randomly",
+          "feedback": "3 m 25 cm = 300 cm + 25 cm = 325 cm, not 350 cm."
+        }
+      ],
+      "hints": [
+        "Convert the metres to centimetres: 3 m = 300 cm.",
+        "Then add the remaining centimetres: 300 cm + 25 cm.",
+        "300 + 25 = 325."
+      ],
+      "explanation": "3 m 25 cm = 300 cm + 25 cm = 325 cm."
+    },
+    {
+      "id": "g4m4.length-a2",
+      "skillId": "g4.num.measurement.length",
+      "bloom": "apply",
+      "type": "multipleChoice",
+      "prompt": "A rectangle is 8 cm long and 5 cm wide. What is its perimeter?",
+      "choices": [
+        {
+          "text": "26 cm",
+          "correct": true
+        },
+        {
+          "text": "40 cm",
+          "misconception": "added_length_and_width",
+          "feedback": "12+8=20, but perimeter is 2\u00d7(length+width). Note: the correct answer is 26 cm, not 40."
+        },
+        {
+          "text": "40 cm\u00b2",
+          "misconception": "confused_with_area",
+          "feedback": "40 cm\u00b2 is the area of a 8\u00d75 rectangle (40 cm\u00b2), not the perimeter. Perimeter uses linear units (cm)."
+        },
+        {
+          "text": "13 cm",
+          "misconception": "forgot_to_double",
+          "feedback": "12+8=20, but that is only half the perimeter. Perimeter = 2\u00d7(8+5) = 26 cm."
+        }
+      ],
+      "hints": [
+        "Perimeter = 2 \u00d7 (length + width).",
+        "Length = 8 cm, width = 5 cm.",
+        "First add: 8 + 5 = 13. Then multiply by 2: 13 \u00d7 2 = 26."
+      ],
+      "explanation": "Perimeter = 2 \u00d7 (length + width) = 2 \u00d7 (8 + 5) = 2 \u00d7 13 = 26 cm."
+    },
+    {
+      "id": "g4m4.length-an1",
+      "skillId": "g4.num.measurement.length",
+      "bloom": "analyze",
+      "type": "multipleChoice",
+      "prompt": "A bookshelf is 150 cm tall. What is its height in metres and centimetres?",
+      "choices": [
+        {
+          "text": "1 m 50 cm",
+          "correct": true
+        },
+        {
+          "text": "15 m",
+          "misconception": "decimal_point_wrong",
+          "feedback": "150 cm = 1.5 m = 1 m 50 cm. '15 m' would be 1500 cm."
+        },
+        {
+          "text": "1500 m",
+          "misconception": "multiplier_confusion",
+          "feedback": "150 cm = 1.5 m, not 1500 m. 1500 m would be 150 000 cm."
+        },
+        {
+          "text": "1.5 cm",
+          "misconception": "decimal_point_misplaced",
+          "feedback": "150 cm = 1.5 m, not 1.5 cm. The unit is metres, and the centimetres part is 50 cm."
+        }
+      ],
+      "hints": [
+        "1 m = 100 cm. 150 cm = 100 cm + 50 cm.",
+        "So 150 cm = 1 m and 50 cm.",
+        "Write the answer as 1 m 50 cm."
+      ],
+      "explanation": "150 cm = 100 cm + 50 cm = 1 m 50 cm."
+    },
+    {
+      "id": "g4m4.length-an2",
+      "skillId": "g4.num.measurement.length",
+      "bloom": "analyze",
+      "type": "multipleChoice",
+      "prompt": "A rectangle has length 12 cm and width 8 cm. Which expression gives its perimeter?",
+      "choices": [
+        {
+          "text": "2\u00d7(12+8)",
+          "correct": true
+        },
+        {
+          "text": "12+8",
+          "misconception": "forgot_to_double",
+          "feedback": "12+8=20 is only half the perimeter. Perimeter = 2\u00d7(12+8)=40 cm."
+        },
+        {
+          "text": "12\u00d78",
+          "misconception": "confused_with_area",
+          "feedback": "12\u00d78=96 is the area (in cm\u00b2), not the perimeter. Perimeter uses linear units."
+        },
+        {
+          "text": "12+8+12",
+          "misconception": "missed_one_side",
+          "feedback": "12+8+12=32 is only 3 of the 4 sides. Perimeter = 2\u00d7(12+8)=40 cm."
+        }
+      ],
+      "hints": [
+        "Perimeter is the total distance around the rectangle.",
+        "Perimeter = 2 \u00d7 (length + width) = 2 \u00d7 (12 + 8) = 40 cm.",
+        "Check each expression against 40 cm."
+      ],
+      "explanation": "The perimeter is 2\u00d7(12+8)=40 cm. 12+8=20 is only half; 12\u00d78=96 is the area, not the perimeter."
+    }
+  ]
+}

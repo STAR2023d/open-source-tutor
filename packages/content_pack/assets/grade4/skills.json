@@ -186,6 +186,18 @@
         "g4dec-u1"
       ],
       "validated": false
+    },
+    {
+      "id": "g4.num.measurement.length",
+      "title": "Length (cm and m)",
+      "grade": 4,
+      "strand": "Numbers",
+      "subStrand": "Measurement",
+      "prerequisites": [
+        "g4.num.whole.place-value"
+      ],
+      "status": "live",
+      "kicdRef": "Gr4 Math 2.1"
     }
   ]
 }
