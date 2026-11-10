@@ -222,6 +222,18 @@
       ],
       "status": "live",
       "kicdRef": "Gr4 Math 2.3"
+    },
+    {
+      "id": "g4.num.measurement.mass",
+      "title": "Mass (kg, g)",
+      "grade": 4,
+      "strand": "Numbers",
+      "subStrand": "Measurement",
+      "prerequisites": [
+        "g4.num.whole.place-value"
+      ],
+      "status": "live",
+      "kicdRef": "Gr4 Math 2.4"
     }
   ]
 }
