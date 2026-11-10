@@ -76,6 +76,7 @@ class _HesabuAppState extends State<HesabuApp> {
                 contentFuture: _contentFuture,
                 store: widget.store,
                 profile: widget.profile,
+                theme: widget.theme,
                 onChangeGrade: _handleGradeChanged,
               ),
       ),
@@ -89,12 +90,14 @@ class _HomeContent extends StatelessWidget {
     required this.contentFuture,
     required this.store,
     required this.profile,
+    required this.theme,
     required this.onChangeGrade,
   });
 
   final Future<ContentBundle> contentFuture;
   final ProgressStore store;
   final ProfileController profile;
+  final ThemeController theme;
   final ValueChanged<String> onChangeGrade;
 
   @override
@@ -141,7 +144,7 @@ class _HomeContent extends StatelessWidget {
         return HomeScreen(
           content: snap.data!,
           store: store,
-          theme: widget.theme,
+          theme: theme,
           profile: profile,
         );
       },
