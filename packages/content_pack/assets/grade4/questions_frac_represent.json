@@ -71,6 +71,233 @@
         "The numerator is the number of shaded parts."
       ],
       "explanation": "2/5 means 5 equal parts with 2 shaded. A bar split into 5 parts with 2 shaded matches."
+    },
+    {
+      "id": "g4frac-r2",
+      "skillId": "g4.num.frac.represent",
+      "bloom": "remember",
+      "type": "multipleChoice",
+      "prompt": "What fraction does the shaded part show?",
+      "visual": {
+        "type": "fractionBar",
+        "numerator": 3,
+        "denominator": 4,
+        "showWith": "prompt"
+      },
+      "choices": [
+        {
+          "text": "3/4",
+          "correct": true
+        },
+        {
+          "text": "3/6",
+          "misconception": "wrong_denominator",
+          "feedback": "The bar is split into 4 equal parts, so the denominator is 4, not 6."
+        },
+        {
+          "text": "4/3",
+          "misconception": "swapped_fraction",
+          "feedback": "The shaded part is 3 out of 4, so it is 3/4, not 4/3."
+        },
+        {
+          "text": "4/4",
+          "misconception": "whole_wrong",
+          "feedback": "4/4 is the whole; only 3 of the 4 parts are shaded."
+        }
+      ],
+      "hints": [
+        "The denominator is the total number of equal parts (4).",
+        "The numerator is the number of shaded parts (3)."
+      ],
+      "explanation": "The bar is split into 4 equal parts and 3 are shaded, so the fraction is 3/4."
+    },
+    {
+      "id": "g4frac-u2",
+      "skillId": "g4.num.frac.represent",
+      "bloom": "understand",
+      "type": "multipleChoice",
+      "prompt": "Which shaded figure shows 3/4?",
+      "choices": [
+        {
+          "text": "A bar split into 4 equal parts with 3 shaded",
+          "correct": true
+        },
+        {
+          "text": "A bar split into 3 equal parts with 4 shaded",
+          "misconception": "numerator_more_than_denom",
+          "feedback": "3/4 has 4 equal parts and 3 shaded; a bar split into 3 parts cannot show 3/4."
+        },
+        {
+          "text": "A bar split into 4 equal parts with 2 shaded",
+          "misconception": "shaded_count",
+          "feedback": "2 shaded parts is 2/4, not 3/4."
+        },
+        {
+          "text": "A bar split into 4 equal parts with 4 shaded",
+          "misconception": "shaded_count_all",
+          "feedback": "4 shaded parts means the whole (4/4), not 3/4."
+        }
+      ],
+      "hints": [
+        "The denominator is the total number of equal parts (4).",
+        "The numerator is the number of shaded parts (3)."
+      ],
+      "explanation": "3/4 means 4 equal parts with 3 shaded. A bar split into 4 parts with 3 shaded matches."
+    },
+    {
+      "id": "g4frac-a1",
+      "skillId": "g4.num.frac.represent",
+      "bloom": "apply",
+      "type": "multipleChoice",
+      "prompt": "What fraction is shaded?",
+      "visual": {
+        "type": "fractionBar",
+        "numerator": 2,
+        "denominator": 5,
+        "showWith": "prompt"
+      },
+      "choices": [
+        {
+          "text": "2/5",
+          "correct": true
+        },
+        {
+          "text": "2/3",
+          "misconception": "wrong_total_parts",
+          "feedback": "The bar is split into 5 equal parts, so the denominator is 5, not 3."
+        },
+        {
+          "text": "5/2",
+          "misconception": "inverted_fraction",
+          "feedback": "2/5 means 2 shaded out of 5 total, not 5 out of 2."
+        },
+        {
+          "text": "3/5",
+          "misconception": "added_parts",
+          "feedback": "The shaded part is 2 out of 5, not 3 out of 5."
+        }
+      ],
+      "hints": [
+        "Count the total number of equal parts (denominator).",
+        "Count the shaded parts (numerator)."
+      ],
+      "explanation": "2 out of 5 equal parts are shaded, so the fraction is 2/5."
+    },
+    {
+      "id": "g4frac-a2",
+      "skillId": "g4.num.frac.represent",
+      "bloom": "apply",
+      "type": "multipleChoice",
+      "prompt": "What fraction of the shape is shaded?",
+      "visual": {
+        "type": "fractionBar",
+        "numerator": 3,
+        "denominator": 8,
+        "showWith": "prompt"
+      },
+      "choices": [
+        {
+          "text": "3/8",
+          "correct": true
+        },
+        {
+          "text": "3/5",
+          "misconception": "wrong_total_parts",
+          "feedback": "The bar is split into 8 equal parts, so the denominator is 8, not 5."
+        },
+        {
+          "text": "8/3",
+          "misconception": "inverted_fraction",
+          "feedback": "3/8 means 3 shaded out of 8 total, not 8 out of 3."
+        },
+        {
+          "text": "5/8",
+          "misconception": "wrong_shaded_count",
+          "feedback": "The shaded part is 3 out of 8, not 5 out of 8."
+        }
+      ],
+      "hints": [
+        "The denominator is the total number of equal parts (8).",
+        "The numerator is the number of shaded parts (3)."
+      ],
+      "explanation": "3 out of 8 equal parts are shaded, so the fraction is 3/8."
+    },
+    {
+      "id": "g4frac-an1",
+      "skillId": "g4.num.frac.represent",
+      "bloom": "analyze",
+      "type": "multipleChoice",
+      "prompt": "Which model correctly represents 2/5?",
+      "visual": {
+        "type": "fractionBar",
+        "numerator": 2,
+        "denominator": 5,
+        "showWith": "prompt"
+      },
+      "choices": [
+        {
+          "text": "A bar split into 5 equal parts with 2 shaded",
+          "correct": true
+        },
+        {
+          "text": "A bar split into 5 equal parts with 3 shaded",
+          "misconception": "shaded_count_wrong",
+          "feedback": "3 shaded parts is 3/5, not 2/5."
+        },
+        {
+          "text": "A bar split into 2 equal parts with 5 shaded",
+          "misconception": "numerator_wrong",
+          "feedback": "2/5 has 5 equal parts (denominator) and 2 shaded (numerator)."
+        },
+        {
+          "text": "A bar split into 5 equal parts with 0 shaded",
+          "misconception": "nothing_shaded",
+          "feedback": "0 shaded parts means 0/5, not 2/5."
+        }
+      ],
+      "hints": [
+        "2/5 means the bar is split into 5 equal parts with 2 of them shaded."
+      ],
+      "explanation": "2/5 means 5 equal parts with 2 shaded. The visual shows a bar split into 5 parts with 2 shaded."
+    },
+    {
+      "id": "g4frac-an2",
+      "skillId": "g4.num.frac.represent",
+      "bloom": "analyze",
+      "type": "multipleChoice",
+      "prompt": "Which number line shows 3/4?",
+      "visual": {
+        "type": "numberLine",
+        "min": 0,
+        "max": 1,
+        "step": 0.25,
+        "showWith": "prompt"
+      },
+      "choices": [
+        {
+          "text": "A number line from 0 to 1 with a point at 3/4",
+          "correct": true
+        },
+        {
+          "text": "A number line from 0 to 1 with a point at 1/4",
+          "misconception": "wrong_point",
+          "feedback": "The point at 1/4 is the first mark, not 3/4."
+        },
+        {
+          "text": "A number line from 0 to 2 with a point at 3/4",
+          "misconception": "wrong_range",
+          "feedback": "The number line should go from 0 to 1 for 3/4."
+        },
+        {
+          "text": "A number line from 0 to 1 with a point at 1/2",
+          "misconception": "wrong_point",
+          "feedback": "The point at 1/2 is the middle, not 3/4."
+        }
+      ],
+      "hints": [
+        "Divide the line from 0 to 1 into 4 equal parts. 3/4 is at the third mark."
+      ],
+      "explanation": "3/4 means 3 out of 4 equal parts. On a number line from 0 to 1 in steps of 0.25, the third mark is 0.75."
     }
   ]
 }

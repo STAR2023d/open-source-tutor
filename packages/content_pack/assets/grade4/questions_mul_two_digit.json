@@ -65,6 +65,204 @@
         "Multiply each part of the first split by each part of the second."
       ],
       "explanation": "14 \u00d7 13 = (10 + 4) \u00d7 (10 + 3) = 10\u00d710 + 10\u00d73 + 4\u00d710 + 4\u00d73 = 100 + 30 + 40 + 12 = 182."
+    },
+    {
+      "id": "g4mt-r2",
+      "skillId": "g4.num.mul.two-digit",
+      "bloom": "remember",
+      "type": "multipleChoice",
+      "prompt": "What is 12 \\u00d7 10?",
+      "choices": [
+        {
+          "text": "120",
+          "correct": true
+        },
+        {
+          "text": "12",
+          "misconception": "forgot_zeros",
+          "feedback": "12\\u00d710 means 12 groups of 10; the answer is 120, not 12."
+        },
+        {
+          "text": "102",
+          "misconception": "digits_reversed",
+          "feedback": "12\\u00d710 is 120; the digits are not reversed."
+        },
+        {
+          "text": "210",
+          "misconception": "digits_swapped",
+          "feedback": "12\\u00d710 is 120; 210 comes from 21\\u00d710."
+        }
+      ],
+      "hints": [
+        "Multiplying by 10 adds a zero to the end.",
+        "12\\u00d710 = 12 ten times = 120."
+      ],
+      "explanation": "12\\u00d710 = 120. Multiplying by 10 shifts each digit one place to the left."
+    },
+    {
+      "id": "g4mt-u2",
+      "skillId": "g4.num.mul.two-digit",
+      "bloom": "understand",
+      "type": "multipleChoice",
+      "prompt": "Which expression equals 12 \\u00d7 13?",
+      "choices": [
+        {
+          "text": "10\\u00d713 + 2\\u00d713",
+          "correct": true
+        },
+        {
+          "text": "12\\u00d710 + 13",
+          "misconception": "wrong_split",
+          "feedback": "This does not split 13 into tens and ones correctly."
+        },
+        {
+          "text": "12\\u00d713 + 12",
+          "misconception": "extra_term",
+          "feedback": "The expanded form has two terms, not three."
+        },
+        {
+          "text": "10\\u00d713 + 13",
+          "misconception": "missed_tens",
+          "feedback": "This misses the 2 tens in 12."
+        }
+      ],
+      "hints": [
+        "Split 12 into 10 + 2, then multiply each part by 13.",
+        "10\\u00d713 = 130 and 2\\u00d713 = 26."
+      ],
+      "explanation": "12 \\u00d7 13 = (10 + 2) \\u00d7 13 = 10\\u00d713 + 2\\u00d713 = 130 + 26 = 156."
+    },
+    {
+      "id": "g4mt-a1",
+      "skillId": "g4.num.mul.two-digit",
+      "bloom": "apply",
+      "type": "multipleChoice",
+      "prompt": "What is 23 \\u00d7 14?",
+      "choices": [
+        {
+          "text": "322",
+          "correct": true
+        },
+        {
+          "text": "312",
+          "misconception": "forgot_carry",
+          "feedback": "23 \\u00d7 14 is 322. Forgetting the carry gives 312."
+        },
+        {
+          "text": "234",
+          "misconception": "did_not_carry",
+          "feedback": "23 \\u00d7 14 is 322; not carrying the 1 from 28 gives 234."
+        },
+        {
+          "text": "282",
+          "misconception": "added_wrong",
+          "feedback": "23 \\u00d7 14 is 322; adding the partial products wrong gives 282."
+        }
+      ],
+      "hints": [
+        "Work it out in columns: 23 \\u00d7 4 = 92, then 23 \\u00d7 10 = 230.",
+        "Add the two results: 230 + 92 = 322."
+      ],
+      "explanation": "23 \\u00d7 14 = 23 \\u00d7 10 + 23 \\u00d7 4 = 230 + 92 = 322."
+    },
+    {
+      "id": "g4mt-a2",
+      "skillId": "g4.num.mul.two-digit",
+      "bloom": "apply",
+      "type": "multipleChoice",
+      "prompt": "What is 15 \\u00d7 23?",
+      "choices": [
+        {
+          "text": "345",
+          "correct": true
+        },
+        {
+          "text": "335",
+          "misconception": "forgot_tens_place",
+          "feedback": "15 \\u00d7 23 is 345; forgetting the 0 place holder gives 335."
+        },
+        {
+          "text": "235",
+          "misconception": "did_not_carry",
+          "feedback": "15 \\u00d7 23 is 345; not carrying the 1 from 15 \\u00d7 3 = 45 gives 235."
+        },
+        {
+          "text": "355",
+          "misconception": "added_wrong",
+          "feedback": "15 \\u00d7 23 is 345; adding partial products wrong gives 355."
+        }
+      ],
+      "hints": [
+        "Work it out in columns: 15 \\u00d7 3 = 45, then 15 \\u00d7 20 = 300.",
+        "Add the two results: 300 + 45 = 345."
+      ],
+      "explanation": "15 \\u00d7 23 = 15 \\u00d7 20 + 15 \\u00d7 3 = 300 + 45 = 345."
+    },
+    {
+      "id": "g4mt-an1",
+      "skillId": "g4.num.mul.two-digit",
+      "bloom": "analyze",
+      "type": "multipleChoice",
+      "prompt": "If 14 \\u00d7 12 = 168, which of these is also true?",
+      "choices": [
+        {
+          "text": "168 \\u00f7 12 = 14",
+          "correct": true
+        },
+        {
+          "text": "168 \\u00f7 14 = 12",
+          "misconception": "swapped_divisor",
+          "feedback": "Both 168 \\u00f7 12 = 14 and 168 \\u00f7 14 = 12 are true. Choose the one that matches the given fact."
+        },
+        {
+          "text": "14 + 12 = 168",
+          "misconception": "added_not_multipled",
+          "feedback": "14 + 12 is 26, not 168."
+        },
+        {
+          "text": "14 - 12 = 168",
+          "misconception": "subtracted_not_multipled",
+          "feedback": "14 - 12 is 2, not 168."
+        }
+      ],
+      "hints": [
+        "Division is the inverse of multiplication.",
+        "If a \\u00d7 b = c, then c \\u00f7 b = a and c \\u00f7 a = b."
+      ],
+      "explanation": "14 \\u00d7 12 = 168 means 168 \\u00f7 12 = 14 and 168 \\u00f7 14 = 12. Both are true; the question asks which is also true, so either works. The first listed is the direct inverse."
+    },
+    {
+      "id": "g4mt-an2",
+      "skillId": "g4.num.mul.two-digit",
+      "bloom": "analyze",
+      "type": "multipleChoice",
+      "prompt": "Which expression is equivalent to 14 \\u00d7 12?",
+      "choices": [
+        {
+          "text": "10\\u00d712 + 4\\u00d712",
+          "correct": true
+        },
+        {
+          "text": "14\\u00d710 + 12",
+          "misconception": "wrong_split",
+          "feedback": "This splits 14 into 10 + 4 but applies the split to the wrong factor."
+        },
+        {
+          "text": "14\\u00d712 + 12",
+          "misconception": "extra_term",
+          "feedback": "The expanded form has two terms when 14 is split into tens and ones."
+        },
+        {
+          "text": "14\\u00d72 + 12\\u00d72",
+          "misconception": "perimeter_not_area",
+          "feedback": "14\\u00d72 + 12\\u00d72 is the perimeter (or duplicated area), not the product."
+        }
+      ],
+      "hints": [
+        "Split 14 into 10 + 4, then multiply each part by 12.",
+        "14 \\u00d7 12 = (10 + 4) \\u00d7 12 = 10\\u00d712 + 4\\u00d712."
+      ],
+      "explanation": "14 \\u00d7 12 = (10 + 4) \\u00d7 12 = 10\\u00d712 + 4\\u00d712 = 120 + 48 = 168."
     }
   ]
 }

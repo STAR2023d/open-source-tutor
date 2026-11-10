@@ -7,16 +7,210 @@
       "type": "multipleChoice",
       "prompt": "Which list shows all the factors of 12?",
       "choices": [
-        {"text": "1, 2, 3, 4, 6, 12", "correct": true},
-        {"text": "1, 2, 3, 4, 6", "misconception": "missed_twelve", "feedback": "12 is a factor of 12 (12 × 1 = 12), so it must be included."},
-        {"text": "2, 3, 4, 6", "misconception": "missed_one_and_twelve", "feedback": "1 and 12 are factors of 12, so they must be included."},
-        {"text": "1, 2, 3, 4, 6, 12, 24", "misconception": "included_multiple", "feedback": "24 is a multiple of 12, not a factor, so it should not be included."}
+        {
+          "text": "1, 2, 3, 4, 6, 12",
+          "correct": true
+        },
+        {
+          "text": "1, 2, 3, 4, 6",
+          "misconception": "missed_twelve",
+          "feedback": "12 is a factor of 12 (12 \u00d7 1 = 12), so it must be included."
+        },
+        {
+          "text": "2, 3, 4, 6",
+          "misconception": "missed_one_and_twelve",
+          "feedback": "1 and 12 are factors of 12, so they must be included."
+        },
+        {
+          "text": "1, 2, 3, 4, 6, 12, 24",
+          "misconception": "included_multiple",
+          "feedback": "24 is a multiple of 12, not a factor, so it should not be included."
+        }
       ],
       "hints": [
         "A factor divides a number exactly, leaving no remainder.",
         "Check every number from 1 up to the number itself."
       ],
-      "explanation": "The factors of 12 are 1, 2, 3, 4, 6, and 12 (1×12, 2×6, 3×4)."
+      "explanation": "The factors of 12 are 1, 2, 3, 4, 6, and 12 (1\u00d712, 2\u00d76, 3\u00d74)."
+    },
+    {
+      "id": "g4fm-r2",
+      "skillId": "g4.num.whole.factors-multiples",
+      "bloom": "remember",
+      "type": "multipleChoice",
+      "prompt": "Which of these is a factor of 6?",
+      "choices": [
+        {
+          "text": "1",
+          "correct": true
+        },
+        {
+          "text": "4",
+          "misconception": "not_divides_evenly"
+        },
+        {
+          "text": "7",
+          "misconception": "prime_attempt"
+        },
+        {
+          "text": "8",
+          "misconception": "larger_is_factor"
+        }
+      ],
+      "hints": [
+        "A factor divides a number exactly, with no remainder.",
+        "Check 6 \u00f7 each number."
+      ],
+      "explanation": "6 \u00f7 1 = 6 exactly, so 1 is a factor of 6. 6 \u00f7 4, 6 \u00f7 7, 6 \u00f7 8 all leave remainders."
+    },
+    {
+      "id": "g4fm-u1",
+      "skillId": "g4.num.whole.factors-multiples",
+      "bloom": "understand",
+      "type": "multipleChoice",
+      "prompt": "What is a multiple of 4?",
+      "choices": [
+        {
+          "text": "12",
+          "correct": true
+        },
+        {
+          "text": "13",
+          "misconception": "counting_error"
+        },
+        {
+          "text": "15",
+          "misconception": "added_instead_of_multipled"
+        },
+        {
+          "text": "21",
+          "misconception": "multiplied_wrong"
+        }
+      ],
+      "hints": [
+        "If 4\u00d73=12, then 12 is a multiple of 4.",
+        "List some multiples of 4: 4, 8, 12, 16, ..."
+      ],
+      "explanation": "12 = 4 \u00d7 3, so 12 is a multiple of 4. The others leave a remainder."
+    },
+    {
+      "id": "g4fm-u2",
+      "skillId": "g4.num.whole.factors-multiples",
+      "bloom": "understand",
+      "type": "multipleChoice",
+      "prompt": "Which number is a multiple of both 3 and 4?",
+      "choices": [
+        {
+          "text": "12",
+          "correct": true
+        },
+        {
+          "text": "8",
+          "misconception": "multiple_of_4_only"
+        },
+        {
+          "text": "9",
+          "misconception": "multiple_of_3_only"
+        },
+        {
+          "text": "14",
+          "misconception": "multiple_of_2_and_7"
+        }
+      ],
+      "hints": [
+        "A common multiple is a number that is a multiple of BOTH."
+      ],
+      "explanation": "12 = 3 \u00d7 4, so 12 is a multiple of both 3 and 4. 8 is only a multiple of 4; 9 only of 3; 14 of neither."
+    },
+    {
+      "id": "g4fm-a2",
+      "skillId": "g4.num.whole.factors-multiples",
+      "bloom": "apply",
+      "type": "multipleChoice",
+      "prompt": "Which number is a common multiple of 6 and 8?",
+      "choices": [
+        {
+          "text": "24",
+          "correct": true
+        },
+        {
+          "text": "16",
+          "misconception": "multiple_of_8_only"
+        },
+        {
+          "text": "18",
+          "misconception": "multiple_of_6_only"
+        },
+        {
+          "text": "12",
+          "misconception": "multiple_of_6_only"
+        }
+      ],
+      "hints": [
+        "List multiples of 6: 6, 12, 18, 24, ...",
+        "List multiples of 8: 8, 16, 24, 32, ..."
+      ],
+      "explanation": "24 = 6\u00d74 and 24 = 8\u00d73, so 24 is a common multiple. 16 is only a multiple of 8; 18 and 12 are only multiples of 6."
+    },
+    {
+      "id": "g4fm-an1",
+      "skillId": "g4.num.whole.factors-multiples",
+      "bloom": "analyze",
+      "type": "multipleChoice",
+      "prompt": "Which number is BOTH a factor of 12 and a multiple of 3?",
+      "choices": [
+        {
+          "text": "6",
+          "correct": true
+        },
+        {
+          "text": "5",
+          "misconception": "not_factor"
+        },
+        {
+          "text": "7",
+          "misconception": "prime_not_factor"
+        },
+        {
+          "text": "9",
+          "misconception": "not_factor"
+        }
+      ],
+      "hints": [
+        "Factors of 12: 1, 2, 3, 4, 6, 12.",
+        "Multiples of 3: 3, 6, 9, 12, ..."
+      ],
+      "explanation": "6 is a factor of 12 (12\u00f76=2) and a multiple of 3 (6=3\u00d72). 5, 7, 9 don't meet both conditions."
+    },
+    {
+      "id": "g4fm-an2",
+      "skillId": "g4.num.whole.factors-multiples",
+      "bloom": "analyze",
+      "type": "multipleChoice",
+      "prompt": "Which list shows all factors of 12?",
+      "choices": [
+        {
+          "text": "1, 2, 3, 4, 6, 12",
+          "correct": true
+        },
+        {
+          "text": "1, 2, 3, 4, 6",
+          "misconception": "missing_twelve"
+        },
+        {
+          "text": "2, 3, 4, 6, 12",
+          "misconception": "missing_one"
+        },
+        {
+          "text": "1, 2, 3, 4, 6, 12, 24",
+          "misconception": "includes_multiple"
+        }
+      ],
+      "hints": [
+        "A factor divides a number exactly, with no remainder.",
+        "Check 1\u00d712, 2\u00d76, 3\u00d74."
+      ],
+      "explanation": "The factors of 12 are 1, 2, 3, 4, 6, and 12 (1\u00d712, 2\u00d76, 3\u00d74). 24 is a multiple, not a factor."
     },
     {
       "id": "g4fm-a1",
@@ -25,16 +219,31 @@
       "type": "multipleChoice",
       "prompt": "Which number is a multiple of both 4 and 6?",
       "choices": [
-        {"text": "12", "correct": true},
-        {"text": "8", "misconception": "multiple_of_4_only", "feedback": "8 is divisible by 4 but not by 6, so it is not a multiple of both."},
-        {"text": "9", "misconception": "multiple_of_3_only", "feedback": "9 is divisible by 3 but not by 6, so it is not a multiple of both."},
-        {"text": "18", "misconception": "multiple_of_6_only", "feedback": "18 is divisible by 6 but not by 4, so it is not a multiple of both."}
+        {
+          "text": "12",
+          "correct": true
+        },
+        {
+          "text": "8",
+          "misconception": "multiple_of_4_only",
+          "feedback": "8 is divisible by 4 but not by 6, so it is not a multiple of both."
+        },
+        {
+          "text": "9",
+          "misconception": "multiple_of_3_only",
+          "feedback": "9 is divisible by 3 but not by 6, so it is not a multiple of both."
+        },
+        {
+          "text": "18",
+          "misconception": "multiple_of_6_only",
+          "feedback": "18 is divisible by 6 but not by 4, so it is not a multiple of both."
+        }
       ],
       "hints": [
         "A multiple of a number is the product of that number and a whole number.",
         "List the multiples of 4 and the multiples of 6, then find the common one."
       ],
-      "explanation": "The multiples of 4 are 4, 8, 12, 16, … and the multiples of 6 are 6, 12, 18, … The common multiple is 12."
+      "explanation": "The multiples of 4 are 4, 8, 12, 16, \u2026 and the multiples of 6 are 6, 12, 18, \u2026 The common multiple is 12."
     }
   ]
 }

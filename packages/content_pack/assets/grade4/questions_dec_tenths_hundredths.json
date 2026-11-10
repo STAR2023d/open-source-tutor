@@ -65,6 +65,221 @@
         "2.5 = 2.50, so compare 2.50 with 2.05."
       ],
       "explanation": "2.5 = 2.50, and 2.50 > 2.05, so 2.5 is larger."
+    },
+    {
+      "id": "g4dec-r2",
+      "skillId": "g4.num.dec.tenths-hundredths",
+      "bloom": "remember",
+      "type": "multipleChoice",
+      "prompt": "Which decimal is shown by 45 hundredths?",
+      "choices": [
+        {
+          "text": "0.45",
+          "correct": true
+        },
+        {
+          "text": "4.5",
+          "misconception": "tenths_not_hundredths",
+          "feedback": "45 hundredths means 45/100 = 0.45, not 4.5."
+        },
+        {
+          "text": "45",
+          "misconception": "whole_number",
+          "feedback": "45 hundredths is 0.45, not 45. 45 is 45 ones."
+        },
+        {
+          "text": "0.045",
+          "misconception": "moved_decimal_wrong",
+          "feedback": "0.045 is 4.5 hundredths, not 45 hundredths."
+        }
+      ],
+      "hints": [
+        "45 hundredths means 45/100.",
+        "45/100 written as a decimal is 0.45."
+      ],
+      "explanation": "45 hundredths = 45/100 = 0.45."
+    },
+    {
+      "id": "g4dec-u2",
+      "skillId": "g4.num.dec.tenths-hundredths",
+      "bloom": "understand",
+      "type": "multipleChoice",
+      "prompt": "Which is larger: 0.3 or 0.25?",
+      "choices": [
+        {
+          "text": "0.3",
+          "correct": true
+        },
+        {
+          "text": "0.25",
+          "misconception": "looks_smaller",
+          "feedback": "0.3 is 0.30, which is larger than 0.25."
+        },
+        {
+          "text": "They are equal",
+          "misconception": "same_digits",
+          "feedback": "0.3 = 0.30, which is not the same as 0.25."
+        },
+        {
+          "text": "0.03",
+          "misconception": "decimal_moved",
+          "feedback": "0.03 is 3 hundredths; 0.3 is 30 hundredths, which is larger."
+        }
+      ],
+      "hints": [
+        "Compare the decimals place by place.",
+        "0.3 = 0.30; compare 30 hundredths with 25 hundredths."
+      ],
+      "explanation": "0.3 = 0.30, which is 30 hundredths. 30 > 25, so 0.3 is larger."
+    },
+    {
+      "id": "g4dec-a1",
+      "skillId": "g4.num.dec.tenths-hundredths",
+      "bloom": "apply",
+      "type": "multipleChoice",
+      "prompt": "What decimal is shown by the number line?",
+      "visual": {
+        "type": "numberLine",
+        "min": 0,
+        "max": 1,
+        "step": 0.25,
+        "showWith": "prompt"
+      },
+      "choices": [
+        {
+          "text": "0.75",
+          "correct": true
+        },
+        {
+          "text": "0.25",
+          "misconception": "first_mark",
+          "feedback": "0.25 is the first mark after 0; the question asks which decimal the number line shows."
+        },
+        {
+          "text": "0.5",
+          "misconception": "middle_point",
+          "feedback": "0.5 is the middle mark; the shaded point shown is at 0.75."
+        },
+        {
+          "text": "0.75",
+          "misconception": "decimal_point_position",
+          "feedback": "The point is at 3/4, which is 0.75."
+        }
+      ],
+      "hints": [
+        "The number line goes from 0 to 1 in steps of 0.25.",
+        "0.25, 0.50, 0.75 are the marks."
+      ],
+      "explanation": "The point on the number line is at the third mark, which is 0.75."
+    },
+    {
+      "id": "g4dec-a2",
+      "skillId": "g4.num.dec.tenths-hundredths",
+      "bloom": "apply",
+      "type": "multipleChoice",
+      "prompt": "What decimal is shown by the shaded part?",
+      "visual": {
+        "type": "fractionBar",
+        "numerator": 3,
+        "denominator": 10,
+        "showWith": "prompt"
+      },
+      "choices": [
+        {
+          "text": "0.3",
+          "correct": true
+        },
+        {
+          "text": "0.03",
+          "misconception": "hundredths_not_tenths",
+          "feedback": "3 out of 10 parts shaded means 3/10 = 0.3, not 0.03."
+        },
+        {
+          "text": "3.0",
+          "misconception": "whole_number",
+          "feedback": "3 out of 10 parts shaded means 3/10 = 0.3, not 3.0."
+        },
+        {
+          "text": "0.13",
+          "misconception": "decimal_moved",
+          "feedback": "0.13 is 13 hundredths; 3 out of 10 is 3 tenths = 0.3."
+        }
+      ],
+      "hints": [
+        "3 out of 10 equal parts is 3/10.",
+        "3/10 written as a decimal is 0.3."
+      ],
+      "explanation": "3 out of 10 equal parts are shaded, so the fraction is 3/10 = 0.3."
+    },
+    {
+      "id": "g4dec-an1",
+      "skillId": "g4.num.dec.tenths-hundredths",
+      "bloom": "analyze",
+      "type": "multipleChoice",
+      "prompt": "Which statement is true about 2.5 and 2.05?",
+      "choices": [
+        {
+          "text": "2.5 is greater than 2.05",
+          "correct": true
+        },
+        {
+          "text": "2.05 is greater than 2.5",
+          "misconception": "by_decimal_value",
+          "feedback": "2.5 = 2.50, which is greater than 2.05."
+        },
+        {
+          "text": "They are equal",
+          "misconception": "same_value",
+          "feedback": "2.5 = 2.50, which is not the same as 2.05."
+        },
+        {
+          "text": "2.05 is greater than 2.5",
+          "misconception": "misread_decimal",
+          "feedback": "2.5 = 2.50 has more tenths (5) than 2.05 (0 tenths)."
+        },
+        {
+          "text": "2.5 is less than 2.05",
+          "misconception": "opposite_comparison",
+          "feedback": "2.5 = 2.50, which is greater than 2.05."
+        }
+      ],
+      "hints": [
+        "Compare the decimal parts: 0.5 = 0.50 and 0.05 = 5 hundredths.",
+        "0.50 > 0.05."
+      ],
+      "explanation": "2.5 = 2.50, so 2.50 > 2.05. The 5 in 2.5 is in the tenths place, which is worth more than 0.05."
+    },
+    {
+      "id": "g4dec-an2",
+      "skillId": "g4.num.dec.tenths-hundredths",
+      "bloom": "analyze",
+      "type": "multipleChoice",
+      "prompt": "Which list shows 0.3, 0.25, and 0.4 in order from smallest to largest?",
+      "choices": [
+        {
+          "text": "0.25, 0.3, 0.4",
+          "correct": true
+        },
+        {
+          "text": "0.3, 0.25, 0.4",
+          "misconception": "wrong_order",
+          "feedback": "0.25 < 0.3 < 0.4, so the correct order is 0.25, 0.3, 0.4."
+        },
+        {
+          "text": "0.25, 0.4, 0.3",
+          "misconception": "wrong_order",
+          "feedback": "0.3 < 0.4, so 0.3 comes before 0.4."
+        },
+        {
+          "text": "0.4, 0.3, 0.25",
+          "misconception": "desc_order",
+          "feedback": "This is the order from largest to smallest, not smallest to largest."
+        }
+      ],
+      "hints": [
+        "Compare the decimal parts: 0.3 = 0.30, 0.25 = 25 hundredths, 0.4 = 0.40."
+      ],
+      "explanation": "0.25 (25 hundredths) < 0.30 (30 hundredths) < 0.40 (40 hundredths), so 0.25 < 0.3 < 0.4."
     }
   ]
 }

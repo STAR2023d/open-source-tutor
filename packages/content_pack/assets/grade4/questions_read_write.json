@@ -7,14 +7,29 @@
       "type": "multipleChoice",
       "prompt": "What is the value of the digit 4 in 4,032?",
       "choices": [
-        {"text": "4,000", "correct": true},
-        {"text": "400", "misconception": "hundreds", "feedback": "4 is in the hundreds place, but here it is in the thousands place, so its value is 4,000."},
-        {"text": "40", "misconception": "tens", "feedback": "4 is in the hundreds place, not the tens place."},
-        {"text": "4", "misconception": "ones", "feedback": "4 is in the thousands place, not the ones place."}
+        {
+          "text": "4,000",
+          "correct": true
+        },
+        {
+          "text": "400",
+          "misconception": "hundreds",
+          "feedback": "4 is in the hundreds place, but here it is in the thousands place, so its value is 4,000."
+        },
+        {
+          "text": "40",
+          "misconception": "tens",
+          "feedback": "4 is in the hundreds place, not the tens place."
+        },
+        {
+          "text": "4",
+          "misconception": "ones",
+          "feedback": "4 is in the thousands place, not the ones place."
+        }
       ],
       "hints": [
         "Find the position of the digit 4 in the number.",
-        "Thousands, hundreds, tens, ones — read from left to right after the first digit."
+        "Thousands, hundreds, tens, ones \u2014 read from left to right after the first digit."
       ],
       "explanation": "In 4,032, the digit 4 is the thousands digit, so its value is 4,000."
     },
@@ -25,16 +40,210 @@
       "type": "multipleChoice",
       "prompt": "Which shows 7,004 written in expanded form?",
       "choices": [
-        {"text": "7,000 + 4", "correct": true},
-        {"text": "7,000 + 40", "misconception": "tens_instead_of_ones", "feedback": "7,004 has 0 tens, so only 4 sits in the ones place."},
-        {"text": "700 + 4", "misconception": "missing_thousands", "feedback": "7,004 has 7 in the thousands place, not the hundreds place."},
-        {"text": "7,000 + 400 + 4", "misconception": "extra_hundreds", "feedback": "7,004 has 0 hundreds, so there is no 400 in its expanded form."}
+        {
+          "text": "7,000 + 4",
+          "correct": true
+        },
+        {
+          "text": "7,000 + 40",
+          "misconception": "tens_instead_of_ones",
+          "feedback": "7,004 has 0 tens, so only 4 sits in the ones place."
+        },
+        {
+          "text": "700 + 4",
+          "misconception": "missing_thousands",
+          "feedback": "7,004 has 7 in the thousands place, not the hundreds place."
+        },
+        {
+          "text": "7,000 + 400 + 4",
+          "misconception": "extra_hundreds",
+          "feedback": "7,004 has 0 hundreds, so there is no 400 in its expanded form."
+        }
       ],
       "hints": [
         "Expanded form breaks a number into the sum of each digit's value.",
         "Use 0 for places that have no value, e.g. 7,004 = 7,000 + 0 + 0 + 4."
       ],
       "explanation": "7,004 = 7,000 + 0 + 0 + 4, so the expanded form is 7,000 + 4."
+    },
+    {
+      "id": "g4rw-r2",
+      "skillId": "g4.num.whole.read-write",
+      "bloom": "remember",
+      "type": "multipleChoice",
+      "prompt": "What is the value of the tens digit in 5,063?",
+      "choices": [
+        {
+          "text": "60",
+          "correct": true
+        },
+        {
+          "text": "6",
+          "misconception": "place_value",
+          "feedback": "6 is in the tens place, so its value is 60, not 6."
+        },
+        {
+          "text": "600",
+          "misconception": "hundreds"
+        },
+        {
+          "text": "5,000",
+          "misconception": "thousands"
+        }
+      ],
+      "hints": [
+        "Tens place is the second digit from the right.",
+        "5 in the thousands, 0 in hundreds, 6 in tens, 3 in ones."
+      ],
+      "explanation": "5,063 = 5,000 + 0 + 60 + 3, so the tens digit is 6 and its value is 60."
+    },
+    {
+      "id": "g4rw-u2",
+      "skillId": "g4.num.whole.read-write",
+      "bloom": "understand",
+      "type": "multipleChoice",
+      "prompt": "What is 9,000 + 400 + 30 + 5 in standard form?",
+      "choices": [
+        {
+          "text": "9,435",
+          "correct": true
+        },
+        {
+          "text": "9,405",
+          "misconception": "omitted_tens"
+        },
+        {
+          "text": "9,045",
+          "misconception": "omitted_hundreds"
+        },
+        {
+          "text": "9,005",
+          "misconception": "all_zero_places"
+        }
+      ],
+      "hints": [
+        "Add each place: thousands + hundreds + tens + ones.",
+        "9,000 + 400 + 30 + 5 = 9,000 + 400 + 30 + 5."
+      ],
+      "explanation": "9,000 + 400 = 9,400; + 30 = 9,430; + 5 = 9,435."
+    },
+    {
+      "id": "g4rw-a1",
+      "skillId": "g4.num.whole.read-write",
+      "bloom": "apply",
+      "type": "multipleChoice",
+      "prompt": "What is 3,000 + 500 + 40 in standard form?",
+      "choices": [
+        {
+          "text": "3,540",
+          "correct": true
+        },
+        {
+          "text": "3,504",
+          "misconception": "zeros_not_included"
+        },
+        {
+          "text": "3,450",
+          "misconception": "wrong_order"
+        },
+        {
+          "text": "4,350",
+          "misconception": "digits_swapped"
+        }
+      ],
+      "hints": [
+        "Add the parts: thousands + hundreds + tens + ones.",
+        "4,000 + 600 + 30 + 8 = 4,638."
+      ],
+      "explanation": "4,000 + 500 = 4,500; + 40 = 4,540; + 8 = 4,548."
+    },
+    {
+      "id": "g4rw-a2",
+      "skillId": "g4.num.whole.read-write",
+      "bloom": "apply",
+      "type": "multipleChoice",
+      "prompt": "What is 7,000 + 500 + 2 in standard form?",
+      "choices": [
+        {
+          "text": "7,502",
+          "correct": true
+        },
+        {
+          "text": "7,520",
+          "misconception": "tens_wrong_place"
+        },
+        {
+          "text": "7,052",
+          "misconception": "hundreds_wrong"
+        },
+        {
+          "text": "7,520",
+          "misconception": "missing_ones"
+        }
+      ],
+      "hints": [
+        "Add the parts: thousands + hundreds + tens + ones.",
+        "7,000 + 500 = 7,500; + 2 = 7,502."
+      ],
+      "explanation": "7,000 + 500 + 0 + 2 = 7,502."
+    },
+    {
+      "id": "g4rw-an1",
+      "skillId": "g4.num.whole.read-write",
+      "bloom": "analyze",
+      "type": "multipleChoice",
+      "prompt": "Which number has 4 thousands, 0 hundreds, 7 tens, and 2 ones?",
+      "choices": [
+        {
+          "text": "4,072",
+          "correct": true
+        },
+        {
+          "text": "4,402",
+          "misconception": "hundreds_wrong"
+        },
+        {
+          "text": "4,072",
+          "misconception": "wrong_place"
+        },
+        {
+          "text": "4,072",
+          "misconception": "hundreds_confused"
+        }
+      ],
+      "hints": [
+        "Thousands = 4,000; hundreds = 0; tens = 70; ones = 2."
+      ],
+      "explanation": "4,000 + 0 + 70 + 2 = 4,072."
+    },
+    {
+      "id": "g4rw-an2",
+      "skillId": "g4.num.whole.read-write",
+      "bloom": "analyze",
+      "type": "multipleChoice",
+      "prompt": "Which list shows the numbers 2,000 / 3,100 / 2,500 in order from smallest to largest?",
+      "choices": [
+        {
+          "text": "2,000 / 2,500 / 3,100",
+          "correct": true
+        },
+        {
+          "text": "2,500 / 2,000 / 3,100",
+          "misconception": "biggest_first"
+        },
+        {
+          "text": "3,100 / 2,500 / 2,000",
+          "misconception": "desc_order"
+        },
+        {
+          "text": "2,000 / 3,100 / 2,500",
+          "misconception": "random_order"
+        }
+      ],
+      "hints": [
+        "Compare the thousands first, then hundreds, then tens, then ones."
+      ],
+      "explanation": "2,000 < 2,500 < 3,100, so the correct order is 2,000 / 2,500 / 3,100."
     }
   ]
 }

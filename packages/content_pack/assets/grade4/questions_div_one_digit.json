@@ -65,6 +65,204 @@
         "How many 6s are in 30? 6 \u00d7 5 = 30."
       ],
       "explanation": "30 \u00f7 6 = 5, so you can fill 5 boxes of 6 apples."
+    },
+    {
+      "id": "g4div-r2",
+      "skillId": "g4.num.div.one-digit",
+      "bloom": "remember",
+      "type": "multipleChoice",
+      "prompt": "What is 8 \\u00d7 7?",
+      "choices": [
+        {
+          "text": "56",
+          "correct": true
+        },
+        {
+          "text": "42",
+          "misconception": "confused_table",
+          "feedback": "8 \\u00d7 7 is 56, not 42 (42 is 6 \\u00d7 7)."
+        },
+        {
+          "text": "54",
+          "misconception": "off_by_two",
+          "feedback": "8 \\u00d7 7 is 56, not 54."
+        },
+        {
+          "text": "15",
+          "misconception": "wrote_digits",
+          "feedback": "15 is 3 \\u00d7 5 or 5 \\u00d7 3, not 8 \\u00d7 7."
+        }
+      ],
+      "hints": [
+        "Use the 7 times table.",
+        "7 \\u00d7 8 = 7 \\u00d7 7 + 7 = 49 + 7 = 56."
+      ],
+      "explanation": "8 \\u00d7 7 = 56. (Multiplication is commutative, so 7 \\u00d7 8 = 56 too.)"
+    },
+    {
+      "id": "g4div-u2",
+      "skillId": "g4.num.div.one-digit",
+      "bloom": "understand",
+      "type": "multipleChoice",
+      "prompt": "If 84 \\u00f7 6 = 14, which of these is also true?",
+      "choices": [
+        {
+          "text": "6 \\u00d7 14 = 84",
+          "correct": true
+        },
+        {
+          "text": "6 + 14 = 20",
+          "misconception": "added_not_multipled",
+          "feedback": "84 \\u00f7 6 = 14 means 6 \\u00d7 14 = 84; adding is not the inverse."
+        },
+        {
+          "text": "6 \\u00d7 4 = 24",
+          "misconception": "ones_digit_only",
+          "feedback": "The full product is 6 \\u00d7 14 = 84, not just 6 \\u00d7 4."
+        },
+        {
+          "text": "14 \\u00d7 6 = 840",
+          "misconception": "added_zero",
+          "feedback": "14 \\u00d7 6 = 84, not 840. Do not add an extra zero."
+        }
+      ],
+      "hints": [
+        "Division and multiplication are inverse operations.",
+        "If a \\u00f7 b = c, then c \\u00d7 b = a."
+      ],
+      "explanation": "If 84 \\u00f7 6 = 14, then multiplying the quotient by the divisor gives the dividend: 14 \\u00d7 6 = 84."
+    },
+    {
+      "id": "g4div-a1",
+      "skillId": "g4.num.div.one-digit",
+      "bloom": "apply",
+      "type": "multipleChoice",
+      "prompt": "What is 72 \\u00f7 6?",
+      "choices": [
+        {
+          "text": "12",
+          "correct": true
+        },
+        {
+          "text": "18",
+          "misconception": "applied_wrong",
+          "feedback": "72 \\u00f7 6 is 12 (6 \\u00d7 12 = 72), not 18."
+        },
+        {
+          "text": "14",
+          "misconception": "used_addition",
+          "feedback": "72 \\u00f7 6 is 12, not 14. 14 \\u00d7 6 = 84."
+        },
+        {
+          "text": "10",
+          "misconception": "rounded_down",
+          "feedback": "72 \\u00f7 6 is exactly 12, not 10."
+        }
+      ],
+      "hints": [
+        "Think: what number times 6 equals 72?",
+        "6 \\u00d7 10 = 60, 6 \\u00d7 2 = 12, so 6 \\u00d7 12 = 72."
+      ],
+      "explanation": "6 \\u00d7 12 = 72, so 72 \\u00f7 6 = 12."
+    },
+    {
+      "id": "g4div-a2",
+      "skillId": "g4.num.div.one-digit",
+      "bloom": "apply",
+      "type": "multipleChoice",
+      "prompt": "What is 96 \\u00f7 4?",
+      "choices": [
+        {
+          "text": "24",
+          "correct": true
+        },
+        {
+          "text": "26",
+          "misconception": "carried_wrong",
+          "feedback": "96 \\u00f7 4 is 24. Carrying the 1 incorrectly gives 26."
+        },
+        {
+          "text": "22",
+          "misconception": "subtracted_wrong",
+          "feedback": "96 \\u00f7 4 is 24 (4 \\u00d7 24 = 96), not 22."
+        },
+        {
+          "text": "32",
+          "misconception": "multiplied_backwards",
+          "feedback": "96 \\u00f7 4 is 24. If you multiplied 4 \\u00d7 32 you got 128, not 96."
+        }
+      ],
+      "hints": [
+        "Think: what number times 4 equals 96?",
+        "4 \\u00d7 20 = 80 and 4 \\u00d7 4 = 16; 80 + 16 = 96."
+      ],
+      "explanation": "4 \\u00d7 24 = 96, so 96 \\u00f7 4 = 24."
+    },
+    {
+      "id": "g4div-an1",
+      "skillId": "g4.num.div.one-digit",
+      "bloom": "analyze",
+      "type": "multipleChoice",
+      "prompt": "If 84 \\u00f7 6 = 14, which of these is also true?",
+      "choices": [
+        {
+          "text": "6 \\u00d7 14 = 84",
+          "correct": true
+        },
+        {
+          "text": "6 \\u00d7 4 = 84",
+          "misconception": "ones_digit_only",
+          "feedback": "The full inverse is 6 \\u00d7 14 = 84; 6 \\u00d7 4 is only part of it."
+        },
+        {
+          "text": "6 + 14 = 20",
+          "misconception": "added_not_multipled",
+          "feedback": "The inverse of division is multiplication, not addition."
+        },
+        {
+          "text": "14 \\u00d7 6 = 840",
+          "misconception": "added_zero",
+          "feedback": "14 \\u00d7 6 = 84, not 840. Do not add an extra zero."
+        }
+      ],
+      "hints": [
+        "Division and multiplication undo each other.",
+        "If a \\u00f7 b = c, then c \\u00d7 b = a."
+      ],
+      "explanation": "84 \\u00f7 6 = 14 means 14 \\u00d7 6 = 84. The inverse relationship confirms 6 \\u00d7 14 = 84."
+    },
+    {
+      "id": "g4div-an2",
+      "skillId": "g4.num.div.one-digit",
+      "bloom": "analyze",
+      "type": "multipleChoice",
+      "prompt": "Which division fact is correct?",
+      "choices": [
+        {
+          "text": "48 \\u00f7 6 = 8",
+          "correct": true
+        },
+        {
+          "text": "42 \\u00f7 6 = 8",
+          "misconception": "wrong_quotient",
+          "feedback": "42 \\u00f7 6 = 7, not 8 (6 \\u00d7 7 = 42)."
+        },
+        {
+          "text": "36 \\u00f7 6 = 7",
+          "misconception": "off_by_one",
+          "feedback": "36 \\u00f7 6 = 6 (6 \\u00d7 6 = 36), not 7."
+        },
+        {
+          "text": "54 \\u00f7 9 = 7",
+          "misconception": "wrong_quotient",
+          "feedback": "54 \\u00f7 9 = 6, not 7 (9 \\u00d7 6 = 54)."
+        }
+      ],
+      "hints": [
+        "A fact is correct only if the dividend equals divisor \\u00d7 quotient.",
+        "Check each: divisor \\u00d7 answer should equal the dividend."
+      ],
+      "explanation": "48 \\u00f7 6 = 8 because 6 \\u00d7 8 = 48. The other facts have wrong quotients."
     }
   ]
 }

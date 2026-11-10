@@ -3,6 +3,185 @@
     {
       "id": "g4ord-r1",
       "skillId": "g4.num.whole.order-round",
+      "bloom": "remember",
+      "type": "multipleChoice",
+      "prompt": "What is the value of the hundreds digit in 3,452?",
+      "choices": [
+        {
+          "text": "400",
+          "correct": true
+        },
+        {
+          "text": "3",
+          "misconception": "digit_value"
+        },
+        {
+          "text": "30",
+          "misconception": "tens"
+        },
+        {
+          "text": "4",
+          "misconception": "hundreds_digit_is_four"
+        }
+      ],
+      "hints": [
+        "The hundreds place is the third digit from the right.",
+        "3,452 = 3,000 + 400 + 50 + 2."
+      ],
+      "explanation": "3,452 has 4 hundreds, so the hundreds digit is 4 and its value is 400."
+    },
+    {
+      "id": "g4ord-r2",
+      "skillId": "g4.num.whole.order-round",
+      "bloom": "remember",
+      "type": "multipleChoice",
+      "prompt": "Which digit is in the thousands place in 4,002?",
+      "choices": [
+        {
+          "text": "4",
+          "correct": true
+        },
+        {
+          "text": "0",
+          "misconception": "thousands_digit"
+        },
+        {
+          "text": "2",
+          "misconception": "ones_digit"
+        },
+        {
+          "text": "1,000",
+          "misconception": "place_value_not_digit"
+        }
+      ],
+      "hints": [
+        "Thousands is the first digit from the left (for 4-digit numbers)."
+      ],
+      "explanation": "4,002 has 4 thousands, so the thousands digit is 4."
+    },
+    {
+      "id": "g4ord-u1",
+      "skillId": "g4.num.whole.order-round",
+      "bloom": "understand",
+      "type": "multipleChoice",
+      "prompt": "Why is 3,051 less than 3,501?",
+      "choices": [
+        {
+          "text": "3,051 has 0 hundreds while 3,501 has 5 hundreds",
+          "correct": true
+        },
+        {
+          "text": "3,051 has fewer digits",
+          "misconception": "fewer_digits"
+        },
+        {
+          "text": "3,051 ends with zero",
+          "misconception": "ends_with_zero"
+        },
+        {
+          "text": "3,501 has more tens",
+          "misconception": "more_tens"
+        }
+      ],
+      "hints": [
+        "Compare the hundreds place first.",
+        "3,051 = 3,051; 3,501 = 3,501."
+      ],
+      "explanation": "3,051 has 0 hundreds and 3,501 has 5 hundreds; the hundreds digit decides the order."
+    },
+    {
+      "id": "g4ord-u2",
+      "skillId": "g4.num.whole.order-round",
+      "bloom": "understand",
+      "type": "multipleChoice",
+      "prompt": "What does the 2 in 2,007 represent?",
+      "choices": [
+        {
+          "text": "2,000 (2 thousands)",
+          "correct": true
+        },
+        {
+          "text": "200",
+          "misconception": "hundreds"
+        },
+        {
+          "text": "20",
+          "misconception": "tens"
+        },
+        {
+          "text": "2",
+          "misconception": "ones"
+        }
+      ],
+      "hints": [
+        "2,007 = 2,000 + 0 + 0 + 7.",
+        "The 2 is in the thousands place."
+      ],
+      "explanation": "The 2 is in the thousands place, so it represents 2 \u00d7 1,000 = 2,000."
+    },
+    {
+      "id": "g4ord-a1",
+      "skillId": "g4.num.whole.order-round",
+      "bloom": "apply",
+      "type": "multipleChoice",
+      "prompt": "Round 2,645 to the nearest 100.",
+      "choices": [
+        {
+          "text": "2,600",
+          "correct": true
+        },
+        {
+          "text": "2,650",
+          "misconception": "nearest_tenths"
+        },
+        {
+          "text": "2,700",
+          "misconception": "rounded_up"
+        },
+        {
+          "text": "2,645",
+          "misconception": "original_number"
+        }
+      ],
+      "hints": [
+        "Look at the tens digit: 4. Since 4 < 5, round down.",
+        "2,645 is between 2,600 and 2,700."
+      ],
+      "explanation": "The tens digit is 4 (less than 5), so 2,645 rounds down to 2,600."
+    },
+    {
+      "id": "g4ord-a2",
+      "skillId": "g4.num.whole.order-round",
+      "bloom": "apply",
+      "type": "multipleChoice",
+      "prompt": "Round 8,923 to the nearest 100.",
+      "choices": [
+        {
+          "text": "8,900",
+          "correct": true
+        },
+        {
+          "text": "8,930",
+          "misconception": "nearest_tenths"
+        },
+        {
+          "text": "8,923",
+          "misconception": "original_number"
+        },
+        {
+          "text": "8,950",
+          "misconception": "rounded_up"
+        }
+      ],
+      "hints": [
+        "Look at the tens digit: 2. Since 2 < 5, round down.",
+        "8,923 is between 8,900 and 9,000."
+      ],
+      "explanation": "The tens digit is 2 (less than 5), so 8,923 rounds down to 8,900."
+    },
+    {
+      "id": "g4ord-an1",
+      "skillId": "g4.num.whole.order-round",
       "bloom": "analyze",
       "type": "multipleChoice",
       "prompt": "Arrange these numbers in order from smallest to largest: 3,412 / 3,142 / 3,421",
@@ -34,7 +213,7 @@
       "explanation": "3,142 (1 hundred) < 3,412 (4 hundreds) < 3,421 (4 hundreds and 2 tens)."
     },
     {
-      "id": "g4ord-r2",
+      "id": "g4ord-an2",
       "skillId": "g4.num.whole.order-round",
       "bloom": "analyze",
       "type": "multipleChoice",
