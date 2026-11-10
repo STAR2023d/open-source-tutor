@@ -4,6 +4,7 @@ import 'package:mastery_core/mastery_core.dart';
 import 'data/profile_controller.dart';
 import 'data/storage.dart';
 import 'screens/home_screen.dart';
+import 'screens/settings_screen.dart';
 import 'screens/onboarding_screen.dart';
 import 'theme/app_theme.dart';
 import 'theme/theme_controller.dart';
