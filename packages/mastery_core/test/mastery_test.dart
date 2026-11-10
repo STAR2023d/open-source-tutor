@@ -166,16 +166,6 @@ void main() {
 
   group('g4.num.sub.regroup', () {
     const skillId = 'g4.num.sub.regroup';
-    final questionIds = [
-      'g4sub-r1',
-      'g4sub-r2',
-      'g4sub-u1',
-      'g4sub-u2',
-      'g4sub-a1',
-      'g4sub-a2',
-      'g4sub-an1',
-      'g4sub-an2',
-    ];
 
     test('next() starts at Remember and stops when the skill is mastered', () {
       final questions = <Question>[];
@@ -231,14 +221,14 @@ void main() {
           grade: 4,
           strand: 'Numbers',
           subStrand: 'Subtraction',
-          prerequisites: const ['g4.num.add.regroup'],
+          prerequisites: ['g4.num.add.regroup'],
         ),
         questions: questions,
         progress: const SkillProgress(skillId: skillId),
       );
 
       final served = <BloomLevel>[];
-      for (final b in coreLevels) {
+      for (final _ in coreLevels) {
         for (var i = 0; i < 2; i++) {
           served.add(session.next()!.bloom);
           session.submit(session.next()!, '1');

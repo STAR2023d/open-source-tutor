@@ -43,6 +43,10 @@ class ProfileController extends ChangeNotifier {
   String get grade => _grade;
   bool get hasGrade => _grade != null;
 
+  String get nickname => _nickname;
+  MascotKind get mascot => _mascot;
+  bool get onboarded => _onboarded;
+
   String get displayName => _nickname.isEmpty ? 'Champion' : _nickname;
 
   Future<void> save({required String nickname, required MascotKind mascot}) async {

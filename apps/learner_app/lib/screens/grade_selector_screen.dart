@@ -56,7 +56,8 @@ class _GradeSelectorScreenState extends State<GradeSelectorScreen> {
       body: ListView(
         padding: const EdgeInsets.all(Space.l),
         children: [
-          const Text(
+          const SizedBox(height: Space.l),
+          Text(
             'Pick the grade you are practising today.',
             style: text.titleLarge,
             textAlign: TextAlign.center,
