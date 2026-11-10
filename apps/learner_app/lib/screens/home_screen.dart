@@ -8,8 +8,6 @@ import '../theme/theme_controller.dart';
 import '../theme/tokens.dart';
 import '../widgets/skill_card.dart';
 import 'package:mastery_core/mastery_core.dart';
-import 'grade_selector_screen.dart';
-import 'onboarding_screen.dart';
 import 'practice_screen.dart';
 import 'settings_screen.dart';
 

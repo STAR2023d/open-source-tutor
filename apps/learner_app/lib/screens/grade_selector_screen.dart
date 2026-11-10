@@ -41,7 +41,6 @@ class _GradeSelectorScreenState extends State<GradeSelectorScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final scheme = Theme.of(context).colorScheme;
     final text = Theme.of(context).textTheme;
     final colors = HesabuColors.of(context);
 

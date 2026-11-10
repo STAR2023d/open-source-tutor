@@ -6,7 +6,7 @@ import '../mascot/mascot_kind.dart';
 /// Keep nicknames short, simple and safe: letters, digits, spaces, ' and -.
 String sanitizeNickname(String raw) {
   final cleaned = raw
-      .replaceAll(RegExp(r"[^A-Za-z0-9 '\\-]"), '')
+      .replaceAll(RegExp(r"[^A-Za-z0-9 '\-]"), '')
       .replaceAll(RegExp(r'\s+'), ' ')
       .trim();
   return cleaned.length <= 16 ? cleaned : cleaned.substring(0, 16).trim();
@@ -41,7 +41,6 @@ class ProfileController extends ChangeNotifier {
   String _grade;
 
   String get grade => _grade;
-  bool get hasGrade => _grade != null;
 
   String get nickname => _nickname;
   MascotKind get mascot => _mascot;

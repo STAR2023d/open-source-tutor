@@ -141,7 +141,7 @@ class _HomeContent extends StatelessWidget {
         return HomeScreen(
           content: snap.data!,
           store: store,
-          theme: Theme.of(context),
+          theme: widget.theme,
           profile: profile,
         );
       },
