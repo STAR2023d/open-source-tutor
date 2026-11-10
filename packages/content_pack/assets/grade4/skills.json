@@ -198,6 +198,18 @@
       ],
       "status": "live",
       "kicdRef": "Gr4 Math 2.1"
+    },
+    {
+      "id": "g4.num.measurement.area",
+      "title": "Area (square cm and m)",
+      "grade": 4,
+      "strand": "Numbers",
+      "subStrand": "Measurement",
+      "prerequisites": [
+        "g4.num.whole.place-value"
+      ],
+      "status": "live",
+      "kicdRef": "Gr4 Math 2.2"
     }
   ]
 }

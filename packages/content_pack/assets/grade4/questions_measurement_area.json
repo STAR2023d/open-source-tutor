@@ -1,0 +1,277 @@
+{
+  "questions": [
+    {
+      "id": "g4m4.area-r1",
+      "skillId": "g4.num.measurement.area",
+      "bloom": "remember",
+      "type": "multipleChoice",
+      "prompt": "What unit is used to measure area?",
+      "choices": [
+        {
+          "text": "square cm (cm\u00b2) / square metres (m\u00b2)",
+          "correct": true
+        },
+        {
+          "text": "cm",
+          "misconception": "linear_unit",
+          "feedback": "cm is a unit of length, not area. Area needs units that are squared."
+        },
+        {
+          "text": "cm\u00b3",
+          "misconception": "cubic_unit",
+          "feedback": "cm\u00b3 is a unit of volume (3D), not area."
+        },
+        {
+          "text": "litres",
+          "misconception": "capacity_unit",
+          "feedback": "Litres measure capacity/volume, not area."
+        }
+      ],
+      "hints": [
+        "Area measures the surface inside a shape.",
+        "Units for area always have an exponent of 2 (e.g., cm\u00b2, m\u00b2).",
+        "Think: a tile on the floor covers a certain number of square centimetres."
+      ],
+      "explanation": "Area is measured in square units such as cm\u00b2 and m\u00b2 because it covers a 2D surface."
+    },
+    {
+      "id": "g4m4.area-r2",
+      "skillId": "g4.num.measurement.area",
+      "bloom": "remember",
+      "type": "multipleChoice",
+      "prompt": "What is the formula for the area of a rectangle?",
+      "choices": [
+        {
+          "text": "Area = length \u00d7 width",
+          "correct": true
+        },
+        {
+          "text": "Area = length + width",
+          "misconception": "added",
+          "feedback": "Adding length and width gives half the perimeter, not area."
+        },
+        {
+          "text": "Area = length \u00d7 2 + width \u00d7 2",
+          "misconception": "perimeter",
+          "feedback": "That is the perimeter formula (2\u00d7length + 2\u00d7width)."
+        },
+        {
+          "text": "Area = length \u00f7 width",
+          "misconception": "divided",
+          "feedback": "Dividing length by width gives no meaningful area."
+        }
+      ],
+      "hints": [
+        "Area = length \u00d7 width.",
+        "For a 3\u00d74 rectangle: 3 \u00d7 4 = 12 square units.",
+        "The answer is always in square units such as cm\u00b2."
+      ],
+      "explanation": "Area of a rectangle = length \u00d7 width. For example, a 3 cm \u00d7 4 cm rectangle has area 12 cm\u00b2."
+    },
+    {
+      "id": "g4m4.area-u1",
+      "skillId": "g4.num.measurement.area",
+      "bloom": "understand",
+      "type": "multipleChoice",
+      "prompt": "Explain why area is measured in square units (e.g., cm\u00b2) rather than just cm.",
+      "choices": [
+        {
+          "text": "Area covers a 2D surface, so we multiply two lengths, giving squared units",
+          "correct": true
+        },
+        {
+          "text": "Square units are the only units available in the metric system",
+          "misconception": "no_other_option",
+          "feedback": "We have square, cubic, and linear units for different measurements."
+        },
+        {
+          "text": "Centimetres squared are more precise than centimetres",
+          "misconception": "more_precise",
+          "feedback": "Precision is not the reason; area is 2D, so units must be squared."
+        },
+        {
+          "text": "Only square units have been approved for Grade 4",
+          "misconception": "grade_rule",
+          "feedback": "The rule is that area is 2D, so square units are used. It is a mathematical necessity, not a curriculum rule."
+        }
+      ],
+      "hints": [
+        "Consider a 3\u00d74 rectangle tiled with 1\u00d71 squares.",
+        "Each row has 3 squares, and there are 4 rows.",
+        "To find the total, we multiply: length \u00d7 width.",
+        "Because we multiply two lengths (both in cm), the result is in cm\u00b2."
+      ],
+      "explanation": "Area covers a 2D surface. Multiplying length by width means we multiply two lengths (e.g., cm \u00d7 cm = cm\u00b2)."
+    },
+    {
+      "id": "g4m4.area-u2",
+      "skillId": "g4.num.measurement.area",
+      "bloom": "understand",
+      "type": "multipleChoice",
+      "prompt": "A 4 cm \u00d7 3 cm rectangle is tiled with 1 cm \u00d7 1 cm squares. How many squares cover it?",
+      "choices": [
+        {
+          "text": "12",
+          "correct": true
+        },
+        {
+          "text": "7",
+          "misconception": "added",
+          "feedback": "4 + 3 = 7 is the sum of sides, not the area. Area = 4 \u00d7 3 = 12."
+        },
+        {
+          "text": "14",
+          "misconception": "added_with_1",
+          "feedback": "4 + 3 + 7 = 14. Area = 4 \u00d7 3 = 12."
+        },
+        {
+          "text": "43",
+          "misconception": "concatenated",
+          "feedback": "43 is just putting the digits together. Area = 4 \u00d7 3 = 12."
+        }
+      ],
+      "hints": [
+        "Count how many 1 cm squares fit in one row: 4.",
+        "Count how many rows: 3.",
+        "Total squares = 4 \u00d7 3 = 12."
+      ],
+      "explanation": "The rectangle has 4 squares per row and 3 rows, so 4 \u00d7 3 = 12 squares cover it."
+    },
+    {
+      "id": "g4m4.area-a1",
+      "skillId": "g4.num.measurement.area",
+      "bloom": "apply",
+      "type": "multipleChoice",
+      "prompt": "A rectangle is 6 cm long and 4 cm wide. What is its area?",
+      "choices": [
+        {
+          "text": "24 cm\u00b2",
+          "correct": true
+        },
+        {
+          "text": "10 cm\u00b2",
+          "misconception": "added",
+          "feedback": "6 + 4 = 10. That is the sum of sides, not the area."
+        },
+        {
+          "text": "20 cm\u00b2",
+          "misconception": "subtracted",
+          "feedback": "6 \u2212 4 = 2, not 20. Area = 6 \u00d7 4 = 24."
+        },
+        {
+          "text": "24 cm",
+          "misconception": "linear_unit",
+          "feedback": "24 cm is a length, not an area. The answer must be in cm\u00b2."
+        }
+      ],
+      "hints": [
+        "Area = length \u00d7 width.",
+        "Length = 6 cm, width = 4 cm.",
+        "6 \u00d7 4 = 24. Write the answer as 24 cm\u00b2."
+      ],
+      "explanation": "Area = length \u00d7 width = 6 \u00d7 4 = 24 cm\u00b2."
+    },
+    {
+      "id": "g4m4.area-a2",
+      "skillId": "g4.num.measurement.area",
+      "bloom": "apply",
+      "type": "multipleChoice",
+      "prompt": "A square has side length 5 cm. What is its area?",
+      "choices": [
+        {
+          "text": "25 cm\u00b2",
+          "correct": true
+        },
+        {
+          "text": "10 cm\u00b2",
+          "misconception": "added",
+          "feedback": "5 + 5 = 10. The area of a square is side \u00d7 side = 5 \u00d7 5 = 25."
+        },
+        {
+          "text": "20 cm\u00b2",
+          "misconception": "doubled",
+          "feedback": "5 \u00d7 2 = 10, not 20. Area = 5 \u00d7 5 = 25."
+        },
+        {
+          "text": "25 cm",
+          "misconception": "linear_unit",
+          "feedback": "25 cm is a length, not an area. A square's area must be in cm\u00b2."
+        }
+      ],
+      "hints": [
+        "Area of a square = side \u00d7 side.",
+        "Side = 5 cm.",
+        "5 \u00d7 5 = 25. Write the answer as 25 cm\u00b2."
+      ],
+      "explanation": "Area of a square = side \u00d7 side = 5 \u00d7 5 = 25 cm\u00b2."
+    },
+    {
+      "id": "g4m4.area-an1",
+      "skillId": "g4.num.measurement.area",
+      "bloom": "analyze",
+      "type": "multipleChoice",
+      "prompt": "Which shape has a larger area: a 6 cm \u00d7 4 cm rectangle or an 8 cm \u00d7 3 cm rectangle?",
+      "choices": [
+        {
+          "text": "They have the same area (both 24 cm\u00b2)",
+          "correct": true
+        },
+        {
+          "text": "The 6 cm \u00d7 4 cm rectangle (24 cm\u00b2)",
+          "misconception": "wrong_area",
+          "feedback": "6\u00d74=24 and 8\u00d73=24, so both have the same area."
+        },
+        {
+          "text": "The 8 cm \u00d7 3 cm rectangle (24 cm\u00b2)",
+          "misconception": "wrong_area",
+          "feedback": "8\u00d73=24 cm\u00b2. Both rectangles have the same area."
+        },
+        {
+          "text": "Cannot be determined",
+          "misconception": "insufficient_info",
+          "feedback": "We can calculate both areas: 6\u00d74=24 and 8\u00d73=24, so they are equal."
+        }
+      ],
+      "hints": [
+        "Calculate each area: length \u00d7 width.",
+        "6 \u00d7 4 = 24 and 8 \u00d7 3 = 24.",
+        "Compare the two results."
+      ],
+      "explanation": "6\u00d74=24 cm\u00b2 and 8\u00d73=24 cm\u00b2. Both rectangles have the same area."
+    },
+    {
+      "id": "g4m4.area-an2",
+      "skillId": "g4.num.measurement.area",
+      "bloom": "analyze",
+      "type": "multipleChoice",
+      "prompt": "A square has side 6 cm. A rectangle has length 9 cm and width 4 cm. Which has a larger area?",
+      "choices": [
+        {
+          "text": "The square (36 cm\u00b2)",
+          "correct": true
+        },
+        {
+          "text": "The rectangle (36 cm\u00b2)",
+          "misconception": "same_area",
+          "feedback": "Square = 6\u00d76=36 cm\u00b2. Rectangle = 9\u00d74=36 cm\u00b2. Both have the same area."
+        },
+        {
+          "text": "They have the same area",
+          "misconception": "wrong_area",
+          "feedback": "Both are 36 cm\u00b2. The areas are equal."
+        },
+        {
+          "text": "Cannot be determined",
+          "misconception": "insufficient",
+          "feedback": "We can calculate: 6\u00d76=36 and 9\u00d74=36, so both are 36 cm\u00b2."
+        }
+      ],
+      "hints": [
+        "Square: side \u00d7 side = 6 \u00d7 6.",
+        "Rectangle: length \u00d7 width = 9 \u00d7 4.",
+        "Compare the two products."
+      ],
+      "explanation": "Square = 6\u00d76 = 36 cm\u00b2. Rectangle = 9\u00d74 = 36 cm\u00b2. The areas are equal."
+    }
+  ]
+}
