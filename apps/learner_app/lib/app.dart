@@ -39,8 +39,6 @@ class _HesabuAppState extends State<HesabuApp> {
     return loadContent(grade);
   }
 
-  }
-
   @override
   Widget build(BuildContext context) {
     return ListenableBuilder(
