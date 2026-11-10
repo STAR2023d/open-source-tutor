@@ -55,7 +55,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
               children: [
                 Text('Your buddy', style: text.titleMedium),
                 const SizedBox(height: Space.s),
-                _BuddySection(profile: profile),
+                _BuddySection(profile: widget.profile),
                 const Divider(height: Space.xl),
                 Text('Look', style: text.titleMedium),
                 const SizedBox(height: Space.s),
