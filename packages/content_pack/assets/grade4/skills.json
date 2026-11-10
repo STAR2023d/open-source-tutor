@@ -294,6 +294,18 @@
       ],
       "status": "live",
       "kicdRef": "Gr4 Math 3.3"
+    },
+    {
+      "id": "g4.num.datahandling.data",
+      "title": "Data (collect, tally, tables, graphs)",
+      "grade": 4,
+      "strand": "Data Handling",
+      "subStrand": "Data",
+      "prerequisites": [
+        "g4.num.whole.place-value"
+      ],
+      "status": "live",
+      "kicdRef": "Gr4 Math 4.1"
     }
   ]
 }

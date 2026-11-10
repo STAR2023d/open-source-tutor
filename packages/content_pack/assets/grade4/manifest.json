@@ -21,6 +21,7 @@
     "questions_measurement_money.json",
     "questions_geometry_position_direction.json",
     "questions_geometry_angles.json",
-    "questions_geometry_plane_figures.json"
+    "questions_geometry_plane_figures.json",
+    "questions_datahandling_data.json"
   ]
 }

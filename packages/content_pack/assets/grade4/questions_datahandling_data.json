@@ -1,0 +1,284 @@
+{
+  "questions": [
+    {
+      "id": "g4m4.dh-r1",
+      "skillId": "g4.num.datahandling.data",
+      "bloom": "remember",
+      "type": "multipleChoice",
+      "prompt": "What is data?",
+      "choices": [
+        {
+          "text": "Information that can be collected, counted, and used",
+          "correct": true
+        },
+        {
+          "text": "A type of fruit",
+          "misconception": "fruit",
+          "feedback": "Data is information, not a type of fruit."
+        },
+        {
+          "text": "A unit of length",
+          "misconception": "length",
+          "feedback": "Data is information, not a unit of length."
+        },
+        {
+          "text": "A tool for drawing",
+          "misconception": "tool",
+          "feedback": "Data is information, not a tool for drawing."
+        }
+      ],
+      "hints": [
+        "Data is information that we collect and count.",
+        "Examples: favourite fruits, colours, or sports.",
+        "Data can be shown in tables, tally marks, pictographs, or bar graphs.",
+        "Think: data is what we measure, count, or record."
+      ],
+      "explanation": "Data is information that can be collected, counted, and used to understand things."
+    },
+    {
+      "id": "g4m4.dh-r2",
+      "skillId": "g4.num.datahandling.data",
+      "bloom": "remember",
+      "type": "multipleChoice",
+      "prompt": "What is a tally mark used for?",
+      "choices": [
+        {
+          "text": "Counting and recording data",
+          "correct": true
+        },
+        {
+          "text": "Drawing shapes",
+          "misconception": "drawing_shapes",
+          "feedback": "Tally marks are for counting and recording data, not drawing shapes."
+        },
+        {
+          "text": "Measuring length",
+          "misconception": "measuring_length",
+          "feedback": "Tally marks are for counting data, not measuring length."
+        },
+        {
+          "text": "Weighing objects",
+          "misconception": "weighing",
+          "feedback": "Tally marks are for counting data, not weighing objects."
+        }
+      ],
+      "hints": [
+        "Tally marks look like short vertical strokes.",
+        "They are grouped in fives (four vertical strokes with a diagonal fifth).",
+        "Use them to count things quickly and accurately.",
+        "Example: tally marks can record how many pupils like each fruit."
+      ],
+      "explanation": "A tally mark is used for counting and recording data."
+    },
+    {
+      "id": "g4m4.dh-u1",
+      "skillId": "g4.num.datahandling.data",
+      "bloom": "understand",
+      "type": "multipleChoice",
+      "prompt": "Why do we use tally marks instead of writing numbers every time?",
+      "choices": [
+        {
+          "text": "Tally marks are faster and easier to count while collecting data",
+          "correct": true
+        },
+        {
+          "text": "Tally marks are the only way to collect data",
+          "misconception": "only_way",
+          "feedback": "There are other ways (tables, frequency columns). Tally marks are just one convenient method."
+        },
+        {
+          "text": "Tally marks take longer to write",
+          "misconception": "takes_longer",
+          "feedback": "Tally marks are actually faster to write while collecting data."
+        },
+        {
+          "text": "Tally marks can measure length",
+          "misconception": "measures_length",
+          "feedback": "Tally marks record counts, not length."
+        }
+      ],
+      "hints": [
+        "Tally marks are quick to draw while you are counting.",
+        "Each mark represents one item.",
+        "Group of five makes counting easier.",
+        "Try counting tally marks in fives: 5, 10, 15, 20."
+      ],
+      "explanation": "Tally marks are faster and easier to count while collecting data."
+    },
+    {
+      "id": "g4m4.dh-u2",
+      "skillId": "g4.num.datahandling.data",
+      "bloom": "understand",
+      "type": "multipleChoice",
+      "prompt": "What is a frequency table?",
+      "choices": [
+        {
+          "text": "A table that shows how often each item or category appears",
+          "correct": true
+        },
+        {
+          "text": "A table of colours only",
+          "misconception": "colours_only",
+          "feedback": "A frequency table can show any data, not just colours."
+        },
+        {
+          "text": "A table of shapes only",
+          "misconception": "shapes_only",
+          "feedback": "A frequency table can show any data, not just shapes."
+        },
+        {
+          "text": "A table of numbers only",
+          "misconception": "numbers_only",
+          "feedback": "A frequency table can show any data, not just numbers."
+        }
+      ],
+      "hints": [
+        "A frequency table has two columns: one for the item, one for how often it appears.",
+        "The frequency column is the count.",
+        "Example: Fruit | Tally | Frequency. Apples | ||| | 3.",
+        "It helps us see the most and least popular items."
+      ],
+      "explanation": "A frequency table shows how often each item or category appears."
+    },
+    {
+      "id": "g4m4.dh-a1",
+      "skillId": "g4.num.datahandling.data",
+      "bloom": "apply",
+      "type": "multipleChoice",
+      "prompt": "A class votes for their favourite fruit. The results are: Apple (8), Banana (5), Orange (3), Mango (4). Which fruit is the most popular?",
+      "choices": [
+        {
+          "text": "Apple",
+          "correct": true
+        },
+        {
+          "text": "Banana",
+          "misconception": "banana",
+          "feedback": "Apple has 8 votes, Banana has 5. Apple is the most popular."
+        },
+        {
+          "text": "Orange",
+          "misconception": "orange",
+          "feedback": "Orange has 3 votes, the fewest. Apple is the most popular."
+        },
+        {
+          "text": "Mango",
+          "misconception": "mango",
+          "feedback": "Mango has 4 votes. Apple has 8, so Apple is the most popular."
+        }
+      ],
+      "hints": [
+        "Find the largest number in the frequency column.",
+        "Apple = 8, Banana = 5, Orange = 3, Mango = 4.",
+        "8 is the largest number.",
+        "The most popular fruit is Apple."
+      ],
+      "explanation": "Apple has the highest frequency (8 votes), so it is the most popular fruit."
+    },
+    {
+      "id": "g4m4.dh-a2",
+      "skillId": "g4.num.datahandling.data",
+      "bloom": "apply",
+      "type": "multipleChoice",
+      "prompt": "A class of 20 pupils chose their favourite colour. 8 chose Blue, 6 chose Red, 4 chose Green, and 2 chose Yellow. How many pupils chose Blue or Green?",
+      "choices": [
+        {
+          "text": "12",
+          "correct": true
+        },
+        {
+          "text": "8",
+          "misconception": "only_blue",
+          "feedback": "Blue + Green = 8 + 4 = 12. 8 is only the Blue count."
+        },
+        {
+          "text": "10",
+          "misconception": "wrong_addition",
+          "feedback": "Blue + Green = 8 + 4 = 12. 10 is not the sum."
+        },
+        {
+          "text": "6",
+          "misconception": "only_red",
+          "feedback": "Blue + Green = 8 + 4 = 12. 6 is only the Red count."
+        }
+      ],
+      "hints": [
+        "Find the number of pupils who chose Blue: 8.",
+        "Find the number who chose Green: 4.",
+        "Add them together: 8 + 4 = 12.",
+        "The answer is 12."
+      ],
+      "explanation": "Blue (8) + Green (4) = 12 pupils."
+    },
+    {
+      "id": "g4m4.dh-an1",
+      "skillId": "g4.num.datahandling.data",
+      "bloom": "analyze",
+      "type": "multipleChoice",
+      "prompt": "A class voted for their favourite sport. The results are: Football (10), Cricket (6), Basketball (4), Volleyball (2). Which of these statements is true?",
+      "choices": [
+        {
+          "text": "Most pupils chose Football",
+          "correct": true
+        },
+        {
+          "text": "Most pupils chose Cricket",
+          "misconception": "cricket",
+          "feedback": "Football has 10 votes, the most. Cricket has 6."
+        },
+        {
+          "text": "Most pupils chose Basketball",
+          "misconception": "basketball",
+          "feedback": "Basketball has 4 votes. Football has 10, the most."
+        },
+        {
+          "text": "Most pupils chose Volleyball",
+          "misconception": "volleyball",
+          "feedback": "Volleyball has 2 votes. Football has 10, the most."
+        }
+      ],
+      "hints": [
+        "Look for the highest number in the data.",
+        "Football = 10, Cricket = 6, Basketball = 4, Volleyball = 2.",
+        "10 is the highest number.",
+        "The most popular sport is Football."
+      ],
+      "explanation": "Football has the highest number of votes (10), so most pupils chose Football."
+    },
+    {
+      "id": "g4m4.dh-an2",
+      "skillId": "g4.num.datahandling.data",
+      "bloom": "analyze",
+      "type": "multipleChoice",
+      "prompt": "A class of 20 pupils chose their favourite sport. Football (10), Cricket (6), Basketball (4), Volleyball (2). How many more pupils chose Football than Volleyball?",
+      "choices": [
+        {
+          "text": "8 pupils",
+          "correct": true
+        },
+        {
+          "text": "2 pupils",
+          "misconception": "only_volleyball",
+          "feedback": "10 \u2212 2 = 8. The answer is 8, not 2."
+        },
+        {
+          "text": "6 pupils",
+          "misconception": "only_cricket",
+          "feedback": "10 \u2212 2 = 8. The answer is 8, not 6."
+        },
+        {
+          "text": "4 pupils",
+          "misconception": "only_basketball",
+          "feedback": "10 \u2212 2 = 8. The answer is 8, not 4."
+        }
+      ],
+      "hints": [
+        "Find the number who chose Football: 10.",
+        "Find the number who chose Volleyball: 2.",
+        "Subtract: 10 \u2212 2 = 8.",
+        "The answer is 8 pupils."
+      ],
+      "explanation": "Football (10) \u2212 Volleyball (2) = 8 pupils. Eight more pupils chose Football than Volleyball."
+    }
+  ]
+}
