@@ -9,11 +9,36 @@ import '../widgets/kind_picker.dart';
 import 'grade_selector_screen.dart';
 import 'gallery_screen.dart';
 
-class SettingsScreen extends StatelessWidget {
+class SettingsScreen extends StatefulWidget {
   const SettingsScreen({super.key, required this.theme, required this.profile});
 
   final ThemeController theme;
   final ProfileController profile;
+
+  @override
+  State<SettingsScreen> createState() => _SettingsScreenState();
+}
+
+class _SettingsScreenState extends State<SettingsScreen> {
+  void _showGradeSelector(BuildContext context) {
+    showModalBottomSheet(
+      context: context,
+      builder: (_) => GradeSelectorScreen(
+        profile: widget.profile,
+        initialGrade: widget.profile.grade,
+        onGradeSelected: widget.profile.setGrade,
+      ),
+    );
+  }
+
+  String _gradeLabel(String grade) {
+    final mapping = <String, String>{
+      'grade4': 'Grade 4',
+      'grade5': 'Grade 5',
+      'grade6': 'Grade 6',
+    };
+    return mapping[grade] ?? 'Grade 4';
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +49,7 @@ class SettingsScreen extends StatelessWidget {
         child: ConstrainedBox(
           constraints: const BoxConstraints(maxWidth: kMaxContentWidth),
           child: ListenableBuilder(
-            listenable: theme,
+            listenable: widget.theme,
             builder: (context, _) => ListView(
               padding: const EdgeInsets.all(Space.m),
               children: [
@@ -49,16 +74,16 @@ class SettingsScreen extends StatelessWidget {
                         icon: Icon(Icons.dark_mode_outlined),
                         label: Text('Dark')),
                   ],
-                  selected: {theme.mode},
-                  onSelectionChanged: (s) => theme.setMode(s.first),
+                  selected: {widget.theme.mode},
+                  onSelectionChanged: (s) => widget.theme.setMode(s.first),
                 ),
                 const SizedBox(height: Space.m),
                 SwitchListTile(
                   contentPadding: EdgeInsets.zero,
                   title: const Text('Larger text'),
                   subtitle: const Text('Makes everything easier to read'),
-                  value: theme.largeText,
-                  onChanged: theme.setLargeText,
+                  value: widget.theme.largeText,
+                  onChanged: widget.theme.setLargeText,
                 ),
                 const Divider(height: Space.xl),
                 ListTile(
