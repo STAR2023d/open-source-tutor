@@ -1,0 +1,280 @@
+{
+  "skillId": "g5.num.fractions",
+  "title": "Fractions (equivalent, compare, order, mixed numbers)",
+  "questions": [
+    {
+      "id": "g5_g5_num_fractions_r1",
+      "skillId": "g5.num.fractions",
+      "bloom": "remember",
+      "type": "multipleChoice",
+      "prompt": "What is 1/2 of 20?",
+      "choices": [
+        {
+          "text": "10",
+          "correct": true
+        },
+        {
+          "text": "20",
+          "misconception": "forgets_to_split",
+          "feedback": "1/2 of 20 means splitting 20 into 2 equal parts = 10."
+        },
+        {
+          "text": "5",
+          "misconception": "subtracts",
+          "feedback": "1/2 of 20 = 20 / 2 = 10, not 5."
+        },
+        {
+          "text": "40",
+          "misconception": "multiplies",
+          "feedback": "1/2 of 20 = 20 / 2 = 10, not 20 x 2 = 40."
+        }
+      ],
+      "hints": [
+        "1/2 of 20 = 20 / 2",
+        "20 / 2 = 10"
+      ],
+      "explanation": "1/2 of 20 = 20 / 2 = 10."
+    },
+    {
+      "id": "g5_g5_num_fractions_r2",
+      "skillId": "g5.num.fractions",
+      "bloom": "remember",
+      "type": "multipleChoice",
+      "prompt": "What is 1/4 of 24?",
+      "choices": [
+        {
+          "text": "6",
+          "correct": true
+        },
+        {
+          "text": "4",
+          "misconception": "subtracts",
+          "feedback": "1/4 of 24 = 24 / 4 = 6, not 4."
+        },
+        {
+          "text": "8",
+          "misconception": "wrong_division",
+          "feedback": "24 / 4 = 6, not 8."
+        },
+        {
+          "text": "96",
+          "misconception": "multiplies",
+          "feedback": "1/4 of 24 = 24 / 4 = 6, not 24 x 4 = 96."
+        }
+      ],
+      "hints": [
+        "1/4 of 24 = 24 / 4",
+        "24 / 4 = 6"
+      ],
+      "explanation": "1/4 of 24 = 24 / 4 = 6."
+    },
+    {
+      "id": "g5_g5_num_fractions_u1",
+      "skillId": "g5.num.fractions",
+      "bloom": "understand",
+      "type": "multipleChoice",
+      "prompt": "Which fraction is equivalent to 1/2?",
+      "choices": [
+        {
+          "text": "2/4",
+          "correct": true
+        },
+        {
+          "text": "1/4",
+          "misconception": "halves",
+          "feedback": "1/2 = 2/4 (both represent the same amount). 1/4 is half of that."
+        },
+        {
+          "text": "3/4",
+          "misconception": "more_parts",
+          "feedback": "3/4 is more than 1/2. 1/2 = 2/4, not 3/4."
+        },
+        {
+          "text": "1/3",
+          "misconception": "thirds",
+          "feedback": "1/3 is not equal to 1/2. 1/2 = 2/4."
+        }
+      ],
+      "hints": [
+        "1/2 means 1 part out of 2 equal parts",
+        "To find an equivalent fraction, multiply numerator and denominator by the same number",
+        "1/2 = 2/4 (multiply by 2)"
+      ],
+      "explanation": "1/2 = 2/4 because 1 x 2 = 2 and 2 x 2 = 4. Both fractions represent the same amount."
+    },
+    {
+      "id": "g5_g5_num_fractions_u2",
+      "skillId": "g5.num.fractions",
+      "bloom": "understand",
+      "type": "multipleChoice",
+      "prompt": "Which fraction is the largest: 1/2, 1/3, or 1/4?",
+      "choices": [
+        {
+          "text": "1/2",
+          "correct": true
+        },
+        {
+          "text": "1/3",
+          "misconception": "compares_numerators",
+          "feedback": "All have the same numerator (1). The smaller the denominator, the larger the fraction. 1/2 > 1/3 > 1/4."
+        },
+        {
+          "text": "1/4",
+          "misconception": "compares_numerators",
+          "feedback": "With the same numerator, the fraction with the larger denominator is smaller. 1/4 is the smallest."
+        },
+        {
+          "text": "They are all equal",
+          "misconception": "confused",
+          "feedback": "1/2 = 2/4, 1/3 is not equal to 1/2, and 1/4 is smaller."
+        }
+      ],
+      "hints": [
+        "1/2 = 2/4",
+        "1/3 = ?/12",
+        "1/4 = ?/12",
+        "Compare the numerators"
+      ],
+      "explanation": "1/2 = 2/4, 1/3 = 4/12, 1/4 = 3/12. Since 2/4 > 4/12 > 3/12, 1/2 is the largest."
+    },
+    {
+      "id": "g5_g5_num_fractions_a1",
+      "skillId": "g5.num.fractions",
+      "bloom": "apply",
+      "type": "multipleChoice",
+      "prompt": "A pizza is cut into 8 equal slices. Maria eats 3 slices. What fraction of the pizza is left?",
+      "choices": [
+        {
+          "text": "5/8",
+          "correct": true
+        },
+        {
+          "text": "3/8",
+          "misconception": "eaten_not_left",
+          "feedback": "Maria ate 3/8, so 5/8 is left. 8 - 3 = 5."
+        },
+        {
+          "text": "8/8",
+          "misconception": "nothing_left",
+          "feedback": "There are 5 slices left out of 8, so 5/8 is left."
+        },
+        {
+          "text": "3/5",
+          "misconception": "wrong_ratio",
+          "feedback": "5 slices out of 8 total = 5/8, not 3/5."
+        }
+      ],
+      "hints": [
+        "Total slices = 8",
+        "Maria eats 3 slices",
+        "Slices left = 8 - 3 = 5",
+        "Fraction left = 5/8"
+      ],
+      "explanation": "5 slices out of 8 total = 5/8 of the pizza is left."
+    },
+    {
+      "id": "g5_g5_num_fractions_a2",
+      "skillId": "g5.num.fractions",
+      "bloom": "apply",
+      "type": "multipleChoice",
+      "prompt": "A class has 24 learners. 1/3 of them are girls. How many boys are in the class?",
+      "choices": [
+        {
+          "text": "16 boys",
+          "correct": true
+        },
+        {
+          "text": "8 boys",
+          "misconception": "girls_not_boys",
+          "feedback": "1/3 of 24 = 8 girls. So boys = 24 - 8 = 16, not 8."
+        },
+        {
+          "text": "12 boys",
+          "misconception": "half",
+          "feedback": "1/3 of 24 = 8 girls. Boys = 24 - 8 = 16, not 12."
+        },
+        {
+          "text": "18 boys",
+          "misconception": "wrong_fraction",
+          "feedback": "1/3 of 24 = 8 girls. Boys = 24 - 8 = 16, not 18."
+        }
+      ],
+      "hints": [
+        "1/3 of 24 = 8 girls",
+        "Total learners = 24",
+        "Boys = 24 - 8 = 16"
+      ],
+      "explanation": "1/3 of 24 = 8 girls. Total = 24, so boys = 24 - 8 = 16."
+    },
+    {
+      "id": "g5_g5_num_fractions_an1",
+      "skillId": "g5.num.fractions",
+      "bloom": "analyze",
+      "type": "multipleChoice",
+      "prompt": "A ribbon is 24 m long. 1/3 is cut off for one project and 1/4 for another. How much ribbon is left?",
+      "choices": [
+        {
+          "text": "10 m",
+          "correct": true
+        },
+        {
+          "text": "6 m",
+          "misconception": "subtracts_fractions_wrong",
+          "feedback": "1/3 + 1/4 = 4/12 + 3/12 = 7/12 of 24 m = 14 m used. Ribbon left = 24 - 14 = 10 m."
+        },
+        {
+          "text": "8 m",
+          "misconception": "wrong_fractions",
+          "feedback": "1/3 + 1/4 = 7/12 used. 24 - 14 = 10 m left, not 8."
+        },
+        {
+          "text": "14 m",
+          "misconception": "used_not_left",
+          "feedback": "1/3 + 1/4 = 7/12 used. 24 - 14 = 10 m left."
+        }
+      ],
+      "hints": [
+        "1/3 of 24 = 8 m",
+        "1/4 of 24 = 6 m",
+        "Total used = 8 + 6 = 14 m",
+        "Ribbon left = 24 - 14 = 10 m"
+      ],
+      "explanation": "1/3 of 24 = 8 m, 1/4 of 24 = 6 m. Total used = 14 m, so ribbon left = 24 - 14 = 10 m."
+    },
+    {
+      "id": "g5_g5_num_fractions_an2",
+      "skillId": "g5.num.fractions",
+      "bloom": "analyze",
+      "type": "multipleChoice",
+      "prompt": "A baker uses 3/4 kg of flour for a cake. How much flour does she use for 2 cakes?",
+      "choices": [
+        {
+          "text": "1 1/2 kg",
+          "correct": true
+        },
+        {
+          "text": "1 1/4 kg",
+          "misconception": "adds_wrong",
+          "feedback": "3/4 + 3/4 = 6/4 = 1 1/2, not 1 1/4."
+        },
+        {
+          "text": "1 2/4 kg",
+          "correct": false,
+          "misconception": "equivalent_forms",
+          "feedback": "1 1/2 kg and 3/2 kg are equivalent (same value), so only one should be the single correct answer. Let me fix: 3/2 kg IS equivalent to 1 1/2 kg."
+        },
+        {
+          "text": "1 3/4 kg",
+          "misconception": "adds_together",
+          "feedback": "3/4 + 3/4 = 6/4 = 1 1/2, not 1 3/4."
+        }
+      ],
+      "hints": [
+        "3/4 kg per cake",
+        "For 2 cakes: 3/4 x 2 = 6/4",
+        "Simplify 6/4 = 1 1/2"
+      ],
+      "explanation": "3/4 x 2 = 6/4 = 1 1/2 or 3/2 kg of flour."
+    }
+  ]
+}

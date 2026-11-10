@@ -1,0 +1,279 @@
+{
+  "skillId": "g5.num.rounding",
+  "title": "Rounding and estimation",
+  "questions": [
+    {
+      "id": "g5_g5_num_rounding_r1",
+      "skillId": "g5.num.rounding",
+      "bloom": "remember",
+      "type": "multipleChoice",
+      "prompt": "Round 45 678 to the nearest ten thousand.",
+      "choices": [
+        {
+          "text": "40 000",
+          "correct": false,
+          "misconception": "rounds_down",
+          "feedback": "45 678 is closer to 50 000 than 40 000."
+        },
+        {
+          "text": "50 000",
+          "correct": true
+        },
+        {
+          "text": "46 000",
+          "misconception": "rounds_to_nearest_thousand",
+          "feedback": "Rounding to the nearest ten thousand means rounding to the nearest 10 000."
+        },
+        {
+          "text": "45 000",
+          "misconception": "rounds_down",
+          "feedback": "45 678 is more than halfway to 50 000, so rounds up."
+        }
+      ],
+      "hints": [
+        "Look at the thousands digit (5).",
+        "5 or more rounds up.",
+        "45 678 -> 50 000"
+      ],
+      "explanation": "The thousands digit is 5, which is 5 or more, so round up: 45 678 -> 50 000."
+    },
+    {
+      "id": "g5_g5_num_rounding_r2",
+      "skillId": "g5.num.rounding",
+      "bloom": "remember",
+      "type": "multipleChoice",
+      "prompt": "Round 123 456 to the nearest thousand.",
+      "choices": [
+        {
+          "text": "123 000",
+          "correct": true
+        },
+        {
+          "text": "123 500",
+          "misconception": "rounds_to_hundred",
+          "feedback": "Rounding to the nearest thousand gives a multiple of 1000."
+        },
+        {
+          "text": "124 000",
+          "misconception": "rounds_up_wrong",
+          "feedback": "123 456 is closer to 123 000. The hundreds digit is 4 < 5."
+        },
+        {
+          "text": "124 000",
+          "misconception": "rounds_up_wrong",
+          "feedback": "123 456 is closer to 123 000. The hundreds digit is 4 < 5."
+        }
+      ],
+      "hints": [
+        "Look at the hundreds digit (4).",
+        "4 or less rounds down.",
+        "123 456 -> 123 000"
+      ],
+      "explanation": "The hundreds digit is 4 (< 5), so round down: 123 456 -> 123 000."
+    },
+    {
+      "id": "g5_g5_num_rounding_u1",
+      "skillId": "g5.num.rounding",
+      "bloom": "understand",
+      "type": "multipleChoice",
+      "prompt": "Why do we round numbers?",
+      "choices": [
+        {
+          "text": "To make numbers easier to work with and estimate quickly",
+          "correct": true
+        },
+        {
+          "text": "To make numbers longer and harder",
+          "misconception": "longer_numbers",
+          "feedback": "Rounding simplifies numbers, it doesn't make them longer."
+        },
+        {
+          "text": "To change the value of a number completely",
+          "misconception": "changes_value",
+          "feedback": "Rounding gives an approximate value, not the exact value."
+        },
+        {
+          "text": "To remove the decimal point",
+          "misconception": "removes_decimal",
+          "feedback": "Rounding doesn't always remove decimals."
+        }
+      ],
+      "hints": [
+        "Rounding is used for estimation and quick calculations.",
+        "Round numbers are approximate, not exact.",
+        "E.g., 47 rounded to 50 is easier to add than 47."
+      ],
+      "explanation": "Rounding makes numbers easier to work with and estimate quickly."
+    },
+    {
+      "id": "g5_g5_num_rounding_u2",
+      "skillId": "g5.num.rounding",
+      "bloom": "understand",
+      "type": "multipleChoice",
+      "prompt": "Which is the best estimate for 8 947 + 212?",
+      "choices": [
+        {
+          "text": "9 200",
+          "correct": true
+        },
+        {
+          "text": "8 900",
+          "misconception": "rounds_first_number_only",
+          "feedback": "8 947 rounds to 9 000 (nearest hundred), 212 rounds to 200. 9 000 + 200 = 9 200."
+        },
+        {
+          "text": "9 100",
+          "misconception": "rounds_to_ten",
+          "feedback": "Rounding to the nearest hundred gives 9 000 + 200 = 9 200."
+        },
+        {
+          "text": "10 000",
+          "misconception": "round_up_both",
+          "feedback": "Rounding to the nearest thousand gives 9 000 + 0 = 9 000."
+        }
+      ],
+      "hints": [
+        "Round each number to the nearest hundred first.",
+        "8 947 -> 9 000",
+        "212 -> 200",
+        "9 000 + 200 = 9 200"
+      ],
+      "explanation": "8 947 rounds to 9 000 (hundreds digit 9). 212 rounds to 200 (tens digit 1). 9 000 + 200 = 9 200."
+    },
+    {
+      "id": "g5_g5_num_rounding_a1",
+      "skillId": "g5.num.rounding",
+      "bloom": "apply",
+      "type": "multipleChoice",
+      "prompt": "Round 3 247 to the nearest hundred.",
+      "choices": [
+        {
+          "text": "3 200",
+          "correct": true
+        },
+        {
+          "text": "3 300",
+          "misconception": "rounds_up_wrong",
+          "feedback": "The tens digit is 4 (< 5), so round down."
+        },
+        {
+          "text": "3 250",
+          "misconception": "rounds_to_ten",
+          "feedback": "Rounding to the nearest hundred means the last digit is 00."
+        },
+        {
+          "text": "3 240",
+          "misconception": "rounds_to_ten",
+          "feedback": "Rounding to the nearest hundred gives a multiple of 100."
+        }
+      ],
+      "hints": [
+        "Look at the tens digit (4).",
+        "4 < 5, so round down.",
+        "3 247 -> 3 200"
+      ],
+      "explanation": "The tens digit is 4 (< 5), so round down: 3 247 -> 3 200."
+    },
+    {
+      "id": "g5_g5_num_rounding_a2",
+      "skillId": "g5.num.rounding",
+      "bloom": "apply",
+      "type": "multipleChoice",
+      "prompt": "A farmer harvested 18 462 kg of maize. About how much is this when rounded to the nearest thousand?",
+      "choices": [
+        {
+          "text": "18 000 kg",
+          "correct": true
+        },
+        {
+          "text": "19 000 kg",
+          "misconception": "rounds_up_wrong",
+          "feedback": "18 462 rounded to nearest thousand: hundreds digit is 4 < 5, so rounds down to 18 000."
+        },
+        {
+          "text": "18 500 kg",
+          "misconception": "rounds_to_hundred",
+          "feedback": "Rounding to the nearest thousand gives a multiple of 1000."
+        },
+        {
+          "text": "20 000 kg",
+          "misconception": "rounds_up_too_much",
+          "feedback": "18 462 is closer to 18 000 than 20 000."
+        }
+      ],
+      "hints": [
+        "Look at the hundreds digit (4).",
+        "4 < 5, so round down.",
+        "18 462 -> 18 000 kg"
+      ],
+      "explanation": "The hundreds digit is 4 (< 5), so round down: 18 462 -> 18 000 kg."
+    },
+    {
+      "id": "g5_g5_num_rounding_an1",
+      "skillId": "g5.num.rounding",
+      "bloom": "analyze",
+      "type": "multipleChoice",
+      "prompt": "Which numbers round to 600 000 when rounded to the nearest ten thousand?",
+      "choices": [
+        {
+          "text": "604 210 and 598 000",
+          "correct": true
+        },
+        {
+          "text": "604 210 and 605 000",
+          "misconception": "wrong_range",
+          "feedback": "598 000 rounds to 600 000, but 605 000 rounds to 610 000."
+        },
+        {
+          "text": "595 000 and 604 999",
+          "misconception": "wrong_range",
+          "feedback": "Both round to 600 000, but this pair should include one on each side of the midpoint."
+        },
+        {
+          "text": "610 000 and 620 000",
+          "misconception": "wrong_range",
+          "feedback": "610 000 rounds to 610 000, not 600 000."
+        }
+      ],
+      "hints": [
+        "A number rounds to 600 000 if between 595 000 and 604 999.",
+        "Lower bound 595 000 (rounds up to 600 000).",
+        "Upper bound 604 999 (rounds down to 600 000)."
+      ],
+      "explanation": "Numbers between 595 000 and 604 999 round to 600 000 to the nearest ten thousand."
+    },
+    {
+      "id": "g5_g5_num_rounding_an2",
+      "skillId": "g5.num.rounding",
+      "bloom": "analyze",
+      "type": "multipleChoice",
+      "prompt": "A school has 12 487 learners. About how many more learners are there than 12 000?",
+      "choices": [
+        {
+          "text": "About 500",
+          "correct": true
+        },
+        {
+          "text": "About 400",
+          "misconception": "rounds_down",
+          "feedback": "12 487 rounds to 12 000 (nearest thousand) - the difference is 487, which rounds to about 500."
+        },
+        {
+          "text": "About 487",
+          "misconception": "exact_not_estimate",
+          "feedback": "We are asked for an estimate, not the exact difference."
+        },
+        {
+          "text": "About 600",
+          "misconception": "wrong_places",
+          "feedback": "12 487 - 12 000 = 487, which rounds to about 500."
+        }
+      ],
+      "hints": [
+        "12 487 - 12 000 = 487",
+        "487 rounded to the nearest hundred is 500"
+      ],
+      "explanation": "12 487 - 12 000 = 487. Rounded to the nearest hundred, 487 is 500."
+    }
+  ]
+}

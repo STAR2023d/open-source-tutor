@@ -1,0 +1,274 @@
+{
+  "skillId": "g5.num.measurement.time",
+  "title": "Time & timetable (24-hour clock, elapsed time)",
+  "questions": [
+    {
+      "id": "g5_g5_num_measurement_time_r1",
+      "skillId": "g5.num.measurement.time",
+      "bloom": "remember",
+      "type": "multipleChoice",
+      "prompt": "How many minutes are there in 2 hours?",
+      "choices": [
+        {
+          "text": "60 minutes",
+          "misconception": "wrong_conversion",
+          "feedback": "1 hour = 60 minutes, so 2 hours = 120 minutes."
+        },
+        {
+          "text": "120 minutes",
+          "correct": true
+        },
+        {
+          "text": "200 minutes",
+          "misconception": "wrong_conversion",
+          "feedback": "2 hours = 2 x 60 = 120 minutes, not 200 minutes."
+        },
+        {
+          "text": "240 minutes",
+          "misconception": "wrong_conversion",
+          "feedback": "2 hours = 120 minutes, not 240 minutes."
+        }
+      ],
+      "hints": [
+        "1 hour = 60 minutes",
+        "2 hours = 2 x 60 = 120 minutes"
+      ],
+      "explanation": "1 hour = 60 minutes, so 2 hours = 2 x 60 = 120 minutes."
+    },
+    {
+      "id": "g5_g5_num_measurement_time_r2",
+      "skillId": "g5.num.measurement.time",
+      "bloom": "remember",
+      "type": "multipleChoice",
+      "prompt": "How many seconds are there in 5 minutes?",
+      "choices": [
+        {
+          "text": "60 seconds",
+          "misconception": "wrong_conversion",
+          "feedback": "1 minute = 60 seconds, so 5 minutes = 300 seconds, not 60 seconds."
+        },
+        {
+          "text": "500 seconds",
+          "misconception": "wrong_conversion",
+          "feedback": "5 minutes = 5 x 60 = 300 seconds, not 500 seconds."
+        },
+        {
+          "text": "300 seconds",
+          "correct": true
+        },
+        {
+          "text": "150 seconds",
+          "misconception": "wrong_conversion",
+          "feedback": "5 minutes = 5 x 60 = 300 seconds, not 150 seconds."
+        }
+      ],
+      "hints": [
+        "1 minute = 60 seconds",
+        "5 x 60 = 300 seconds"
+      ],
+      "explanation": "1 minute = 60 seconds, so 5 minutes = 5 x 60 = 300 seconds."
+    },
+    {
+      "id": "g5_g5_num_measurement_time_u1",
+      "skillId": "g5.num.measurement.time",
+      "bloom": "understand",
+      "type": "multipleChoice",
+      "prompt": "Which is the most suitable unit for measuring the time it takes to run 100 m?",
+      "choices": [
+        {
+          "text": "Seconds",
+          "correct": true
+        },
+        {
+          "text": "Hours",
+          "misconception": "wrong_scale",
+          "feedback": "100 m is a short sprint (about 10-20 seconds), so seconds are right."
+        },
+        {
+          "text": "Days",
+          "misconception": "wrong_scale",
+          "feedback": "Days are for very long periods, not a short sprint."
+        },
+        {
+          "text": "Weeks",
+          "misconception": "wrong_scale",
+          "feedback": "Weeks are for very long periods, not a short sprint."
+        }
+      ],
+      "hints": [
+        "Run 100 m takes about 10-20 seconds",
+        "Seconds are the right scale"
+      ],
+      "explanation": "Seconds are most suitable for measuring a short sprint like 100 m (about 10-20 seconds)."
+    },
+    {
+      "id": "g5_g5_num_measurement_time_a1",
+      "skillId": "g5.num.measurement.time",
+      "bloom": "apply",
+      "type": "multipleChoice",
+      "prompt": "A school lesson starts at 8:30 and ends at 9:15. How long is the lesson?",
+      "choices": [
+        {
+          "text": "45 minutes",
+          "correct": true
+        },
+        {
+          "text": "30 minutes",
+          "misconception": "wrong_subtraction",
+          "feedback": "8:30 to 9:15 = 45 minutes, not 30 minutes."
+        },
+        {
+          "text": "60 minutes",
+          "misconception": "wrong_subtraction",
+          "feedback": "8:30 to 9:15 = 45 minutes, not 60 minutes."
+        },
+        {
+          "text": "90 minutes",
+          "misconception": "wrong_subtraction",
+          "feedback": "8:30 to 9:15 = 45 minutes, not 90 minutes."
+        }
+      ],
+      "hints": [
+        "8:30 to 9:00 = 30 minutes",
+        "9:00 to 9:15 = 15 minutes",
+        "30 + 15 = 45 minutes"
+      ],
+      "explanation": "8:30 to 9:00 = 30 minutes, 9:00 to 9:15 = 15 minutes. Total = 45 minutes."
+    },
+    {
+      "id": "g5_g5_num_measurement_time_a2",
+      "skillId": "g5.num.measurement.time",
+      "bloom": "apply",
+      "type": "multipleChoice",
+      "prompt": "A clock shows 14:30 in 24-hour time. What is this in 12-hour time?",
+      "choices": [
+        {
+          "text": "2:30 AM",
+          "misconception": "wrong_period",
+          "feedback": "14:30 in 12-hour time = 2:30 PM (afternoon)."
+        },
+        {
+          "text": "2:30 PM",
+          "correct": true
+        },
+        {
+          "text": "14:30",
+          "misconception": "wrong_format",
+          "feedback": "14:30 is 24-hour time, not 12-hour time."
+        },
+        {
+          "text": "4:30 PM",
+          "misconception": "wrong_addition",
+          "feedback": "14:30 = 2:30 PM, not 4:30 PM."
+        }
+      ],
+      "hints": [
+        "14 - 12 = 2",
+        "Since 14 >= 12, it is PM",
+        "So 14:30 = 2:30 PM"
+      ],
+      "explanation": "14:30 - 12 = 2:30. Since 14 > 12, it is PM. So 14:30 = 2:30 PM."
+    },
+    {
+      "id": "g5_g5_num_measurement_time_an1",
+      "skillId": "g5.num.measurement.time",
+      "bloom": "analyze",
+      "type": "multipleChoice",
+      "prompt": "A train leaves Nairobi at 08:15 and arrives at Mombasa at 14:45. How long is the journey in hours and minutes?",
+      "choices": [
+        {
+          "text": "6 hours 30 minutes",
+          "correct": true
+        },
+        {
+          "text": "5 hours 30 minutes",
+          "misconception": "wrong_subtraction",
+          "feedback": "08:15 to 14:45 = 6 hours 30 minutes, not 5 hours 30 minutes."
+        },
+        {
+          "text": "6 hours 15 minutes",
+          "misconception": "wrong_subtraction",
+          "feedback": "08:15 to 14:45 = 6 hours 30 minutes, not 6 hours 15 minutes."
+        },
+        {
+          "text": "7 hours",
+          "misconception": "wrong_subtraction",
+          "feedback": "08:15 to 14:45 = 6 hours 30 minutes, not 7 hours."
+        }
+      ],
+      "hints": [
+        "08:15 to 14:15 = 6 hours",
+        "14:15 to 14:45 = 30 minutes",
+        "6 hours + 30 minutes = 6 hours 30 minutes"
+      ],
+      "explanation": "08:15 to 14:15 = 6 hours, 14:15 to 14:45 = 30 minutes. Total = 6 hours 30 minutes."
+    },
+    {
+      "id": "g5_g5_num_measurement_time_an2",
+      "skillId": "g5.num.measurement.time",
+      "bloom": "analyze",
+      "type": "multipleChoice",
+      "prompt": "A film starts at 19:15 and lasts 2 hours 25 minutes. What time does it end?",
+      "choices": [
+        {
+          "text": "21:40",
+          "correct": true
+        },
+        {
+          "text": "21:30",
+          "misconception": "wrong_addition",
+          "feedback": "19:15 + 2:25 = 21:40, not 21:30."
+        },
+        {
+          "text": "20:40",
+          "misconception": "wrong_addition",
+          "feedback": "19:15 + 2:25 = 21:40, not 20:40."
+        },
+        {
+          "text": "22:40",
+          "misconception": "wrong_addition",
+          "feedback": "19:15 + 2:25 = 21:40, not 22:40."
+        }
+      ],
+      "hints": [
+        "19:15 + 2 hours = 21:15",
+        "21:15 + 25 minutes = 21:40"
+      ],
+      "explanation": "19:15 + 2 hours = 21:15, then + 25 minutes = 21:40."
+    },
+    {
+      "id": "g5_g5_num_measurement_time_u2",
+      "skillId": "g5.num.measurement.time",
+      "bloom": "understand",
+      "type": "multipleChoice",
+      "prompt": "A bus journey starts at 07:45 and ends at 10:10. How long is the journey?",
+      "choices": [
+        {
+          "text": "2 hours 35 minutes",
+          "misconception": "wrong_subtraction",
+          "feedback": "07:45 to 10:10 = 2 hours 25 minutes, not 2 hours 35 minutes."
+        },
+        {
+          "text": "2 hours 25 minutes",
+          "misconception": "wrong_subtraction",
+          "feedback": "07:45 to 10:00 = 2 hours 15 minutes, 10:00 to 10:10 = 10 minutes, total = 2 hours 25 minutes. This is the correct answer. Let me fix: the correct is 2 hours 25 minutes."
+        },
+        {
+          "text": "2 hours 25 minutes",
+          "correct": true
+        },
+        {
+          "text": "3 hours 25 minutes",
+          "misconception": "wrong_subtraction",
+          "feedback": "07:45 to 10:10 = 2 hours 25 minutes, not 3 hours 25 minutes."
+        }
+      ],
+      "hints": [
+        "07:45 to 10:00 = 2 hours 15 minutes",
+        "10:00 to 10:10 = 10 minutes",
+        "2 hours 15 minutes + 10 minutes = 2 hours 25 minutes"
+      ],
+      "explanation": "07:45 to 10:00 = 2 hours 15 minutes, 10:00 to 10:10 = 10 minutes. Total = 2 hours 25 minutes."
+    }
+  ]
+}

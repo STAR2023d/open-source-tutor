@@ -1,0 +1,277 @@
+{
+  "skillId": "g5.num.measurement.area",
+  "title": "Area (rectangles, squares, composite shapes)",
+  "questions": [
+    {
+      "id": "g5_g5_num_measurement_area_r1",
+      "skillId": "g5.num.measurement.area",
+      "bloom": "remember",
+      "type": "multipleChoice",
+      "prompt": "What is the area of a square with side 5 cm?",
+      "choices": [
+        {
+          "text": "10 cm\u00b2",
+          "correct": false,
+          "misconception": "adds_sides",
+          "feedback": "Area of a square = side x side = 5 x 5 = 25 cm\u00b2, not 10 cm\u00b2."
+        },
+        {
+          "text": "20 cm\u00b2",
+          "correct": false,
+          "misconception": "adds_sides",
+          "feedback": "Area = side x side, not 2 x side. 5 x 5 = 25 cm\u00b2."
+        },
+        {
+          "text": "25 cm\u00b2",
+          "correct": true
+        },
+        {
+          "text": "30 cm\u00b2",
+          "misconception": "adds_sides",
+          "feedback": "Area = 5 x 5 = 25 cm\u00b2, not 30 cm\u00b2."
+        }
+      ],
+      "hints": [
+        "Area of a square = side x side",
+        "5 x 5 = 25"
+      ],
+      "explanation": "Area of a square = 5 x 5 = 25 cm\u00b2."
+    },
+    {
+      "id": "g5_g5_num_measurement_area_r2",
+      "skillId": "g5.num.measurement.area",
+      "bloom": "remember",
+      "type": "multipleChoice",
+      "prompt": "What is the area of a rectangle with length 6 cm and width 4 cm?",
+      "choices": [
+        {
+          "text": "10 cm\u00b2",
+          "correct": false,
+          "misconception": "adds_sides",
+          "feedback": "Area of a rectangle = length x width = 6 x 4 = 24 cm\u00b2, not 10 cm\u00b2."
+        },
+        {
+          "text": "20 cm\u00b2",
+          "misconception": "adds_sides",
+          "feedback": "6 + 4 = 10, but area = length x width = 6 x 4 = 24 cm\u00b2."
+        },
+        {
+          "text": "24 cm\u00b2",
+          "correct": true
+        },
+        {
+          "text": "24 cm\u00b2",
+          "misconception": "wrong_product",
+          "feedback": "6 x 4 = 24 cm\u00b2."
+        }
+      ],
+      "hints": [
+        "Area of a rectangle = length x width",
+        "6 x 4 = 24"
+      ],
+      "explanation": "Area of a rectangle = 6 x 4 = 24 cm\u00b2."
+    },
+    {
+      "id": "g5_g5_num_measurement_area_u1",
+      "skillId": "g5.num.measurement.area",
+      "bloom": "understand",
+      "type": "multipleChoice",
+      "prompt": "Which formula gives the area of a rectangle?",
+      "choices": [
+        {
+          "text": "length x width",
+          "correct": true
+        },
+        {
+          "text": "2 x (length + width)",
+          "misconception": "perimeter",
+          "feedback": "2 x (length + width) gives the perimeter, not the area."
+        },
+        {
+          "text": "length + width",
+          "misconception": "adds_sides",
+          "feedback": "Length + width gives half the perimeter, not the area."
+        },
+        {
+          "text": "length x width x width",
+          "misconception": "wrong_formula",
+          "feedback": "Area of a rectangle = length x width (2D shape)."
+        }
+      ],
+      "hints": [
+        "Area of a rectangle = length x width"
+      ],
+      "explanation": "Area of a rectangle = length x width."
+    },
+    {
+      "id": "g5_g5_num_measurement_area_u2",
+      "skillId": "g5.num.measurement.area",
+      "bloom": "understand",
+      "type": "multipleChoice",
+      "prompt": "Which figure has the larger area: a square of side 4 cm or a rectangle of length 5 cm and width 3 cm?",
+      "choices": [
+        {
+          "text": "The rectangle",
+          "correct": true
+        },
+        {
+          "text": "The square",
+          "misconception": "wrong_calculation",
+          "feedback": "Square: 4 x 4 = 16 cm\u00b2. Rectangle: 5 x 3 = 15 cm\u00b2. The square has larger area."
+        },
+        {
+          "text": "They are equal",
+          "misconception": "confused",
+          "feedback": "Square = 16 cm\u00b2, Rectangle = 15 cm\u00b2. The square is larger."
+        },
+        {
+          "text": "Cannot be determined",
+          "misconception": "no_info",
+          "feedback": "Both areas can be calculated with the given information."
+        }
+      ],
+      "hints": [
+        "Square: 4 x 4 = 16 cm\u00b2",
+        "Rectangle: 5 x 3 = 15 cm\u00b2",
+        "Compare: 16 > 15"
+      ],
+      "explanation": "Square = 16 cm\u00b2, Rectangle = 15 cm\u00b2. The square has the larger area."
+    },
+    {
+      "id": "g5_g5_num_measurement_area_a1",
+      "skillId": "g5.num.measurement.area",
+      "bloom": "apply",
+      "type": "multipleChoice",
+      "prompt": "A rectangular garden is 12 m long and 8 m wide. What is its area?",
+      "choices": [
+        {
+          "text": "96 m\u00b2",
+          "correct": true
+        },
+        {
+          "text": "20 m\u00b2",
+          "misconception": "adds_sides",
+          "feedback": "Area = 12 x 8 = 96 m\u00b2, not 20 m\u00b2. 12 + 8 = 20 (that would be perimeter)."
+        },
+        {
+          "text": "40 m\u00b2",
+          "misconception": "subtracts",
+          "feedback": "Area = 12 x 8 = 96 m\u00b2, not 40 m\u00b2."
+        },
+        {
+          "text": "20 m\u00b2",
+          "misconception": "adds_sides",
+          "feedback": "Area = 12 x 8 = 96 m\u00b2, not 20 m\u00b2."
+        }
+      ],
+      "hints": [
+        "Area = length x width",
+        "12 x 8 = 96"
+      ],
+      "explanation": "Area = 12 x 8 = 96 m\u00b2."
+    },
+    {
+      "id": "g5_g5_num_measurement_area_a2",
+      "skillId": "g5.num.measurement.area",
+      "bloom": "apply",
+      "type": "multipleChoice",
+      "prompt": "A shaded region is made of 12 full squares of 1 cm\u00b2 each, plus 8 half-squares. What is the area of the shaded region?",
+      "choices": [
+        {
+          "text": "16 cm\u00b2",
+          "correct": true
+        },
+        {
+          "text": "12 cm\u00b2",
+          "misconception": "only_full_squares",
+          "feedback": "Full squares = 12 cm\u00b2, half-squares = 8 x 0.5 = 4 cm\u00b2. Total = 12 + 4 = 16 cm\u00b2."
+        },
+        {
+          "text": "10 cm\u00b2",
+          "misconception": "wrong_how_half",
+          "feedback": "Full = 12, half-squares = 8 x 0.5 = 4. Total = 16 cm\u00b2."
+        },
+        {
+          "text": "20 cm\u00b2",
+          "misconception": "adds_all",
+          "feedback": "12 + 8 = 20, but half-squares are 0.5 each, so 8 x 0.5 = 4. Total = 16 cm\u00b2."
+        }
+      ],
+      "hints": [
+        "Full squares = 12 x 1 = 12 cm\u00b2",
+        "Half-squares = 8 x 0.5 = 4 cm\u00b2",
+        "Total = 12 + 4 = 16 cm\u00b2"
+      ],
+      "explanation": "Full squares = 12 cm\u00b2, 8 half-squares = 4 cm\u00b2. Total area = 12 + 4 = 16 cm\u00b2."
+    },
+    {
+      "id": "g5_g5_num_measurement_area_an1",
+      "skillId": "g5.num.measurement.area",
+      "bloom": "analyze",
+      "type": "multipleChoice",
+      "prompt": "A floor is covered with square tiles of side 50 cm. How many tiles are needed to cover a floor of 4 m by 3 m?",
+      "choices": [
+        {
+          "text": "48 tiles",
+          "correct": true
+        },
+        {
+          "text": "12 tiles",
+          "misconception": "wrong_area",
+          "feedback": "Tile area = 50 x 50 = 2500 cm\u00b2. Floor = 400 x 300 = 120 000 cm\u00b2. 120 000 / 2500 = 48 tiles."
+        },
+        {
+          "text": "24 tiles",
+          "misconception": "wrong_area",
+          "feedback": "Tile area = 2500 cm\u00b2, floor = 120 000 cm\u00b2. 120 000 / 2500 = 48 tiles."
+        },
+        {
+          "text": "100 tiles",
+          "misconception": "wrong_calculation",
+          "feedback": "400 x 300 = 120 000, 50 x 50 = 2500. 120 000 / 2500 = 48 tiles."
+        }
+      ],
+      "hints": [
+        "Tile: 50 cm = 0.5 m",
+        "Tile area = 0.5 x 0.5 = 0.25 m\u00b2",
+        "Floor area = 4 x 3 = 12 m\u00b2",
+        "12 / 0.25 = 48 tiles"
+      ],
+      "explanation": "Tile = 0.5 x 0.5 = 0.25 m\u00b2. Floor = 12 m\u00b2. 12 / 0.25 = 48 tiles."
+    },
+    {
+      "id": "g5_g5_num_measurement_area_an2",
+      "skillId": "g5.num.measurement.area",
+      "bloom": "analyze",
+      "type": "multipleChoice",
+      "prompt": "A rectangular playground is 30 m long and 20 m wide. A square sandbox of side 10 m is cut out. What is the remaining area?",
+      "choices": [
+        {
+          "text": "500 m\u00b2",
+          "correct": true
+        },
+        {
+          "text": "300 m\u00b2",
+          "misconception": "wrong_calculation",
+          "feedback": "Playground: 30 x 20 = 600 m\u00b2. Sandbox: 10 x 10 = 100 m\u00b2. Remaining = 600 - 100 = 500 m\u00b2."
+        },
+        {
+          "text": "600 m\u00b2",
+          "misconception": "wrong_calculation",
+          "feedback": "This is the total area, not the remaining area. Subtract the sandbox area."
+        },
+        {
+          "text": "400 m\u00b2",
+          "misconception": "wrong_calculation",
+          "feedback": "Sandbox = 10 x 10 = 100 m\u00b2. Remaining = 600 - 100 = 500 m\u00b2, not 400."
+        }
+      ],
+      "hints": [
+        "Playground = 30 x 20 = 600 m\u00b2",
+        "Sandbox = 10 x 10 = 100 m\u00b2",
+        "Remaining = 600 - 100 = 500 m\u00b2"
+      ],
+      "explanation": "Playground = 600 m\u00b2, sandbox = 100 m\u00b2. Remaining = 600 - 100 = 500 m\u00b2."
+    }
+  ]
+}

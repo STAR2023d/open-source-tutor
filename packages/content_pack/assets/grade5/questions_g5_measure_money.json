@@ -1,0 +1,264 @@
+{
+  "skillId": "g5.num.measurement.money",
+  "title": "Money (profit, loss, bills, interest)",
+  "questions": [
+    {
+      "id": "g5_g5_num_measurement_money_r1",
+      "skillId": "g5.num.measurement.money",
+      "bloom": "remember",
+      "type": "multipleChoice",
+      "prompt": "How many shillings are there in 1000 cents?",
+      "choices": [
+        {
+          "text": "100 shillings",
+          "misconception": "wrong_conv",
+          "feedback": "100 cents = 1 shilling, so 1000 cents = 10 shillings, not 100 shillings."
+        },
+        {
+          "text": "10 shillings",
+          "correct": true
+        },
+        {
+          "text": "1 shilling",
+          "misconception": "wrong_conv",
+          "feedback": "1000 cents = 10 shillings, not 1 shilling."
+        },
+        {
+          "text": "1000 shillings",
+          "misconception": "wrong_conv",
+          "feedback": "1000 cents = 10 shillings, not 1000 shillings."
+        }
+      ],
+      "hints": [
+        "100 cents = 1 shilling",
+        "1000 cents / 100 = 10 shillings"
+      ],
+      "explanation": "100 cents = 1 shilling, so 1000 cents / 100 = 10 shillings."
+    },
+    {
+      "id": "g5_g5_num_measurement_money_r2",
+      "skillId": "g5.num.measurement.money",
+      "bloom": "remember",
+      "type": "multipleChoice",
+      "prompt": "How many cents are there in 25 shillings?",
+      "choices": [
+        {
+          "text": "25 cents",
+          "misconception": "wrong_conv",
+          "feedback": "100 cents = 1 shilling, so 25 shillings = 2500 cents, not 25 cents."
+        },
+        {
+          "text": "250 cents",
+          "misconception": "wrong_conv",
+          "feedback": "25 shillings = 2500 cents, not 250 cents."
+        },
+        {
+          "text": "2500 cents",
+          "correct": true
+        },
+        {
+          "text": "2.5 cents",
+          "misconception": "wrong_conv",
+          "feedback": "25 shillings = 2500 cents, not 2.5 cents."
+        }
+      ],
+      "hints": [
+        "100 cents = 1 shilling",
+        "25 x 100 = 2500 cents"
+      ],
+      "explanation": "100 cents = 1 shilling, so 25 shillings = 25 x 100 = 2500 cents."
+    },
+    {
+      "id": "g5_g5_num_measurement_money_u1",
+      "skillId": "g5.num.measurement.money",
+      "bloom": "understand",
+      "type": "multipleChoice",
+      "prompt": "Which is the most suitable unit for measuring the price of a loaf of bread?",
+      "choices": [
+        {
+          "text": "Cents",
+          "misconception": "wrong_unit",
+          "feedback": "A loaf of bread costs about 30-50 shillings, so shillings are more suitable than cents."
+        },
+        {
+          "text": "Shillings",
+          "correct": true
+        },
+        {
+          "text": "Dollars",
+          "misconception": "wrong_currency",
+          "feedback": "Kenya uses shillings, not dollars, for everyday purchases."
+        },
+        {
+          "text": "Euros",
+          "misconception": "wrong_currency",
+          "feedback": "Kenya uses shillings, not euros, for everyday purchases."
+        }
+      ],
+      "hints": [
+        "A loaf of bread costs about 30-50 shillings",
+        "Shillings are the right unit"
+      ],
+      "explanation": "Shillings are most suitable for measuring the price of a loaf of bread (about 30-50 shillings)."
+    },
+    {
+      "id": "g5_g5_num_measurement_money_a1",
+      "skillId": "g5.num.measurement.money",
+      "bloom": "apply",
+      "type": "multipleChoice",
+      "prompt": "A book costs 120 shillings. How much do 4 books cost?",
+      "choices": [
+        {
+          "text": "420 shillings",
+          "misconception": "wrong_mul",
+          "feedback": "120 x 4 = 480, not 420 shillings."
+        },
+        {
+          "text": "360 shillings",
+          "misconception": "wrong_mul",
+          "feedback": "120 x 4 = 480, not 360 shillings."
+        },
+        {
+          "text": "520 shillings",
+          "misconception": "wrong_mul",
+          "feedback": "120 x 4 = 480, not 520 shillings."
+        },
+        {
+          "text": "480 shillings",
+          "correct": true
+        }
+      ],
+      "hints": [
+        "120 x 4 = 480"
+      ],
+      "explanation": "120 x 4 = 480 shillings."
+    },
+    {
+      "id": "g5_g5_num_measurement_money_a2",
+      "skillId": "g5.num.measurement.money",
+      "bloom": "apply",
+      "type": "multipleChoice",
+      "prompt": "A shirt costs 500 shillings. During a sale, it is reduced by 150 shillings. What is the sale price?",
+      "choices": [
+        {
+          "text": "650 shillings",
+          "misconception": "wrong_calc",
+          "feedback": "500 - 150 = 350, not 650 shillings. 650 would be 500 + 150."
+        },
+        {
+          "text": "5150 shillings",
+          "misconception": "wrong_calc",
+          "feedback": "500 - 150 = 350, not 5150 shillings."
+        },
+        {
+          "text": "300 shillings",
+          "misconception": "wrong_calc",
+          "feedback": "500 - 150 = 350, not 300 shillings."
+        },
+        {
+          "text": "350 shillings",
+          "correct": true
+        }
+      ],
+      "hints": [
+        "500 - 150 = 350"
+      ],
+      "explanation": "500 - 150 = 350 shillings."
+    },
+    {
+      "id": "g5_g5_num_measurement_money_an1",
+      "skillId": "g5.num.measurement.money",
+      "bloom": "analyze",
+      "type": "multipleChoice",
+      "prompt": "A shopkeeper bought 10 kg of maize flour at 250 shillings per kg and sold it at 320 shillings per kg. What is the profit?",
+      "choices": [
+        {
+          "text": "70 shillings",
+          "misconception": "wrong_calc",
+          "feedback": "Profit per kg = 320 - 250 = 70, not 70 shillings for 10 kg."
+        },
+        {
+          "text": "570 shillings",
+          "misconception": "wrong_calc",
+          "feedback": "Profit = (320 - 250) x 10 = 70 x 10 = 700, not 570 shillings."
+        },
+        {
+          "text": "700 shillings",
+          "correct": true
+        }
+      ],
+      "hints": [
+        "Profit per kg = 320 - 250 = 70",
+        "Total profit = 70 x 10 = 700 shillings"
+      ],
+      "explanation": "Profit per kg = 320 - 250 = 70. Total profit for 10 kg = 70 x 10 = 700 shillings."
+    },
+    {
+      "id": "g5_g5_num_measurement_money_an2",
+      "skillId": "g5.num.measurement.money",
+      "bloom": "analyze",
+      "type": "multipleChoice",
+      "prompt": "A shopkeeper bought 5 litres of milk at 120 shillings per litre and sold it at 150 shillings per litre. What is the total profit?",
+      "choices": [
+        {
+          "text": "30 shillings",
+          "misconception": "wrong_calc",
+          "feedback": "Profit per litre = 150 - 120 = 30. Total = 30 x 5 = 150, not 30 shillings."
+        },
+        {
+          "text": "600 shillings",
+          "misconception": "wrong_calc",
+          "feedback": "Profit = (150 - 120) x 5 = 30 x 5 = 150, not 600 shillings."
+        },
+        {
+          "text": "750 shillings",
+          "misconception": "wrong_calc",
+          "feedback": "Profit = (150 - 120) x 5 = 150, not 750 shillings."
+        },
+        {
+          "text": "150 shillings",
+          "correct": true
+        }
+      ],
+      "hints": [
+        "Profit per litre = 150 - 120 = 30",
+        "Total = 30 x 5 = 150 shillings"
+      ],
+      "explanation": "Profit per litre = 150 - 120 = 30. Total profit for 5 litres = 30 x 5 = 150 shillings."
+    },
+    {
+      "id": "g5_g5_num_measurement_money_u2",
+      "skillId": "g5.num.measurement.money",
+      "bloom": "understand",
+      "type": "multipleChoice",
+      "prompt": "Which unit is most suitable for measuring the price of a car?",
+      "choices": [
+        {
+          "text": "Cents",
+          "correct": false,
+          "misconception": "wrong_unit",
+          "feedback": "A car costs hundreds of thousands of shillings, so cents are too small."
+        },
+        {
+          "text": "Shillings",
+          "correct": true
+        },
+        {
+          "text": "Dollars",
+          "misconception": "wrong_currency",
+          "feedback": "Kenya uses shillings, not dollars, for car prices."
+        },
+        {
+          "text": "Euros",
+          "misconception": "wrong_currency",
+          "feedback": "Kenya uses shillings, not euros, for car prices."
+        }
+      ],
+      "hints": [
+        "A car costs about 500 000 to 2 000 000 shillings",
+        "Shillings are used for large amounts"
+      ],
+      "explanation": "Shillings are used for measuring the price of a car (hundreds of thousands of shillings)."
+    }
+  ]
+}

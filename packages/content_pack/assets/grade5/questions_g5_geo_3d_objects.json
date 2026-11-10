@@ -1,0 +1,263 @@
+{
+  "skillId": "g5.num.geometry.3d_objects",
+  "title": "3-D objects (cuboids, cubes, pyramids, prisms)",
+  "questions": [
+    {
+      "id": "g5_g5_num_geometry_3d-objects_r1",
+      "skillId": "g5.num.geometry.3d-objects",
+      "bloom": "remember",
+      "type": "multipleChoice",
+      "prompt": "How many faces does a cube have?",
+      "choices": [
+        {
+          "text": "4",
+          "misconception": "wrong_count",
+          "feedback": "A cube has 6 faces, not 4."
+        },
+        {
+          "text": "5",
+          "misconception": "wrong_count",
+          "feedback": "A cube has 6 faces, not 5."
+        },
+        {
+          "text": "6",
+          "correct": true
+        },
+        {
+          "text": "8",
+          "misconception": "wrong_count",
+          "feedback": "A cube has 6 faces, not 8."
+        }
+      ],
+      "hints": [
+        "A cube has 6 faces"
+      ],
+      "explanation": "A cube has 6 faces."
+    },
+    {
+      "id": "g5_g5_num_geometry_3d-objects_r2",
+      "skillId": "g5.num.geometry.3d-objects",
+      "bloom": "remember",
+      "type": "multipleChoice",
+      "prompt": "How many edges does a cuboid have?",
+      "choices": [
+        {
+          "text": "6",
+          "misconception": "wrong_count",
+          "feedback": "A cuboid has 12 edges, not 6."
+        },
+        {
+          "text": "8",
+          "misconception": "wrong_count",
+          "feedback": "A cuboid has 12 edges, not 8."
+        },
+        {
+          "text": "12",
+          "correct": true
+        },
+        {
+          "text": "10",
+          "misconception": "wrong_count",
+          "feedback": "A cuboid has 12 edges, not 10."
+        }
+      ],
+      "hints": [
+        "A cuboid has 12 edges"
+      ],
+      "explanation": "A cuboid has 12 edges."
+    },
+    {
+      "id": "g5_g5_num_geometry_3d-objects_u1",
+      "skillId": "g5.num.geometry.3d-objects",
+      "bloom": "understand",
+      "type": "multipleChoice",
+      "prompt": "Which 3D object has 5 faces, 8 edges, and 5 vertices?",
+      "choices": [
+        {
+          "text": "Cube",
+          "misconception": "wrong_shape",
+          "feedback": "A cube has 6 faces, 12 edges, and 8 vertices."
+        },
+        {
+          "text": "Cone",
+          "misconception": "wrong_shape",
+          "feedback": "A cone has 1 face, 1 edge (or 0), and 1 vertex."
+        },
+        {
+          "text": "Square pyramid",
+          "correct": true
+        },
+        {
+          "text": "Cylinder",
+          "misconception": "wrong_shape",
+          "feedback": "A cylinder has 3 faces, 2 edges, and 0 vertices."
+        }
+      ],
+      "hints": [
+        "Square pyramid has 5 faces, 8 edges, 5 vertices"
+      ],
+      "explanation": "A square pyramid has 5 faces, 8 edges, and 5 vertices."
+    },
+    {
+      "id": "g5_g5_num_geometry_3d-objects_u2",
+      "skillId": "g5.num.geometry.3d-objects",
+      "bloom": "understand",
+      "type": "multipleChoice",
+      "prompt": "Which object has 2 circular faces and 1 curved surface?",
+      "choices": [
+        {
+          "text": "Cube",
+          "misconception": "wrong_shape",
+          "feedback": "A cube has 6 flat faces and no curved surface."
+        },
+        {
+          "text": "Cone",
+          "misconception": "wrong_shape",
+          "feedback": "A cone has 1 circular face, 1 vertex, and 1 curved surface."
+        },
+        {
+          "text": "Triangular prism",
+          "misconception": "wrong_shape",
+          "feedback": "A triangular prism has 5 faces and no curved surface."
+        },
+        {
+          "text": "Cylinder",
+          "correct": true
+        }
+      ],
+      "hints": [
+        "Cylinder has 2 circular faces and 1 curved surface"
+      ],
+      "explanation": "A cylinder has 2 circular faces and 1 curved surface."
+    },
+    {
+      "id": "g5_g5_num_geometry_3d-objects_a1",
+      "skillId": "g5.num.geometry.3d-objects",
+      "bloom": "apply",
+      "type": "multipleChoice",
+      "prompt": "A cube has side length 4 cm. What is its volume?",
+      "choices": [
+        {
+          "text": "12 cm\u00b3",
+          "misconception": "wrong_calc",
+          "feedback": "4 x 4 x 4 = 64, not 12 cm\u00b3."
+        },
+        {
+          "text": "16 cm\u00b3",
+          "misconception": "wrong_calc",
+          "feedback": "4 x 4 x 4 = 64, not 16 cm\u00b3."
+        },
+        {
+          "text": "24 cm\u00b3",
+          "misconception": "wrong_calc",
+          "feedback": "4 x 4 x 4 = 64, not 24 cm\u00b3."
+        },
+        {
+          "text": "64 cm\u00b3",
+          "correct": true
+        }
+      ],
+      "hints": [
+        "Volume of cube = side x side x side = 4 x 4 x 4 = 64 cm\u00b3"
+      ],
+      "explanation": "Volume of a cube = 4 x 4 x 4 = 64 cm\u00b3."
+    },
+    {
+      "id": "g5_g5_num_geometry_3d-objects_a2",
+      "skillId": "g5.num.geometry.3d-objects",
+      "bloom": "apply",
+      "type": "multipleChoice",
+      "prompt": "Which object can roll but not slide?",
+      "choices": [
+        {
+          "text": "Cube",
+          "misconception": "wrong_shape",
+          "feedback": "A cube can slide but not roll (it has flat faces)."
+        },
+        {
+          "text": "Cuboid",
+          "misconception": "wrong_shape",
+          "feedback": "A cuboid can slide but not roll (it has flat faces)."
+        },
+        {
+          "text": "Cone",
+          "correct": true
+        },
+        {
+          "text": "Square pyramid",
+          "misconception": "wrong_shape",
+          "feedback": "A square pyramid has flat faces and can slide but not roll."
+        }
+      ],
+      "hints": [
+        "A cone has a curved surface and can roll"
+      ],
+      "explanation": "A cone has a curved surface and can roll."
+    },
+    {
+      "id": "g5_g5_num_geometry_3d-objects_an1",
+      "skillId": "g5.num.geometry.3d-objects",
+      "bloom": "analyze",
+      "type": "multipleChoice",
+      "prompt": "A cuboidal box is 10 cm long, 6 cm wide, and 4 cm high. How many 1 cm\u00b3 cubes fit inside?",
+      "choices": [
+        {
+          "text": "200",
+          "misconception": "wrong_calc",
+          "feedback": "10 x 6 x 4 = 240, not 200."
+        },
+        {
+          "text": "220",
+          "misconception": "wrong_calc",
+          "feedback": "10 x 6 x 4 = 240, not 220."
+        },
+        {
+          "text": "240",
+          "correct": true
+        },
+        {
+          "text": "280",
+          "misconception": "wrong_calc",
+          "feedback": "10 x 6 x 4 = 240, not 280."
+        }
+      ],
+      "hints": [
+        "Volume = 10 x 6 x 4 = 240 cm\u00b3"
+      ],
+      "explanation": "Volume = 10 x 6 x 4 = 240 cm\u00b3. So 240 1 cm\u00b3 cubes fit."
+    },
+    {
+      "id": "g5_g5_num_geometry_3d-objects_an2",
+      "skillId": "g5.num.geometry.3d-objects",
+      "bloom": "analyze",
+      "type": "multipleChoice",
+      "prompt": "Which pair has the same number of faces: a cube and a cuboid, or a cone and a cylinder?",
+      "choices": [
+        {
+          "text": "Cone and cylinder",
+          "misconception": "wrong_shape",
+          "feedback": "Cube has 6 faces, cuboid has 6 faces. They are the same pair."
+        },
+        {
+          "text": "Cube and cuboid",
+          "correct": true
+        },
+        {
+          "text": "Both pairs",
+          "misconception": "wrong_shape",
+          "feedback": "Cube and cuboid both have 6 faces. They are the same pair."
+        },
+        {
+          "text": "Neither pair",
+          "misconception": "wrong_shape",
+          "feedback": "Cube and cuboid both have 6 faces. They are the same pair."
+        }
+      ],
+      "hints": [
+        "Cube has 6 faces, cuboid has 6 faces",
+        "Cube and cuboid have the same number of faces"
+      ],
+      "explanation": "Cube has 6 faces, cuboid has 6 faces. Cube and cuboid have the same number of faces."
+    }
+  ]
+}

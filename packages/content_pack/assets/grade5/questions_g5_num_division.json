@@ -1,0 +1,289 @@
+{
+  "skillId": "g5.num.division",
+  "title": "Division (long division with 2-digit divisors)",
+  "questions": [
+    {
+      "id": "g5_g5_num_division_r1",
+      "skillId": "g5.num.division",
+      "bloom": "remember",
+      "type": "multipleChoice",
+      "prompt": "What is 84 / 6?",
+      "choices": [
+        {
+          "text": "12",
+          "correct": false,
+          "misconception": "subtract_wrong",
+          "feedback": "84 / 6 = 14, not 12. Count back in 6s: 84 -> 78 -> 72 -> 66 -> 60 -> 54 -> 48 -> 42 -> 36 -> 30 -> 24 -> 18 -> 12 -> 6 -> 0 (14 steps)."
+        },
+        {
+          "text": "13",
+          "misconception": "rounding",
+          "feedback": "84 / 6 = 14, not 13. 6 x 13 = 78, 6 x 14 = 84."
+        },
+        {
+          "text": "14",
+          "correct": true
+        },
+        {
+          "text": "15",
+          "misconception": "rounding",
+          "feedback": "6 x 15 = 90, not 84. 6 x 14 = 84."
+        }
+      ],
+      "hints": [
+        "Think: 6 x ? = 84",
+        "6 x 10 = 60",
+        "6 x 4 = 24",
+        "60 + 24 = 84",
+        "6 x 14 = 84"
+      ],
+      "explanation": "84 / 6 = 14 because 6 x 14 = 84."
+    },
+    {
+      "id": "g5_g5_num_division_r2",
+      "skillId": "g5.num.division",
+      "bloom": "remember",
+      "type": "multipleChoice",
+      "prompt": "What is 144 / 12?",
+      "choices": [
+        {
+          "text": "10",
+          "correct": false,
+          "misconception": "estimation",
+          "feedback": "144 / 12 = 12, not 10. 12 x 10 = 120, too small."
+        },
+        {
+          "text": "11",
+          "misconception": "rounding",
+          "feedback": "12 x 11 = 132, not 144."
+        },
+        {
+          "text": "12",
+          "correct": true
+        },
+        {
+          "text": "13",
+          "misconception": "rounding",
+          "feedback": "12 x 13 = 156, not 144."
+        }
+      ],
+      "hints": [
+        "Think: 12 x ? = 144",
+        "12 x 10 = 120",
+        "144 - 120 = 24",
+        "24 / 12 = 2",
+        "10 + 2 = 12"
+      ],
+      "explanation": "144 / 12 = 12 because 12 x 12 = 144."
+    },
+    {
+      "id": "g5_g5_num_division_a1",
+      "skillId": "g5.num.division",
+      "bloom": "apply",
+      "type": "multipleChoice",
+      "prompt": "A teacher has 96 pencils. She shares them equally among 8 learners. How many pencils does each learner get?",
+      "choices": [
+        {
+          "text": "12 pencils",
+          "correct": true
+        },
+        {
+          "text": "11 pencils",
+          "misconception": "rounding",
+          "feedback": "96 / 8 = 12, not 11. 8 x 11 = 88, 96 - 88 = 8 more."
+        },
+        {
+          "text": "10 pencils",
+          "misconception": "rounding",
+          "feedback": "8 x 10 = 80, 96 - 80 = 16 left, so 12 pencils each, not 10."
+        },
+        {
+          "text": "9 pencils",
+          "misconception": "wrong_division",
+          "feedback": "96 / 8 = 12, not 9. 8 x 9 = 72, too small."
+        }
+      ],
+      "hints": [
+        "96 pencils shared among 8 learners",
+        "96 / 8 = ?",
+        "8 x 10 = 80",
+        "96 - 80 = 16",
+        "16 / 8 = 2",
+        "10 + 2 = 12"
+      ],
+      "explanation": "96 / 8 = 12. Each learner gets 12 pencils."
+    },
+    {
+      "id": "g5_g5_num_division_a2",
+      "skillId": "g5.num.division",
+      "bloom": "apply",
+      "type": "multipleChoice",
+      "prompt": "There are 12 eggs in each carton. How many cartons are needed for 144 eggs?",
+      "choices": [
+        {
+          "text": "12 cartons",
+          "correct": true
+        },
+        {
+          "text": "11 cartons",
+          "misconception": "rounding",
+          "feedback": "144 / 12 = 12, not 11. 11 x 12 = 132, 144 - 132 = 12 short."
+        },
+        {
+          "text": "10 cartons",
+          "misconception": "rounding",
+          "feedback": "10 x 12 = 120, not 144. Need 12 cartons."
+        },
+        {
+          "text": "13 cartons",
+          "misconception": "rounding_up",
+          "feedback": "13 x 12 = 156, which is more than 144. You need exactly 12 cartons."
+        }
+      ],
+      "hints": [
+        "144 eggs / 12 eggs per carton",
+        "12 x 10 = 120",
+        "144 - 120 = 24",
+        "24 / 12 = 2",
+        "10 + 2 = 12"
+      ],
+      "explanation": "144 / 12 = 12. You need 12 cartons."
+    },
+    {
+      "id": "g5_g5_num_division_u1",
+      "skillId": "g5.num.division",
+      "bloom": "understand",
+      "type": "multipleChoice",
+      "prompt": "Which division fact is related to 7 x 8 = 56?",
+      "choices": [
+        {
+          "text": "56 / 7 = 8",
+          "correct": true
+        },
+        {
+          "text": "56 / 8 = 7",
+          "misconception": "swap_numbers",
+          "feedback": "Both 56/7 = 8 and 56/8 = 7 are true (inverse of 7 x 8 = 56). But 56/7 = 8 matches the question format."
+        },
+        {
+          "text": "7 / 56 = 8",
+          "misconception": "wrong_order",
+          "feedback": "Division must be larger / smaller, not smaller / larger."
+        },
+        {
+          "text": "8 / 56 = 7",
+          "misconception": "wrong_order",
+          "feedback": "Division must be larger / smaller, not smaller / larger."
+        }
+      ],
+      "hints": [
+        "Multiplication and division are inverse operations",
+        "7 x 8 = 56 means 56 / 7 = 8 and 56 / 8 = 7"
+      ],
+      "explanation": "56 / 7 = 8 (and 56 / 8 = 7), because multiplication and division are inverse operations."
+    },
+    {
+      "id": "g5_g5_num_division_u2",
+      "skillId": "g5.num.division",
+      "bloom": "understand",
+      "type": "multipleChoice",
+      "prompt": "Which subtraction sentence helps solve 56 / 8?",
+      "choices": [
+        {
+          "text": "48 / 8 = 6 then 56 - 48 = 8",
+          "correct": true
+        },
+        {
+          "text": "56 - 8 = 48",
+          "misconception": "subtract_first",
+          "feedback": "To divide, you can count back in eights from 56. 56 - 8 = 48, then 48 / 8 = 6."
+        },
+        {
+          "text": "8 x 7 = 56",
+          "misconception": "multiplication",
+          "feedback": "56 / 8 = 7, and 8 x 7 = 56 is multiplication, not subtraction."
+        },
+        {
+          "text": "56 / 7 = 8",
+          "misconception": "division",
+          "feedback": "This is a division sentence, not a subtraction sentence."
+        }
+      ],
+      "hints": [
+        "56 / 8 means how many eights in 56",
+        "Count back in eights: 56 - 8 = 48",
+        "48 - 8 = 40",
+        "40 - 8 = 32",
+        "... 7 eights = 56"
+      ],
+      "explanation": "56 / 8 = 7. We can subtract 8 seven times: 56 - 8 = 48, 48 - 8 = 40, 40 - 8 = 32, 32 - 8 = 24, 24 - 8 = 16, 16 - 8 = 8, 8 - 8 = 0."
+    },
+    {
+      "id": "g5_g5_num_division_an1",
+      "skillId": "g5.num.division",
+      "bloom": "analyze",
+      "type": "multipleChoice",
+      "prompt": "A school has 144 books to pack into boxes of 12. After packing, the librarian adds 2 more boxes with the same number of books. How many books are there total?",
+      "choices": [
+        {
+          "text": "168 books",
+          "correct": true
+        },
+        {
+          "text": "144 books",
+          "misconception": "no_addition",
+          "feedback": "The librarian adds 2 more boxes with 12 books each = 24 more books. 144 + 24 = 168."
+        },
+        {
+          "text": "160 books",
+          "misconception": "wrong_addition",
+          "feedback": "144 + 24 = 168, not 160."
+        },
+        {
+          "text": "336 books",
+          "misconception": "multiplies_by_2",
+          "feedback": "144 / 12 = 12 boxes. Adding 2 more = 14 boxes. 14 x 12 = 168, not 336."
+        }
+      ],
+      "hints": [
+        "144 books / 12 per box = 12 boxes",
+        "2 more boxes x 12 = 24",
+        "144 + 24 = 168"
+      ],
+      "explanation": "12 boxes x 12 books = 144. Adding 2 more boxes x 12 = 24. Total = 144 + 24 = 168 books."
+    },
+    {
+      "id": "g5_g5_num_division_an2",
+      "skillId": "g5.num.division",
+      "bloom": "analyze",
+      "type": "multipleChoice",
+      "prompt": "A farmer packs 180 eggs into trays of 12. He sells 7 trays. How many trays of eggs remain?",
+      "choices": [
+        {
+          "text": "10 trays",
+          "correct": true
+        },
+        {
+          "text": "9 trays",
+          "misconception": "rounding",
+          "feedback": "180 / 12 = 15 trays. 15 - 7 = 8 trays remaining, not 10."
+        },
+        {
+          "text": "8 trays",
+          "misconception": "wrong_subtraction",
+          "feedback": "180 / 12 = 15 trays. 15 - 7 = 8 trays remaining."
+        },
+        {
+          "text": "11 trays",
+          "misconception": "rounding",
+          "feedback": "180 / 12 = 15 trays. 15 - 7 = 8, not 11."
+        }
+      ],
+      "hints": [
+        "180 eggs / 12 per tray = 15 trays",
+        "15 trays - 7 trays sold = 8 trays left"
+      ],
+      "explanation": "180 / 12 = 15 trays. 15 - 7 = 8 trays remain in storage."
+    }
+  ]
+}

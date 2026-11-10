@@ -1,0 +1,266 @@
+{
+  "skillId": "g5.num.geometry.positions",
+  "title": "Positions & directions (coordinates)",
+  "questions": [
+    {
+      "id": "g5_g5_num_geometry_positions_r1",
+      "skillId": "g5.num.geometry.positions",
+      "bloom": "remember",
+      "type": "multipleChoice",
+      "prompt": "In a grid, what direction does the arrow pointing right represent?",
+      "choices": [
+        {
+          "text": "North",
+          "misconception": "wrong_dir",
+          "feedback": "Right points to East, not North."
+        },
+        {
+          "text": "South",
+          "misconception": "wrong_dir",
+          "feedback": "Right points to East, not South."
+        },
+        {
+          "text": "East",
+          "correct": true
+        },
+        {
+          "text": "West",
+          "misconception": "wrong_dir",
+          "feedback": "Right points to East, not West."
+        }
+      ],
+      "hints": [
+        "East is the direction pointing right"
+      ],
+      "explanation": "East is the direction pointing right."
+    },
+    {
+      "id": "g5_g5_num_geometry_positions_r2",
+      "skillId": "g5.num.geometry.positions",
+      "bloom": "remember",
+      "type": "multipleChoice",
+      "prompt": "In a grid, what direction does the arrow pointing up represent?",
+      "choices": [
+        {
+          "text": "South",
+          "misconception": "wrong_dir",
+          "feedback": "Up points to North, not South."
+        },
+        {
+          "text": "East",
+          "misconception": "wrong_dir",
+          "feedback": "Up points to North, not East."
+        },
+        {
+          "text": "West",
+          "misconception": "wrong_dir",
+          "feedback": "Up points to North, not West."
+        },
+        {
+          "text": "North",
+          "correct": true
+        }
+      ],
+      "hints": [
+        "North is the direction pointing up"
+      ],
+      "explanation": "North is the direction pointing up."
+    },
+    {
+      "id": "g5_g5_num_geometry_positions_u1",
+      "skillId": "g5.num.geometry.positions",
+      "bloom": "understand",
+      "type": "multipleChoice",
+      "prompt": "Which direction is opposite to North?",
+      "choices": [
+        {
+          "text": "East",
+          "misconception": "wrong_dir",
+          "feedback": "South is opposite to North, not East."
+        },
+        {
+          "text": "South",
+          "misconception": "wrong_dir",
+          "feedback": "South is opposite to North, not West."
+        },
+        {
+          "text": "South",
+          "correct": true
+        },
+        {
+          "text": "West",
+          "misconception": "wrong_dir",
+          "feedback": "South is opposite to North, not West."
+        }
+      ],
+      "hints": [
+        "South is opposite to North"
+      ],
+      "explanation": "South is opposite to North."
+    },
+    {
+      "id": "g5_g5_num_geometry_positions_a1",
+      "skillId": "g5.num.geometry.positions",
+      "bloom": "apply",
+      "type": "multipleChoice",
+      "prompt": "If you face North and turn 90 degrees to your right, which direction are you facing?",
+      "choices": [
+        {
+          "text": "South",
+          "misconception": "wrong_dir",
+          "feedback": "Turning 90 degrees right from North gives West, not South."
+        },
+        {
+          "text": "East",
+          "misconception": "wrong_dir",
+          "feedback": "Turning 90 degrees right from North gives West, not East."
+        },
+        {
+          "text": "West",
+          "correct": true
+        },
+        {
+          "text": "North",
+          "misconception": "wrong_dir",
+          "feedback": "Turning 90 degrees right from North gives West, not North."
+        }
+      ],
+      "hints": [
+        "Facing North, turning 90 degrees right = West"
+      ],
+      "explanation": "Facing North, turning 90 degrees right = West."
+    },
+    {
+      "id": "g5_g5_num_geometry_positions_a2",
+      "skillId": "g5.num.geometry.positions",
+      "bloom": "apply",
+      "type": "multipleChoice",
+      "prompt": "On a grid, point A is at (2,3) and point B is at (5,3). Which direction moves from A to B?",
+      "choices": [
+        {
+          "text": "North",
+          "misconception": "wrong_dir",
+          "feedback": "Same row (y=3), x increases from 2 to 5 = East, not North."
+        },
+        {
+          "text": "South",
+          "misconception": "wrong_dir",
+          "feedback": "Same row (y=3), x increases from 2 to 5 = East, not South."
+        },
+        {
+          "text": "East",
+          "correct": true
+        },
+        {
+          "text": "West",
+          "misconception": "wrong_dir",
+          "feedback": "x increases from 2 to 5 = East, not West."
+        }
+      ],
+      "hints": [
+        "Same row (y=3), x increases from 2 to 5 = East"
+      ],
+      "explanation": "Point A (2,3) to B (5,3): x increases, y stays same = East."
+    },
+    {
+      "id": "g5_g5_num_geometry_positions_an1",
+      "skillId": "g5.num.geometry.positions",
+      "bloom": "analyze",
+      "type": "multipleChoice",
+      "prompt": "You are at (1,1). You move 3 units right and 2 units up. Where are you now?",
+      "choices": [
+        {
+          "text": "(1,3)",
+          "misconception": "wrong_calc",
+          "feedback": "3 right from 1 = 4 (x=4), 2 up from 1 = 3 (y=3), so (4,3), not (1,3)."
+        },
+        {
+          "text": "(3,2)",
+          "misconception": "wrong_calc",
+          "feedback": "3 right from 1 = 4 (x=4), 2 up from 1 = 3 (y=3), so (4,3), not (3,2)."
+        },
+        {
+          "text": "(3,3)",
+          "misconception": "wrong_calc",
+          "feedback": "3 right from 1 = 4 (x=4), 2 up from 1 = 3 (y=3), so (4,3), not (3,3)."
+        },
+        {
+          "text": "(4,3)",
+          "correct": true
+        }
+      ],
+      "hints": [
+        "3 right from 1 = 4 (x=4)",
+        "2 up from 1 = 3 (y=3)",
+        "New position (4,3)"
+      ],
+      "explanation": "New position (4,3)."
+    },
+    {
+      "id": "g5_g5_num_geometry_positions_an2",
+      "skillId": "g5.num.geometry.positions",
+      "bloom": "analyze",
+      "type": "multipleChoice",
+      "prompt": "You are at (5,5). You move 3 units left and 4 units down. Where are you now?",
+      "choices": [
+        {
+          "text": "(8,1)",
+          "misconception": "wrong_calc",
+          "feedback": "5 - 3 = 2 (x=2), 5 - 4 = 1 (y=1), so (2,1), not (8,1)."
+        },
+        {
+          "text": "(2,1)",
+          "correct": true
+        },
+        {
+          "text": "(2,9)",
+          "misconception": "wrong_calc",
+          "feedback": "5 - 3 = 2 (x=2), 5 - 4 = 1 (y=1), so (2,1), not (2,9)."
+        },
+        {
+          "text": "(-2,1)",
+          "misconception": "wrong_calc",
+          "feedback": "5 - 3 = 2 (x=2), 5 - 4 = 1 (y=1), so (2,1), not (-2,1)"
+        }
+      ],
+      "hints": [
+        "5 - 3 = 2 (x=2)",
+        "5 - 4 = 1 (y=1)",
+        "New position (2,1)"
+      ],
+      "explanation": "New position (2,1)."
+    },
+    {
+      "id": "g5_g5_num_geometry_positions_u2",
+      "skillId": "g5.num.geometry.positions",
+      "bloom": "understand",
+      "type": "multipleChoice",
+      "prompt": "If you face South and turn 180 degrees, which direction are you facing?",
+      "choices": [
+        {
+          "text": "North",
+          "misconception": "wrong_dir",
+          "feedback": "Facing South, turning 180 degrees = North, not West."
+        },
+        {
+          "text": "East",
+          "misconception": "wrong_dir",
+          "feedback": "Facing South, turning 180 degrees = North, not East."
+        },
+        {
+          "text": "North",
+          "correct": true
+        },
+        {
+          "text": "West",
+          "misconception": "wrong_dir",
+          "feedback": "Facing South, turning 180 degrees = North, not West."
+        }
+      ],
+      "hints": [
+        "Facing South, turning 180 degrees = North"
+      ],
+      "explanation": "Facing South, turning 180 degrees = North."
+    }
+  ]
+}

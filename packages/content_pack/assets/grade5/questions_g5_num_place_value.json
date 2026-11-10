@@ -1,0 +1,275 @@
+{
+  "skillId": "g5.num.place-value",
+  "title": "Place value and total value (up to 1 000 000)",
+  "questions": [
+    {
+      "id": "g5_g5_num_place-value_r1",
+      "skillId": "g5.num.place-value",
+      "bloom": "remember",
+      "type": "multipleChoice",
+      "prompt": "What is the place value of the digit 5 in 357 216?",
+      "choices": [
+        {
+          "text": "Tens",
+          "correct": false,
+          "misconception": "off_by_one_place",
+          "feedback": "The 5 is in the ten-thousands, not tens, place."
+        },
+        {
+          "text": "Ten-thousands",
+          "correct": true
+        },
+        {
+          "text": "Thousands",
+          "misconception": "off_by_one_place",
+          "feedback": "The 5 is two places left of thousands."
+        },
+        {
+          "text": "Hundreds of thousands",
+          "misconception": "off_by_one_place",
+          "feedback": "The 5 is one place right of hundred-thousands."
+        }
+      ],
+      "hints": [
+        "Write the number in a place value table.",
+        "H-Th | T-Th | Th | H | T | O",
+        "3 | 5 | 7 | 2 | 1 | 6"
+      ],
+      "explanation": "357 216 = 300 000 + 50 000 + 7 000 + 200 + 10 + 6. The 5 has a value of 50 000, so it is in the ten-thousands place."
+    },
+    {
+      "id": "g5_g5_num_place-value_r2",
+      "skillId": "g5.num.place-value",
+      "bloom": "remember",
+      "type": "multipleChoice",
+      "prompt": "What is the value of the digit 8 in 582 043?",
+      "choices": [
+        {
+          "text": "800",
+          "misconception": "off_by_one_place",
+          "feedback": "The 8 is in the ten-thousands place, not hundreds."
+        },
+        {
+          "text": "8 000",
+          "misconception": "off_by_one_place",
+          "feedback": "The 8 is in the ten-thousands place, not thousands."
+        },
+        {
+          "text": "80 000",
+          "correct": true
+        },
+        {
+          "text": "8 000 000",
+          "misconception": "wrong_place",
+          "feedback": "582 043 has 6 digits. The 8 is in the ten-thousands place."
+        }
+      ],
+      "hints": [
+        "Place value table: H-Th | T-Th | Th | H | T | O",
+        "5 | 8 | 2 | 0 | 4 | 3"
+      ],
+      "explanation": "582 043 = 500 000 + 80 000 + 2 000 + 0 + 40 + 3. The 8 has a value of 80 000."
+    },
+    {
+      "id": "g5_g5_num_place-value_u1",
+      "skillId": "g5.num.place-value",
+      "bloom": "understand",
+      "type": "multipleChoice",
+      "prompt": "Write 724 005 in expanded form.",
+      "choices": [
+        {
+          "text": "700 000 + 20 000 + 4 000 + 5",
+          "correct": true
+        },
+        {
+          "text": "700 000 + 20 000 + 400 + 5",
+          "misconception": "missing_thousands",
+          "feedback": "724 005 has 4 in the thousands place."
+        },
+        {
+          "text": "700 000 + 20 000 + 400 000 + 5",
+          "misconception": "wrong_place",
+          "feedback": "The 4 is in the thousands place, not hundred-thousands."
+        },
+        {
+          "text": "700 000 + 2 000 + 4 000 + 5",
+          "misconception": "wrong_place",
+          "feedback": "The 2 is in the ten-thousands place."
+        }
+      ],
+      "hints": [
+        "724 005 = 700 000 + 20 000 + 4 000 + 0 + 0 + 5"
+      ],
+      "explanation": "724 005 = 700 000 + 20 000 + 4 000 + 5."
+    },
+    {
+      "id": "g5_g5_num_place-value_u2",
+      "skillId": "g5.num.place-value",
+      "bloom": "understand",
+      "type": "multipleChoice",
+      "prompt": "Which digit is in the ten-thousands place in 408 319?",
+      "choices": [
+        {
+          "text": "0",
+          "correct": true
+        },
+        {
+          "text": "3",
+          "misconception": "off_by_one_place",
+          "feedback": "The 3 is in the hundreds place. The 0 is in the ten-thousands place."
+        },
+        {
+          "text": "8",
+          "misconception": "off_by_one_place",
+          "feedback": "The 8 is in the thousands place."
+        },
+        {
+          "text": "4",
+          "misconception": "off_by_one_place",
+          "feedback": "The 4 is in the hundred-thousands place."
+        }
+      ],
+      "hints": [
+        "H-Th | T-Th | Th | H | T | O",
+        "4 | 0 | 8 | 3 | 1 | 9"
+      ],
+      "explanation": "408 319 = 400 000 + 0 + 8 000 + 300 + 10 + 9. The ten-thousands digit is 0."
+    },
+    {
+      "id": "g5_g5_num_place-value_a1",
+      "skillId": "g5.num.place-value",
+      "bloom": "apply",
+      "type": "multipleChoice",
+      "prompt": "What is the value of the digit 3 in 630 042?",
+      "choices": [
+        {
+          "text": "3 000",
+          "correct": true
+        },
+        {
+          "text": "30 000",
+          "misconception": "off_by_one_place",
+          "feedback": "The 3 is in the thousands, not ten-thousands."
+        },
+        {
+          "text": "300",
+          "misconception": "off_by_one_place",
+          "feedback": "The 3 is in the thousands place, not hundreds."
+        },
+        {
+          "text": "30 000",
+          "misconception": "off_by_one_place",
+          "feedback": "The 3 is in the thousands, not ten-thousands."
+        }
+      ],
+      "hints": [
+        "H-Th | T-Th | Th | H | T | O",
+        "6 | 3 | 0 | 0 | 4 | 2"
+      ],
+      "explanation": "630 042 = 600 000 + 30 000 + 0 + 0 + 40 + 2. The 3 is in the ten-thousands place, so its value is 30 000."
+    },
+    {
+      "id": "g5_g5_num_place-value_a2",
+      "skillId": "g5.num.place-value",
+      "bloom": "apply",
+      "type": "multipleChoice",
+      "prompt": "Write the number 80 000 + 4 000 + 500 + 20 + 7 in standard form.",
+      "choices": [
+        {
+          "text": "84 527",
+          "correct": true
+        },
+        {
+          "text": "80 452",
+          "misconception": "wrong_place",
+          "feedback": "The 4 is in the thousands, not hundreds."
+        },
+        {
+          "text": "84 027",
+          "misconception": "wrong_place",
+          "feedback": "Missing the 20 (tens) and 7 (ones)."
+        },
+        {
+          "text": "84 507",
+          "misconception": "wrong_place",
+          "feedback": "Missing the 20 (tens)."
+        }
+      ],
+      "hints": [
+        "Add: 80 000 + 4 000 = 84 000",
+        "84 000 + 500 = 84 500",
+        "84 500 + 20 = 84 520",
+        "84 520 + 7 = 84 527"
+      ],
+      "explanation": "80 000 + 4 000 = 84 000; + 500 = 84 500; + 20 = 84 520; + 7 = 84 527."
+    },
+    {
+      "id": "g5_g5_num_place-value_an1",
+      "skillId": "g5.num.place-value",
+      "bloom": "analyze",
+      "type": "multipleChoice",
+      "prompt": "A number has 7 in the thousands place. Which of these could be the number?",
+      "choices": [
+        {
+          "text": "67 321",
+          "correct": true
+        },
+        {
+          "text": "76 321",
+          "misconception": "wrong_place",
+          "feedback": "In 76 321 the 7 is in the ten-thousands place."
+        },
+        {
+          "text": "63 721",
+          "misconception": "wrong_place",
+          "feedback": "In 63 721 the 7 is in the hundreds place."
+        },
+        {
+          "text": "73 216",
+          "misconception": "wrong_place",
+          "feedback": "In 73 216 the 7 is in the ten-thousands place."
+        }
+      ],
+      "hints": [
+        "Thousands place is the 4th digit from the right.",
+        "For 7 in thousands: ___ 7 ___ ___ ___",
+        "67 321 has 7 in the thousands place."
+      ],
+      "explanation": "In 67 321, the 7 is the 4th digit from the right, so it is in the thousands place."
+    },
+    {
+      "id": "g5_g5_num_place-value_an2",
+      "skillId": "g5.num.place-value",
+      "bloom": "analyze",
+      "type": "multipleChoice",
+      "prompt": "In the number 503 412, what is the relationship between the digit 5 and the digit 3?",
+      "choices": [
+        {
+          "text": "The 5 is about 167 times greater than the 3",
+          "correct": true
+        },
+        {
+          "text": "The 5 is 10 times greater than the 3",
+          "misconception": "wrong_multiple",
+          "feedback": "The 5 (hundred-thousands) and 3 (thousands) have a ratio of about 167:1"
+        },
+        {
+          "text": "The 3 is about 167 times greater than the 5",
+          "misconception": "wrong_order",
+          "feedback": "The 5 is in the hundred-thousands place, 3 in thousands. 5 is larger."
+        },
+        {
+          "text": "The 5 and 3 have the same place value",
+          "misconception": "same_value",
+          "feedback": "5 is hundred-thousands, 3 is thousands. Different place values."
+        }
+      ],
+      "hints": [
+        "503 412: digit 5 is in H-Th (hundred-thousands) place, digit 3 is in Th (thousands) place",
+        "Value of 5 = 500 000, value of 3 = 3 000",
+        "500 000 / 3 000 = 166.67, so 5 is about 167 times greater"
+      ],
+      "explanation": "In 503 412, the 5 is in the hundred-thousands place (500 000) and the 3 is in the thousands place (3 000). 500 000 / 3 000 = 166.67, so the 5 is about 167 times greater than the 3."
+    }
+  ]
+}

@@ -1,0 +1,281 @@
+{
+  "skillId": "g5.num.multiplication",
+  "title": "Multiplication (2-digit by 2-digit, 3-digit by 1-digit)",
+  "questions": [
+    {
+      "id": "g5_g5_num_multiplication_r1",
+      "skillId": "g5.num.multiplication",
+      "bloom": "remember",
+      "type": "multipleChoice",
+      "prompt": "What is 24 x 13?",
+      "choices": [
+        {
+          "text": "282",
+          "correct": false,
+          "misconception": "partial_sum",
+          "feedback": "24 x 13 = 24 x 10 + 24 x 3 = 240 + 72 = 312, not 282."
+        },
+        {
+          "text": "312",
+          "correct": true
+        },
+        {
+          "text": "312",
+          "misconception": "wrong_product",
+          "feedback": "24 x 13 = 24 x 10 + 24 x 3 = 240 + 72 = 312."
+        },
+        {
+          "text": "276",
+          "misconception": "wrong_partial",
+          "feedback": "276 = 24 x 11.5, not a real computation. Check your partial products."
+        }
+      ],
+      "hints": [
+        "Break 13 into 10 + 3.",
+        "24 x 10 = 240",
+        "24 x 3 = 72",
+        "240 + 72 = 312"
+      ],
+      "explanation": "24 x 13 = 24 x 10 + 24 x 3 = 240 + 72 = 312."
+    },
+    {
+      "id": "g5_g5_num_multiplication_r2",
+      "skillId": "g5.num.multiplication",
+      "bloom": "remember",
+      "type": "multipleChoice",
+      "prompt": "What is 125 x 4?",
+      "choices": [
+        {
+          "text": "500",
+          "correct": true
+        },
+        {
+          "text": "400",
+          "misconception": "forgets_one",
+          "feedback": "125 x 4 = 500, not 400. 125 x 4 = (100 + 25) x 4 = 400 + 100 = 500."
+        },
+        {
+          "text": "425",
+          "misconception": "adds_wrong",
+          "feedback": "125 x 4 = 500. 425 would be 125 + 300, not 125 x 4."
+        },
+        {
+          "text": "5000",
+          "misconception": "wrong_zeros",
+          "feedback": "125 x 4 = 500, not 5000."
+        }
+      ],
+      "hints": [
+        "125 x 4 = (100 + 25) x 4",
+        "100 x 4 = 400",
+        "25 x 4 = 100",
+        "400 + 100 = 500"
+      ],
+      "explanation": "125 x 4 = 500."
+    },
+    {
+      "id": "g5_g5_num_multiplication_u1",
+      "skillId": "g5.num.multiplication",
+      "bloom": "understand",
+      "type": "multipleChoice",
+      "prompt": "Which expression is equivalent to 23 x 14?",
+      "choices": [
+        {
+          "text": "23 x 10 + 23 x 4",
+          "correct": true
+        },
+        {
+          "text": "23 x 10 + 4",
+          "misconception": "misses_multiplication",
+          "feedback": "23 x 14 = 23 x (10 + 4) = 23 x 10 + 23 x 4, not 23 x 10 + 4."
+        },
+        {
+          "text": "23 + 14 x 10",
+          "misconception": "wrong_order",
+          "feedback": "The distributive property requires multiplying 23 by each part: 23 x 10 + 23 x 4."
+        },
+        {
+          "text": "23 x 4 + 14",
+          "misconception": "swap_numbers",
+          "feedback": "23 x 14 = 23 x (10 + 4). Swapping gives 23 x 4 + 14, which is not equivalent."
+        }
+      ],
+      "hints": [
+        "14 = 10 + 4",
+        "23 x 14 = 23 x (10 + 4)",
+        "Use the distributive property"
+      ],
+      "explanation": "23 x 14 = 23 x (10 + 4) = 23 x 10 + 23 x 4 = 230 + 92 = 322."
+    },
+    {
+      "id": "g5_g5_num_multiplication_u2",
+      "skillId": "g5.num.multiplication",
+      "bloom": "understand",
+      "type": "multipleChoice",
+      "prompt": "What is 34 x 22 in expanded form?",
+      "choices": [
+        {
+          "text": "34 x 20 + 34 x 2",
+          "correct": true
+        },
+        {
+          "text": "34 x 2 + 34 x 2",
+          "misconception": "misses_tens",
+          "feedback": "34 x 22 = 34 x (20 + 2). 20 is a place value, not 2."
+        },
+        {
+          "text": "34 x 20 + 2",
+          "misconception": "zeros_wrong",
+          "feedback": "34 x 22 = 34 x (20 + 2), not 34 x 20 + 2."
+        },
+        {
+          "text": "30 + 4 x 20 + 2",
+          "misconception": "distributive_partial",
+          "feedback": "The distributive property applies to the whole number, not individual digits without multiplication."
+        }
+      ],
+      "hints": [
+        "22 = 20 + 2",
+        "34 x 22 = 34 x (20 + 2)",
+        "= 34 x 20 + 34 x 2"
+      ],
+      "explanation": "34 x 22 = 34 x (20 + 2) = 34 x 20 + 34 x 2 = 680 + 68 = 748."
+    },
+    {
+      "id": "g5_g5_num_multiplication_a1",
+      "skillId": "g5.num.multiplication",
+      "bloom": "apply",
+      "type": "multipleChoice",
+      "prompt": "A box holds 24 packets of sweets. Each packet has 13 sweets. How many sweets are in the box?",
+      "choices": [
+        {
+          "text": "312 sweets",
+          "correct": true
+        },
+        {
+          "text": "276 sweets",
+          "misconception": "wrong_partial",
+          "feedback": "24 x 13 = 312, not 276. Check your partial products."
+        },
+        {
+          "text": "260 sweets",
+          "misconception": "forgets_ones",
+          "feedback": "24 x 13 = 24 x 10 + 24 x 3 = 240 + 72 = 312, not 260."
+        },
+        {
+          "text": "300 sweets",
+          "misconception": "round_up",
+          "feedback": "24 x 13 = 312, not 300. The exact answer is 312."
+        }
+      ],
+      "hints": [
+        "Each box = 24 packets x 13 sweets",
+        "24 x 13 = 24 x 10 + 24 x 3",
+        "240 + 72 = 312"
+      ],
+      "explanation": "24 x 13 = 24 x 10 + 24 x 3 = 240 + 72 = 312. There are 312 sweets in the box."
+    },
+    {
+      "id": "g5_g5_num_multiplication_a2",
+      "skillId": "g5.num.multiplication",
+      "bloom": "apply",
+      "type": "multipleChoice",
+      "prompt": "A classroom has 24 rows of desks with 15 desks in each row. How many desks are there?",
+      "choices": [
+        {
+          "text": "360 desks",
+          "correct": true
+        },
+        {
+          "text": "270 desks",
+          "misconception": "wrong_product",
+          "feedback": "24 x 15 = 360, not 270. 24 x 15 = 24 x 10 + 24 x 5 = 240 + 120 = 360."
+        },
+        {
+          "text": "240 desks",
+          "misconception": "forgets_part",
+          "feedback": "24 x 15 = 240 + 120 = 360, not 240. The 120 missing desks are the second row of 15."
+        },
+        {
+          "text": "300 desks",
+          "misconception": "round_up",
+          "feedback": "24 x 15 = 360, not 300."
+        }
+      ],
+      "hints": [
+        "24 rows x 15 desks per row",
+        "24 x 15 = 24 x 10 + 24 x 5",
+        "240 + 120 = 360"
+      ],
+      "explanation": "24 x 15 = 24 x 10 + 24 x 5 = 240 + 120 = 360. There are 360 desks."
+    },
+    {
+      "id": "g5_g5_num_multiplication_an1",
+      "skillId": "g5.num.multiplication",
+      "bloom": "analyze",
+      "type": "multipleChoice",
+      "prompt": "A rectangular garden has 18 rows of plants with 14 plants in each row. If the gardener adds 1 more row with 14 plants, how many plants will there be?",
+      "choices": [
+        {
+          "text": "350 plants",
+          "correct": true
+        },
+        {
+          "text": "300 plants",
+          "misconception": "wrong_partial",
+          "feedback": "18 x 14 = 252, then adding 14 more = 266, not 300. 18 x 14 = 18 x 10 + 18 x 4 = 180 + 72 = 252."
+        },
+        {
+          "text": "266 plants",
+          "misconception": "wrong_place",
+          "feedback": "18 x 14 = 252, plus 14 = 266. The total is 266 plants."
+        },
+        {
+          "text": "252 plants",
+          "misconception": "adds_row",
+          "feedback": "The question says 1 more row is added, so add 14 to 252: 252 + 14 = 266."
+        }
+      ],
+      "hints": [
+        "First find 18 x 14",
+        "18 x 14 = 18 x 10 + 18 x 4 = 180 + 72 = 252",
+        "Then add 1 more row: 252 + 14 = 266"
+      ],
+      "explanation": "18 x 14 = 180 + 72 = 252. Adding 1 more row of 14 plants: 252 + 14 = 266 plants."
+    },
+    {
+      "id": "g5_g5_num_multiplication_an2",
+      "skillId": "g5.num.multiplication",
+      "bloom": "analyze",
+      "type": "multipleChoice",
+      "prompt": "A school buys 24 packs of exercise books with 13 books in each pack. They already had 50 books. How many books do they have in total?",
+      "choices": [
+        {
+          "text": "362 books",
+          "correct": true
+        },
+        {
+          "text": "312 books",
+          "misconception": "misses_existing",
+          "feedback": "24 x 13 = 312 books, plus 50 already had = 362."
+        },
+        {
+          "text": "300 books",
+          "misconception": "round_down",
+          "feedback": "312 + 50 = 362, not 300."
+        },
+        {
+          "text": "212 books",
+          "misconception": "subtracts",
+          "feedback": "312 + 50 = 362, not 212."
+        }
+      ],
+      "hints": [
+        "24 packs x 13 books per pack = 312",
+        "Then add 50 existing books",
+        "312 + 50 = 362"
+      ],
+      "explanation": "24 x 13 = 312 books new. Plus 50 already had = 362 books total."
+    }
+  ]
+}
