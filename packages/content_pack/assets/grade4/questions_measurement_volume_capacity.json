@@ -1,0 +1,278 @@
+{
+  "questions": [
+    {
+      "id": "g4m4.vol-r1",
+      "skillId": "g4.num.measurement.volume-capacity",
+      "bloom": "remember",
+      "type": "multipleChoice",
+      "prompt": "What unit is used to measure capacity (volume of a liquid)?",
+      "choices": [
+        {
+          "text": "litres (L)",
+          "correct": true
+        },
+        {
+          "text": "centimetres (cm)",
+          "misconception": "length_unit",
+          "feedback": "cm is a unit of length, not capacity."
+        },
+        {
+          "text": "grams (g)",
+          "misconception": "mass_unit",
+          "feedback": "g is a unit of mass, not capacity."
+        },
+        {
+          "text": "square metres (m\u00b2)",
+          "misconception": "area_unit",
+          "feedback": "m\u00b2 is a unit of area, not capacity."
+        }
+      ],
+      "hints": [
+        "Capacity measures how much a container can hold.",
+        "The standard units are litres (L) and millilitres (mL).",
+        "Think of a water bottle: it holds about 1 litre."
+      ],
+      "explanation": "Capacity is measured in litres (L) and millilitres (mL)."
+    },
+    {
+      "id": "g4m4.vol-r2",
+      "skillId": "g4.num.measurement.volume-capacity",
+      "bloom": "remember",
+      "type": "multipleChoice",
+      "prompt": "How many millilitres are in 1 litre?",
+      "choices": [
+        {
+          "text": "10",
+          "correct": false,
+          "misconception": "tens",
+          "feedback": "10 mL = 0.01 L. There are 1000 mL in 1 L."
+        },
+        {
+          "text": "100",
+          "correct": false,
+          "misconception": "hundredths",
+          "feedback": "100 mL = 0.1 L. There are 1000 mL in 1 L."
+        },
+        {
+          "text": "1000",
+          "correct": true
+        },
+        {
+          "text": "10 000",
+          "misconception": "added_zeros",
+          "feedback": "10 000 mL = 10 L. There are 1000 mL in 1 L."
+        }
+      ],
+      "hints": [
+        "The prefix 'milli-' means one thousandth (1/1000).",
+        "1 L = 1000 mL.",
+        "Think of a large bottle of water: it holds 1 L or 1000 mL."
+      ],
+      "explanation": "1 litre = 1000 millilitres, because 'milli-' means one thousandth."
+    },
+    {
+      "id": "g4m4.vol-u1",
+      "skillId": "g4.num.measurement.volume-capacity",
+      "bloom": "understand",
+      "type": "multipleChoice",
+      "prompt": "What is the relationship between litres and millilitres?",
+      "choices": [
+        {
+          "text": "1 L = 1000 mL",
+          "correct": true
+        },
+        {
+          "text": "1 L = 100 mL",
+          "misconception": "hundredths",
+          "feedback": "100 mL = 0.1 L. There are 1000 mL in 1 L."
+        },
+        {
+          "text": "1 L = 10 mL",
+          "misconception": "tens",
+          "feedback": "10 mL = 0.01 L. There are 1000 mL in 1 L."
+        },
+        {
+          "text": "1 L = 0.001 mL",
+          "misconception": "inverted",
+          "feedback": "1 L = 1000 mL, not 0.001 mL."
+        }
+      ],
+      "hints": [
+        "The prefix 'milli-' means one thousandth.",
+        "1 L = 1000 \u00d7 1 mL.",
+        "Think: how many small containers of 1 mL fill a 1 L bottle?"
+      ],
+      "explanation": "1 litre = 1000 millilitres. Milli- means one thousandth, so 1000 millilitres make 1 litre."
+    },
+    {
+      "id": "g4m4.vol-u2",
+      "skillId": "g4.num.measurement.volume-capacity",
+      "bloom": "understand",
+      "type": "multipleChoice",
+      "prompt": "Why is capacity measured in cubic units (e.g., cm\u00b3) as well as litres?",
+      "choices": [
+        {
+          "text": "1 cm\u00b3 is the same as 1 mL, so they are interchangeable",
+          "correct": true
+        },
+        {
+          "text": "Cubic units are only used for solids, never liquids",
+          "misconception": "only_solids",
+          "feedback": "Capacity can be measured in either cm\u00b3 or mL (1 cm\u00b3 = 1 mL), so both are used."
+        },
+        {
+          "text": "Cubic units are very rare and rarely used",
+          "misconception": "rare_unit",
+          "feedback": "cm\u00b3 is commonly used for capacity; 1 cm\u00b3 = 1 mL."
+        },
+        {
+          "text": "Only cubic units have been approved for Grade 4",
+          "misconception": "grade_rule",
+          "feedback": "There is no such rule. Both cm\u00b3 and mL are used for capacity."
+        }
+      ],
+      "hints": [
+        "1 cm of water in a cube that measures 1 cm \u00d7 1 cm \u00d7 1 cm holds 1 mL.",
+        "So 1 cm\u00b3 = 1 mL.",
+        "This is why we can use both cm\u00b3 and mL for capacity."
+      ],
+      "explanation": "1 cm\u00b3 = 1 mL, so cubic centimetres and millilitres are interchangeable. Both measure capacity."
+    },
+    {
+      "id": "g4m4.vol-a1",
+      "skillId": "g4.num.measurement.volume-capacity",
+      "bloom": "apply",
+      "type": "multipleChoice",
+      "prompt": "How many millilitres are in 3 litres?",
+      "choices": [
+        {
+          "text": "3000 mL",
+          "correct": true
+        },
+        {
+          "text": "300 mL",
+          "misconception": "forgot_zeros",
+          "feedback": "3 L = 3000 mL. 300 mL would be 0.3 L."
+        },
+        {
+          "text": "30 mL",
+          "misconception": "forgot_zeros",
+          "feedback": "3 L = 3000 mL. 30 mL would be 0.03 L."
+        },
+        {
+          "text": "30 000 mL",
+          "misconception": "multiplied_by_10000",
+          "feedback": "3 L = 3000 mL, not 30 000 mL."
+        }
+      ],
+      "hints": [
+        "1 L = 1000 mL.",
+        "3 L = 3 \u00d7 1000 mL.",
+        "3 \u00d7 1000 = 3000."
+      ],
+      "explanation": "3 L \u00d7 1000 = 3000 mL."
+    },
+    {
+      "id": "g4m4.vol-a2",
+      "skillId": "g4.num.measurement.volume-capacity",
+      "bloom": "apply",
+      "type": "multipleChoice",
+      "prompt": "A jug contains 250 mL of juice. How many millilitres are in 4 such jugs?",
+      "choices": [
+        {
+          "text": "1000 mL",
+          "correct": true
+        },
+        {
+          "text": "254 mL",
+          "misconception": "added",
+          "feedback": "250 \u00d7 4 = 1000, not 254."
+        },
+        {
+          "text": "2504 mL",
+          "misconception": "concatenated",
+          "feedback": "250 \u00d7 4 = 1000, not 2504."
+        },
+        {
+          "text": "5000 mL",
+          "misconception": "added_extra",
+          "feedback": "4 \u00d7 250 = 1000, not 5000."
+        }
+      ],
+      "hints": [
+        "Each jug holds 250 mL.",
+        "4 jugs \u00d7 250 mL.",
+        "4 \u00d7 250 = 1000."
+      ],
+      "explanation": "4 \u00d7 250 mL = 1000 mL."
+    },
+    {
+      "id": "g4m4.vol-an1",
+      "skillId": "g4.num.measurement.volume-capacity",
+      "bloom": "analyze",
+      "type": "multipleChoice",
+      "prompt": "Which holds more: a 2 L bottle or ten 250 mL cups?",
+      "choices": [
+        {
+          "text": "They hold the same (both 2000 mL)",
+          "correct": true
+        },
+        {
+          "text": "The 2 L bottle (2000 mL)",
+          "misconception": "wrong_capacity",
+          "feedback": "10 \u00d7 250 mL = 2500 mL, which is more than 2 L."
+        },
+        {
+          "text": "Ten 250 mL cups (2500 mL)",
+          "misconception": "wrong_capacity",
+          "feedback": "10 \u00d7 250 mL = 2500 mL. This is more than 2 L (2000 mL)."
+        },
+        {
+          "text": "Cannot be determined",
+          "misconception": "insufficient_info",
+          "feedback": "We can compare: 2 L = 2000 mL, and 10 \u00d7 250 mL = 2500 mL."
+        }
+      ],
+      "hints": [
+        "Convert to the same unit: 2 L = 2000 mL.",
+        "Ten 250 mL cups = 10 \u00d7 250 mL.",
+        "10 \u00d7 250 = 2500."
+      ],
+      "explanation": "2 L = 2000 mL. Ten 250 mL cups = 10 \u00d7 250 = 2500 mL. The cups hold more."
+    },
+    {
+      "id": "g4m4.vol-an2",
+      "skillId": "g4.num.measurement.volume-capacity",
+      "bloom": "analyze",
+      "type": "multipleChoice",
+      "prompt": "A container holds 1500 cm\u00b3 of water. What is its capacity in litres?",
+      "choices": [
+        {
+          "text": "1.5 L",
+          "correct": true
+        },
+        {
+          "text": "15 L",
+          "misconception": "decimal_point_wrong",
+          "feedback": "1500 cm\u00b3 = 1.5 L. 15 L would be 15 000 cm\u00b3."
+        },
+        {
+          "text": "0.15 L",
+          "misconception": "decimal_point_wrong",
+          "feedback": "1500 cm\u00b3 = 1.5 L. 0.15 L would be 150 cm\u00b3."
+        },
+        {
+          "text": "1500 L",
+          "misconception": "no_conversion",
+          "feedback": "1500 cm\u00b3 = 1.5 L, not 1500 L."
+        }
+      ],
+      "hints": [
+        "1 cm\u00b3 = 1 mL.",
+        "So 1500 cm\u00b3 = 1500 mL.",
+        "Since 1000 mL = 1 L, 1500 mL = 1.5 L."
+      ],
+      "explanation": "1500 cm\u00b3 = 1500 mL = 1.5 L."
+    }
+  ]
+}

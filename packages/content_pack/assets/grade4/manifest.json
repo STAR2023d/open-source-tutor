@@ -14,6 +14,7 @@
     "questions_frac_convert.json",
     "questions_dec_tenths_hundredths.json",
     "questions_measurement_length.json",
-    "questions_measurement_area.json"
+    "questions_measurement_area.json",
+    "questions_measurement_volume_capacity.json"
   ]
 }

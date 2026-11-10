@@ -210,6 +210,18 @@
       ],
       "status": "live",
       "kicdRef": "Gr4 Math 2.2"
+    },
+    {
+      "id": "g4.num.measurement.volume-capacity",
+      "title": "Volume / capacity (l, ml, cm\u00b3)",
+      "grade": 4,
+      "strand": "Numbers",
+      "subStrand": "Measurement",
+      "prerequisites": [
+        "g4.num.whole.place-value"
+      ],
+      "status": "live",
+      "kicdRef": "Gr4 Math 2.3"
     }
   ]
 }
