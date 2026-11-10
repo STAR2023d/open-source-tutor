@@ -1,0 +1,279 @@
+{
+  "questions": [
+    {
+      "id": "g4m4.time-r1",
+      "skillId": "g4.num.measurement.time",
+      "bloom": "remember",
+      "type": "multipleChoice",
+      "prompt": "How many minutes are in 1 hour?",
+      "choices": [
+        {
+          "text": "60 minutes",
+          "correct": true
+        },
+        {
+          "text": "100 minutes",
+          "misconception": "decimal_base",
+          "feedback": "There are 60 minutes in 1 hour, not 100."
+        },
+        {
+          "text": "1000 minutes",
+          "misconception": "milli_prefix",
+          "feedback": "The 'milli-' prefix means 1/1000; it does not apply here."
+        },
+        {
+          "text": "120 minutes",
+          "misconception": "doubled",
+          "feedback": "120 minutes = 2 hours. There are 60 minutes in 1 hour."
+        }
+      ],
+      "hints": [
+        "An hour is divided into 60 equal parts.",
+        "A clock face is divided into 12 numbers, each representing 5 minutes.",
+        "12 \u00d7 5 = 60."
+      ],
+      "explanation": "There are 60 minutes in 1 hour."
+    },
+    {
+      "id": "g4m4.time-r2",
+      "skillId": "g4.num.measurement.time",
+      "bloom": "remember",
+      "type": "multipleChoice",
+      "prompt": "Which clock shows 3:15?",
+      "choices": [
+        {
+          "text": "Hour hand at 3, minute hand at 3 (pointing to 15 minutes)",
+          "correct": true
+        },
+        {
+          "text": "Hour hand at 3, minute hand at 12",
+          "misconception": "o_clock",
+          "feedback": "Hour hand at 3, minute hand at 12 means 3:00, not 3:15."
+        },
+        {
+          "text": "Hour hand at 12, minute hand at 3",
+          "misconception": "swapped_hands",
+          "feedback": "Hour hand at 12, minute hand at 3 means 12:15, not 3:15."
+        },
+        {
+          "text": "Hour hand between 3 and 4, minute hand at 3",
+          "misconception": "after_3",
+          "feedback": "Hour hand at 3 with minute hand at 3 (15 minutes) means exactly 3:15."
+        }
+      ],
+      "hints": [
+        "The minute hand points to the number of 5-minute intervals.",
+        "3 \u00d7 5 = 15, so the minute hand points to 3.",
+        "The hour hand points to the hour."
+      ],
+      "explanation": "3:15 means the hour hand is at 3 and the minute hand points to 3 (which is 15 minutes)."
+    },
+    {
+      "id": "g4m4.time-u1",
+      "skillId": "g4.num.measurement.time",
+      "bloom": "understand",
+      "type": "multipleChoice",
+      "prompt": "Why does a clock show 60 minutes per hour rather than 100 minutes per hour?",
+      "choices": [
+        {
+          "text": "The minute hand moves in 60 equal parts around the clock face",
+          "correct": true
+        },
+        {
+          "text": "60 is a larger number than 100, making it easier",
+          "misconception": "larger_number",
+          "feedback": "60 is smaller than 100. The division is a historical convention, not related to size."
+        },
+        {
+          "text": "Minutes are divided into 100 parts because the metric system uses 100",
+          "misconception": "metric_base",
+          "feedback": "The metric system uses 100 only for base units. Time is not metric-based."
+        },
+        {
+          "text": "The clock is divided into 12 hours, each with 60 minutes",
+          "misconception": "hours_are_100",
+          "feedback": "60 minutes per hour is the standard; the total is 24 \u00d7 60 = 1440 minutes per day."
+        }
+      ],
+      "hints": [
+        "A clock face is a circle divided into 12 equal sections.",
+        "Each section is further divided into 5-minute intervals.",
+        "12 \u00d7 5 = 60 minutes in one full circle.",
+        "This is the standard way clocks are designed."
+      ],
+      "explanation": "Clock faces are divided into 12 sections, each representing 5 minutes (12 \u00d7 5 = 60)."
+    },
+    {
+      "id": "g4m4.time-u2",
+      "skillId": "g4.num.measurement.time",
+      "bloom": "understand",
+      "type": "multipleChoice",
+      "prompt": "A movie starts at 14:30. What time is this in 12-hour clock format?",
+      "choices": [
+        {
+          "text": "2:30 p.m.",
+          "correct": true
+        },
+        {
+          "text": "2:30 a.m.",
+          "misconception": "am_pm_wrong",
+          "feedback": "14:30 is 2:30 in the afternoon (p.m.), not the morning."
+        },
+        {
+          "text": "14:30 p.m.",
+          "misconception": "12_hour_format",
+          "feedback": "14:30 is already in 24-hour format. In 12-hour format, it is 2:30 p.m."
+        },
+        {
+          "text": "1:30 p.m.",
+          "misconception": "subtracted_1",
+          "feedback": "14:30 \u2192 14 \u2212 12 = 2, so it is 2:30 p.m., not 1:30 p.m."
+        }
+      ],
+      "hints": [
+        "To convert from 24-hour to 12-hour: subtract 12 if the hour is 13 or more.",
+        "14 \u2212 12 = 2.",
+        "Since 14:30 is in the afternoon, use p.m."
+      ],
+      "explanation": "14:30 \u2192 14 \u2212 12 = 2, so it is 2:30 p.m."
+    },
+    {
+      "id": "g4m4.time-a1",
+      "skillId": "g4.num.measurement.time",
+      "bloom": "apply",
+      "type": "multipleChoice",
+      "prompt": "A train leaves at 09:45 and arrives at 11:20. How long is the journey?",
+      "choices": [
+        {
+          "text": "1 hour 35 minutes",
+          "correct": true
+        },
+        {
+          "text": "2 hours 25 minutes",
+          "misconception": "added_missed_borrow",
+          "feedback": "From 09:45 to 11:20 is 1 hour 35 minutes. 09:45 \u2192 10:45 = 1 hour, then 10:45 \u2192 11:20 = 35 minutes."
+        },
+        {
+          "text": "1 hour 75 minutes",
+          "misconception": "did_not_borrow",
+          "feedback": "75 minutes is more than 60. Convert: 75 minutes = 1 hour 15 minutes, giving 2 hours 15 minutes total."
+        },
+        {
+          "text": "2 hours 35 minutes",
+          "misconception": "added_full",
+          "feedback": "Adding 09:45 and 11:20 gives 2 hours 35 minutes, but this is wrong because you should find the difference."
+        }
+      ],
+      "hints": [
+        "From 09:45 to 10:45 = 1 hour.",
+        "From 10:45 to 11:20 = 35 minutes.",
+        "Total = 1 hour + 35 minutes = 1 hour 35 minutes."
+      ],
+      "explanation": "09:45 to 10:45 = 1 hour; 10:45 to 11:20 = 35 minutes. Total = 1 hour 35 minutes."
+    },
+    {
+      "id": "g4m4.time-a2",
+      "skillId": "g4.num.measurement.time",
+      "bloom": "apply",
+      "type": "multipleChoice",
+      "prompt": "A bus journey starts at 14:15 and lasts 2 hours 40 minutes. What time does it end?",
+      "choices": [
+        {
+          "text": "16:55",
+          "correct": true
+        },
+        {
+          "text": "17:00",
+          "misconception": "rounded_up",
+          "feedback": "14:15 + 2 hr 40 min = 16:55, not 17:00."
+        },
+        {
+          "text": "16:40",
+          "misconception": "added_less",
+          "feedback": "14:15 + 2 hr 40 min = 16:55, not 16:40."
+        },
+        {
+          "text": "15:55",
+          "misconception": "forgot_2_hours",
+          "feedback": "14:15 + 2 hr 40 min = 16:55, not 15:55."
+        }
+      ],
+      "hints": [
+        "Add the hours: 14:00 + 2 hr = 16:00.",
+        "Add the minutes: 15 min + 40 min = 55 min.",
+        "Total = 16:55."
+      ],
+      "explanation": "14:15 + 2 hr 40 min = 16:55."
+    },
+    {
+      "id": "g4m4.time-an1",
+      "skillId": "g4.num.measurement.time",
+      "bloom": "analyze",
+      "type": "multipleChoice",
+      "prompt": "Which of the following statements is ALWAYS true about time?",
+      "choices": [
+        {
+          "text": "24 hours = 1440 minutes",
+          "correct": true
+        },
+        {
+          "text": "1 hour = 100 minutes",
+          "misconception": "decimal_base",
+          "feedback": "1 hour = 60 minutes, not 100."
+        },
+        {
+          "text": "1 day = 24 \u00d7 60 minutes = 1440 minutes",
+          "misconception": "day_23",
+          "feedback": "1 day = 24 hours = 1440 minutes. The correct total is 1440."
+        },
+        {
+          "text": "1 hour = 60 minutes, so 1 day = 24 \u00d7 60 = 1440 minutes",
+          "misconception": "day_24",
+          "feedback": "1 day = 24 hours = 1440 minutes. The correct total is 1440."
+        }
+      ],
+      "hints": [
+        "There are 24 hours in a day.",
+        "Each hour has 60 minutes.",
+        "Total minutes in a day = 24 \u00d7 60.",
+        "24 \u00d7 60 = 1440."
+      ],
+      "explanation": "1 day = 24 hours \u00d7 60 minutes = 1440 minutes."
+    },
+    {
+      "id": "g4m4.time-an2",
+      "skillId": "g4.num.measurement.time",
+      "bloom": "analyze",
+      "type": "multipleChoice",
+      "prompt": "Which of the following is the best estimate for the time it takes to boil a pot of water?",
+      "choices": [
+        {
+          "text": "10 minutes",
+          "correct": true
+        },
+        {
+          "text": "1 hour",
+          "misconception": "too_long",
+          "feedback": "Boiling a pot of water typically takes about 10 minutes, not 1 hour."
+        },
+        {
+          "text": "10 hours",
+          "misconception": "too_long",
+          "feedback": "Boiling a pot of water typically takes about 10 minutes, not 10 hours."
+        },
+        {
+          "text": "1 second",
+          "misconception": "too_short",
+          "feedback": "Boiling a pot of water takes about 10 minutes, not 1 second."
+        }
+      ],
+      "hints": [
+        "Boiling a pot of water is a quick household task.",
+        "10 minutes is about the time to cook a single egg.",
+        "1 hour or 10 hours would be far too long.",
+        "1 second is far too short."
+      ],
+      "explanation": "10 minutes is the best estimate for boiling a pot of water."
+    }
+  ]
+}

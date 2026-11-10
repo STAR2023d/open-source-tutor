@@ -16,6 +16,7 @@
     "questions_measurement_length.json",
     "questions_measurement_area.json",
     "questions_measurement_volume_capacity.json",
-    "questions_measurement_mass.json"
+    "questions_measurement_mass.json",
+    "questions_measurement_time.json"
   ]
 }

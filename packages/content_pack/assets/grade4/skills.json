@@ -234,6 +234,18 @@
       ],
       "status": "live",
       "kicdRef": "Gr4 Math 2.4"
+    },
+    {
+      "id": "g4.num.measurement.time",
+      "title": "Time (hours, minutes, seconds)",
+      "grade": 4,
+      "strand": "Numbers",
+      "subStrand": "Measurement",
+      "prerequisites": [
+        "g4.num.whole.place-value"
+      ],
+      "status": "live",
+      "kicdRef": "Gr4 Math 2.5"
     }
   ]
 }
