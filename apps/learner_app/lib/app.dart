@@ -108,7 +108,7 @@ class _HomeContent extends StatelessWidget {
                   onPressed: () => Navigator.of(context).push(
                     MaterialPageRoute<void>(
                       builder: (_) => SettingsScreen(
-                        theme: Theme.of(context),
+                        theme: theme,
                         profile: profile,
                       ),
                     ),
