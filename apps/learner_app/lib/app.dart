@@ -3,7 +3,6 @@ import 'package:mastery_core/mastery_core.dart';
 
 import 'data/profile_controller.dart';
 import 'data/storage.dart';
-import 'screens/grade_selector_screen.dart';
 import 'screens/home_screen.dart';
 import 'screens/onboarding_screen.dart';
 import 'theme/app_theme.dart';
@@ -40,13 +39,6 @@ class _HesabuAppState extends State<HesabuApp> {
     return loadContent(grade);
   }
 
-  void _handleGradeChanged(String grade) {
-    // Restart the content future so the app loads the correct grade.
-    WidgetsBinding.instance.addPostFrameCallback((_) {
-      setState(() {
-        _contentFuture = _loadContent(grade);
-      });
-    });
   }
 
   @override
@@ -77,7 +69,6 @@ class _HesabuAppState extends State<HesabuApp> {
                 store: widget.store,
                 profile: widget.profile,
                 theme: widget.theme,
-                onChangeGrade: _handleGradeChanged,
               ),
       ),
     );
@@ -91,14 +82,12 @@ class _HomeContent extends StatelessWidget {
     required this.store,
     required this.profile,
     required this.theme,
-    required this.onChangeGrade,
   });
 
   final Future<ContentBundle> contentFuture;
   final ProgressStore store;
   final ProfileController profile;
   final ThemeController theme;
-  final ValueChanged<String> onChangeGrade;
 
   @override
   Widget build(BuildContext context) {
@@ -115,19 +104,16 @@ class _HomeContent extends StatelessWidget {
               ),
               actions: [
                 IconButton(
-                  tooltip: 'Change grade',
-                  icon: const Icon(Icons.language_outlined),
-                  onPressed: () {
-                    Navigator.of(context).push(
-                      MaterialPageRoute<void>(
-                        builder: (_) => GradeSelectorScreen(
-                          profile: profile,
-                          initialGrade: profile.grade,
-                          onGradeSelected: profile.setGrade,
-                        ),
+                  tooltip: 'Settings',
+                  icon: const Icon(Icons.settings_outlined),
+                  onPressed: () => Navigator.of(context).push(
+                    MaterialPageRoute<void>(
+                      builder: (_) => SettingsScreen(
+                        theme: Theme.of(context),
+                        profile: profile,
                       ),
-                    );
-                  },
+                    ),
+                  ),
                 ),
               ],
             ),

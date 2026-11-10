@@ -81,17 +81,32 @@ class SettingsScreen extends StatelessWidget {
                   )),
                 ),
                 const Divider(height: Space.xl),
-                Text('About', style: text.titleMedium),
+                Text('Grade selector', style: text.titleMedium),
                 const SizedBox(height: Space.s),
-                Text(
-                  'Hesabu is free and open source. Your progress, buddy and '
-                  'nickname stay on this device. No account and no personal data.',
-                  style: text.bodyLarge,
+                ListTile(
+                  contentPadding: EdgeInsets.zero,
+                  leading: const Icon(Icons.filter_tilt_shift),
+                  title: const Text('Choose your grade'),
+                  subtitle: Text('Currently: Grade 4',
+                      style: text.bodyLarge?.copyWith(color: Colors.grey[600])),
+                  trailing: const Icon(Icons.chevron_right),
+                  onTap: () => _showGradeSelector(context),
                 ),
-              ],
+              ]),
             ),
           ),
         ),
+      ),
+    );
+  }
+
+  void _showGradeSelector(BuildContext context) {
+    showModalBottomSheet(
+      context: context,
+      builder: (_) => GradeSelectorScreen(
+        profile: widget.profile,
+        initialGrade: widget.profile.grade,
+        onGradeSelected: widget.profile.setGrade,
       ),
     );
   }
