@@ -6,6 +6,7 @@ import '../mascot/mascot.dart';
 import '../theme/theme_controller.dart';
 import '../theme/tokens.dart';
 import '../widgets/kind_picker.dart';
+import 'grade_selector_screen.dart';
 import 'gallery_screen.dart';
 
 class SettingsScreen extends StatelessWidget {
@@ -87,7 +88,7 @@ class SettingsScreen extends StatelessWidget {
                   contentPadding: EdgeInsets.zero,
                   leading: const Icon(Icons.filter_tilt_shift),
                   title: const Text('Choose your grade'),
-                  subtitle: Text('Currently: Grade 4',
+                  subtitle: Text('Currently: ${_gradeLabel(profile.grade)}',
                       style: text.bodyLarge?.copyWith(color: Colors.grey[600])),
                   trailing: const Icon(Icons.chevron_right),
                   onTap: () => _showGradeSelector(context),
@@ -109,6 +110,15 @@ class SettingsScreen extends StatelessWidget {
         onGradeSelected: widget.profile.setGrade,
       ),
     );
+  }
+
+  String _gradeLabel(String grade) {
+    final mapping = <String, String>{
+      'grade4': 'Grade 4',
+      'grade5': 'Grade 5',
+      'grade6': 'Grade 6',
+    };
+    return mapping[grade] ?? 'Grade 4';
   }
 }
 
