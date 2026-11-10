@@ -1,0 +1,277 @@
+{
+  "questions": [
+    {
+      "id": "g4m4.money-r1",
+      "skillId": "g4.num.measurement.money",
+      "bloom": "remember",
+      "type": "multipleChoice",
+      "prompt": "What is the currency used in Kenya?",
+      "choices": [
+        {
+          "text": "Kenyan Shilling (KES)",
+          "correct": true
+        },
+        {
+          "text": "US Dollar (USD)",
+          "misconception": "usd",
+          "feedback": "US Dollars are used in the USA, not Kenya."
+        },
+        {
+          "text": "Euro (EUR)",
+          "misconception": "eur",
+          "feedback": "Euros are used in many European countries, not Kenya."
+        },
+        {
+          "text": "British Pound (GBP)",
+          "misconception": "gbp",
+          "feedback": "British Pounds are used in the UK, not Kenya."
+        }
+      ],
+      "hints": [
+        "Kenya is a country in East Africa.",
+        "The Kenyan currency is divided into 100 cents.",
+        "The symbol for Kenyan Shilling is KES or Sh."
+      ],
+      "explanation": "The currency of Kenya is the Kenyan Shilling (KES), divided into 100 cents."
+    },
+    {
+      "id": "g4m4.money-r2",
+      "skillId": "g4.num.measurement.money",
+      "bloom": "remember",
+      "type": "multipleChoice",
+      "prompt": "How many cents are in 1 Kenyan Shilling?",
+      "choices": [
+        {
+          "text": "100 cents",
+          "correct": true
+        },
+        {
+          "text": "10 cents",
+          "misconception": "tens",
+          "feedback": "10 cents = 0.1 KES. There are 100 cents in 1 KES."
+        },
+        {
+          "text": "1000 cents",
+          "misconception": "thousands",
+          "feedback": "1000 cents = 10 KES. There are 100 cents in 1 KES."
+        },
+        {
+          "text": "1 cent",
+          "misconception": "no_conversion",
+          "feedback": "1 cent = 0.01 KES. There are 100 cents in 1 KES."
+        }
+      ],
+      "hints": [
+        "The Kenyan Shilling is divided into 100 cents.",
+        "Think of a dollar: 100 cents = 1 dollar.",
+        "The same system is used for the Kenyan Shilling."
+      ],
+      "explanation": "1 Kenyan Shilling = 100 cents."
+    },
+    {
+      "id": "g4m4.money-u1",
+      "skillId": "g4.num.measurement.money",
+      "bloom": "understand",
+      "type": "multipleChoice",
+      "prompt": "Why is the Kenyan Shilling divided into 100 cents?",
+      "choices": [
+        {
+          "text": "It follows the decimal system, making calculations easy",
+          "correct": true
+        },
+        {
+          "text": "The Kenyan government decided to use 100 cents by law",
+          "misconception": "law_required",
+          "feedback": "The division into 100 cents follows the decimal system, a mathematical convention, not a law."
+        },
+        {
+          "text": "There are 100 cents in all currencies worldwide",
+          "misconception": "all_currencies",
+          "feedback": "Not all currencies use 100 subunits. This is the decimal system."
+        },
+        {
+          "text": "Coins are made in batches of 100",
+          "misconception": "batch_system",
+          "feedback": "The division into 100 cents is for the decimal system, not coin production."
+        }
+      ],
+      "hints": [
+        "Kenya uses a decimal currency system.",
+        "The same system is used for dollars (100 cents = 1 dollar).",
+        "Decimals make adding, subtracting, and multiplying money easier."
+      ],
+      "explanation": "The Kenyan Shilling uses a decimal system (100 cents = 1 KES), making calculations straightforward."
+    },
+    {
+      "id": "g4m4.money-u2",
+      "skillId": "g4.num.measurement.money",
+      "bloom": "understand",
+      "type": "multipleChoice",
+      "prompt": "A pencil costs 25 KES. A notebook costs 75 KES. What is the total cost in cents?",
+      "choices": [
+        {
+          "text": "10 000 cents",
+          "correct": true
+        },
+        {
+          "text": "100 cents",
+          "misconception": "forgot_to_convert",
+          "feedback": "25 + 75 = 100 KES = 10 000 cents. Converting first: 2500 + 7500 = 10 000 cents."
+        },
+        {
+          "text": "1000 cents",
+          "misconception": "divided_by_10",
+          "feedback": "100 KES = 10000 cents. Dividing by 10 is not correct; multiply by 100."
+        },
+        {
+          "text": "2575 cents",
+          "misconception": "concatenated",
+          "feedback": "25 + 75 = 100 KES = 10 000 cents. The answer cannot be 2575 cents."
+        }
+      ],
+      "hints": [
+        "Convert each price to cents first: 25 KES = 2500 cents.",
+        "75 KES = 7500 cents.",
+        "Add: 2500 + 7500 = 10 000 cents."
+      ],
+      "explanation": "25 KES = 2500 cents, 75 KES = 7500 cents. Total = 10 000 cents."
+    },
+    {
+      "id": "g4m4.money-a1",
+      "skillId": "g4.num.measurement.money",
+      "bloom": "apply",
+      "type": "multipleChoice",
+      "prompt": "A toy costs 245 KES. A book costs 360 KES. What is the total cost?",
+      "choices": [
+        {
+          "text": "605 KES",
+          "correct": true
+        },
+        {
+          "text": "505 KES",
+          "misconception": "added_wrong",
+          "feedback": "245 + 360 = 605, not 505."
+        },
+        {
+          "text": "615 KES",
+          "misconception": "added_digits",
+          "feedback": "245 + 360 = 605, not 615."
+        },
+        {
+          "text": "600 KES",
+          "misconception": "rounded",
+          "feedback": "245 + 360 = 605, not 600."
+        }
+      ],
+      "hints": [
+        "Add the KES amounts: 245 + 360.",
+        "245 + 360 = 605.",
+        "The answer is in KES."
+      ],
+      "explanation": "245 KES + 360 KES = 605 KES."
+    },
+    {
+      "id": "g4m4.money-a2",
+      "skillId": "g4.num.measurement.money",
+      "bloom": "apply",
+      "type": "multipleChoice",
+      "prompt": "A child buys a pen for 15 KES and pays with a 50 KES note. How much change should they get?",
+      "choices": [
+        {
+          "text": "35 KES",
+          "correct": true
+        },
+        {
+          "text": "65 KES",
+          "misconception": "added",
+          "feedback": "50 \u2212 15 = 35, not 65."
+        },
+        {
+          "text": "25 KES",
+          "misconception": "subtracted_digits",
+          "feedback": "50 \u2212 15 = 35, not 25."
+        },
+        {
+          "text": "15 KES",
+          "misconception": "same_as_price",
+          "feedback": "50 \u2212 15 = 35, not 15."
+        }
+      ],
+      "hints": [
+        "Change = amount paid \u2212 cost.",
+        "50 \u2212 15 = 35.",
+        "The answer is in KES."
+      ],
+      "explanation": "50 KES \u2212 15 KES = 35 KES."
+    },
+    {
+      "id": "g4m4.money-an1",
+      "skillId": "g4.num.measurement.money",
+      "bloom": "analyze",
+      "type": "multipleChoice",
+      "prompt": "A shop sells pencils for 12 KES and erasers for 35 KES. A customer buys 10 pencils and 5 erasers. Which statement is correct?",
+      "choices": [
+        {
+          "text": "Cost = (10 \u00d7 12) + (5 \u00d7 35)",
+          "correct": true
+        },
+        {
+          "text": "Cost = 10 + 12 + 5 + 35",
+          "misconception": "added_all",
+          "feedback": "You must multiply quantities by prices before adding."
+        },
+        {
+          "text": "Cost = (10 \u00d7 35) + (5 \u00d7 12)",
+          "misconception": "swapped_prices",
+          "feedback": "The pencils are 12 KES and erasers are 35 KES, so (10 \u00d7 12) + (5 \u00d7 35) is correct."
+        },
+        {
+          "text": "Cost = 10 \u00d7 5 \u00d7 12 \u00d7 35",
+          "misconception": "multiplied_all",
+          "feedback": "You multiply quantity by price for each item, then add."
+        }
+      ],
+      "hints": [
+        "Calculate the cost of the pencils: 10 \u00d7 12.",
+        "Calculate the cost of the erasers: 5 \u00d7 35.",
+        "Add the two amounts together."
+      ],
+      "explanation": "Cost = (10 \u00d7 12) + (5 \u00d7 35)."
+    },
+    {
+      "id": "g4m4.money-an2",
+      "skillId": "g4.num.measurement.money",
+      "bloom": "analyze",
+      "type": "multipleChoice",
+      "prompt": "Which purchase is the better value: a 500 g bag of sugar for 80 KES, or a 1 kg bag of sugar for 150 KES?",
+      "choices": [
+        {
+          "text": "The 1 kg bag (better value)",
+          "correct": true
+        },
+        {
+          "text": "The 500 g bag (better value)",
+          "misconception": "smaller_quantity",
+          "feedback": "1 kg bag = 150 KES. 500 g bag = 80 KES. The 1 kg bag is cheaper per kg."
+        },
+        {
+          "text": "They cost the same per kg",
+          "misconception": "same_value_per_kg",
+          "feedback": "500 g for 80 KES = 160 KES/kg. 1 kg for 150 KES = 150 KES/kg. The 1 kg bag is cheaper."
+        },
+        {
+          "text": "Cannot be determined",
+          "misconception": "insufficient_info",
+          "feedback": "We can compare: 500 g for 80 KES = 160 KES/kg, and 1 kg for 150 KES = 150 KES/kg."
+        }
+      ],
+      "hints": [
+        "Find the cost per kg for each.",
+        "500 g = 0.5 kg. So 80 KES \u00f7 0.5 kg = 160 KES/kg.",
+        "1 kg for 150 KES = 150 KES/kg.",
+        "The lower price per kg is the better value."
+      ],
+      "explanation": "500 g for 80 KES = 160 KES/kg. 1 kg for 150 KES = 150 KES/kg. The 1 kg bag is the better value."
+    }
+  ]
+}

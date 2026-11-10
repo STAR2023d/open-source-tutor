@@ -246,6 +246,18 @@
       ],
       "status": "live",
       "kicdRef": "Gr4 Math 2.5"
+    },
+    {
+      "id": "g4.num.measurement.money",
+      "title": "Money (KES, c)",
+      "grade": 4,
+      "strand": "Numbers",
+      "subStrand": "Measurement",
+      "prerequisites": [
+        "g4.num.whole.place-value"
+      ],
+      "status": "live",
+      "kicdRef": "Gr4 Math 2.6"
     }
   ]
 }
