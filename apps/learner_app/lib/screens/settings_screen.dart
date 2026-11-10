@@ -125,26 +125,6 @@ class _SettingsScreenState extends State<SettingsScreen> {
       ),
     );
   }
-
-  void _showGradeSelector(BuildContext context) {
-    showModalBottomSheet(
-      context: context,
-      builder: (_) => GradeSelectorScreen(
-        profile: widget.profile,
-        initialGrade: widget.profile.grade,
-        onGradeSelected: widget.profile.setGrade,
-      ),
-    );
-  }
-
-  String _gradeLabel(String grade) {
-    final mapping = <String, String>{
-      'grade4': 'Grade 4',
-      'grade5': 'Grade 5',
-      'grade6': 'Grade 6',
-    };
-    return mapping[grade] ?? 'Grade 4';
-  }
 }
 
 class _BuddySection extends StatefulWidget {
