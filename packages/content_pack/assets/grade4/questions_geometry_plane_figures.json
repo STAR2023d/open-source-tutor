@@ -1,0 +1,284 @@
+{
+  "questions": [
+    {
+      "id": "g4m4.geo2-r1",
+      "skillId": "g4.num.geometry.plane-figures",
+      "bloom": "remember",
+      "type": "multipleChoice",
+      "prompt": "Which shape has 4 equal sides and 4 right angles?",
+      "choices": [
+        {
+          "text": "A square",
+          "correct": true
+        },
+        {
+          "text": "A rectangle",
+          "misconception": "rectangle",
+          "feedback": "A rectangle has 4 right angles but not necessarily 4 equal sides."
+        },
+        {
+          "text": "A triangle",
+          "misconception": "triangle",
+          "feedback": "A triangle has 3 sides, not 4."
+        },
+        {
+          "text": "A circle",
+          "misconception": "circle",
+          "feedback": "A circle has no sides or right angles."
+        }
+      ],
+      "hints": [
+        "A square has 4 equal sides and 4 right angles.",
+        "A rectangle has 4 right angles but opposite sides are equal.",
+        "A square is a special type of rectangle.",
+        "Check: all sides equal + all angles 90\u00b0."
+      ],
+      "explanation": "A square has 4 equal sides and 4 right angles."
+    },
+    {
+      "id": "g4m4.geo2-r2",
+      "skillId": "g4.num.geometry.plane-figures",
+      "bloom": "remember",
+      "type": "multipleChoice",
+      "prompt": "How many sides does a triangle have?",
+      "choices": [
+        {
+          "text": "3 sides",
+          "correct": true
+        },
+        {
+          "text": "4 sides",
+          "misconception": "square",
+          "feedback": "A square has 4 sides. A triangle has 3 sides."
+        },
+        {
+          "text": "5 sides",
+          "misconception": "pentagon",
+          "feedback": "A pentagon has 5 sides."
+        },
+        {
+          "text": "6 sides",
+          "misconception": "hexagon",
+          "feedback": "A hexagon has 6 sides."
+        }
+      ],
+      "hints": [
+        "A triangle is a shape with 3 straight sides.",
+        "Think: 'tri' means three.",
+        "Examples: slices of pizza, road signs (yield signs).",
+        "Count the sides: 1, 2, 3."
+      ],
+      "explanation": "A triangle has 3 sides."
+    },
+    {
+      "id": "g4m4.geo2-u1",
+      "skillId": "g4.num.geometry.plane-figures",
+      "bloom": "understand",
+      "type": "multipleChoice",
+      "prompt": "Which shape has exactly one pair of parallel sides?",
+      "choices": [
+        {
+          "text": "A trapezium",
+          "correct": true
+        },
+        {
+          "text": "A square",
+          "misconception": "square",
+          "feedback": "A square has two pairs of parallel sides."
+        },
+        {
+          "text": "A rectangle",
+          "misconception": "rectangle",
+          "feedback": "A rectangle has two pairs of parallel sides."
+        },
+        {
+          "text": "A circle",
+          "misconception": "circle",
+          "feedback": "A circle has no sides or parallel lines."
+        }
+      ],
+      "hints": [
+        "A pair of parallel sides runs in the same direction without meeting.",
+        "A trapezium has only one pair of parallel sides.",
+        "Think: 'trapezium' sounds like 'table' \u2014 a table has one top edge parallel to the bottom.",
+        "A square and rectangle have two pairs of parallel sides."
+      ],
+      "explanation": "A trapezium has exactly one pair of parallel sides."
+    },
+    {
+      "id": "g4m4.geo2-u2",
+      "skillId": "g4.num.geometry.plane-figures",
+      "bloom": "understand",
+      "type": "multipleChoice",
+      "prompt": "Why does a square always have four right angles?",
+      "choices": [
+        {
+          "text": "A square is defined as a shape with 4 equal sides and 4 right angles",
+          "correct": true
+        },
+        {
+          "text": "All squares are made of triangles",
+          "misconception": "made_of_triangles",
+          "feedback": "A square is defined by 4 equal sides and 4 right angles."
+        },
+        {
+          "text": "Squares are drawn with rulers only",
+          "misconception": "tool_rule",
+          "feedback": "The definition comes from its properties, not the tools used."
+        },
+        {
+          "text": "Only squares can have right angles",
+          "misconception": "only_squares",
+          "feedback": "Rectangles also have 4 right angles. The key is that a square has 4 equal sides AND 4 right angles."
+        }
+      ],
+      "hints": [
+        "A square is a special type of rectangle.",
+        "Rectangles have 4 right angles.",
+        "A square adds the rule of 4 equal sides.",
+        "So a square always has 4 right angles."
+      ],
+      "explanation": "A square is defined as a shape with 4 equal sides and 4 right angles."
+    },
+    {
+      "id": "g4m4.geo2-a1",
+      "skillId": "g4.num.geometry.plane-figures",
+      "bloom": "apply",
+      "type": "multipleChoice",
+      "prompt": "Which shape has 3 sides and 3 vertices (corners)?",
+      "choices": [
+        {
+          "text": "A triangle",
+          "correct": true
+        },
+        {
+          "text": "A square",
+          "misconception": "square",
+          "feedback": "A square has 4 sides and 4 vertices."
+        },
+        {
+          "text": "A circle",
+          "misconception": "circle",
+          "feedback": "A circle has no vertices."
+        },
+        {
+          "text": "A rectangle",
+          "misconception": "rectangle",
+          "feedback": "A rectangle has 4 sides and 4 vertices."
+        }
+      ],
+      "hints": [
+        "A triangle has 3 sides and 3 vertices.",
+        "Think: 'tri' means three.",
+        "Draw a triangle: count the sides (3) and the corners (3).",
+        "Triangle is the simplest polygon (closed shape with straight sides)."
+      ],
+      "explanation": "A triangle has 3 sides and 3 vertices."
+    },
+    {
+      "id": "g4m4.geo2-a2",
+      "skillId": "g4.num.geometry.plane-figures",
+      "bloom": "apply",
+      "type": "multipleChoice",
+      "prompt": "A rectangle has a length of 8 cm and a width of 5 cm. What is its perimeter?",
+      "choices": [
+        {
+          "text": "26 cm",
+          "correct": true
+        },
+        {
+          "text": "13 cm",
+          "misconception": "added_only",
+          "feedback": "8 + 5 = 13 is only half the perimeter. Perimeter = 2 \u00d7 (8 + 5) = 26 cm."
+        },
+        {
+          "text": "40 cm",
+          "misconception": "wrong_formula",
+          "feedback": "40 cm would be the area (8 \u00d7 5 = 40), not the perimeter."
+        },
+        {
+          "text": "46 cm",
+          "misconception": "added_dimensions",
+          "feedback": "8 + 5 = 13, and 13 \u00d7 2 = 26. 46 cm is incorrect."
+        }
+      ],
+      "hints": [
+        "Perimeter = 2 \u00d7 (length + width).",
+        "Length = 8 cm, width = 5 cm.",
+        "8 + 5 = 13, so 2 \u00d7 13 = 26 cm.",
+        "The unit is cm, not cm\u00b2 (area)."
+      ],
+      "explanation": "Perimeter = 2 \u00d7 (8 + 5) = 2 \u00d7 13 = 26 cm."
+    },
+    {
+      "id": "g4m4.geo2-an1",
+      "skillId": "g4.num.geometry.plane-figures",
+      "bloom": "analyze",
+      "type": "multipleChoice",
+      "prompt": "Which quadrilateral has 4 equal sides, 4 right angles, and 2 pairs of parallel sides?",
+      "choices": [
+        {
+          "text": "A square",
+          "correct": true
+        },
+        {
+          "text": "A rectangle",
+          "misconception": "rectangle",
+          "feedback": "A rectangle has 4 right angles and 2 pairs of parallel sides, but not 4 equal sides."
+        },
+        {
+          "text": "A rhombus",
+          "misconception": "rhombus",
+          "feedback": "A rhombus has 4 equal sides and 2 pairs of parallel sides, but not 4 right angles."
+        },
+        {
+          "text": "A kite",
+          "misconception": "kite",
+          "feedback": "A kite has 2 pairs of adjacent equal sides but not 4 right angles or 4 equal sides."
+        }
+      ],
+      "hints": [
+        "The shape must have ALL of: 4 equal sides, 4 right angles, 2 pairs of parallel sides.",
+        "A square has all three properties.",
+        "Check each option against the criteria.",
+        "A rectangle lacks 4 equal sides. A rhombus lacks 4 right angles."
+      ],
+      "explanation": "A square has 4 equal sides, 4 right angles, and 2 pairs of parallel sides."
+    },
+    {
+      "id": "g4m4.geo2-an2",
+      "skillId": "g4.num.geometry.plane-figures",
+      "bloom": "analyze",
+      "type": "multipleChoice",
+      "prompt": "Which shape does NOT belong with the others: square, rectangle, triangle, rhombus?",
+      "choices": [
+        {
+          "text": "Triangle",
+          "correct": true
+        },
+        {
+          "text": "Square",
+          "misconception": "square",
+          "feedback": "A square has 4 equal sides and 4 right angles. It belongs with the others (quadrilaterals)."
+        },
+        {
+          "text": "Rectangle",
+          "misconception": "rectangle",
+          "feedback": "A rectangle has 4 sides and 4 right angles. It belongs with the others (quadrilaterals)."
+        },
+        {
+          "text": "Rhombus",
+          "misconception": "rhombus",
+          "feedback": "A rhombus has 4 sides and is a quadrilateral. It belongs with the others."
+        }
+      ],
+      "hints": [
+        "Look at the properties of each shape.",
+        "A square, rectangle, and rhombus all have 4 sides (they are quadrilaterals).",
+        "A triangle has only 3 sides.",
+        "The triangle does not belong because it has 3 sides, not 4."
+      ],
+      "explanation": "The triangle does not belong because it has 3 sides, while the others have 4 sides (quadrilaterals)."
+    }
+  ]
+}
