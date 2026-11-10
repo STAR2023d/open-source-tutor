@@ -3,6 +3,7 @@ import 'package:mastery_core/mastery_core.dart';
 
 import 'data/profile_controller.dart';
 import 'data/storage.dart';
+import 'screens/grade_selector_screen.dart';
 import 'screens/home_screen.dart';
 import 'screens/onboarding_screen.dart';
 import 'theme/app_theme.dart';
@@ -25,7 +26,28 @@ class HesabuApp extends StatefulWidget {
 }
 
 class _HesabuAppState extends State<HesabuApp> {
-  late final Future<ContentBundle> _content = loadContent('grade4');
+  late Future<ContentBundle> _contentFuture;
+
+  @override
+  void initState() {
+    super.initState();
+    _contentFuture = _loadContent(widget.profile.grade);
+  }
+
+  Future<ContentBundle> _loadContent(String grade) async {
+    // Delay loading slightly so the app shows a smooth loading state
+    await Future.delayed(const Duration(milliseconds: 200));
+    return loadContent(grade);
+  }
+
+  void _handleGradeChanged(String grade) {
+    // Restart the content future so the app loads the correct grade.
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      setState(() {
+        _contentFuture = _loadContent(grade);
+      });
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -38,8 +60,6 @@ class _HesabuAppState extends State<HesabuApp> {
         darkTheme: buildTheme(Brightness.dark),
         themeMode: widget.theme.mode,
         builder: (context, child) {
-          // Respect the system text size, add our own "larger text" on top,
-          // and clamp so layouts never break.
           final mq = MediaQuery.of(context);
           final scale =
               (mq.textScaler.scale(1.0) * widget.theme.extraTextScale)
@@ -52,27 +72,79 @@ class _HesabuAppState extends State<HesabuApp> {
         },
         home: !widget.profile.onboarded
             ? OnboardingScreen(profile: widget.profile)
-            : FutureBuilder<ContentBundle>(
-          future: _content,
-          builder: (context, snap) {
-            if (snap.hasError) {
-              return Scaffold(
-                body: Center(child: Text('Could not load lessons: ${snap.error}')),
-              );
-            }
-            if (!snap.hasData) {
-              return const Scaffold(
-                  body: Center(child: CircularProgressIndicator()));
-            }
-            return HomeScreen(
-              content: snap.data!,
-              store: widget.store,
-              theme: widget.theme,
-              profile: widget.profile,
-            );
-          },
-        ),
+            : _HomeContent(
+                contentFuture: _contentFuture,
+                store: widget.store,
+                profile: widget.profile,
+                onChangeGrade: _handleGradeChanged,
+              ),
       ),
+    );
+  }
+}
+
+/// The main content screen, shown after onboarding.
+class _HomeContent extends StatelessWidget {
+  const _HomeContent({
+    required this.contentFuture,
+    required this.store,
+    required this.profile,
+    required this.onChangeGrade,
+  });
+
+  final Future<ContentBundle> contentFuture;
+  final ProgressStore store;
+  final ProfileController profile;
+  final ValueChanged<String> onChangeGrade;
+
+  @override
+  Widget build(BuildContext context) {
+    return FutureBuilder<ContentBundle>(
+      future: contentFuture,
+      builder: (context, snap) {
+        if (snap.hasError) {
+          return Scaffold(
+            appBar: AppBar(
+              title: const Text('Hesabu'),
+              leading: IconButton(
+                icon: const Icon(Icons.arrow_back),
+                onPressed: () => Navigator.of(context).pop(),
+              ),
+              actions: [
+                IconButton(
+                  tooltip: 'Change grade',
+                  icon: const Icon(Icons.language_outlined),
+                  onPressed: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute<void>(
+                        builder: (_) => GradeSelectorScreen(
+                          profile: profile,
+                          initialGrade: profile.grade,
+                          onGradeSelected: profile.setGrade,
+                        ),
+                      ),
+                    );
+                  },
+                ),
+              ],
+            ),
+            body: Center(
+              child: Text('Could not load lessons: ${snap.error}'),
+            ),
+          );
+        }
+        if (!snap.hasData) {
+          return const Scaffold(
+            body: Center(child: CircularProgressIndicator()),
+          );
+        }
+        return HomeScreen(
+          content: snap.data!,
+          store: store,
+          theme: Theme.of(context),
+          profile: profile,
+        );
+      },
     );
   }
 }

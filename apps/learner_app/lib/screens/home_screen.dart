@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:mastery_core/mastery_core.dart';
 
 import '../data/profile_controller.dart';
-import '../data/storage.dart';
 import '../mascot/mascot.dart';
 import '../theme/hesabu_colors.dart';
-import '../theme/theme_controller.dart';
 import '../theme/tokens.dart';
 import '../widgets/skill_card.dart';
+import 'grade_selector_screen.dart';
+import 'onboarding_screen.dart';
 import 'practice_screen.dart';
 import 'settings_screen.dart';
 
@@ -156,14 +155,14 @@ class _Summary extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text('Jambo, ${profile.displayName}!',
-                        style: text.headlineMedium
-                            ?.copyWith(color: scheme.onPrimaryContainer)),
+                    Text(
+                      'Jambo, ${profile.displayName}!',
+                      style: text.headlineMedium
+                          ?.copyWith(color: scheme.onPrimaryContainer),
+                    ),
                     const SizedBox(height: Space.xs),
                     Text(
-                      mastered == 0
-                          ? 'Grade 4 Maths. Pick a skill and start practising!'
-                          : '$mastered of $total skills mastered. Keep going!',
+                      'Grade ${_gradeLabel(profile.grade)}. Pick a skill and start practising!',
                       style: text.bodyLarge
                           ?.copyWith(color: scheme.onPrimaryContainer),
                     ),
@@ -191,6 +190,15 @@ class _Summary extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  String _gradeLabel(String grade) {
+    final mapping = {
+      'grade4': 'Grade 4',
+      'grade5': 'Grade 5',
+      'grade6': 'Grade 6',
+    };
+    return mapping[grade] ?? 'Grade 4';
   }
 }
 
