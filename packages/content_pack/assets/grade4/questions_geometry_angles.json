@@ -1,0 +1,283 @@
+{
+  "questions": [
+    {
+      "id": "g4m4.geo-r1",
+      "skillId": "g4.num.geometry.angles",
+      "bloom": "remember",
+      "type": "multipleChoice",
+      "prompt": "What is an angle?",
+      "choices": [
+        {
+          "text": "The amount of turn between two straight lines that meet at a point",
+          "correct": true
+        },
+        {
+          "text": "A straight line",
+          "misconception": "straight_line",
+          "feedback": "A straight line has no angle. An angle is the amount of turn between two lines."
+        },
+        {
+          "text": "A curved line",
+          "misconception": "curved_line",
+          "feedback": "A curved line is not an angle. An angle is formed where two straight lines meet."
+        },
+        {
+          "text": "A point",
+          "misconception": "point",
+          "feedback": "A point has no angle. An angle is the amount of turn between two lines that meet."
+        }
+      ],
+      "hints": [
+        "An angle is the amount of turn between two lines that meet at a point.",
+        "Think of the hands of a clock moving \u2014 that is an angle.",
+        "Two lines meeting at a point form an angle."
+      ],
+      "explanation": "An angle is the amount of turn between two straight lines that meet at a point."
+    },
+    {
+      "id": "g4m4.geo-r2",
+      "skillId": "g4.num.geometry.angles",
+      "bloom": "remember",
+      "type": "multipleChoice",
+      "prompt": "What do we call an angle that measures exactly 90 degrees?",
+      "choices": [
+        {
+          "text": "A right angle",
+          "correct": true
+        },
+        {
+          "text": "An acute angle",
+          "misconception": "acute_angle",
+          "feedback": "An acute angle is LESS than 90 degrees. A right angle is exactly 90 degrees."
+        },
+        {
+          "text": "An obtuse angle",
+          "misconception": "obtuse_angle",
+          "feedback": "An obtuse angle is MORE than 90 degrees but less than 180. A right angle is exactly 90."
+        },
+        {
+          "text": "A straight angle",
+          "misconception": "straight_angle",
+          "feedback": "A straight angle is 180 degrees. A right angle is exactly 90."
+        }
+      ],
+      "hints": [
+        "A right angle is the corner of a square or rectangle.",
+        "It is exactly 90 degrees.",
+        "You can make a right angle with a piece of paper (the corner).",
+        "The corner of a book or notebook is a right angle."
+      ],
+      "explanation": "An angle that measures exactly 90 degrees is called a right angle."
+    },
+    {
+      "id": "g4m4.geo-u1",
+      "skillId": "g4.num.geometry.angles",
+      "bloom": "understand",
+      "type": "multipleChoice",
+      "prompt": "What is an acute angle?",
+      "choices": [
+        {
+          "text": "Less than 90 degrees",
+          "correct": true
+        },
+        {
+          "text": "Exactly 90 degrees",
+          "misconception": "right_angle",
+          "feedback": "Exactly 90 degrees is a right angle, not an acute angle."
+        },
+        {
+          "text": "More than 90 degrees but less than 180 degrees",
+          "misconception": "obtuse_angle",
+          "feedback": "More than 90 degrees but less than 180 is an obtuse angle, not an acute angle."
+        },
+        {
+          "text": "Exactly 180 degrees",
+          "misconception": "straight_angle",
+          "feedback": "Exactly 180 degrees is a straight angle, not an acute angle."
+        }
+      ],
+      "hints": [
+        "Acute angles are sharp \u2014 smaller than a right angle.",
+        "Think: 'acute' means sharp or small.",
+        "Compare: acute < right angle < obtuse < straight.",
+        "An acute angle is less than a quarter turn."
+      ],
+      "explanation": "An acute angle is less than 90 degrees (smaller than a right angle)."
+    },
+    {
+      "id": "g4m4.geo-u2",
+      "skillId": "g4.num.geometry.angles",
+      "bloom": "understand",
+      "type": "multipleChoice",
+      "prompt": "What is an obtuse angle?",
+      "choices": [
+        {
+          "text": "More than 90 degrees but less than 180 degrees",
+          "correct": true
+        },
+        {
+          "text": "Exactly 90 degrees",
+          "misconception": "right_angle",
+          "feedback": "Exactly 90 degrees is a right angle, not an obtuse angle."
+        },
+        {
+          "text": "Less than 90 degrees",
+          "misconception": "acute_angle",
+          "feedback": "Less than 90 degrees is an acute angle, not an obtuse angle."
+        },
+        {
+          "text": "Exactly 180 degrees",
+          "misconception": "straight_angle",
+          "feedback": "Exactly 180 degrees is a straight angle, not an obtuse angle."
+        }
+      ],
+      "hints": [
+        "Obtuse angles are wide \u2014 larger than a right angle but less than a straight line.",
+        "Think: 'obtuse' means blunt or wide.",
+        "Compare: acute < right angle < obtuse < straight.",
+        "An obtuse angle is between a quarter turn and a half turn."
+      ],
+      "explanation": "An obtuse angle is more than 90 degrees but less than 180 degrees."
+    },
+    {
+      "id": "g4m4.geo-a1",
+      "skillId": "g4.num.geometry.angles",
+      "bloom": "apply",
+      "type": "multipleChoice",
+      "prompt": "Which of these angles is a right angle?",
+      "choices": [
+        {
+          "text": "The corner of a square",
+          "correct": true
+        },
+        {
+          "text": "The tip of a pencil",
+          "misconception": "sharp_angle",
+          "feedback": "The tip of a pencil is an acute angle (sharp), not a right angle."
+        },
+        {
+          "text": "The bend in a banana",
+          "misconception": "curved_angle",
+          "feedback": "A banana bend is a curved shape, not a right angle. A right angle is formed by two straight lines meeting at 90 degrees."
+        },
+        {
+          "text": "The opening of a book at 30 degrees",
+          "misconception": "open_book",
+          "feedback": "An opening book at 30 degrees is an acute angle. A right angle is exactly 90 degrees."
+        }
+      ],
+      "hints": [
+        "A right angle is exactly 90 degrees.",
+        "The corner of a square or rectangle is a right angle.",
+        "You can check with the corner of a piece of paper.",
+        "The corner of a book or notebook is a right angle."
+      ],
+      "explanation": "A right angle is exactly 90 degrees. The corner of a square is a right angle."
+    },
+    {
+      "id": "g4m4.geo-a2",
+      "skillId": "g4.num.geometry.angles",
+      "bloom": "apply",
+      "type": "multipleChoice",
+      "prompt": "A pair of scissors opens to form an angle of 45 degrees. What type of angle is this?",
+      "choices": [
+        {
+          "text": "Acute angle",
+          "correct": true
+        },
+        {
+          "text": "Right angle",
+          "misconception": "right_angle",
+          "feedback": "A right angle is exactly 90 degrees. 45 degrees is half of a right angle, so it is acute."
+        },
+        {
+          "text": "Obtuse angle",
+          "misconception": "obtuse_angle",
+          "feedback": "An obtuse angle is more than 90 degrees but less than 180. 45 degrees is acute."
+        },
+        {
+          "text": "Straight angle",
+          "misconception": "straight_angle",
+          "feedback": "A straight angle is 180 degrees. 45 degrees is acute."
+        }
+      ],
+      "hints": [
+        "45 degrees is exactly half of a right angle (90 degrees).",
+        "An acute angle is less than 90 degrees.",
+        "Since 45 < 90, the 45-degree angle is acute.",
+        "Think: a smaller angle is an acute angle."
+      ],
+      "explanation": "45 degrees is less than 90 degrees, so it is an acute angle."
+    },
+    {
+      "id": "g4m4.geo-an1",
+      "skillId": "g4.num.geometry.angles",
+      "bloom": "analyze",
+      "type": "multipleChoice",
+      "prompt": "Which angle is the largest: 30\u00b0, 120\u00b0, or 90\u00b0?",
+      "choices": [
+        {
+          "text": "120\u00b0",
+          "correct": true
+        },
+        {
+          "text": "90\u00b0",
+          "misconception": "right_angle",
+          "feedback": "90\u00b0 is a right angle. 120\u00b0 is larger than 90\u00b0 (obtuse), so 120\u00b0 is the largest."
+        },
+        {
+          "text": "30\u00b0",
+          "misconception": "acute_angle",
+          "feedback": "30\u00b0 is an acute angle (less than 90\u00b0). 120\u00b0 is larger."
+        },
+        {
+          "text": "All are equal",
+          "misconception": "same_size",
+          "feedback": "30\u00b0 < 90\u00b0 < 120\u00b0, so 120\u00b0 is the largest."
+        }
+      ],
+      "hints": [
+        "Order the angles from smallest to largest.",
+        "30\u00b0 < 90\u00b0 < 120\u00b0.",
+        "90\u00b0 is a right angle.",
+        "120\u00b0 is more than a right angle but less than a straight line (180\u00b0)."
+      ],
+      "explanation": "30\u00b0 < 90\u00b0 < 120\u00b0. The largest is 120\u00b0."
+    },
+    {
+      "id": "g4m4.geo-an2",
+      "skillId": "g4.num.geometry.angles",
+      "bloom": "analyze",
+      "type": "multipleChoice",
+      "prompt": "Which statement is true about the angles in a triangle?",
+      "choices": [
+        {
+          "text": "The three angles add up to 180 degrees",
+          "correct": true
+        },
+        {
+          "text": "The three angles add up to 90 degrees",
+          "misconception": "add_90",
+          "feedback": "The three angles in a triangle add up to 180 degrees, not 90."
+        },
+        {
+          "text": "The three angles add up to 360 degrees",
+          "misconception": "add_360",
+          "feedback": "360 degrees is a full turn. A triangle's angles add up to 180 degrees."
+        },
+        {
+          "text": "A triangle has only two angles",
+          "misconception": "only_two",
+          "feedback": "A triangle has three angles (one at each corner). All three add up to 180 degrees."
+        }
+      ],
+      "hints": [
+        "A triangle has three corners (vertices). Each corner has an angle.",
+        "All three angles in a triangle add up to 180 degrees.",
+        "This is like a straight line being split into three parts.",
+        "A straight line is 180 degrees."
+      ],
+      "explanation": "The three angles in a triangle add up to 180 degrees."
+    }
+  ]
+}
