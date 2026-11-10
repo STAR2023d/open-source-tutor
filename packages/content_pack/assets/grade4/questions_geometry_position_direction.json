@@ -1,0 +1,284 @@
+{
+  "questions": [
+    {
+      "id": "g4m4.gd-r1",
+      "skillId": "g4.num.geometry.position-direction",
+      "bloom": "remember",
+      "type": "multipleChoice",
+      "prompt": "What are the four main compass directions (cardinal points)?",
+      "choices": [
+        {
+          "text": "North, South, East, West",
+          "correct": true
+        },
+        {
+          "text": "North, South, Left, Right",
+          "misconception": "includes_left_right",
+          "feedback": "Left and Right are relative directions, not compass directions."
+        },
+        {
+          "text": "East, West, Up, Down",
+          "misconception": "includes_up_down",
+          "feedback": "Up and Down are vertical directions, not cardinal compass points."
+        },
+        {
+          "text": "North, East, South, Center",
+          "misconception": "includes_center",
+          "feedback": "There is no center compass point. The four are N, S, E, W."
+        }
+      ],
+      "hints": [
+        "The four cardinal points are N, S, E, W.",
+        "Remember: North, South, East, West.",
+        "A compass rose shows these four points.",
+        "Think of a map: N on top, S at bottom, E on right, W on left."
+      ],
+      "explanation": "The four cardinal points are North, South, East, and West."
+    },
+    {
+      "id": "g4m4.gd-r2",
+      "skillId": "g4.num.geometry.position-direction",
+      "bloom": "remember",
+      "type": "multipleChoice",
+      "prompt": "If you face North and turn clockwise (right) by a quarter turn, which direction do you face?",
+      "choices": [
+        {
+          "text": "East",
+          "correct": true
+        },
+        {
+          "text": "West",
+          "misconception": "turned_left",
+          "feedback": "Turning clockwise (right) from North by a quarter turn faces East. Turn left would face West."
+        },
+        {
+          "text": "South",
+          "misconception": "half_turn",
+          "feedback": "A half turn from North faces South. A quarter turn (right) faces East."
+        },
+        {
+          "text": "North",
+          "misconception": "no_turn",
+          "feedback": "Turning clockwise by a quarter turn from North faces East. No turn would keep you facing North."
+        }
+      ],
+      "hints": [
+        "A quarter turn = 90 degrees.",
+        "Clockwise means turning to the right.",
+        "North \u2192 East \u2192 South \u2192 West (clockwise).",
+        "So a quarter turn clockwise from North lands on East."
+      ],
+      "explanation": "Facing North and turning clockwise by a quarter turn (90\u00b0) faces East."
+    },
+    {
+      "id": "g4m4.gd-u1",
+      "skillId": "g4.num.geometry.position-direction",
+      "bloom": "understand",
+      "type": "multipleChoice",
+      "prompt": "Which statement describes a clockwise turn?",
+      "choices": [
+        {
+          "text": "Turning in the same direction as the hands of a clock",
+          "correct": true
+        },
+        {
+          "text": "Turning to the left",
+          "misconception": "turned_left",
+          "feedback": "Turning to the left is anti-clockwise. Clockwise means turning to the right."
+        },
+        {
+          "text": "Turning 180 degrees",
+          "misconception": "half_turn",
+          "feedback": "A 180-degree turn is a half turn. Clockwise refers to direction, not amount."
+        },
+        {
+          "text": "Turning only on a flat surface",
+          "misconception": "flat_surface",
+          "feedback": "Clockwise describes direction of turning (right), not the surface."
+        }
+      ],
+      "hints": [
+        "Clocks move from 12 to 1 to 2 to 3 \u2014 that is clockwise.",
+        "Clock hands move to the right.",
+        "Clockwise = turning to the right (same as clock hands).",
+        "Anti-clockwise (counter-clockwise) is the opposite (to the left)."
+      ],
+      "explanation": "Clockwise means turning in the same direction as the hands of a clock \u2014 to the right."
+    },
+    {
+      "id": "g4m4.gd-u2",
+      "skillId": "g4.num.geometry.position-direction",
+      "bloom": "understand",
+      "type": "multipleChoice",
+      "prompt": "You are facing South. You turn clockwise through a half turn (180\u00b0). Which direction do you face?",
+      "choices": [
+        {
+          "text": "North",
+          "correct": true
+        },
+        {
+          "text": "East",
+          "misconception": "quarter_turn",
+          "feedback": "A half turn (180\u00b0) from South faces North. East would be a quarter turn."
+        },
+        {
+          "text": "West",
+          "misconception": "quarter_turn",
+          "feedback": "A half turn from South faces North. West would be a quarter turn the other way."
+        },
+        {
+          "text": "South",
+          "misconception": "no_turn",
+          "feedback": "A half turn changes your facing direction. Facing South and turning 180\u00b0 faces North."
+        }
+      ],
+      "hints": [
+        "A half turn = 180 degrees.",
+        "Facing South and turning clockwise 180\u00b0 (half a circle).",
+        "North \u2192 East \u2192 South (quarter turn), then \u2192 West (half turn).",
+        "So facing South and turning clockwise half a turn faces North."
+      ],
+      "explanation": "Facing South and turning clockwise through a half turn (180\u00b0) faces North."
+    },
+    {
+      "id": "g4m4.gd-a1",
+      "skillId": "g4.num.geometry.position-direction",
+      "bloom": "apply",
+      "type": "multipleChoice",
+      "prompt": "You face North. You turn clockwise through a full turn (360\u00b0). Which direction do you face?",
+      "choices": [
+        {
+          "text": "North",
+          "correct": true
+        },
+        {
+          "text": "East",
+          "misconception": "quarter_turn",
+          "feedback": "A full turn (360\u00b0) brings you back to the starting direction. You face North, not East."
+        },
+        {
+          "text": "West",
+          "misconception": "three_quarter_turn",
+          "feedback": "A full turn brings you back to the start. You face North, not West."
+        },
+        {
+          "text": "South",
+          "misconception": "half_turn",
+          "feedback": "A half turn (180\u00b0) from North faces South. A full turn (360\u00b0) faces North."
+        }
+      ],
+      "hints": [
+        "A full turn = 360 degrees.",
+        "Turning 360\u00b0 means you complete one full circle.",
+        "You end up facing the same direction you started.",
+        "You started facing North, so you face North again."
+      ],
+      "explanation": "A full turn (360\u00b0) brings you back to the starting direction. You face North again."
+    },
+    {
+      "id": "g4m4.gd-a2",
+      "skillId": "g4.num.geometry.position-direction",
+      "bloom": "apply",
+      "type": "multipleChoice",
+      "prompt": "You face East. You turn anti-clockwise (left) through a quarter turn (90\u00b0). Which direction do you face?",
+      "choices": [
+        {
+          "text": "North",
+          "correct": true
+        },
+        {
+          "text": "South",
+          "misconception": "quarter_turn",
+          "feedback": "Facing East and turning anti-clockwise quarter turn (90\u00b0) faces North."
+        },
+        {
+          "text": "West",
+          "misconception": "quarter_turn_other_way",
+          "feedback": "Turning anti-clockwise from East quarter turn faces North. West would be clockwise quarter turn."
+        },
+        {
+          "text": "South",
+          "misconception": "half_turn",
+          "feedback": "Facing East and turning 180\u00b0 (half turn) would face South. A quarter turn faces North."
+        }
+      ],
+      "hints": [
+        "A quarter turn = 90 degrees.",
+        "Anti-clockwise means turning to the left.",
+        "Facing East, turning left (anti-clockwise) by 90\u00b0 faces North.",
+        "You can remember by tracing: E \u2192 N (anti-clockwise)."
+      ],
+      "explanation": "Facing East and turning anti-clockwise through a quarter turn (90\u00b0) faces North."
+    },
+    {
+      "id": "g4m4.gd-an1",
+      "skillId": "g4.num.geometry.position-direction",
+      "bloom": "analyze",
+      "type": "multipleChoice",
+      "prompt": "You face West. You turn clockwise through a quarter turn. Which direction do you face?",
+      "choices": [
+        {
+          "text": "North",
+          "correct": true
+        },
+        {
+          "text": "South",
+          "misconception": "quarter_turn_clockwise",
+          "feedback": "Facing West and turning clockwise quarter turn (90\u00b0) faces North."
+        },
+        {
+          "text": "East",
+          "misconception": "quarter_turn_anticlockwise",
+          "feedback": "Facing West and turning anti-clockwise quarter turn faces East. Clockwise turns to North."
+        },
+        {
+          "text": "South",
+          "misconception": "half_turn",
+          "feedback": "A half turn from West faces South. A quarter turn (90\u00b0) faces North."
+        }
+      ],
+      "hints": [
+        "Clockwise = turning to the right.",
+        "Facing West, turning right (clockwise) by 90\u00b0.",
+        "North \u2192 East \u2192 South \u2192 West \u2192 North (clockwise).",
+        "When facing West, the next clockwise direction is North."
+      ],
+      "explanation": "Facing West and turning clockwise through a quarter turn (90\u00b0) faces North."
+    },
+    {
+      "id": "g4m4.gd-an2",
+      "skillId": "g4.num.geometry.position-direction",
+      "bloom": "analyze",
+      "type": "multipleChoice",
+      "prompt": "A map uses compass directions. Town A is North of Town B, and Town C is South of Town B. Where is Town C relative to Town A?",
+      "choices": [
+        {
+          "text": "South of Town A",
+          "correct": true
+        },
+        {
+          "text": "North of Town A",
+          "misconception": "same_direction",
+          "feedback": "Town A is North of B, and C is South of B. So C is further South than B, meaning C is South of A."
+        },
+        {
+          "text": "East of Town A",
+          "misconception": "east_direction",
+          "feedback": "North and South are vertical directions. East is horizontal, so C is not East of A."
+        },
+        {
+          "text": "There is no relationship",
+          "misconception": "no_relationship",
+          "feedback": "C is South of B and A is North of B, so C is South of A."
+        }
+      ],
+      "hints": [
+        "Town A is North of Town B: A \u2192 B = North (so B is South of A).",
+        "Town C is South of Town B: C is further South than B.",
+        "Since A is North of B and C is South of B, C is South of A.",
+        "Draw a line: A (top) \u2192 B (middle) \u2192 C (bottom)."
+      ],
+      "explanation": "Town A is North of Town B. Town C is South of Town B, so Town C is South of Town A."
+    }
+  ]
+}

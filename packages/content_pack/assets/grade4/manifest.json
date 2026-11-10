@@ -18,6 +18,7 @@
     "questions_measurement_volume_capacity.json",
     "questions_measurement_mass.json",
     "questions_measurement_time.json",
-    "questions_measurement_money.json"
+    "questions_measurement_money.json",
+    "questions_geometry_position_direction.json"
   ]
 }
