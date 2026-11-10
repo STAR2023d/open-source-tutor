@@ -1,0 +1,265 @@
+{
+  "skillId": "g5.num.geometry.symmetry_angles",
+  "title": "Symmetry & angles (measuring, drawing)",
+  "questions": [
+    {
+      "id": "g5_g5_num_geometry_symmetry_r1",
+      "skillId": "g5.num.geometry.symmetry",
+      "bloom": "remember",
+      "type": "multipleChoice",
+      "prompt": "What is a right angle?",
+      "choices": [
+        {
+          "text": "An angle less than 90 degrees",
+          "misconception": "wrong_measure",
+          "feedback": "A right angle measures exactly 90 degrees, not less than 90 degrees."
+        },
+        {
+          "text": "An angle greater than 90 degrees",
+          "misconception": "wrong_measure",
+          "feedback": "A right angle measures exactly 90 degrees, not greater than 90 degrees."
+        },
+        {
+          "text": "An angle of exactly 90 degrees",
+          "correct": true
+        },
+        {
+          "text": "A straight angle",
+          "misconception": "wrong_measure",
+          "feedback": "A straight angle measures 180 degrees, not 90 degrees."
+        }
+      ],
+      "hints": [
+        "A right angle measures exactly 90 degrees"
+      ],
+      "explanation": "A right angle measures exactly 90 degrees."
+    },
+    {
+      "id": "g5_g5_num_geometry_symmetry_r2",
+      "skillId": "g5.num.geometry.symmetry",
+      "bloom": "remember",
+      "type": "multipleChoice",
+      "prompt": "What is the sum of angles in a triangle?",
+      "choices": [
+        {
+          "text": "90 degrees",
+          "misconception": "wrong_sum",
+          "feedback": "The sum of angles in a triangle is 180 degrees, not 90 degrees."
+        },
+        {
+          "text": "180 degrees",
+          "correct": true
+        },
+        {
+          "text": "270 degrees",
+          "misconception": "wrong_sum",
+          "feedback": "The sum of angles in a triangle is 180 degrees, not 270 degrees."
+        },
+        {
+          "text": "360 degrees",
+          "misconception": "wrong_sum",
+          "feedback": "The sum of angles in a triangle is 180 degrees, not 360 degrees."
+        }
+      ],
+      "hints": [
+        "The sum of angles in any triangle is 180 degrees"
+      ],
+      "explanation": "The sum of angles in any triangle is 180 degrees."
+    },
+    {
+      "id": "g5_g5_num_geometry_symmetry_u1",
+      "skillId": "g5.num.geometry.symmetry",
+      "bloom": "understand",
+      "type": "multipleChoice",
+      "prompt": "Which angle is larger: an acute angle or an obtuse angle?",
+      "choices": [
+        {
+          "text": "Acute angle",
+          "misconception": "wrong_shape",
+          "feedback": "An acute angle is less than 90 degrees. An obtuse angle is greater than 90 degrees and less than 180 degrees, so it is larger."
+        },
+        {
+          "text": "Obtuse angle",
+          "correct": true
+        },
+        {
+          "text": "They are equal",
+          "misconception": "confused",
+          "feedback": "Acute angles are less than 90 degrees, obtuse angles are greater than 90 degrees. They are not equal."
+        },
+        {
+          "text": "Cannot be determined",
+          "misconception": "no_info",
+          "feedback": "We can compare them: obtuse angles are always larger than acute angles."
+        }
+      ],
+      "hints": [
+        "Acute angle < 90 degrees",
+        "Obtuse angle > 90 degrees but < 180 degrees"
+      ],
+      "explanation": "An obtuse angle (greater than 90 degrees) is larger than an acute angle (less than 90 degrees)."
+    },
+    {
+      "id": "g5_g5_num_geometry_symmetry_a1",
+      "skillId": "g5.num.geometry.symmetry",
+      "bloom": "apply",
+      "type": "multipleChoice",
+      "prompt": "A square has sides of 5 cm. What is the perimeter?",
+      "choices": [
+        {
+          "text": "10 cm",
+          "misconception": "wrong_perimeter",
+          "feedback": "Perimeter = 4 x side = 4 x 5 = 20 cm, not 10 cm."
+        },
+        {
+          "text": "15 cm",
+          "misconception": "wrong_perimeter",
+          "feedback": "Perimeter = 4 x side = 4 x 5 = 20 cm, not 15 cm."
+        },
+        {
+          "text": "20 cm",
+          "correct": true
+        },
+        {
+          "text": "25 cm",
+          "misconception": "wrong_perimeter",
+          "feedback": "Perimeter = 4 x side = 4 x 5 = 20 cm, not 25 cm."
+        }
+      ],
+      "hints": [
+        "Perimeter = 4 x side = 4 x 5 = 20 cm"
+      ],
+      "explanation": "Perimeter = 4 x side = 4 x 5 = 20 cm."
+    },
+    {
+      "id": "g5_g5_num_geometry_symmetry_a2",
+      "skillId": "g5.num.geometry.symmetry",
+      "bloom": "apply",
+      "type": "multipleChoice",
+      "prompt": "An angle measures 120 degrees. What type of angle is it?",
+      "choices": [
+        {
+          "text": "Acute angle",
+          "misconception": "wrong_type",
+          "feedback": "120 degrees is greater than 90 degrees, so it is not acute."
+        },
+        {
+          "text": "Obtuse angle",
+          "correct": true
+        },
+        {
+          "text": "Right angle",
+          "misconception": "wrong_type",
+          "feedback": "A right angle is exactly 90 degrees, not 120 degrees."
+        },
+        {
+          "text": "Reflex angle",
+          "misconception": "wrong_type",
+          "feedback": "A reflex angle is greater than 180 degrees, not 120 degrees."
+        }
+      ],
+      "hints": [
+        "120 degrees is between 90 and 180 degrees, so it is obtuse"
+      ],
+      "explanation": "An angle of 120 degrees is between 90 and 180 degrees, so it is obtuse."
+    },
+    {
+      "id": "g5_g5_num_geometry_symmetry_an1",
+      "skillId": "g5.num.geometry.symmetry",
+      "bloom": "analyze",
+      "type": "multipleChoice",
+      "prompt": "In a right-angled triangle, one angle is 90 degrees and another is 45 degrees. What is the third angle?",
+      "choices": [
+        {
+          "text": "30 degrees",
+          "misconception": "wrong_calc",
+          "feedback": "90 + 45 = 135, 180 - 135 = 45, not 30 degrees."
+        },
+        {
+          "text": "45 degrees",
+          "misconception": "wrong_calc",
+          "feedback": "Sum of angles = 180 degrees. 90 + 45 = 135. 180 - 135 = 45 degrees."
+        },
+        {
+          "text": "45 degrees",
+          "correct": true
+        },
+        {
+          "text": "90 degrees",
+          "misconception": "wrong_calc",
+          "feedback": "Third angle = 180 - (90 + 45) = 45 degrees, not 90 degrees."
+        }
+      ],
+      "hints": [
+        "Sum of angles = 180 degrees",
+        "90 + 45 = 135",
+        "180 - 135 = 45"
+      ],
+      "explanation": "Sum of angles = 180 degrees. 90 + 45 = 135. 180 - 135 = 45 degrees."
+    },
+    {
+      "id": "g5_g5_num_geometry_symmetry_an2",
+      "skillId": "g5.num.geometry.symmetry",
+      "bloom": "analyze",
+      "type": "multipleChoice",
+      "prompt": "A rectangle has length 10 cm and width 4 cm. If you draw lines of symmetry, how many can you draw?",
+      "choices": [
+        {
+          "text": "0",
+          "misconception": "wrong_count",
+          "feedback": "A rectangle has 2 lines of symmetry (horizontal and vertical)."
+        },
+        {
+          "text": "1",
+          "misconception": "wrong_count",
+          "feedback": "A rectangle has 2 lines of symmetry (horizontal and vertical)."
+        },
+        {
+          "text": "2",
+          "correct": true
+        },
+        {
+          "text": "4",
+          "misconception": "wrong_count",
+          "feedback": "A rectangle has 2 lines of symmetry (horizontal and vertical), not 4."
+        }
+      ],
+      "hints": [
+        "A rectangle has 2 lines of symmetry (horizontal and vertical)"
+      ],
+      "explanation": "A rectangle has 2 lines of symmetry (horizontal and vertical)."
+    },
+    {
+      "id": "g5_g5_num_geometry_symmetry_u2",
+      "skillId": "g5.num.geometry.symmetry",
+      "bloom": "understand",
+      "type": "multipleChoice",
+      "prompt": "How many degrees are in a straight angle?",
+      "choices": [
+        {
+          "text": "45 degrees",
+          "misconception": "wrong_deg",
+          "feedback": "A straight angle measures 180 degrees, not 45 degrees."
+        },
+        {
+          "text": "60 degrees",
+          "misconception": "wrong_deg",
+          "feedback": "A straight angle measures 180 degrees, not 60 degrees."
+        },
+        {
+          "text": "180 degrees",
+          "correct": true
+        },
+        {
+          "text": "90 degrees",
+          "misconception": "wrong_deg",
+          "feedback": "A straight angle measures 180 degrees, not 90 degrees."
+        }
+      ],
+      "hints": [
+        "A straight angle measures 180 degrees"
+      ],
+      "explanation": "A straight angle measures 180 degrees."
+    }
+  ]
+}

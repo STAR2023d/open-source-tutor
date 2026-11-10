@@ -1,0 +1,298 @@
+{
+  "skillId": "g5.num.datahandling.representation",
+  "title": "Data representation (pictographs, bar graphs)",
+  "questions": [
+    {
+      "id": "g5_g5_num_datahandling_representation_r1",
+      "skillId": "g5.num.datahandling.representation",
+      "bloom": "remember",
+      "type": "multipleChoice",
+      "prompt": "Which graph uses bars to show data?",
+      "choices": [
+        {
+          "text": "Pie chart",
+          "misconception": "wrong_type",
+          "feedback": "A pie chart uses slices, not bars."
+        },
+        {
+          "text": "Pictograph",
+          "misconception": "wrong_type",
+          "feedback": "A pictograph uses pictures, not bars."
+        },
+        {
+          "text": "Bar graph",
+          "correct": true
+        },
+        {
+          "text": "Line graph",
+          "misconception": "wrong_type",
+          "feedback": "A line graph uses points and lines, not bars."
+        }
+      ],
+      "hints": [
+        "A bar graph uses bars to show data"
+      ],
+      "explanation": "A bar graph uses bars to show data."
+    },
+    {
+      "id": "g5_g5_num_datahandling_representation_r2",
+      "skillId": "g5.num.datahandling.representation",
+      "bloom": "remember",
+      "type": "multipleChoice",
+      "prompt": "Which graph uses pictures to show data?",
+      "choices": [
+        {
+          "text": "Bar graph",
+          "misconception": "wrong_type",
+          "feedback": "A bar graph uses bars, not pictures."
+        },
+        {
+          "text": "Pie chart",
+          "misconception": "wrong_type",
+          "feedback": "A pie chart uses slices, not pictures."
+        },
+        {
+          "text": "Line graph",
+          "misconception": "wrong_type",
+          "feedback": "A line graph uses points and lines, not pictures."
+        },
+        {
+          "text": "Pictograph",
+          "correct": true
+        }
+      ],
+      "hints": [
+        "A pictograph uses pictures to show data"
+      ],
+      "explanation": "A pictograph uses pictures to show data."
+    },
+    {
+      "id": "g5_g5_num_datahandling_representation_u1",
+      "skillId": "g5.num.datahandling.representation",
+      "bloom": "understand",
+      "type": "multipleChoice",
+      "prompt": "Which graph is best for showing parts of a whole?",
+      "choices": [
+        {
+          "text": "Bar graph",
+          "misconception": "wrong_purpose",
+          "feedback": "A bar graph compares categories, not parts of a whole."
+        },
+        {
+          "text": "Pie chart",
+          "correct": true
+        },
+        {
+          "text": "Pictograph",
+          "misconception": "wrong_purpose",
+          "feedback": "A pictograph shows quantities using pictures, not parts of a whole."
+        },
+        {
+          "text": "Line graph",
+          "misconception": "wrong_purpose",
+          "feedback": "A line graph shows trends over time, not parts of a whole."
+        }
+      ],
+      "hints": [
+        "A pie chart shows parts of a whole"
+      ],
+      "explanation": "A pie chart shows parts of a whole (as percentages of a circle)."
+    },
+    {
+      "id": "g5_g5_num_datahandling_representation_a1",
+      "skillId": "g5.num.datahandling.representation",
+      "bloom": "apply",
+      "type": "multipleChoice",
+      "prompt": "A bar graph shows the number of books read by 5 students: 3, 5, 2, 4, 6. What is the total number of books read?",
+      "choices": [
+        {
+          "text": "15",
+          "misconception": "wrong_add",
+          "feedback": "Total = 3 + 5 + 2 + 4 + 6 = 20, not 15."
+        },
+        {
+          "text": "18",
+          "misconception": "wrong_add",
+          "feedback": "Total = 3 + 5 + 2 + 4 + 6 = 20, not 18."
+        },
+        {
+          "text": "20",
+          "correct": true
+        },
+        {
+          "text": "24",
+          "misconception": "wrong_add",
+          "feedback": "Total = 3 + 5 + 2 + 4 + 6 = 20, not 24."
+        }
+      ],
+      "hints": [
+        "Total = 3 + 5 + 2 + 4 + 6 = 20"
+      ],
+      "explanation": "Total = 3 + 5 + 2 + 4 + 6 = 20."
+    },
+    {
+      "id": "g5_g5_num_datahandling_representation_a2",
+      "skillId": "g5.num.datahandling.representation",
+      "bloom": "apply",
+      "type": "multipleChoice",
+      "prompt": "A pictograph shows 5 pictures of books, each representing 2 books. How many books are shown?",
+      "choices": [
+        {
+          "text": "7",
+          "misconception": "wrong_mul",
+          "feedback": "5 x 2 = 10, not 7."
+        },
+        {
+          "text": "8",
+          "misconception": "wrong_mul",
+          "feedback": "5 x 2 = 10, not 8."
+        },
+        {
+          "text": "10",
+          "misconception": "wrong_mul",
+          "feedback": "5 x 2 = 10, not 10."
+        },
+        {
+          "text": "10",
+          "correct": true
+        }
+      ],
+      "hints": [
+        "5 pictures x 2 books each = 10 books"
+      ],
+      "explanation": "5 pictures x 2 books each = 10 books."
+    },
+    {
+      "id": "g5_g5_num_datahandling_representation_an1",
+      "skillId": "g5.num.datahandling.representation",
+      "bloom": "analyze",
+      "type": "multipleChoice",
+      "prompt": "A survey asks 30 students their favourite fruit. 10 choose apples, 8 choose bananas, and the rest choose oranges. How many chose oranges?",
+      "choices": [
+        {
+          "text": "8",
+          "misconception": "wrong_sub",
+          "feedback": "30 - (10 + 8) = 30 - 18 = 12, not 8."
+        },
+        {
+          "text": "10",
+          "misconception": "wrong_sub",
+          "feedback": "30 - (10 + 8) = 30 - 18 = 12, not 10."
+        },
+        {
+          "text": "12",
+          "correct": true
+        },
+        {
+          "text": "15",
+          "misconception": "wrong_sub",
+          "feedback": "30 - (10 + 8) = 30 - 18 = 12, not 15."
+        }
+      ],
+      "hints": [
+        "30 - (10 + 8) = 30 - 18 = 12"
+      ],
+      "explanation": "30 - (10 + 8) = 30 - 18 = 12."
+    },
+    {
+      "id": "g5_g5_num_datahandling_representation_an2",
+      "skillId": "g5.num.datahandling.representation",
+      "bloom": "analyze",
+      "type": "multipleChoice",
+      "prompt": "A bar graph shows the number of pets: 5 dogs, 3 cats, 2 birds, 4 fish. Which pet is the most common?",
+      "choices": [
+        {
+          "text": "Cats",
+          "misconception": "wrong_compare",
+          "feedback": "5 dogs > 3 cats > 2 birds > 4 fish. Cats are not the most common."
+        },
+        {
+          "text": "Birds",
+          "misconception": "wrong_compare",
+          "feedback": "5 dogs > 4 fish > 3 cats > 2 birds. Birds are the least common."
+        },
+        {
+          "text": "Dogs",
+          "correct": true
+        },
+        {
+          "text": "Fish",
+          "misconception": "wrong_compare",
+          "feedback": "5 dogs > 4 fish > 3 cats > 2 birds. Fish are second."
+        }
+      ],
+      "hints": [
+        "5 dogs > 4 fish > 3 cats > 2 birds"
+      ],
+      "explanation": "5 dogs > 4 fish > 3 cats > 2 birds, so dogs are the most common."
+    },
+    {
+      "id": "g5_g5_num_datahandling_representation_r3",
+      "skillId": "g5.num.datahandling.representation",
+      "bloom": "understand",
+      "type": "multipleChoice",
+      "prompt": "Which graph uses points connected by lines to show change over time?",
+      "choices": [
+        {
+          "text": "Bar graph",
+          "correct": false,
+          "misconception": "wrong_type",
+          "feedback": "A bar graph uses bars to compare categories, not points connected by lines."
+        },
+        {
+          "text": "Line graph",
+          "correct": true
+        },
+        {
+          "text": "Pictograph",
+          "misconception": "wrong_type",
+          "feedback": "A pictograph uses pictures, not points connected by lines."
+        },
+        {
+          "text": "Pie chart",
+          "misconception": "wrong_type",
+          "feedback": "A pie chart uses slices of a circle, not points connected by lines."
+        }
+      ],
+      "hints": [
+        "Points connected by lines show change over time",
+        "This is called a line graph"
+      ],
+      "explanation": "A line graph uses points connected by lines to show change over time."
+    },
+    {
+      "id": "g5_g5_num_datahandling_representation_u2",
+      "skillId": "g5.num.datahandling.representation",
+      "bloom": "understand",
+      "type": "multipleChoice",
+      "prompt": "Which graph uses points connected by lines to show change over time?",
+      "choices": [
+        {
+          "text": "Bar graph",
+          "correct": false,
+          "misconception": "wrong_type",
+          "feedback": "A bar graph uses bars to compare categories, not points connected by lines."
+        },
+        {
+          "text": "Line graph",
+          "correct": true
+        },
+        {
+          "text": "Pictograph",
+          "misconception": "wrong_type",
+          "feedback": "A pictograph uses pictures, not points connected by lines."
+        },
+        {
+          "text": "Pie chart",
+          "misconception": "wrong_type",
+          "feedback": "A pie chart uses slices of a circle, not points connected by lines."
+        }
+      ],
+      "hints": [
+        "Points connected by lines show change over time",
+        "This is called a line graph"
+      ],
+      "explanation": "A line graph uses points connected by lines to show change over time."
+    }
+  ]
+}

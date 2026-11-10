@@ -1,0 +1,24 @@
+{
+  "grade": 5,
+  "skills": "skills.json",
+  "questions": [
+    "questions_g5_num_place_value.json",
+    "questions_g5_num_rounding.json",
+    "questions_g5_num_multiplication.json",
+    "questions_g5_num_division.json",
+    "questions_g5_num_fractions.json",
+    "questions_g5_num_decimals.json",
+    "questions_g5_measure_length.json",
+    "questions_g5_measure_area.json",
+    "questions_g5_measure_volume.json",
+    "questions_g5_measure_mass.json",
+    "questions_g5_measure_time.json",
+    "questions_g5_measure_money.json",
+    "questions_g5_geo_2d_shapes.json",
+    "questions_g5_geo_3d_objects.json",
+    "questions_g5_geo_symmetry_angles.json",
+    "questions_g5_geo_positions.json",
+    "questions_g5_data_representation.json",
+    "questions_g5_data_interpreting.json"
+  ]
+}

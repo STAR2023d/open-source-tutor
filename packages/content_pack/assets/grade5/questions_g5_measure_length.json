@@ -1,0 +1,271 @@
+{
+  "skillId": "g5.num.measurement.length",
+  "title": "Length (convert units, perimeter)",
+  "questions": [
+    {
+      "id": "g5_g5_num_measurement_length_r1",
+      "skillId": "g5.num.measurement.length",
+      "bloom": "remember",
+      "type": "multipleChoice",
+      "prompt": "How many metres are there in 1 km?",
+      "choices": [
+        {
+          "text": "100 m",
+          "correct": false,
+          "misconception": "wrong_conversion",
+          "feedback": "1 km = 1000 m, not 100 m."
+        },
+        {
+          "text": "1000 m",
+          "correct": true
+        },
+        {
+          "text": "10 m",
+          "misconception": "wrong_conversion",
+          "feedback": "1 km = 1000 m, not 10 m."
+        },
+        {
+          "text": "10 000 m",
+          "misconception": "wrong_conversion",
+          "feedback": "1 km = 1000 m, not 10 000 m."
+        }
+      ],
+      "hints": [
+        "1 km = 1000 m"
+      ],
+      "explanation": "1 km = 1000 m."
+    },
+    {
+      "id": "g5_g5_num_measurement_length_r2",
+      "skillId": "g5.num.measurement.length",
+      "bloom": "remember",
+      "type": "multipleChoice",
+      "prompt": "How many cm are there in 1 m?",
+      "choices": [
+        {
+          "text": "100 cm",
+          "correct": true
+        },
+        {
+          "text": "10 cm",
+          "misconception": "wrong_conversion",
+          "feedback": "1 m = 100 cm, not 10 cm."
+        },
+        {
+          "text": "1000 cm",
+          "misconception": "wrong_conversion",
+          "feedback": "1 m = 100 cm, not 1000 cm."
+        },
+        {
+          "text": "1 cm",
+          "misconception": "wrong_conversion",
+          "feedback": "1 m = 100 cm, not 1 cm."
+        }
+      ],
+      "hints": [
+        "1 m = 100 cm"
+      ],
+      "explanation": "1 m = 100 cm."
+    },
+    {
+      "id": "g5_g5_num_measurement_length_u1",
+      "skillId": "g5.num.measurement.length",
+      "bloom": "understand",
+      "type": "multipleChoice",
+      "prompt": "Which unit is most suitable for measuring the length of a classroom?",
+      "choices": [
+        {
+          "text": "Metres",
+          "correct": true
+        },
+        {
+          "text": "Centimetres",
+          "misconception": "too_small",
+          "feedback": "Centimetres would be too precise for a whole classroom. Metres are the right scale."
+        },
+        {
+          "text": "Kilometres",
+          "misconception": "too_large",
+          "feedback": "Kilometres are for long distances, not classroom length."
+        },
+        {
+          "text": "Millimetres",
+          "misconception": "too_small",
+          "feedback": "Millimetres are for very small objects, not a classroom."
+        }
+      ],
+      "hints": [
+        "Classroom length = about 6-10 m",
+        "Metres are the right scale"
+      ],
+      "explanation": "Metres are most suitable for measuring the length of a classroom (about 6-10 m)."
+    },
+    {
+      "id": "g5_g5_num_measurement_length_u2",
+      "skillId": "g5.num.measurement.length",
+      "bloom": "understand",
+      "type": "multipleChoice",
+      "prompt": "Which unit is most suitable for measuring the length of a pencil?",
+      "choices": [
+        {
+          "text": "Centimetres",
+          "correct": true
+        },
+        {
+          "text": "Metres",
+          "misconception": "too_large",
+          "feedback": "A pencil is about 15 cm. Metres would be too large for such a short object."
+        },
+        {
+          "text": "Kilometres",
+          "misconception": "too_large",
+          "feedback": "Kilometres are for long distances, not pencil length."
+        },
+        {
+          "text": "Kilograms",
+          "misconception": "wrong_measure",
+          "feedback": "Kilograms measure mass, not length."
+        }
+      ],
+      "hints": [
+        "Pencil length = about 15 cm",
+        "Centimetres are the right scale"
+      ],
+      "explanation": "Centimetres are most suitable for measuring a pencil (about 15 cm)."
+    },
+    {
+      "id": "g5_g5_num_measurement_length_a1",
+      "skillId": "g5.num.measurement.length",
+      "bloom": "apply",
+      "type": "multipleChoice",
+      "prompt": "A room is 5 m long. How many cm is that?",
+      "choices": [
+        {
+          "text": "500 cm",
+          "correct": true
+        },
+        {
+          "text": "50 cm",
+          "misconception": "wrong_conversion",
+          "feedback": "5 m = 5 x 100 = 500 cm, not 50 cm."
+        },
+        {
+          "text": "5000 cm",
+          "misconception": "wrong_conversion",
+          "feedback": "5 m = 5 x 100 = 500 cm, not 5000 cm."
+        },
+        {
+          "text": "50 cm",
+          "misconception": "wrong_conversion",
+          "feedback": "5 m = 500 cm, not 50 cm."
+        }
+      ],
+      "hints": [
+        "5 m x 100 = 500 cm"
+      ],
+      "explanation": "5 m x 100 = 500 cm."
+    },
+    {
+      "id": "g5_g5_num_measurement_length_a2",
+      "skillId": "g5.num.measurement.length",
+      "bloom": "apply",
+      "type": "multipleChoice",
+      "prompt": "A rectangular field is 80 m long and 40 m wide. What is its perimeter?",
+      "choices": [
+        {
+          "text": "240 m",
+          "correct": true
+        },
+        {
+          "text": "120 m",
+          "misconception": "wrong_formula",
+          "feedback": "Perimeter = 2 x (length + width) = 2 x (80 + 40) = 2 x 120 = 240 m, not 120 m."
+        },
+        {
+          "text": "320 m",
+          "misconception": "adds_wrong",
+          "feedback": "Perimeter = 2 x (80 + 40) = 2 x 120 = 240 m, not 320 m."
+        },
+        {
+          "text": "800 m",
+          "misconception": "wrong_formula",
+          "feedback": "Perimeter is 2 x (length + width), not length x width (that would be area)."
+        }
+      ],
+      "hints": [
+        "Perimeter = 2 x (length + width)",
+        "= 2 x (80 + 40)",
+        "= 2 x 120",
+        "= 240 m"
+      ],
+      "explanation": "Perimeter = 2 x (80 + 40) = 2 x 120 = 240 m."
+    },
+    {
+      "id": "g5_g5_num_measurement_length_an1",
+      "skillId": "g5.num.measurement.length",
+      "bloom": "analyze",
+      "type": "multipleChoice",
+      "prompt": "A rope is 2.5 m long. Another rope is 1.75 m long. What is the total length of both ropes in cm?",
+      "choices": [
+        {
+          "text": "425 cm",
+          "correct": true
+        },
+        {
+          "text": "4.25 cm",
+          "misconception": "decimal_incorrect",
+          "feedback": "2.5 m = 250 cm, 1.75 m = 175 cm. Total = 250 + 175 = 425 cm, not 4.25 cm."
+        },
+        {
+          "text": "4250 cm",
+          "misconception": "wrong_conversion",
+          "feedback": "250 + 175 = 425 cm, not 4250 cm."
+        },
+        {
+          "text": "42.5 cm",
+          "misconception": "decimal_incorrect",
+          "feedback": "250 + 175 = 425 cm, not 42.5 cm."
+        }
+      ],
+      "hints": [
+        "2.5 m = 250 cm",
+        "1.75 m = 175 cm",
+        "250 + 175 = 425 cm"
+      ],
+      "explanation": "2.5 m = 250 cm, 1.75 m = 175 cm. Total = 250 + 175 = 425 cm."
+    },
+    {
+      "id": "g5_g5_num_measurement_length_an2",
+      "skillId": "g5.num.measurement.length",
+      "bloom": "analyze",
+      "type": "multipleChoice",
+      "prompt": "A runner runs 2 km 400 m. How many metres is that?",
+      "choices": [
+        {
+          "text": "2400 m",
+          "correct": true
+        },
+        {
+          "text": "240 m",
+          "misconception": "wrong_conversion",
+          "feedback": "2 km = 2000 m, 2000 + 400 = 2400 m, not 240 m."
+        },
+        {
+          "text": "204 m",
+          "misconception": "wrong_conversion",
+          "feedback": "2 km = 2000 m, so 2400 m, not 204 m."
+        },
+        {
+          "text": "20 040 m",
+          "misconception": "wrong_conversion",
+          "feedback": "2 km = 2000 m, + 400 m = 2400 m, not 20 040 m."
+        }
+      ],
+      "hints": [
+        "2 km = 2000 m",
+        "2000 + 400 = 2400 m"
+      ],
+      "explanation": "2 km = 2000 m, 2000 + 400 = 2400 m."
+    }
+  ]
+}

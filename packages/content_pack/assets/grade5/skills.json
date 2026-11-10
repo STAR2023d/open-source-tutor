@@ -1,0 +1,218 @@
+{
+  "skills": [
+    {
+      "id": "g5.num.place-value",
+      "title": "Place value and total value (up to 1 000 000)",
+      "grade": 5,
+      "strand": "Numbers",
+      "subStrand": "Whole Numbers",
+      "prerequisites": [],
+      "status": "live",
+      "kicdRef": "Gr5 Math 1.1 (a)"
+    },
+    {
+      "id": "g5.num.rounding",
+      "title": "Rounding and estimation",
+      "grade": 5,
+      "strand": "Numbers",
+      "subStrand": "Whole Numbers",
+      "prerequisites": [
+        "g5.num.place-value"
+      ],
+      "status": "live",
+      "kicdRef": "Gr5 Math 1.2 (b,d)"
+    },
+    {
+      "id": "g5.num.multiplication",
+      "title": "Multiplication (2-digit by 2-digit, 3-digit by 1-digit)",
+      "grade": 5,
+      "strand": "Numbers",
+      "subStrand": "Multiplication",
+      "prerequisites": [
+        "g5.num.rounding"
+      ],
+      "status": "live",
+      "kicdRef": "Gr5 Math 2.1"
+    },
+    {
+      "id": "g5.num.division",
+      "title": "Division (long division with 2-digit divisors)",
+      "grade": 5,
+      "strand": "Numbers",
+      "subStrand": "Division",
+      "prerequisites": [
+        "g5.num.multiplication"
+      ],
+      "status": "live",
+      "kicdRef": "Gr5 Math 2.2"
+    },
+    {
+      "id": "g5.num.fractions",
+      "title": "Fractions (equivalent, compare, order, mixed numbers)",
+      "grade": 5,
+      "strand": "Numbers",
+      "subStrand": "Fractions",
+      "prerequisites": [
+        "g5.num.division"
+      ],
+      "status": "live",
+      "kicdRef": "Gr5 Math 3.1"
+    },
+    {
+      "id": "g5.num.decimals",
+      "title": "Decimals (tenths, hundredths, thousandths)",
+      "grade": 5,
+      "strand": "Numbers",
+      "subStrand": "Decimals",
+      "prerequisites": [
+        "g5.num.fractions"
+      ],
+      "status": "live",
+      "kicdRef": "Gr5 Math 3.2"
+    },
+    {
+      "id": "g5.num.measurement.length",
+      "title": "Length (convert units, perimeter)",
+      "grade": 5,
+      "strand": "Numbers",
+      "subStrand": "Measurement",
+      "prerequisites": [
+        "g5.num.place-value"
+      ],
+      "status": "live",
+      "kicdRef": "Gr5 Math 4.1"
+    },
+    {
+      "id": "g5.num.measurement.area",
+      "title": "Area (rectangles, squares, composite shapes)",
+      "grade": 5,
+      "strand": "Numbers",
+      "subStrand": "Measurement",
+      "prerequisites": [
+        "g5.num.measurement.length"
+      ],
+      "status": "live",
+      "kicdRef": "Gr5 Math 4.2"
+    },
+    {
+      "id": "g5.num.measurement.volume",
+      "title": "Volume & capacity (cubes, cuboids)",
+      "grade": 5,
+      "strand": "Numbers",
+      "subStrand": "Measurement",
+      "prerequisites": [
+        "g5.num.measurement.area"
+      ],
+      "status": "live",
+      "kicdRef": "Gr5 Math 4.3"
+    },
+    {
+      "id": "g5.num.measurement.mass",
+      "title": "Mass (convert units, word problems)",
+      "grade": 5,
+      "strand": "Numbers",
+      "subStrand": "Measurement",
+      "prerequisites": [
+        "g5.num.measurement.volume"
+      ],
+      "status": "live",
+      "kicdRef": "Gr5 Math 4.4"
+    },
+    {
+      "id": "g5.num.measurement.time",
+      "title": "Time & timetable (24-hour clock, elapsed time)",
+      "grade": 5,
+      "strand": "Numbers",
+      "subStrand": "Measurement",
+      "prerequisites": [
+        "g5.num.measurement.mass"
+      ],
+      "status": "live",
+      "kicdRef": "Gr5 Math 4.5"
+    },
+    {
+      "id": "g5.num.measurement.money",
+      "title": "Money (profit, loss, bills, interest)",
+      "grade": 5,
+      "strand": "Numbers",
+      "subStrand": "Measurement",
+      "prerequisites": [
+        "g5.num.measurement.time"
+      ],
+      "status": "live",
+      "kicdRef": "Gr5 Math 4.6"
+    },
+    {
+      "id": "g5.num.geometry.2d-shapes",
+      "title": "2-D shapes (triangles, quadrilaterals)",
+      "grade": 5,
+      "strand": "Geometry",
+      "subStrand": "Geometry",
+      "prerequisites": [
+        "g5.num.measurement.length"
+      ],
+      "status": "live",
+      "kicdRef": "Gr5 Math 5.1"
+    },
+    {
+      "id": "g5.num.geometry.3d-objects",
+      "title": "3-D objects (cuboids, cubes, pyramids, prisms)",
+      "grade": 5,
+      "strand": "Geometry",
+      "subStrand": "Geometry",
+      "prerequisites": [
+        "g5.num.geometry.2d-shapes"
+      ],
+      "status": "live",
+      "kicdRef": "Gr5 Math 5.2"
+    },
+    {
+      "id": "g5.num.geometry.symmetry",
+      "title": "Symmetry & angles (measuring, drawing)",
+      "grade": 5,
+      "strand": "Geometry",
+      "subStrand": "Geometry",
+      "prerequisites": [
+        "g5.num.geometry.3d-objects"
+      ],
+      "status": "live",
+      "kicdRef": "Gr5 Math 5.3"
+    },
+    {
+      "id": "g5.num.geometry.positions",
+      "title": "Positions & directions (coordinates)",
+      "grade": 5,
+      "strand": "Geometry",
+      "subStrand": "Geometry",
+      "prerequisites": [
+        "g5.num.geometry.symmetry"
+      ],
+      "status": "live",
+      "kicdRef": "Gr5 Math 5.4"
+    },
+    {
+      "id": "g5.num.datahandling.representation",
+      "title": "Data representation (pictographs, bar graphs)",
+      "grade": 5,
+      "strand": "Data Handling",
+      "subStrand": "Data Handling",
+      "prerequisites": [
+        "g5.num.place-value"
+      ],
+      "status": "live",
+      "kicdRef": "Gr5 Math 6.1"
+    },
+    {
+      "id": "g5.num.datahandling.interpretation",
+      "title": "Interpreting data & probability",
+      "grade": 5,
+      "strand": "Data Handling",
+      "subStrand": "Data Handling",
+      "prerequisites": [
+        "g5.num.datahandling.representation"
+      ],
+      "status": "live",
+      "kicdRef": "Gr5 Math 6.2"
+    }
+  ]
+}

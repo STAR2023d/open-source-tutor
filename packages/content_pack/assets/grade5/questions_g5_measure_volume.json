@@ -1,0 +1,273 @@
+{
+  "skillId": "g5.num.measurement.volume",
+  "title": "Volume & capacity (cubes, cuboids)",
+  "questions": [
+    {
+      "id": "g5_g5_num_measurement_volume_r1",
+      "skillId": "g5.num.measurement.volume",
+      "bloom": "remember",
+      "type": "multipleChoice",
+      "prompt": "What is the volume of a cube with side 3 cm?",
+      "choices": [
+        {
+          "text": "6 cm\u00b3",
+          "misconception": "wrong_calc",
+          "feedback": "3 x 3 x 3 = 27 cm\u00b3, not 6 cm\u00b3."
+        },
+        {
+          "text": "9 cm\u00b3",
+          "misconception": "wrong_calc",
+          "feedback": "3 x 3 x 3 = 27 cm\u00b3, not 9 cm\u00b3."
+        },
+        {
+          "text": "12 cm\u00b3",
+          "misconception": "wrong_calc",
+          "feedback": "3 x 3 x 3 = 27 cm\u00b3, not 12 cm\u00b3."
+        },
+        {
+          "text": "27 cm\u00b3",
+          "correct": true
+        }
+      ],
+      "hints": [
+        "Volume of a cube = side x side x side",
+        "3 x 3 x 3 = 27"
+      ],
+      "explanation": "Volume of a cube = 3 x 3 x 3 = 27 cm\u00b3."
+    },
+    {
+      "id": "g5_g5_num_measurement_volume_r2",
+      "skillId": "g5.num.measurement.volume",
+      "bloom": "remember",
+      "type": "multipleChoice",
+      "prompt": "What is the volume of a cuboid with length 4 cm, width 3 cm, height 2 cm?",
+      "choices": [
+        {
+          "text": "9 cm\u00b3",
+          "misconception": "wrong_calc",
+          "feedback": "4 x 3 x 2 = 24 cm\u00b3, not 9 cm\u00b3."
+        },
+        {
+          "text": "18 cm\u00b3",
+          "misconception": "wrong_calc",
+          "feedback": "4 x 3 x 2 = 24 cm\u00b3, not 18 cm\u00b3."
+        },
+        {
+          "text": "12 cm\u00b3",
+          "misconception": "wrong_calc",
+          "feedback": "4 x 3 x 2 = 24 cm\u00b3, not 12 cm\u00b3."
+        },
+        {
+          "text": "24 cm\u00b3",
+          "correct": true
+        }
+      ],
+      "hints": [
+        "Volume of a cuboid = length x width x height",
+        "4 x 3 x 2 = 24"
+      ],
+      "explanation": "Volume of a cuboid = 4 x 3 x 2 = 24 cm\u00b3."
+    },
+    {
+      "id": "g5_g5_num_measurement_volume_u1",
+      "skillId": "g5.num.measurement.volume",
+      "bloom": "understand",
+      "type": "multipleChoice",
+      "prompt": "Which unit is used to measure capacity?",
+      "choices": [
+        {
+          "text": "Metres (m)",
+          "misconception": "wrong_unit",
+          "feedback": "Metres measure length. Litres measure capacity."
+        },
+        {
+          "text": "Grams (g)",
+          "misconception": "wrong_unit",
+          "feedback": "Grams measure mass. Litres measure capacity."
+        },
+        {
+          "text": "Kilograms (kg)",
+          "misconception": "wrong_unit",
+          "feedback": "Kilograms measure mass. Litres measure capacity."
+        },
+        {
+          "text": "Litres (L)",
+          "correct": true
+        }
+      ],
+      "hints": [
+        "Capacity = how much a container can hold",
+        "Units: litres (L), millilitres (mL)"
+      ],
+      "explanation": "Litres (L) is used to measure capacity."
+    },
+    {
+      "id": "g5_g5_num_measurement_volume_u2",
+      "skillId": "g5.num.measurement.volume",
+      "bloom": "understand",
+      "type": "multipleChoice",
+      "prompt": "Which container holds the most: a 1 L bottle, a 500 mL bottle, or a 2 L bottle?",
+      "choices": [
+        {
+          "text": "1 L bottle",
+          "misconception": "wrong_compare",
+          "feedback": "2 L = 2000 mL > 1000 mL > 500 mL. The 2 L bottle holds the most."
+        },
+        {
+          "text": "500 mL bottle",
+          "misconception": "wrong_compare",
+          "feedback": "500 mL = 0.5 L, the smallest."
+        },
+        {
+          "text": "All hold the same",
+          "misconception": "confused",
+          "feedback": "2 L > 1 L > 500 mL. They do not hold the same amount."
+        },
+        {
+          "text": "2 L bottle",
+          "correct": true
+        }
+      ],
+      "hints": [
+        "1 L = 1000 mL",
+        "2 L = 2000 mL",
+        "Compare: 2000 > 1000 > 500"
+      ],
+      "explanation": "2 L bottle holds the most (2000 mL > 1000 mL > 500 mL)."
+    },
+    {
+      "id": "g5_g5_num_measurement_volume_a1",
+      "skillId": "g5.num.measurement.volume",
+      "bloom": "apply",
+      "type": "multipleChoice",
+      "prompt": "A box is 10 cm long, 8 cm wide, and 5 cm high. How many 1 cm\u00b3 cubes can fit inside?",
+      "choices": [
+        {
+          "text": "40 cubes",
+          "misconception": "wrong_calc",
+          "feedback": "10 x 8 x 5 = 400, not 40 cubes."
+        },
+        {
+          "text": "13 cubes",
+          "misconception": "wrong_calc",
+          "feedback": "10 + 8 + 5 = 23, not 400 cubes. Volume = 10 x 8 x 5 = 400 cm\u00b3."
+        },
+        {
+          "text": "100 cubes",
+          "misconception": "wrong_calc",
+          "feedback": "10 x 8 x 5 = 400, not 100 cubes."
+        },
+        {
+          "text": "400 cubes",
+          "correct": true
+        }
+      ],
+      "hints": [
+        "Volume = 10 x 8 x 5 = 400 cm\u00b3",
+        "1 cm\u00b3 cubes fit = 400"
+      ],
+      "explanation": "Volume = 10 x 8 x 5 = 400 cm\u00b3. So 400 1 cm\u00b3 cubes can fit."
+    },
+    {
+      "id": "g5_g5_num_measurement_volume_a2",
+      "skillId": "g5.num.measurement.volume",
+      "bloom": "apply",
+      "type": "multipleChoice",
+      "prompt": "A fish tank is 80 cm long, 40 cm wide, and 50 cm high. What is its volume in cm\u00b3?",
+      "choices": [
+        {
+          "text": "16 000 cm\u00b3",
+          "misconception": "wrong_calc",
+          "feedback": "80 x 40 x 50 = 160 000, not 16 000 cm\u00b3."
+        },
+        {
+          "text": "320 cm\u00b3",
+          "misconception": "wrong_calc",
+          "feedback": "80 x 40 x 50 = 160 000, not 320 cm\u00b3."
+        },
+        {
+          "text": "240 cm\u00b3",
+          "misconception": "wrong_calc",
+          "feedback": "80 x 40 x 50 = 160 000, not 240 cm\u00b3."
+        },
+        {
+          "text": "160 000 cm\u00b3",
+          "correct": true
+        }
+      ],
+      "hints": [
+        "Volume = 80 x 40 x 50",
+        "80 x 40 = 3200",
+        "3200 x 50 = 160 000"
+      ],
+      "explanation": "Volume = 80 x 40 x 50 = 160 000 cm\u00b3."
+    },
+    {
+      "id": "g5_g5_num_measurement_volume_an1",
+      "skillId": "g5.num.measurement.volume",
+      "bloom": "analyze",
+      "type": "multipleChoice",
+      "prompt": "A rectangular tank is 60 cm long, 40 cm wide, and 30 cm high. It is half full. How many more litres to fill completely?",
+      "choices": [
+        {
+          "text": "72 litres",
+          "misconception": "wrong_calc",
+          "feedback": "Total volume = 72 000 cm\u00b3 = 72 L. Half full = 36 L. 36 L more needed, not 72 L."
+        },
+        {
+          "text": "18 litres",
+          "misconception": "wrong_calc",
+          "feedback": "Total = 72 L. Half full = 36 L used. 36 L more needed, not 18 L."
+        },
+        {
+          "text": "120 litres",
+          "misconception": "wrong_calc",
+          "feedback": "Total = 60 x 40 x 30 = 72 000 cm\u00b3 = 72 L. 36 L more needed, not 120 L."
+        },
+        {
+          "text": "36 litres",
+          "correct": true
+        }
+      ],
+      "hints": [
+        "Total volume = 60 x 40 x 30 = 72 000 cm\u00b3",
+        "72 000 cm\u00b3 = 72 litres",
+        "Half full = 36 L, so 36 L more needed"
+      ],
+      "explanation": "Total volume = 72 000 cm\u00b3 = 72 L. Half full means 36 L used, so 36 L more needed to fill."
+    },
+    {
+      "id": "g5_g5_num_measurement_volume_an2",
+      "skillId": "g5.num.measurement.volume",
+      "bloom": "analyze",
+      "type": "multipleChoice",
+      "prompt": "A water tap fills a bucket at 2 litres per minute. How long to fill a 12 L bucket?",
+      "choices": [
+        {
+          "text": "4 minutes",
+          "misconception": "wrong_calc",
+          "feedback": "12 L / 2 L per minute = 6 minutes, not 4 minutes."
+        },
+        {
+          "text": "24 minutes",
+          "misconception": "wrong_calc",
+          "feedback": "12 L / 2 L per minute = 6 minutes, not 24 minutes."
+        },
+        {
+          "text": "3 minutes",
+          "misconception": "wrong_calc",
+          "feedback": "12 L / 2 L per minute = 6 minutes, not 3 minutes."
+        },
+        {
+          "text": "6 minutes",
+          "correct": true
+        }
+      ],
+      "hints": [
+        "Time = 12 L / 2 L per minute",
+        "12 / 2 = 6"
+      ],
+      "explanation": "Time = 12 L / 2 L per minute = 6 minutes."
+    }
+  ]
+}

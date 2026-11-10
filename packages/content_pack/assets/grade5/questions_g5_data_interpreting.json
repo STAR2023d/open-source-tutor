@@ -1,0 +1,262 @@
+{
+  "skillId": "g5.num.datahandling.interpretation",
+  "title": "Interpreting data & probability",
+  "questions": [
+    {
+      "id": "g5_g5_num_datahandling_interpretation_r1",
+      "skillId": "g5.num.datahandling.interpretation",
+      "bloom": "remember",
+      "type": "multipleChoice",
+      "prompt": "In a bar graph, what does the height of a bar represent?",
+      "choices": [
+        {
+          "text": "The time the data was collected",
+          "misconception": "wrong_meaning",
+          "feedback": "The height of a bar represents the count or frequency, not time."
+        },
+        {
+          "text": "The colour of the data",
+          "misconception": "wrong_meaning",
+          "feedback": "The height of a bar represents the count or frequency, not colour."
+        },
+        {
+          "text": "The frequency or count of the data",
+          "correct": true
+        },
+        {
+          "text": "The cost of the data",
+          "misconception": "wrong_meaning",
+          "feedback": "The height of a bar represents the count or frequency, not cost."
+        }
+      ],
+      "hints": [
+        "The height of a bar represents the count or frequency"
+      ],
+      "explanation": "The height of a bar represents the frequency or count of the data."
+    },
+    {
+      "id": "g5_g5_num_datahandling_interpretation_r2",
+      "skillId": "g5.num.datahandling.interpretation",
+      "bloom": "remember",
+      "type": "multipleChoice",
+      "prompt": "What does probability mean?",
+      "choices": [
+        {
+          "text": "The speed of an event",
+          "misconception": "wrong_meaning",
+          "feedback": "Probability is the chance that an event will happen, not its speed."
+        },
+        {
+          "text": "The cost of an event",
+          "misconception": "wrong_meaning",
+          "feedback": "Probability is the chance that an event will happen, not its cost."
+        },
+        {
+          "text": "The chance that an event will happen",
+          "correct": true
+        },
+        {
+          "text": "The size of an event",
+          "misconception": "wrong_meaning",
+          "feedback": "Probability is the chance that an event will happen, not its size."
+        }
+      ],
+      "hints": [
+        "Probability is the chance that an event will happen"
+      ],
+      "explanation": "Probability is the chance that an event will happen."
+    },
+    {
+      "id": "g5_g5_num_datahandling_interpretation_u1",
+      "skillId": "g5.num.datahandling.interpretation",
+      "bloom": "understand",
+      "type": "multipleChoice",
+      "prompt": "If you flip a fair coin, what is the probability of getting heads?",
+      "choices": [
+        {
+          "text": "0",
+          "misconception": "wrong_prob",
+          "feedback": "Probability of heads on a fair coin is 1/2, not 0."
+        },
+        {
+          "text": "1",
+          "misconception": "wrong_prob",
+          "feedback": "Probability of heads on a fair coin is 1/2, not 1."
+        },
+        {
+          "text": "1/2",
+          "correct": true
+        },
+        {
+          "text": "1/4",
+          "misconception": "wrong_prob",
+          "feedback": "A fair coin has 2 sides, so probability of heads = 1/2, not 1/4."
+        }
+      ],
+      "hints": [
+        "A fair coin has 2 sides, so probability of heads = 1/2"
+      ],
+      "explanation": "A fair coin has 2 sides (heads and tails), so probability of heads = 1/2."
+    },
+    {
+      "id": "g5_g5_num_datahandling_interpretation_u2",
+      "skillId": "g5.num.datahandling.interpretation",
+      "bloom": "understand",
+      "type": "multipleChoice",
+      "prompt": "What is the probability of picking a blue marble from a bag with 4 blue and 4 red marbles?",
+      "choices": [
+        {
+          "text": "1/4",
+          "misconception": "wrong_prob",
+          "feedback": "4 blue + 4 red = 8 total, 4 blue, so 4/8 = 1/2, not 1/4."
+        },
+        {
+          "text": "1/2",
+          "correct": true
+        },
+        {
+          "text": "3/4",
+          "misconception": "wrong_prob",
+          "feedback": "4 blue + 4 red = 8 total, 4 blue, so 4/8 = 1/2, not 3/4."
+        },
+        {
+          "text": "1/8",
+          "misconception": "wrong_prob",
+          "feedback": "4 blue + 4 red = 8 total, 4 blue, so 4/8 = 1/2, not 1/8."
+        }
+      ],
+      "hints": [
+        "4 blue + 4 red = 8 total, 4 blue, so 4/8 = 1/2"
+      ],
+      "explanation": "4 blue + 4 red = 8 total, 4 blue, so 4/8 = 1/2."
+    },
+    {
+      "id": "g5_g5_num_datahandling_interpretation_a1",
+      "skillId": "g5.num.datahandling.interpretation",
+      "bloom": "apply",
+      "type": "multipleChoice",
+      "prompt": "A bar graph shows 15 learners who like apples, 10 who like bananas, and 5 who like oranges. What is the total number of learners surveyed?",
+      "choices": [
+        {
+          "text": "20",
+          "misconception": "wrong_add",
+          "feedback": "Total = 15 + 10 + 5 = 30, not 20."
+        },
+        {
+          "text": "25",
+          "misconception": "wrong_add",
+          "feedback": "Total = 15 + 10 + 5 = 30, not 25."
+        },
+        {
+          "text": "30",
+          "correct": true
+        },
+        {
+          "text": "35",
+          "misconception": "wrong_add",
+          "feedback": "Total = 15 + 10 + 5 = 30, not 35."
+        }
+      ],
+      "hints": [
+        "Total = 15 + 10 + 5 = 30"
+      ],
+      "explanation": "Total = 15 + 10 + 5 = 30."
+    },
+    {
+      "id": "g5_g5_num_datahandling_interpretation_a2",
+      "skillId": "g5.num.datahandling.interpretation",
+      "bloom": "apply",
+      "type": "multipleChoice",
+      "prompt": "A pie chart shows 40% like Maths, 30% like English, and 30% like Science. What fraction of learners like Maths?",
+      "choices": [
+        {
+          "text": "1/2",
+          "misconception": "wrong_frac",
+          "feedback": "40% = 2/5, not 1/2."
+        },
+        {
+          "text": "3/10",
+          "misconception": "wrong_frac",
+          "feedback": "40% = 2/5, not 3/10."
+        },
+        {
+          "text": "2/5",
+          "correct": true
+        },
+        {
+          "text": "4/5",
+          "misconception": "wrong_frac",
+          "feedback": "40% = 2/5, not 4/5."
+        }
+      ],
+      "hints": [
+        "40% = 40/100 = 2/5"
+      ],
+      "explanation": "40% = 40/100 = 2/5."
+    },
+    {
+      "id": "g5_g5_num_datahandling_interpretation_an1",
+      "skillId": "g5.num.datahandling.interpretation",
+      "bloom": "analyze",
+      "type": "multipleChoice",
+      "prompt": "A bag contains 3 red marbles and 5 blue marbles. What is the probability of picking a red marble?",
+      "choices": [
+        {
+          "text": "3/8",
+          "misconception": "wrong_prob",
+          "feedback": "Total = 3 + 5 = 8 marbles, 3 are red, so probability = 3/8. This is correct. Change this wrong option to 5/8."
+        },
+        {
+          "text": "5/8",
+          "misconception": "wrong_prob",
+          "feedback": "Total = 3 + 5 = 8 marbles, 3 are red, so probability = 3/8, not 5/8."
+        },
+        {
+          "text": "3/5",
+          "misconception": "wrong_prob",
+          "feedback": "Total = 3 + 5 = 8 marbles, 3 are red, so probability = 3/8, not 3/5."
+        },
+        {
+          "text": "3/8",
+          "correct": true
+        }
+      ],
+      "hints": [
+        "Total = 3 + 5 = 8 marbles, 3 are red, so probability = 3/8"
+      ],
+      "explanation": "Total = 3 + 5 = 8 marbles, 3 are red, so probability = 3/8."
+    },
+    {
+      "id": "g5_g5_num_datahandling_interpretation_an2",
+      "skillId": "g5.num.datahandling.interpretation",
+      "bloom": "analyze",
+      "type": "multipleChoice",
+      "prompt": "In a survey of 40 learners, 25 said their favourite subject is Mathematics. What fraction of the learners prefer Mathematics?",
+      "choices": [
+        {
+          "text": "1/2",
+          "misconception": "wrong_frac",
+          "feedback": "25/40 simplifies to 5/8, not 1/2."
+        },
+        {
+          "text": "3/8",
+          "misconception": "wrong_frac",
+          "feedback": "25/40 simplifies to 5/8, not 3/8."
+        },
+        {
+          "text": "5/8",
+          "correct": true
+        },
+        {
+          "text": "2/5",
+          "misconception": "wrong_frac",
+          "feedback": "25/40 simplifies to 5/8, not 2/5."
+        }
+      ],
+      "hints": [
+        "25/40 simplifies to 5/8"
+      ],
+      "explanation": "25/40 simplifies to 5/8 by dividing both by 5."
+    }
+  ]
+}

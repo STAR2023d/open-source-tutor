@@ -1,0 +1,263 @@
+{
+  "skillId": "g5.num.geometry.2d_shapes",
+  "title": "2-D shapes (triangles, quadrilaterals)",
+  "questions": [
+    {
+      "id": "g5_g5_num_geometry_2d-shapes_r1",
+      "skillId": "g5.num.geometry.2d-shapes",
+      "bloom": "remember",
+      "type": "multipleChoice",
+      "prompt": "How many sides does a triangle have?",
+      "choices": [
+        {
+          "text": "2",
+          "misconception": "wrong_count",
+          "feedback": "A triangle has 3 sides, not 2."
+        },
+        {
+          "text": "3",
+          "correct": true
+        },
+        {
+          "text": "4",
+          "misconception": "wrong_count",
+          "feedback": "A triangle has 3 sides, not 4."
+        },
+        {
+          "text": "5",
+          "misconception": "wrong_count",
+          "feedback": "A triangle has 3 sides, not 5."
+        }
+      ],
+      "hints": [
+        "A triangle has 3 sides"
+      ],
+      "explanation": "A triangle has 3 sides."
+    },
+    {
+      "id": "g5_g5_num_geometry_2d-shapes_r2",
+      "skillId": "g5.num.geometry.2d-shapes",
+      "bloom": "remember",
+      "type": "multipleChoice",
+      "prompt": "How many sides does a quadrilateral have?",
+      "choices": [
+        {
+          "text": "2",
+          "misconception": "wrong_count",
+          "feedback": "A quadrilateral has 4 sides, not 2."
+        },
+        {
+          "text": "3",
+          "misconception": "wrong_count",
+          "feedback": "A quadrilateral has 4 sides, not 3."
+        },
+        {
+          "text": "4",
+          "correct": true
+        },
+        {
+          "text": "5",
+          "misconception": "wrong_count",
+          "feedback": "A quadrilateral has 4 sides, not 5."
+        }
+      ],
+      "hints": [
+        "A quadrilateral has 4 sides"
+      ],
+      "explanation": "A quadrilateral has 4 sides."
+    },
+    {
+      "id": "g5_g5_num_geometry_2d-shapes_u1",
+      "skillId": "g5.num.geometry.2d-shapes",
+      "bloom": "understand",
+      "type": "multipleChoice",
+      "prompt": "Which shape has only one pair of parallel sides?",
+      "choices": [
+        {
+          "text": "Square",
+          "misconception": "wrong_shape",
+          "feedback": "A square has two pairs of parallel sides."
+        },
+        {
+          "text": "Rectangle",
+          "misconception": "wrong_shape",
+          "feedback": "A rectangle has two pairs of parallel sides."
+        },
+        {
+          "text": "Trapezoid",
+          "correct": true
+        },
+        {
+          "text": "Parallelogram",
+          "misconception": "wrong_shape",
+          "feedback": "A parallelogram has two pairs of parallel sides."
+        }
+      ],
+      "hints": [
+        "Trapezoid has exactly one pair of parallel sides"
+      ],
+      "explanation": "A trapezoid has exactly one pair of parallel sides."
+    },
+    {
+      "id": "g5_g5_num_geometry_2d-shapes_u2",
+      "skillId": "g5.num.geometry.2d-shapes",
+      "bloom": "understand",
+      "type": "multipleChoice",
+      "prompt": "Which shape has all sides equal and all angles equal?",
+      "choices": [
+        {
+          "text": "Rectangle",
+          "misconception": "wrong_shape",
+          "feedback": "A rectangle has equal angles (90 degrees) but adjacent sides are not all equal."
+        },
+        {
+          "text": "Square",
+          "correct": true
+        },
+        {
+          "text": "Rhombus",
+          "misconception": "wrong_shape",
+          "feedback": "A rhombus has all sides equal but angles are not all equal (unless it is a square)."
+        },
+        {
+          "text": "Triangle",
+          "misconception": "wrong_shape",
+          "feedback": "A triangle does not have all sides and angles equal in the standard classification."
+        }
+      ],
+      "hints": [
+        "Square has all sides equal and all angles equal (90 degrees)"
+      ],
+      "explanation": "A square has all sides equal and all angles equal (90 degrees)."
+    },
+    {
+      "id": "g5_g5_num_geometry_2d-shapes_a1",
+      "skillId": "g5.num.geometry.2d-shapes",
+      "bloom": "apply",
+      "type": "multipleChoice",
+      "prompt": "How many lines of symmetry does a square have?",
+      "choices": [
+        {
+          "text": "1",
+          "misconception": "wrong_count",
+          "feedback": "A square has 4 lines of symmetry, not 1."
+        },
+        {
+          "text": "2",
+          "misconception": "wrong_count",
+          "feedback": "A square has 4 lines of symmetry, not 2."
+        },
+        {
+          "text": "3",
+          "misconception": "wrong_count",
+          "feedback": "A square has 4 lines of symmetry, not 3."
+        },
+        {
+          "text": "4",
+          "correct": true
+        }
+      ],
+      "hints": [
+        "A square has 4 lines of symmetry"
+      ],
+      "explanation": "A square has 4 lines of symmetry."
+    },
+    {
+      "id": "g5_g5_num_geometry_2d-shapes_a2",
+      "skillId": "g5.num.geometry.2d-shapes",
+      "bloom": "apply",
+      "type": "multipleChoice",
+      "prompt": "How many lines of symmetry does an equilateral triangle have?",
+      "choices": [
+        {
+          "text": "1",
+          "misconception": "wrong_count",
+          "feedback": "An equilateral triangle has 3 lines of symmetry, not 1."
+        },
+        {
+          "text": "2",
+          "misconception": "wrong_count",
+          "feedback": "An equilateral triangle has 3 lines of symmetry, not 2."
+        },
+        {
+          "text": "3",
+          "correct": true
+        },
+        {
+          "text": "4",
+          "misconception": "wrong_count",
+          "feedback": "An equilateral triangle has 3 lines of symmetry, not 4."
+        }
+      ],
+      "hints": [
+        "An equilateral triangle has 3 lines of symmetry"
+      ],
+      "explanation": "An equilateral triangle has 3 lines of symmetry."
+    },
+    {
+      "id": "g5_g5_num_geometry_2d-shapes_an1",
+      "skillId": "g5.num.geometry.2d-shapes",
+      "bloom": "analyze",
+      "type": "multipleChoice",
+      "prompt": "Which of these shapes has the most lines of symmetry: a square, a rectangle, or an equilateral triangle?",
+      "choices": [
+        {
+          "text": "Rectangle",
+          "misconception": "wrong_shape",
+          "feedback": "Rectangle has 2 lines of symmetry; square has 4."
+        },
+        {
+          "text": "Square",
+          "correct": true
+        },
+        {
+          "text": "They are equal",
+          "misconception": "confused",
+          "feedback": "Square has 4, rectangle has 2, triangle has 3. Square has the most."
+        },
+        {
+          "text": "Triangle",
+          "misconception": "wrong_shape",
+          "feedback": "Triangle has 3 lines of symmetry; square has 4."
+        }
+      ],
+      "hints": [
+        "Square has 4 lines, Rectangle has 2, Triangle has 3",
+        "Square has the most"
+      ],
+      "explanation": "Square has 4 lines of symmetry. Rectangle has 2. Triangle has 3. Square has the most."
+    },
+    {
+      "id": "g5_g5_num_geometry_2d-shapes_an2",
+      "skillId": "g5.num.geometry.2d-shapes",
+      "bloom": "analyze",
+      "type": "multipleChoice",
+      "prompt": "A rectangle has length 8 cm and width 5 cm. If you draw lines of symmetry, how many can you draw?",
+      "choices": [
+        {
+          "text": "0",
+          "misconception": "wrong_count",
+          "feedback": "A rectangle has 2 lines of symmetry (horizontal and vertical)."
+        },
+        {
+          "text": "1",
+          "misconception": "wrong_count",
+          "feedback": "A rectangle has 2 lines of symmetry (horizontal and vertical)."
+        },
+        {
+          "text": "3",
+          "misconception": "wrong_count",
+          "feedback": "A rectangle has 2 lines of symmetry (horizontal and vertical)."
+        },
+        {
+          "text": "2",
+          "correct": true
+        }
+      ],
+      "hints": [
+        "A rectangle has 2 lines of symmetry (horizontal and vertical)"
+      ],
+      "explanation": "A rectangle has 2 lines of symmetry (horizontal and vertical)."
+    }
+  ]
+}

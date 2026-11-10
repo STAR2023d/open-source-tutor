@@ -1,0 +1,271 @@
+{
+  "skillId": "g5.num.measurement.mass",
+  "title": "Mass (convert units, word problems)",
+  "questions": [
+    {
+      "id": "g5_g5_num_measurement_mass_r1",
+      "skillId": "g5.num.measurement.mass",
+      "bloom": "remember",
+      "type": "multipleChoice",
+      "prompt": "How many grams are there in 1 kg?",
+      "choices": [
+        {
+          "text": "1000 g",
+          "correct": true
+        },
+        {
+          "text": "100 g",
+          "misconception": "wrong_conversion",
+          "feedback": "1 kg = 1000 g, not 100 g."
+        },
+        {
+          "text": "10 g",
+          "misconception": "wrong_conversion",
+          "feedback": "1 kg = 1000 g, not 10 g."
+        },
+        {
+          "text": "10 000 g",
+          "misconception": "wrong_conversion",
+          "feedback": "1 kg = 1000 g, not 10 000 g."
+        }
+      ],
+      "hints": [
+        "1 kg = 1000 g"
+      ],
+      "explanation": "1 kg = 1000 g."
+    },
+    {
+      "id": "g5_g5_num_measurement_mass_r2",
+      "skillId": "g5.num.measurement.mass",
+      "bloom": "remember",
+      "type": "multipleChoice",
+      "prompt": "How many kg are there in 3000 g?",
+      "choices": [
+        {
+          "text": "30 kg",
+          "misconception": "wrong_division",
+          "feedback": "3000 / 1000 = 3 kg, not 30 kg."
+        },
+        {
+          "text": "3 kg",
+          "correct": true
+        },
+        {
+          "text": "300 kg",
+          "misconception": "wrong_division",
+          "feedback": "3000 / 1000 = 3 kg, not 300 kg."
+        },
+        {
+          "text": "3000 kg",
+          "misconception": "wrong_conversion",
+          "feedback": "3000 g = 3 kg, not 3000 kg."
+        }
+      ],
+      "hints": [
+        "3000 g / 1000 = 3 kg"
+      ],
+      "explanation": "3000 g / 1000 = 3 kg."
+    },
+    {
+      "id": "g5_g5_num_measurement_mass_u1",
+      "skillId": "g5.num.measurement.mass",
+      "bloom": "understand",
+      "type": "multipleChoice",
+      "prompt": "Which unit is most suitable for measuring the mass of a loaf of bread?",
+      "choices": [
+        {
+          "text": "Grams",
+          "correct": true
+        },
+        {
+          "text": "Kilograms",
+          "misconception": "wrong_scale",
+          "feedback": "A loaf of bread weighs about 400 g, so grams are the right scale."
+        },
+        {
+          "text": "Tonnes",
+          "misconception": "wrong_scale",
+          "feedback": "Tonnes are for very heavy objects like cars, not bread."
+        },
+        {
+          "text": "Milligrams",
+          "misconception": "wrong_scale",
+          "feedback": "Milligrams are for very tiny amounts, not a loaf of bread."
+        }
+      ],
+      "hints": [
+        "Mass of a loaf of bread = about 400 g",
+        "Grams are the right scale"
+      ],
+      "explanation": "Grams are most suitable for measuring the mass of a loaf of bread (about 400 g)."
+    },
+    {
+      "id": "g5_g5_num_measurement_mass_u2",
+      "skillId": "g5.num.measurement.mass",
+      "bloom": "understand",
+      "type": "multipleChoice",
+      "prompt": "Which is the lightest: 3 kg, 300 g, or 30 g?",
+      "choices": [
+        {
+          "text": "3 kg",
+          "misconception": "wrong_comparison",
+          "feedback": "300 g = 0.3 kg, 30 g = 0.03 kg. 30 g is the lightest."
+        },
+        {
+          "text": "300 g",
+          "misconception": "wrong_comparison",
+          "feedback": "30 g = 0.03 kg, 300 g = 0.3 kg. 30 g is the lightest."
+        },
+        {
+          "text": "30 g",
+          "correct": true
+        },
+        {
+          "text": "They are all equal",
+          "misconception": "confused",
+          "feedback": "30 g = 0.03 kg, 300 g = 0.3 kg, 3 kg = 3000 g. They are not equal."
+        }
+      ],
+      "hints": [
+        "3 kg = 3000 g",
+        "300 g = 0.3 kg",
+        "30 g = 0.03 kg",
+        "30 g is the lightest."
+      ],
+      "explanation": "30 g = 0.03 kg is the lightest. 3 kg = 3000 g, 300 g = 0.3 kg."
+    },
+    {
+      "id": "g5_g5_num_measurement_mass_a1",
+      "skillId": "g5.num.measurement.mass",
+      "bloom": "apply",
+      "type": "multipleChoice",
+      "prompt": "A bag of sugar weighs 2 kg. How many grams is that?",
+      "choices": [
+        {
+          "text": "2000 g",
+          "correct": true
+        },
+        {
+          "text": "200 g",
+          "misconception": "wrong_conversion",
+          "feedback": "2 kg = 2000 g, not 200 g."
+        },
+        {
+          "text": "20 000 g",
+          "misconception": "wrong_conversion",
+          "feedback": "2 kg = 2000 g, not 20 000 g."
+        },
+        {
+          "text": "20 g",
+          "misconception": "wrong_conversion",
+          "feedback": "2 kg = 2000 g, not 20 g."
+        }
+      ],
+      "hints": [
+        "2 kg x 1000 = 2000 g"
+      ],
+      "explanation": "2 kg x 1000 = 2000 g."
+    },
+    {
+      "id": "g5_g5_num_measurement_mass_a2",
+      "skillId": "g5.num.measurement.mass",
+      "bloom": "apply",
+      "type": "multipleChoice",
+      "prompt": "A bag of maize is 50 kg. If you add 750 g more, what is the total mass in kg?",
+      "choices": [
+        {
+          "text": "50.75 kg",
+          "correct": true
+        },
+        {
+          "text": "50.075 kg",
+          "misconception": "wrong_decimal",
+          "feedback": "750 g = 0.75 kg, so total = 50 + 0.75 = 50.75 kg."
+        },
+        {
+          "text": "57.5 kg",
+          "misconception": "wrong_decimal",
+          "feedback": "750 g = 0.75 kg, not 7.5 kg. 50 + 0.75 = 50.75 kg."
+        },
+        {
+          "text": "50.5 kg",
+          "misconception": "wrong_decimal",
+          "feedback": "750 g = 0.75 kg, so total = 50 + 0.75 = 50.75 kg."
+        }
+      ],
+      "hints": [
+        "750 g = 0.75 kg",
+        "50 + 0.75 = 50.75 kg"
+      ],
+      "explanation": "750 g = 0.75 kg. Total = 50 + 0.75 = 50.75 kg."
+    },
+    {
+      "id": "g5_g5_num_measurement_mass_an1",
+      "skillId": "g5.num.measurement.mass",
+      "bloom": "analyze",
+      "type": "multipleChoice",
+      "prompt": "A truck carries 5 bags of rice (90 kg each) and 3 bags of beans (50 kg each). What is the total mass in tonnes?",
+      "choices": [
+        {
+          "text": "5.5 tonnes",
+          "misconception": "wrong_multiplication",
+          "feedback": "5 x 90 = 450 kg, 3 x 50 = 150 kg, total = 600 kg = 0.6 tonnes, not 5.5 tonnes."
+        },
+        {
+          "text": "600 kg",
+          "misconception": "wrong_units",
+          "feedback": "600 kg = 0.6 tonnes, not 600 kg as the final answer."
+        },
+        {
+          "text": "550 kg",
+          "misconception": "wrong_addition",
+          "feedback": "5 x 90 = 450 kg, 3 x 50 = 150 kg, total = 600 kg = 0.6 tonnes."
+        },
+        {
+          "text": "0.6 tonnes",
+          "correct": true
+        }
+      ],
+      "hints": [
+        "5 x 90 = 450 kg (rice)",
+        "3 x 50 = 150 kg (beans)",
+        "450 + 150 = 600 kg",
+        "600 kg / 1000 = 0.6 tonnes"
+      ],
+      "explanation": "Rice = 450 kg, beans = 150 kg, total = 600 kg = 0.6 tonnes."
+    },
+    {
+      "id": "g5_g5_num_measurement_mass_an2",
+      "skillId": "g5.num.measurement.mass",
+      "bloom": "analyze",
+      "type": "multipleChoice",
+      "prompt": "A bag of potatoes weighs 25 kg. A shopkeeper sells 3 kg. What is the mass of the potatoes left, in grams?",
+      "choices": [
+        {
+          "text": "2200 g",
+          "misconception": "wrong_conversion",
+          "feedback": "25 - 3 = 22 kg = 22 000 g, not 2 200 g."
+        },
+        {
+          "text": "22 000 g",
+          "correct": true
+        },
+        {
+          "text": "25 000 g",
+          "misconception": "wrong_subtraction",
+          "feedback": "25 - 3 = 22, not 25. 22 kg = 22 000 g."
+        },
+        {
+          "text": "20 000 g",
+          "misconception": "wrong_subtraction",
+          "feedback": "25 - 3 = 22, not 20. 22 kg = 22 000 g."
+        }
+      ],
+      "hints": [
+        "25 - 3 = 22 kg",
+        "22 kg = 22 000 g"
+      ],
+      "explanation": "25 - 3 = 22 kg. 22 kg = 22 000 g."
+    }
+  ]
+}

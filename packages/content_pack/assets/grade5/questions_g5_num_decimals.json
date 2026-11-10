@@ -1,0 +1,277 @@
+{
+  "skillId": "g5.num.decimals",
+  "title": "Decimals (tenths, hundredths, thousandths)",
+  "questions": [
+    {
+      "id": "g5_g5_num_decimals_r1",
+      "skillId": "g5.num.decimals",
+      "bloom": "remember",
+      "type": "multipleChoice",
+      "prompt": "What is the value of the digit 4 in 0.74?",
+      "choices": [
+        {
+          "text": "4 hundredths",
+          "correct": true
+        },
+        {
+          "text": "4 tenths",
+          "misconception": "place_value",
+          "feedback": "In 0.74, the 7 is in the tenths place and the 4 is in the hundredths place."
+        },
+        {
+          "text": "4 ones",
+          "misconception": "place_value",
+          "feedback": "0.74 has no ones place digit. The 4 is in the hundredths place."
+        },
+        {
+          "text": "4 tenths",
+          "misconception": "place_value",
+          "feedback": "The 4 is in the hundredths place (0.74 = 7 tenths + 4 hundredths)."
+        }
+      ],
+      "hints": [
+        "Decimal places: tenths, hundredths",
+        "0.74 = 7/10 + 4/100"
+      ],
+      "explanation": "0.74: 7 is in the tenths place, 4 is in the hundredths place. The value of 4 is 4 hundredths."
+    },
+    {
+      "id": "g5_g5_num_decimals_r2",
+      "skillId": "g5.num.decimals",
+      "bloom": "remember",
+      "type": "multipleChoice",
+      "prompt": "What is 0.3 as a fraction?",
+      "choices": [
+        {
+          "text": "3/10",
+          "correct": true
+        },
+        {
+          "text": "3/100",
+          "misconception": "wrong_place",
+          "feedback": "0.3 = 3/10 (3 tenths = 3/10). 3/100 would be 0.03."
+        },
+        {
+          "text": "30/100",
+          "misconception": "fraction_form",
+          "feedback": "0.3 = 3/10 = 30/100, but 3/10 is the simplest form. Both are correct, but 3/10 is standard."
+        },
+        {
+          "text": "1/3",
+          "misconception": "confused",
+          "feedback": "0.3 = 3/10, not 1/3. 1/3 = 0.333... (repeating)."
+        }
+      ],
+      "hints": [
+        "0.3 = 3 tenths",
+        "3 tenths = 3/10"
+      ],
+      "explanation": "0.3 = 3/10 (3 tenths = 3/10)."
+    },
+    {
+      "id": "g5_g5_num_decimals_u1",
+      "skillId": "g5.num.decimals",
+      "bloom": "understand",
+      "type": "multipleChoice",
+      "prompt": "Which decimal is equivalent to 1/2?",
+      "choices": [
+        {
+          "text": "0.5",
+          "correct": true
+        },
+        {
+          "text": "0.2",
+          "misconception": "halves",
+          "feedback": "1/2 = 0.5, not 0.2. 1/2 = 5/10 = 0.5."
+        },
+        {
+          "text": "0.25",
+          "misconception": "quarters",
+          "feedback": "0.25 = 1/4, not 1/2. 1/2 = 0.5."
+        },
+        {
+          "text": "0.05",
+          "misconception": "wrong_place",
+          "feedback": "0.05 = 5/100 = 1/20, not 1/2. 1/2 = 0.5."
+        }
+      ],
+      "hints": [
+        "1/2 = 5/10",
+        "5/10 = 0.5"
+      ],
+      "explanation": "1/2 = 5/10 = 0.5."
+    },
+    {
+      "id": "g5_g5_num_decimals_u2",
+      "skillId": "g5.num.decimals",
+      "bloom": "understand",
+      "type": "multipleChoice",
+      "prompt": "Which decimal is the smallest: 0.3, 0.03, or 0.33?",
+      "choices": [
+        {
+          "text": "0.03",
+          "correct": true
+        },
+        {
+          "text": "0.3",
+          "misconception": "compares_decimals",
+          "feedback": "0.03 is smaller than 0.3 (0.3 = 0.30). 0.03 < 0.3 < 0.33."
+        },
+        {
+          "text": "0.33",
+          "misconception": "compares_decimals",
+          "feedback": "0.33 > 0.3 > 0.03."
+        },
+        {
+          "text": "They are all equal",
+          "misconception": "confused",
+          "feedback": "0.03 < 0.3 < 0.33. They are not equal."
+        }
+      ],
+      "hints": [
+        "0.3 = 0.30",
+        "Compare: 0.30 vs 0.03 vs 0.33",
+        "0.03 < 0.30 < 0.33"
+      ],
+      "explanation": "0.03 is the smallest. 0.03 < 0.30 < 0.33."
+    },
+    {
+      "id": "g5_g5_num_decimals_a1",
+      "skillId": "g5.num.decimals",
+      "bloom": "apply",
+      "type": "multipleChoice",
+      "prompt": "Write 0.6 as a fraction in simplest form.",
+      "choices": [
+        {
+          "text": "3/5",
+          "correct": true
+        },
+        {
+          "text": "6/10",
+          "misconception": "not_simplified",
+          "feedback": "0.6 = 6/10, which simplifies to 3/5 (divide both by 2)."
+        },
+        {
+          "text": "60/100",
+          "misconception": "wrong_place",
+          "feedback": "0.6 = 6/10 = 3/5, not 60/100 (that would be 0.60)."
+        },
+        {
+          "text": "1/6",
+          "misconception": "confused",
+          "feedback": "0.6 = 6/10 = 3/5, not 1/6."
+        }
+      ],
+      "hints": [
+        "0.6 = 6/10",
+        "Divide numerator and denominator by 2",
+        "6/10 = 3/5"
+      ],
+      "explanation": "0.6 = 6/10 = 3/5 (simplify by dividing by 2)."
+    },
+    {
+      "id": "g5_g5_num_decimals_a2",
+      "skillId": "g5.num.decimals",
+      "bloom": "apply",
+      "type": "multipleChoice",
+      "prompt": "A book costs 12.50 shillings. How much do 3 books cost?",
+      "choices": [
+        {
+          "text": "37.50 shillings",
+          "correct": true
+        },
+        {
+          "text": "36.50 shillings",
+          "misconception": "adds_tens",
+          "feedback": "12.50 x 3 = 37.50, not 36.50. 12.50 x 3 = 37.50."
+        },
+        {
+          "text": "37.00 shillings",
+          "misconception": "rounds",
+          "feedback": "12.50 x 3 = 37.50, not 37.00. There are 50 cents extra."
+        },
+        {
+          "text": "42.50 shillings",
+          "misconception": "adds",
+          "feedback": "12.50 x 3 = 37.50, not 42.50. 12.50 + 12.50 + 12.50 = 37.50."
+        }
+      ],
+      "hints": [
+        "12.50 x 3",
+        "12 x 3 = 36",
+        "0.50 x 3 = 1.50",
+        "36 + 1.50 = 37.50"
+      ],
+      "explanation": "12.50 x 3 = 37.50 shillings. The cost of 3 books is 37.50 shillings."
+    },
+    {
+      "id": "g5_g5_num_decimals_an1",
+      "skillId": "g5.num.decimals",
+      "bloom": "analyze",
+      "type": "multipleChoice",
+      "prompt": "A ribbon is 2.4 m long. A piece of 0.8 m is cut off. What fraction of the ribbon remains?",
+      "choices": [
+        {
+          "text": "2/3",
+          "correct": true
+        },
+        {
+          "text": "1/2",
+          "misconception": "subtracts_wrong",
+          "feedback": "2.4 - 0.8 = 1.6 m. 1.6 / 2.4 = 2/3 (not 1/2)."
+        },
+        {
+          "text": "3/4",
+          "misconception": "wrong_subtraction",
+          "feedback": "2.4 - 0.8 = 1.6. 1.6 / 2.4 = 2/3, not 3/4."
+        },
+        {
+          "text": "1/3",
+          "misconception": "wrong_subtraction",
+          "feedback": "2.4 - 0.8 = 1.6 m. 1.6 / 2.4 = 2/3, not 1/3."
+        }
+      ],
+      "hints": [
+        "2.4 - 0.8 = 1.6 m remaining",
+        "Fraction remaining = 1.6 / 2.4",
+        "1.6 / 2.4 = 16/24 = 2/3"
+      ],
+      "explanation": "2.4 - 0.8 = 1.6 m. Fraction remaining = 1.6/2.4 = 16/24 = 2/3 of the ribbon remains."
+    },
+    {
+      "id": "g5_g5_num_decimals_an2",
+      "skillId": "g5.num.decimals",
+      "bloom": "analyze",
+      "type": "multipleChoice",
+      "prompt": "A tank holds 10.5 litres of water. 3.2 litres are used. How much water is left?",
+      "choices": [
+        {
+          "text": "7.3 litres",
+          "correct": true
+        },
+        {
+          "text": "7.2 litres",
+          "misconception": "subtracts",
+          "feedback": "10.5 - 3.2 = 7.3, not 7.2. 10.5 - 3.2 = 7.3."
+        },
+        {
+          "text": "7.5 litres",
+          "misconception": "rounding",
+          "feedback": "10.5 - 3.2 = 7.3, not 7.5."
+        },
+        {
+          "text": "6.3 litres",
+          "misconception": "subtracts",
+          "feedback": "10.5 - 3.2 = 7.3, not 6.3."
+        }
+      ],
+      "hints": [
+        "10.5 - 3.2 = ?",
+        "10 - 3 = 7",
+        "0.5 - 0.2 = 0.3",
+        "7 + 0.3 = 7.3"
+      ],
+      "explanation": "10.5 - 3.2 = 7.3 litres of water left."
+    }
+  ]
+}
